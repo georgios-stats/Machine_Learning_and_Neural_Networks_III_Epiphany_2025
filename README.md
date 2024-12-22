@@ -65,27 +65,60 @@ Lecture notes and lecture handouts are in folder **[[Lecture_notes]](./Lecture_n
 + [PDF](./Lecture_notes/Lecture_notes_MLNN3.pdf)    
 
 
-#### Types of spatial data       
+### Individual handouts
 
-+ [PDF](./Lecture_notes/Lecture_notes_types_of_spatial_data.pdf)    
+#### Learning  
 
-+ [HTML](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/Lecture_notes_types_of_spatial_data_xhtml/Lecture_notes_types_of_spatial_data.xhtml)  
+Learning problem: Definitions, notation, and formulation -A recap  
 
-#### Geostatistical data modeling       
++ [01.Statistical_learning_framework_recap.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/01.Statistical_learning_framework_recap.pdf)  
 
-+ [PDF](./Lecture_notes/Lecture_notes_geostatistical_data.pdf)  
+Elements of convex learning problems  
 
-+ [HTML](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/Lecture_notes_geostatistical_data_xhtml/Lecture_notes_geostatistical_data.xhtml)  
++ [02.Convex_learning_problems.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/02.Convex_learning_problems.pdf)  
 
-#### Aerial unit data modeling              
+Learnability and stability  
 
-+ [PDF](./Lecture_notes/Lecture_notes_aerial_unit_data.pdf)  
++ [03.Learnability_and_stability.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/03.Learnability_and_stability.pdf)  
 
-+ [HTML](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/Lecture_notes_aerial_unit_data_xhtml/Lecture_notes_aerial_unit_data.xhtml)  
+#### Stochastic learning algorithms  
 
-#### Random pattern data modeling       
+Stochastic gradient descent  
 
-... Not available yet  
++ [04.Gradient_descent.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/04.Gradient_descent.pdf)  
+
++ [05.Stochastic_gradient_descent.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/05.Stochastic_gradient_descent.pdf)  
+
+
+Stochastic gradient Langevin dynamics  
+
++ [06.Stochastic_gradient_Langevine_dynamics.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/06.Stochastic_gradient_Langevine_dynamics.pdf)  
+
+#### Learning algorithms  
+
+Support Vector Machines  
+
++ [07.Support_Vector_Machines.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/07.Support_Vector_Machines.pdf)  
+
+
+Kernel methods  
+
++ [08.Kernel_Methods.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/08.Kernel_Methods.pdf) 
+
+
+Artificial Neural Networks  
+
++ [09.Artificial_neural_networks.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/09.Artificial_neural_networks.pdf)  
+
+
+Multi-class classification  
+
++ [10.Multiclass_classification.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/10.Multiclass_classification.pdf)  
+
+Gaussian process regression  
+
++ [11.Gaussian_process_regression.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/11.Gaussian_process_regression.pdf)  
+
 
 ------------------------------------------------------------------------
 
