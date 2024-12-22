@@ -35,7 +35,7 @@
 
 # Description
 
-This repository contains the teaching material for the module ***MATH4341: Spatio-Temporal Statistics*** in Michaelmas term in 2025 @ Durham University.
+This repository contains the teaching material for the module ***MATH4331: Machine Learning and Neural Networks III*** in Epiphany term in 2025 @ Durham University.
 
 - '[Description_sheet.pdf](./Description_sheet.pdf)' contains the ILOs, syllabus, and references  
 
