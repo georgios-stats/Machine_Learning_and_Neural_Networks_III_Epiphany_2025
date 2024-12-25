@@ -71,54 +71,71 @@ Lecture notes and lecture handouts are in folder **[[Lecture_notes]](./Lecture_n
 
 Learning problem: Definitions, notation, and formulation -A recap  
 
+<!--
 + [01.Statistical_learning_framework_recap.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/01.Statistical_learning_framework_recap.pdf)  
+-->
 
 Elements of convex learning problems  
 
+<!--
 + [02.Convex_learning_problems.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/02.Convex_learning_problems.pdf)  
+-->
 
 Learnability and stability  
 
+<!--
 + [03.Learnability_and_stability.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/03.Learnability_and_stability.pdf)  
+-->
 
-#### Stochastic learning algorithms  
+#### Training algorithms for machine learning      
 
 Stochastic gradient descent  
 
+<!--
 + [04.Gradient_descent.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/04.Gradient_descent.pdf)  
+-->
 
+<!--
 + [05.Stochastic_gradient_descent.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/05.Stochastic_gradient_descent.pdf)  
-
+-->
 
 Stochastic gradient Langevin dynamics  
 
+<!--
 + [06.Stochastic_gradient_Langevine_dynamics.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/06.Stochastic_gradient_Langevine_dynamics.pdf)  
+-->
 
-#### Learning algorithms  
+#### Models for supervised machine learning  
 
 Support Vector Machines  
 
+<!--
 + [07.Support_Vector_Machines.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/07.Support_Vector_Machines.pdf)  
+-->
 
+Kernel methods (extensions to non linear feature spaces)  
 
-Kernel methods  
-
+<!--
 + [08.Kernel_Methods.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/08.Kernel_Methods.pdf) 
+-->
 
+Multiclass_classification (extensions to many classes)    
 
-Artificial Neural Networks  
+<!--
++ [09.Multiclass_classification.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/09.Multiclass_classification.pdf)  
+-->
 
-+ [09.Artificial_neural_networks.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/09.Artificial_neural_networks.pdf)  
+Artificial Neural Networks (application to feature space extensions)  
 
+<!--
++ [10.Artificial_neural_networks.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/10.Artificial_neural_networks.pdf)  
+-->
 
-Multi-class classification  
+Gaussian process regression (application of kernel trick/methods)  
 
-+ [10.Multiclass_classification.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/10.Multiclass_classification.pdf)  
-
-Gaussian process regression  
-
+<!--
 + [11.Gaussian_process_regression.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_handouts/11.Gaussian_process_regression.pdf)  
-
+-->
 
 ------------------------------------------------------------------------
 
@@ -137,15 +154,13 @@ The computer lab notes run by software whose version is the same as that install
 + RTools 4.40: for  [MS Windows](https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.4.1-arm64.pkg)  
 
 Required R packages are     
-<!--
+
     install.packages(pkgs = c( 
-        "st", "sf", 
-        "mapview", "tmap", "ggplot2", "viridis", 
-        "spData", "SemiPar", 
-        "gstat", "geoR", 
-        "spdep", "spatialreg"
+        "nloptr", "numDeriv", 
+        "knitr", "mvtnorm", "e1071", "nnet", 
+        "faraway"
         ) )  
--->
+
 
 #### Lab 1:   
 
