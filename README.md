@@ -139,42 +139,27 @@ Required R packages are
 
 #### Lab 1:   
 
-... Not available yet          
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.Rmd)  
 
-<!--
-
-Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Spatial_data_in_R_tasks.html) ; [Download (HTML)](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/refs/heads/main/Computer_lab_notes/Spatial_data_in_R_tasks.html)  
-
-Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Spatial_data_in_R_complete.html) ; [Download (HTML)](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/refs/heads/main/Computer_lab_notes/Spatial_data_in_R_complete.html)  
--->
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_complete.Rmd)  
 
 #### Lab 2:             
 
-... Not available yet  
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.Rmd)  
 
-<!--
-This is about the fiting (cross-)semivariograms, implementing (co-)Kriging, and implementind the linear model of coregionalization.  
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.Rmd)  
 
-Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Point_referenced_spatial_data_modelling_tasks.html)  ; [Download (HTML)](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/refs/heads/main/Computer_lab_notes/Point_referenced_spatial_data_modelling_tasks.html)  
+#### Lab 3:             
 
-Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Point_referenced_spatial_data_modelling_complete.html) ; [Download (HTML)](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/refs/heads/main/Computer_lab_notes/Point_referenced_spatial_data_modelling_complete.html)  
--->
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
 
-#### Lab 3:          
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_complete.Rmd)  
 
-... Not available yet     
+#### Lab 4:              
 
-<!--
-This is about design neighborhoods, proximity matrices, (global and local) Moran's tests, Simultaneous Auto-regressive (SAR) model fitting, and Conditional Auto-Regressive (CAR) model fitting.  
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.Rmd)  
 
-Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Aerial_unit_spatial_data_modelling_tasks.html) ; [Download (HTML)](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/refs/heads/main/Computer_lab_notes/Aerial_unit_spatial_data_modelling_tasks.html)  
-
-Complete [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Aerial_unit_spatial_data_modelling_complete.html) ; [Download (HTML)](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/refs/heads/main/Computer_lab_notes/Aerial_unit_spatial_data_modelling_complete.html)  
--->
-
-#### Lab 4:      
-
-... Not available yet  
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_complete.Rmd)  
 
 ------------------------------------------------------------------------
 
