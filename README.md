@@ -50,8 +50,6 @@ Below you can find:
 + [Practical computer based tests](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/README.md#practical-first-computer-based-tests)  
 -->
 
-+ [Data sets](./README.md#data-sets)  
-
 + [Downloading instructions](./README.md#downloading-instructions)     
 
 ------------------------------------------------------------------------
@@ -62,7 +60,7 @@ Lecture notes and lecture handouts are in folder **[[Lecture_notes]](./Lecture_n
 
 #### Complete set of notes    
 
-+ [PDF](./Lecture_notes/Lecture_notes_MLNN3.pdf)    
++ Lecture notes [(PDF)](./Lecture_notes/Lecture_notes_MLNN3.pdf)    
 
 ### Individual handouts
 
