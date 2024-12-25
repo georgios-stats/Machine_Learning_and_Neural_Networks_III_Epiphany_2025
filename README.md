@@ -71,70 +71,49 @@ Lecture notes and lecture handouts are in folder **[[Lecture_notes]](./Lecture_n
 
 Learning problem: Definitions, notation, and formulation -A recap  
 
-+ [01.Statistical_learning_framework_recap.pdf](./Lecture_notes/01.Statistical_learning_framework_recap.pdf)  
-
++ Lecture notes [(PDF)](./Lecture_notes/01.Statistical_learning_framework_recap.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/01.Statistical_learning_framework_recap_xhtml/01.Statistical_learning_framework_recap.xhtml)  
 
 Elements of convex learning problems  
 
-<!--
-+ [02.Convex_learning_problems.pdf](./Lecture_notes/02.Convex_learning_problems.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/02.Convex_learning_problems.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/02.Convex_learning_problems_xhtml/02.Convex_learning_problems.xhtml)  
 
 Learnability and stability  
 
-<!--
-+ [03.Learnability_and_stability.pdf](./Lecture_notes/03.Learnability_and_stability.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/03.Learnability_and_stability.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/03.Learnability_and_stability_xhtml/03.Learnability_and_stability.xhtml)  
 
 #### Training algorithms for machine learning      
 
++ Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent..pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
+
 Stochastic gradient descent  
 
-<!--
-+ [04.Gradient_descent.pdf](./Lecture_notes/04.Gradient_descent.pdf)  
--->
-
-<!--
-+ [05.Stochastic_gradient_descent.pdf](./Lecture_notes/05.Stochastic_gradient_descent.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/05.Stochastic_gradient_descent.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml)  
 
 Stochastic gradient Langevin dynamics  
 
-<!--
-+ [06.Stochastic_gradient_Langevine_dynamics.pdf](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/06.Stochastic_gradient_Langevine_dynamics_xhtml/06.Stochastic_gradient_Langevine_dynamics.xhtml)  
 
 #### Models for supervised machine learning  
 
 Support Vector Machines  
 
-<!--
-+ [07.Support_Vector_Machines.pdf](./Lecture_notes/07.Support_Vector_Machines.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/07.Support_Vector_Machines.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/07.Support_Vector_Machines_xhtml/07.Support_Vector_Machines.xhtml)  
 
 Kernel methods (extensions to non linear feature spaces)  
 
-<!--
-+ [08.Kernel_Methods.pdf](./Lecture_notes/08.Kernel_Methods.pdf) 
--->
++ Lecture notes [(PDF)](./Lecture_notes/08.Kernel_Methods.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/08.Kernel_Methods_xhtml/08.Kernel_Methods.xhtml)  
 
 Multiclass_classification (extensions to many classes)    
 
-<!--
-+ [09.Multiclass_classification.pdf](./Lecture_notes/09.Multiclass_classification.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/09.Multiclass_classification.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/09.Multiclass_classification_xhtml/09.Multiclass_classification.xhtml)  
 
 Artificial Neural Networks (application to feature space extensions)  
 
-<!--
-+ [10.Artificial_neural_networks.pdf](./Lecture_notes/10.Artificial_neural_networks.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/10.Artificial_neural_networks_xhtml/10.Artificial_neural_networks.xhtml)  
 
 Gaussian process regression (application of kernel trick/methods)  
 
-<!--
-+ [11.Gaussian_process_regression.pdf](./Lecture_notes/11.Gaussian_process_regression.pdf)  
--->
++ Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
 
 ------------------------------------------------------------------------
 
@@ -206,8 +185,6 @@ Complete [View (HTML)](https://html-preview.github.io/?url=https://github.com/ge
 
 #### Exercise sheet  
 
-It contains all the exercises and solutions  
-
 + [Problems only (PDF)](./Exercise_sheets/Exercise_sheet_questions.pdf)  
 
 + [Problems only (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Exercise_sheet_complete_xhtml/Exercise_sheet_questions.xhtml)  
@@ -217,8 +194,6 @@ It contains all the exercises and solutions
 + [Problems and solutions (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Exercise_sheet_complete_xhtml/Exercise_sheet_complete.xhtml)  
 
 #### Homework 1  
-
-... Not available yet  
 
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_1_questions.pdf)  
 
