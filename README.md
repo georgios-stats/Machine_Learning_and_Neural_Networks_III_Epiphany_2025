@@ -71,9 +71,8 @@ Lecture notes and lecture handouts are in folder **[[Lecture_notes]](./Lecture_n
 
 Learning problem: Definitions, notation, and formulation -A recap  
 
-<!--
 + [01.Statistical_learning_framework_recap.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/master/Lecture_handouts/01.Statistical_learning_framework_recap.pdf)  
--->
+
 
 Elements of convex learning problems  
 
@@ -221,7 +220,6 @@ It contains all the exercises and solutions
 
 ... Not available yet  
 
-<!--
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_1_questions.pdf)  
 
 + [Problems only (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_complete_xhtml/Homework_sheet_1_questions.xhtml)  
@@ -229,7 +227,6 @@ It contains all the exercises and solutions
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_1_complete.pdf)  
 
 + [Problems and solutions (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_complete_xhtml/Homework_sheet_1_complete.xhtml)  
--->
 
 #### Homework 2  
 
