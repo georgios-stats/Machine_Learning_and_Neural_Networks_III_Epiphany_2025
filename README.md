@@ -145,21 +145,21 @@ Required R packages are
 
 #### Lab 2:             
 
-+ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.Rmd)  
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.Rmd)  
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.Rmd)  
 
 #### Lab 3:             
 
-+ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_complete.Rmd)  
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_complete.Rmd)  
 
 #### Lab 4:              
 
-+ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_tasks.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.Rmd)  
++ Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_complete.Rmd)  
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_complete.Rmd)  
 
 ------------------------------------------------------------------------
 
