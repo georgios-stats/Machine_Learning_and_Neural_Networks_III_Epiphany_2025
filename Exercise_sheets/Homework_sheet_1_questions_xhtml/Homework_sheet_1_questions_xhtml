@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="generator" content="LyX 2.4.1" />
+<title>LyX Document</title>
+<style>
+/* Layout-provided Styles */
+div.standard {
+	margin-bottom: 2ex;
+}
+div.plain_layout {
+text-align: left;
+
+}
+div.theorem {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.theorem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.exercise {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.exercise_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+ol.enumi   { list-style-type: decimal; }
+ol.enumii  { list-style-type: lower-latin; }
+ol.enumiii { list-style-type: lower-roman; }
+ol.enumiv  { list-style-type: upper-latin; }
+div.solution_ {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.solution__label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+dl.description dt { font-weight: bold; }
+div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
+
+
+</style>
+</head>
+<body dir="auto">
+<div class='standard' id='magicparlabel-3'><div class='Shadowbox'><div class='plain_layout' id='magicparlabel-7'>MATH3431 Machine Learning and Neural Networks III 
+Epiphany term 2025<div style='height:3ex'></div></div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-8'><b><span style='font-size:x-large;'>Homework 1: Convex learning problems </span></b><div style='height:3ex'></div></div>
+
+<div class='plain_layout' id='magicparlabel-9'>Lecturer: Georgios P. Karagiannis&#xA0;&#xA0; 
+<a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+
+<div class='plain_layout' id='magicparlabel-10'><hr />
+</div>
+
+
+</div></div>
+
+<div class='standard' id='magicparlabel-16'>&#xA0;<div style='height:1ex'></div><div style='height:1ex'></div></div>
+
+<div class='standard' id='magicparlabel-17'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-18'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-19'><hr />
+</div>
+<div class='exercise'>
+<div class="exercise_item" id='magicparlabel-20'><span class="exercise_label">Exercise 1.</span>
+(<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>&#x2605;</mo>
+</math>
+) <div class='standard' id='magicparlabel-22'>&#xA0;&#xA0;&#xA0;Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ be a convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B2;</mi>
+</math>
+-smooth function. </div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-23'>Show that for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>v</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>&#x2207;</mi>
+     <mi>f</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>w</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <mi>v</mi>
+     <mo stretchy='false'>-</mo>
+     <mi>w</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>&#x2207;</mi>
+     <mi>f</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>w</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <mi>v</mi>
+     <mo stretchy='false'>-</mo>
+     <mi>w</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <mfrac>
+    <mi>&#x3B2;</mi>
+    <mn>2</mn>
+   </mfrac>
+   <msup>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <mi>v</mi>
+      <mo stretchy='false'>-</mo>
+      <mi>w</mi>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-24'>Show that for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ such that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>w</mi>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>&#x3B2;</mi>
+ </mfrac>
+ <mi>&#x2207;</mi>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, it is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <mn>1</mn>
+  <mrow>
+   <mn>2</mn>
+   <mi>&#x3B2;</mi>
+  </mrow>
+ </mfrac>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>&#x2207;</mi>
+    <mi>f</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x2264;</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>v</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-25'>Additionally assume that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ for all <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+. Show that for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+, 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mrow>
+  <mo>&#x2225;</mo>
+  <mrow>
+   <mi>&#x2207;</mi>
+   <mi>f</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>w</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>&#x2225;</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <msqrt>
+  <mrow>
+   <mn>2</mn>
+   <mi>&#x3B2;</mi>
+   <mi>f</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>w</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+ </msqrt>
+</mrow>
+</math>
+</li>
+</ol>
+
+<div class='solution_'>
+<div class="solution__item" id='magicparlabel-31'><span class="solution__label">Solution.</span>
+&#xA0; </div>
+</div>
+
+</div>
+</div>
+<div class='standard' id='magicparlabel-44'><hr />
+</div>
+<div class='exercise'>
+<div class="exercise_item" id='magicparlabel-45'><span class="exercise_label">Exercise 2.</span>
+(<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>&#x2605;</mo>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>&#x2605;</mo>
+</math>
+) <div class='standard' id='magicparlabel-47'>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ be a <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex function. Assume that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>w</mi>
+ <mo stretchy='false'>*</mo>
+</msup>
+</math>
+ is a minimizer of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ i.e. 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>min</mo>
+  </mrow>
+  <mi>w</mi>
+ </munder>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>f</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>w</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+Show that for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ it holds 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2265;</mo>
+ <mfrac>
+  <mi>&#x3BB;</mi>
+  <mn>2</mn>
+ </mfrac>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>w</mi>
+    <mo stretchy='false'>-</mo>
+    <msup>
+     <mi>w</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+</div>
+<dl class='description'>
+<dt class="description_label">Hint</dt>
+<dd class="description_item" id='magicparlabel-48'> Use the definition of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex function, properly rearrange it, and ...</dd>
+</dl>
+
+<div class='solution_'>
+<div class="solution__item" id='magicparlabel-54'><span class="solution__label">Solution.</span>
+&#xA0;&#xA0;</div>
+</div>
+
+</div>
+</div>
+<div class='standard' id='magicparlabel-64'>
+<br />
+</div>
+
+</body>
+</html>
