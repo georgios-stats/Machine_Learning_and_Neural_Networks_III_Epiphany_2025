@@ -12,7 +12,7 @@
 <meta name="author" content="Georgios P. Karagiannis @ MATH3431 Machine Learning and Neural Networks III" />
 
 
-<title>Varianced Reduced Stochastic Gradient Descent algorithm</title>
+<title>Artificial Neural Networks</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1626,9 +1626,8 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Varianced Reduced Stochastic Gradient
-Descent algorithm</h1>
-<h3 class="subtitle">…on a binary classification problem</h3>
+<h1 class="title toc-ignore">Artificial Neural Networks</h1>
+<h3 class="subtitle">Introductory analysis via NNET</h3>
 <h4 class="author">Georgios P. Karagiannis @ MATH3431 Machine Learning
 and Neural Networks III</h4>
 
@@ -1636,43 +1635,47 @@ and Neural Networks III</h4>
 
 
 <!-- -------------------------------------------------------------------------------- -->
-<!-- Copyright 2024 Georgios Karagiannis -->
+<!-- Copyright 2023 Georgios Karagiannis -->
 <!-- georgios.karagiannis@durham.ac.uk -->
 <!-- Associate Professor -->
 <!-- Department of Mathematical Sciences, Durham University, Durham,  UK  -->
-<!-- This file is part of Spatio-Temporal_Statistics_Michaelmas_2025 -->
-<!-- which is the material of the course -->
-<!-- MATH4341: Spatio-Temporal Statistics -->
-<!-- Epiphany term -->
+<!-- This file is part of Machine Learning and Neural Networks III (MATH3431) -->
+<!-- which is the material of the course (MATH3431 Machine Learning and Neural Networks III) -->
 <!-- taught by Georgios P. Katagiannis in the Department of Mathematical Sciences   -->
-<!-- in the University of Durham  in Michaelmas term in 2025 -->
-<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is free software: -->
-<!-- you can redistribute it and/or modify it-->
-<!-- under the terms of the GNU General Public License as published by -->
+<!-- in the University of Durham  in Michaelmas term in 2019 -->
+<!-- Machine_Learning_and_Neural_Networks_III_Epiphany_2023 is free software: you can redistribute it and/or modify -->
+<!-- it under the terms of the GNU General Public License as published by -->
 <!-- the Free Software Foundation version 3 of the License. -->
-<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is distributed ->
-<!-- in the hope that it will be useful, -->
+<!-- Machine_Learning_and_Neural_Networks_III_Epiphany_2023 is distributed in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
 <!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
 <!-- GNU General Public License for more details. -->
 <!-- You should have received a copy of the GNU General Public License -->
-<!-- along with Spatio-Temporal_Statistics_Michaelmas_2024 -->
-<!-- If not, see <http://www.gnu.org/licenses/>. -->
+<!-- along with Machine_Learning_and_Neural_Networks_III_Epiphany_2023  If not, see <http://www.gnu.org/licenses/>. -->
 <!-- -------------------------------------------------------------------------------- -->
-<p><a href="https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main?tab=readme-ov-file#computer-lab-notes">Back
+<p><a href="https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/tree/main/Computer_practical#aim">Back
 to README</a></p>
 <pre class="r"><code>rm(list=ls())</code></pre>
 <hr />
 <p><strong><em>Aim</em></strong></p>
+<p>Students will become able to:</p>
 <ul>
 <li><p>practice in R,</p></li>
-<li><p>implement SVRG algorithms in R</p></li>
-<li><p>refresh logistic regression, with Ridge penalty from term
-1</p></li>
+<li><p>implement Feed Forward Neural Network with R package nnet in
+R.</p></li>
 </ul>
 <hr />
 <p><strong><em>Reading material</em></strong></p>
 <ul>
+<li><p>Lecture notes:</p>
+<ul>
+<li><a href="https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/09.Artificial_neural_networks.pdf">Handout
+9: Artificial neural networks</a><br />
+</li>
+<li><a href="https://cran.r-project.org/web/packages/nnet/nnet.pdf">Ripley, B.,
+Venables, W., &amp; Ripley, M. B. (2016). Package ‘nnet’. R package
+version, 7(3-12), 700.</a></li>
+</ul></li>
 <li><p>Reference for <em>R</em>:</p>
 <ul>
 <li><a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Cheat
@@ -1691,227 +1694,188 @@ options</a></p></li>
 <li><p>Reference for <em>Latex</em> (optional, supplementary
 material):</p>
 <ul>
-<li><a href="https://wch.github.io/latexsheet/latexsheet-a4.pdf">Latex
-Cheat Sheet</a></li>
+<li><h2 id="latex-cheat-sheet"><a href="https://wch.github.io/latexsheet/latexsheet-a4.pdf">Latex Cheat
+Sheet</a></h2></li>
 </ul></li>
 </ul>
-<hr />
 <p><strong><em>New software</em></strong></p>
 <ul>
 <li>R package <code>base</code> functions:
 <ul>
 <li><code>set.seed{base}</code></li>
 </ul></li>
-<li>R package <code>nloptr</code> functions:
+<li>R package <code>nnet</code> functions:
 <ul>
-<li><code>nloptr{nloptr}</code></li>
-</ul></li>
-<li>R package <code>numDeriv</code> functions:
-<ul>
-<li><code>grad{numDeriv}</code></li>
+<li><code>nnet{nnet}</code> , <code>class.ind{nnet}</code> ,
+<code>predict{nnet}</code> , <code>which.is.max{nnet}</code></li>
 </ul></li>
 </ul>
-<pre class="r"><code># call libraries
-#install.packages(&quot;numDeriv&quot;)
-library(numDeriv)
-#install.packages(&quot;nloptr&quot;)
-library(nloptr)</code></pre>
 <hr />
-<p><strong><em>Initialize R</em></strong></p>
 <pre class="r"><code># Load R package for printing
 library(knitr)</code></pre>
 <pre class="r"><code># Set a seed of the randon number generator
 set.seed(2023)</code></pre>
-<div id="application-binary-classification-problem" class="section level1 unnumbered">
-<h1 class="unnumbered">Application: Binary classification problem</h1>
-<p>Consider the binary classification problem with input <span class="math inline">\(x\in\mathbb{R}\)</span> and output/labels <span class="math inline">\(y\in\{0,1\}\)</span>.</p>
-<p>The prediction rule is <span class="math display">\[
-h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
-\]</span> where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span>
-is the unknown parameter we wish to learn, and hence we can consider
-that the hypothesis class is</p>
-<p><span class="math display">\[
-\mathcal{H}=\{w\in\mathbb{R}^{2}\}
-\]</span></p>
-<p>Consider there is available a dataset<br />
-<span class="math display">\[
-\mathcal{S}_{n}=\left\{ z_{i}=\left(y_{i},x_{i}\right)\right\}
-_{i=1}^{n}
-\]</span></p>
-<p>with <span class="math inline">\(y_{i}\in\{0,1\}\)</span> and <span class="math inline">\(x_{i}\in\mathbb{R}\)</span>.</p>
-<p>Recall that the sampling distribution is<br />
-<span class="math display">\[
-y|w \sim \text{Bernulli}(h_{w}(x)) \\
-h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
-\]</span></p>
-<p>The dataset <span class="math inline">\(\mathcal{S}_{n}=\{z_i=(x_i,y_i)\}\)</span> is
-generated from the data generation probability <span class="math inline">\(g(\cdot)\)</span> provided below as a routine. We
-pretend that we do not know <span class="math inline">\(g(\cdot)\)</span>.</p>
-<pre class="r"><code>data_generating_model &lt;- function(n,w) {
-  z &lt;- rep( NaN, times=n*2 )
-  z &lt;- matrix(z, nrow = n, ncol = 2)
-  z[,1] &lt;- runif(n, min = -10, max = 10)
-  p &lt;- w[1] + w[2]*z[,1] 
-  p &lt;- exp(p) / (1+exp(p))
-  z[,2] &lt;- rbinom(n, size = 1, prob = p)
-  return(z)
-}</code></pre>
-<p>Let the dataset <span class="math inline">\(\mathcal{S}_{n}\)</span>
-has size <span class="math inline">\(n=500\)</span>.</p>
-<p>Assume that the real values for the unknown parameters <span class="math inline">\(w\)</span> is <span class="math inline">\(w_{\text{true}}=(0.0,1.0)^\top\)</span>.</p>
-<p>The dataset containing the examples to train the model are generated
-below, and stores in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
-<pre class="r"><code>set.seed(2023)
-n_obs &lt;- 500
-w_true &lt;- c(0,1)  
-z_obs &lt;- data_generating_model(n = n_obs, w = w_true) 
-w_true &lt;- as.numeric(glm(z_obs[,2]~ 1+ z_obs[,1],family = &quot;binomial&quot; )$coefficients)</code></pre>
-<p>The prediction rule is <span class="math display">\[
-h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
-\]</span></p>
-<p>where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span>.</p>
-<p>The function <strong>prediction_rule(x,w)</strong> that returns the
-rule <span class="math inline">\(h\)</span> where <span class="math inline">\(x\)</span> is the input argument and <span class="math inline">\(w\)</span> is the unknown parameter is given
-below.</p>
-<pre class="r"><code>prediction_rule &lt;- function(x,w) {
-  h &lt;- w[1]+w[2]*x
-  h &lt;- exp(h) / (1.0 + exp(h) )
-  return (h)
-}</code></pre>
-<p>The likelihood function is <span class="math display">\[
-f\left(y|w\right)=\prod_{i=1}^{n}\left(h_{i}\right)^{y_{i}}\left(1-h_{i}\right)^{1-y_{i}}
-\]</span></p>
-<p>We consider a loss function as</p>
-<p><span class="math display">\[
-\ell\left(w,z=\left(x,y\right)\right)=-y\log\left(h(x)\right)-\left(1-y\right)\log\left(1-h(x)\right)
-\]</span></p>
-<p>The code for the loss function is provided below as
-<strong>loss_fun(w,z)</strong> that computes the loss function, where
-<span class="math inline">\(z=(x,y)\)</span> is one example
-(observation) and <span class="math inline">\(w\)</span> is the unknown
-parameter.</p>
-<pre class="r"><code>loss_fun &lt;- function(w,z) {
-  x = z[1]
-  y = z[2]
-  h &lt;- prediction_rule(x,w)
-  ell &lt;- -y*log(h) - (1-y)*log(1-h)
-  return (ell)
-}</code></pre>
-<p>The Risk function under the data generation model <span class="math inline">\(g\)</span> is</p>
-<p><span class="math display">\[
-\begin{align*}
-R_{g}\left(w\right)= &amp;
-\text{E}\left(\ell\left(w,z=\left(x,y\right)\right)\right)\\
-= &amp;
-\text{E}\left(-y\log\left(h\left(w;x\right)\right)-\left(1-y\right)\log\left(1-h\left(w;x\right)\right)\right)
-\end{align*}
-\]</span></p>
-<p>The Empirical risk function is <span class="math display">\[
-\begin{align*}
-\hat{R}_{S}\left(w\right) &amp;
-\frac{1}{n}\sum_{i=1}^{n}\ell\left(w,z_{i}=\left(x_{i},y_{i}\right)\right)\\
-= &amp;
--\frac{1}{n}\sum_{i=1}^{n}\left(y_{i}\log\left(h(w;x_{i})\right)+\left(1-y\right)\log\left(1-h(w;x_{i})\right)\right)
-\end{align*}
-\]</span></p>
-<p>The function <strong>empirical_risk_fun(w,z,n)</strong> computes the
-empirical risk, where <span class="math inline">\(z=(x,y)\)</span> is an
-example, <span class="math inline">\(w\)</span> is the unknown
-parameter, and <span class="math inline">\(n\)</span> is the data size
-is given below.</p>
-<pre class="r"><code>empirical_risk_fun &lt;- function(w,z,n) {
-  x = z[,1]
-  y = z[,2]
-  R &lt;- 0.0
-  for (i in 1:n) {
-    R &lt;- R + loss_fun(w,z[i,])
-  }
-  R &lt;- R / n
-  return (R)
-}</code></pre>
+<div id="familiarity-with-analysis-with-feed-forward-neural-networks-with-nnet" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Familiarity with
+analysis with feed-forward Neural Networks with nnet</h1>
+<p>We will use the R package nnet. It is available from</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/nnet/">https://cran.r-project.org/web/packages/nnet/</a></li>
+</ul>
+<p>The reference manual is available from</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/nnet/nnet.pdf">https://cran.r-project.org/web/packages/nnet/nnet.pdf</a></li>
+</ul>
+<p>Details</p>
+<ul>
+<li>nnet fits single-hidden-layer neural network, possibly with
+skip-layer connections.</li>
+</ul>
+<div id="task-install-nnnet-given" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Task: Install nnnet
+(given)</h2>
+<pre class="r"><code>## build version (recommended)
+#install.packages(&quot;nnet&quot;)
+## linux build
+#install.packages(&quot;https://cran.r-project.org/src/contrib/nnet_7.3-18.tar.gz&quot;, repos = NULL, type = &quot;source&quot;)
+## windows build
+#install.packages(&quot;https://cran.r-project.org/bin/windows/contrib/4.3/nnet_7.3-18.zip&quot;, repos = NULL, type = &quot;source&quot;)</code></pre>
 </div>
-<div id="stochastic-gradient-descent-preparation" class="section level1 unnumbered">
-<h1 class="unnumbered">Stochastic gradient descent preparation</h1>
-<div id="task-given" class="section level2" number="0.1">
-<h2><span class="header-section-number">0.1</span> Task (given)</h2>
-<p>Code a function <strong>learning_rate(t,t0)</strong> that computes
-the learning rate sequence <span class="math display">\[
-\eta_{t}=\frac{t_0}{t}
-\]</span><br />
-where <span class="math inline">\(t\)</span> is the iteration stage and
-<span class="math inline">\(t_0\)</span> is a constant.</p>
-<p>Use <span class="math inline">\(t_0=3\)</span> as default value.</p>
-<pre class="r"><code>learning_rate &lt;-function(t,t0=3) {
-  eta &lt;- t0 / t
-  return( eta )
-}</code></pre>
+<div id="task-load-the-r-package-nnet-given" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Task: Load the R
+package nnet (given)</h2>
+<pre class="r"><code>library(nnet)</code></pre>
 </div>
-<div id="task-given-1" class="section level2" number="0.2">
-<h2><span class="header-section-number">0.2</span> Task (given)</h2>
-<p>Code the function <strong>grad_loss_fun(w,z)</strong> that returns
-the gradient of the loss function at parameter value <span class="math inline">\(w\)</span>, and at example value <span class="math inline">\(z=(x,y)\)</span>.</p>
-<pre class="r"><code>grad_loss_fun &lt;- function(w,z) {
-  x = z[1]
-  y = z[2]
-  h &lt;- prediction_rule(x,w)
-  grd &lt;- c(h-y, (h-y)*x)
-  return (grd)
-}</code></pre>
-</div>
-<div id="task-given-2" class="section level2" number="0.3">
-<h2><span class="header-section-number">0.3</span> Task (given)</h2>
-<p>Code the function <strong>grad_risk_fun &lt;-
-function(w,z,n)</strong> that returns the gradient of the risk function
-at parameter value <span class="math inline">\(w\)</span>, and using the
-data set <span class="math inline">\(z\)</span> of size <span class="math inline">\(n\times 2\)</span>.</p>
-<pre class="r"><code>grad_risk_fun &lt;- function(w,z,n) {
-  grd &lt;- 0.0
-  for (i in 1:n) {
-    grd &lt;- grd + grad_loss_fun(w,z[i,])
-  }
-  grd &lt;- grd / n
-  return (grd)
-}</code></pre>
-<hr />
+<div id="task-about-nnet-commands-to-be-done-at-home" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Task: About nnet
+commands (to be done at home)</h2>
+<p>Check out R package nnet commands from the reference manual is
+available from</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/nnet/nnet.pdf">https://cran.r-project.org/web/packages/nnet/nnet.pdf</a></li>
+</ul>
+<p>in particular: nnet{nnet}, predict.nnet{nnet}, which.is.max{nnet},
+and class.ind{nnet}.</p>
 </div>
 </div>
-<div id="stochastic-variance-reduced-gradient-descent-svrg" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Stochastic Variance
-Reduced Gradient Descent (SVRG)</h1>
-<p>We use a smaller datasize</p>
-<pre class="r"><code>set.seed(2023)
-n_obs &lt;- 100000
-w_true &lt;- c(0,1)  
-z_obs &lt;- data_generating_model(n = n_obs, w = w_true)
-w_true &lt;- as.numeric(glm(z_obs[,2]~ 1+ z_obs[,1],family = &quot;binomial&quot; )$coefficients)</code></pre>
-<div id="task" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Task</h2>
-<p>Code a Stochastic Variance Reduced Gradient (SVRG) Descent algorithm
-with learning rate <span class="math inline">\(\eta_{t}=0.5\)</span> and
-batch size <span class="math inline">\(m=1\)</span> (namely the online
-SGD version of it) that returns the chain of <span class="math inline">\(\{w^{(t)}\}\)</span>.</p>
-<p>Consider <span class="math inline">\(\kappa=100\)</span> as the SVRG
-parameter controlling the number of snapshots.</p>
-<p>The sampling may be performed as a sampling with replacement (see
-?sample.int).</p>
-<p>The termination criterion is when the total number of iterations
-excesses <span class="math inline">\(T=500\)</span>. Seed with <span class="math inline">\(w^{(0)}=(-0.3,3)^\top\)</span>.</p>
-<p>Produce the trace plots of the produced chains <span class="math inline">\(\{w^(t)\}\)</span>.</p>
-<pre class="r"><code>#
-#
-#</code></pre>
+<div id="nn-on-classification-problem-with-multiple-classes" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> NN on classification
+problem with multiple classes</h1>
+<p>This is the <strong>(Multi-class classification problem)</strong>
+from the “Handout 9: Artificial neural networks”.</p>
+<p>The similarity is about the problem to be addressed. Different
+predictor rules or loss functions may be used.</p>
+<div id="task-load-iris-datasets-data-given" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Task: Load iris
+{datasets} data (given)</h2>
+<p>Load the iris {datasets} data, and print them.</p>
+<pre class="r"><code>data(iris)
+iris</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Petal.Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Petal.Width"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Species"],"name":[5],"type":["fct"],"align":["left"]}],"data":[{"1":"5.1","2":"3.5","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.0","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.6","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.7","4":"0.4","5":"setosa"},{"1":"4.6","2":"3.4","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.0","2":"3.4","3":"1.5","4":"0.2","5":"setosa"},{"1":"4.4","2":"2.9","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.1","5":"setosa"},{"1":"5.4","2":"3.7","3":"1.5","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.4","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.1","5":"setosa"},{"1":"4.3","2":"3.0","3":"1.1","4":"0.1","5":"setosa"},{"1":"5.8","2":"4.0","3":"1.2","4":"0.2","5":"setosa"},{"1":"5.7","2":"4.4","3":"1.5","4":"0.4","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.3","4":"0.4","5":"setosa"},{"1":"5.1","2":"3.5","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.7","2":"3.8","3":"1.7","4":"0.3","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.5","4":"0.3","5":"setosa"},{"1":"5.4","2":"3.4","3":"1.7","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.7","3":"1.5","4":"0.4","5":"setosa"},{"1":"4.6","2":"3.6","3":"1.0","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.3","3":"1.7","4":"0.5","5":"setosa"},{"1":"4.8","2":"3.4","3":"1.9","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.0","3":"1.6","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.4","3":"1.6","4":"0.4","5":"setosa"},{"1":"5.2","2":"3.5","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.2","2":"3.4","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.1","3":"1.6","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.4","3":"1.5","4":"0.4","5":"setosa"},{"1":"5.2","2":"4.1","3":"1.5","4":"0.1","5":"setosa"},{"1":"5.5","2":"4.2","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.2","3":"1.2","4":"0.2","5":"setosa"},{"1":"5.5","2":"3.5","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.6","3":"1.4","4":"0.1","5":"setosa"},{"1":"4.4","2":"3.0","3":"1.3","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.4","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.5","3":"1.3","4":"0.3","5":"setosa"},{"1":"4.5","2":"2.3","3":"1.3","4":"0.3","5":"setosa"},{"1":"4.4","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.5","3":"1.6","4":"0.6","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.9","4":"0.4","5":"setosa"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.2","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.3","2":"3.7","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.3","3":"1.4","4":"0.2","5":"setosa"},{"1":"7.0","2":"3.2","3":"4.7","4":"1.4","5":"versicolor"},{"1":"6.4","2":"3.2","3":"4.5","4":"1.5","5":"versicolor"},{"1":"6.9","2":"3.1","3":"4.9","4":"1.5","5":"versicolor"},{"1":"5.5","2":"2.3","3":"4.0","4":"1.3","5":"versicolor"},{"1":"6.5","2":"2.8","3":"4.6","4":"1.5","5":"versicolor"},{"1":"5.7","2":"2.8","3":"4.5","4":"1.3","5":"versicolor"},{"1":"6.3","2":"3.3","3":"4.7","4":"1.6","5":"versicolor"},{"1":"4.9","2":"2.4","3":"3.3","4":"1.0","5":"versicolor"},{"1":"6.6","2":"2.9","3":"4.6","4":"1.3","5":"versicolor"},{"1":"5.2","2":"2.7","3":"3.9","4":"1.4","5":"versicolor"},{"1":"5.0","2":"2.0","3":"3.5","4":"1.0","5":"versicolor"},{"1":"5.9","2":"3.0","3":"4.2","4":"1.5","5":"versicolor"},{"1":"6.0","2":"2.2","3":"4.0","4":"1.0","5":"versicolor"},{"1":"6.1","2":"2.9","3":"4.7","4":"1.4","5":"versicolor"},{"1":"5.6","2":"2.9","3":"3.6","4":"1.3","5":"versicolor"},{"1":"6.7","2":"3.1","3":"4.4","4":"1.4","5":"versicolor"},{"1":"5.6","2":"3.0","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.8","2":"2.7","3":"4.1","4":"1.0","5":"versicolor"},{"1":"6.2","2":"2.2","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.6","2":"2.5","3":"3.9","4":"1.1","5":"versicolor"},{"1":"5.9","2":"3.2","3":"4.8","4":"1.8","5":"versicolor"},{"1":"6.1","2":"2.8","3":"4.0","4":"1.3","5":"versicolor"},{"1":"6.3","2":"2.5","3":"4.9","4":"1.5","5":"versicolor"},{"1":"6.1","2":"2.8","3":"4.7","4":"1.2","5":"versicolor"},{"1":"6.4","2":"2.9","3":"4.3","4":"1.3","5":"versicolor"},{"1":"6.6","2":"3.0","3":"4.4","4":"1.4","5":"versicolor"},{"1":"6.8","2":"2.8","3":"4.8","4":"1.4","5":"versicolor"},{"1":"6.7","2":"3.0","3":"5.0","4":"1.7","5":"versicolor"},{"1":"6.0","2":"2.9","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.7","2":"2.6","3":"3.5","4":"1.0","5":"versicolor"},{"1":"5.5","2":"2.4","3":"3.8","4":"1.1","5":"versicolor"},{"1":"5.5","2":"2.4","3":"3.7","4":"1.0","5":"versicolor"},{"1":"5.8","2":"2.7","3":"3.9","4":"1.2","5":"versicolor"},{"1":"6.0","2":"2.7","3":"5.1","4":"1.6","5":"versicolor"},{"1":"5.4","2":"3.0","3":"4.5","4":"1.5","5":"versicolor"},{"1":"6.0","2":"3.4","3":"4.5","4":"1.6","5":"versicolor"},{"1":"6.7","2":"3.1","3":"4.7","4":"1.5","5":"versicolor"},{"1":"6.3","2":"2.3","3":"4.4","4":"1.3","5":"versicolor"},{"1":"5.6","2":"3.0","3":"4.1","4":"1.3","5":"versicolor"},{"1":"5.5","2":"2.5","3":"4.0","4":"1.3","5":"versicolor"},{"1":"5.5","2":"2.6","3":"4.4","4":"1.2","5":"versicolor"},{"1":"6.1","2":"3.0","3":"4.6","4":"1.4","5":"versicolor"},{"1":"5.8","2":"2.6","3":"4.0","4":"1.2","5":"versicolor"},{"1":"5.0","2":"2.3","3":"3.3","4":"1.0","5":"versicolor"},{"1":"5.6","2":"2.7","3":"4.2","4":"1.3","5":"versicolor"},{"1":"5.7","2":"3.0","3":"4.2","4":"1.2","5":"versicolor"},{"1":"5.7","2":"2.9","3":"4.2","4":"1.3","5":"versicolor"},{"1":"6.2","2":"2.9","3":"4.3","4":"1.3","5":"versicolor"},{"1":"5.1","2":"2.5","3":"3.0","4":"1.1","5":"versicolor"},{"1":"5.7","2":"2.8","3":"4.1","4":"1.3","5":"versicolor"},{"1":"6.3","2":"3.3","3":"6.0","4":"2.5","5":"virginica"},{"1":"5.8","2":"2.7","3":"5.1","4":"1.9","5":"virginica"},{"1":"7.1","2":"3.0","3":"5.9","4":"2.1","5":"virginica"},{"1":"6.3","2":"2.9","3":"5.6","4":"1.8","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.8","4":"2.2","5":"virginica"},{"1":"7.6","2":"3.0","3":"6.6","4":"2.1","5":"virginica"},{"1":"4.9","2":"2.5","3":"4.5","4":"1.7","5":"virginica"},{"1":"7.3","2":"2.9","3":"6.3","4":"1.8","5":"virginica"},{"1":"6.7","2":"2.5","3":"5.8","4":"1.8","5":"virginica"},{"1":"7.2","2":"3.6","3":"6.1","4":"2.5","5":"virginica"},{"1":"6.5","2":"3.2","3":"5.1","4":"2.0","5":"virginica"},{"1":"6.4","2":"2.7","3":"5.3","4":"1.9","5":"virginica"},{"1":"6.8","2":"3.0","3":"5.5","4":"2.1","5":"virginica"},{"1":"5.7","2":"2.5","3":"5.0","4":"2.0","5":"virginica"},{"1":"5.8","2":"2.8","3":"5.1","4":"2.4","5":"virginica"},{"1":"6.4","2":"3.2","3":"5.3","4":"2.3","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.5","4":"1.8","5":"virginica"},{"1":"7.7","2":"3.8","3":"6.7","4":"2.2","5":"virginica"},{"1":"7.7","2":"2.6","3":"6.9","4":"2.3","5":"virginica"},{"1":"6.0","2":"2.2","3":"5.0","4":"1.5","5":"virginica"},{"1":"6.9","2":"3.2","3":"5.7","4":"2.3","5":"virginica"},{"1":"5.6","2":"2.8","3":"4.9","4":"2.0","5":"virginica"},{"1":"7.7","2":"2.8","3":"6.7","4":"2.0","5":"virginica"},{"1":"6.3","2":"2.7","3":"4.9","4":"1.8","5":"virginica"},{"1":"6.7","2":"3.3","3":"5.7","4":"2.1","5":"virginica"},{"1":"7.2","2":"3.2","3":"6.0","4":"1.8","5":"virginica"},{"1":"6.2","2":"2.8","3":"4.8","4":"1.8","5":"virginica"},{"1":"6.1","2":"3.0","3":"4.9","4":"1.8","5":"virginica"},{"1":"6.4","2":"2.8","3":"5.6","4":"2.1","5":"virginica"},{"1":"7.2","2":"3.0","3":"5.8","4":"1.6","5":"virginica"},{"1":"7.4","2":"2.8","3":"6.1","4":"1.9","5":"virginica"},{"1":"7.9","2":"3.8","3":"6.4","4":"2.0","5":"virginica"},{"1":"6.4","2":"2.8","3":"5.6","4":"2.2","5":"virginica"},{"1":"6.3","2":"2.8","3":"5.1","4":"1.5","5":"virginica"},{"1":"6.1","2":"2.6","3":"5.6","4":"1.4","5":"virginica"},{"1":"7.7","2":"3.0","3":"6.1","4":"2.3","5":"virginica"},{"1":"6.3","2":"3.4","3":"5.6","4":"2.4","5":"virginica"},{"1":"6.4","2":"3.1","3":"5.5","4":"1.8","5":"virginica"},{"1":"6.0","2":"3.0","3":"4.8","4":"1.8","5":"virginica"},{"1":"6.9","2":"3.1","3":"5.4","4":"2.1","5":"virginica"},{"1":"6.7","2":"3.1","3":"5.6","4":"2.4","5":"virginica"},{"1":"6.9","2":"3.1","3":"5.1","4":"2.3","5":"virginica"},{"1":"5.8","2":"2.7","3":"5.1","4":"1.9","5":"virginica"},{"1":"6.8","2":"3.2","3":"5.9","4":"2.3","5":"virginica"},{"1":"6.7","2":"3.3","3":"5.7","4":"2.5","5":"virginica"},{"1":"6.7","2":"3.0","3":"5.2","4":"2.3","5":"virginica"},{"1":"6.3","2":"2.5","3":"5.0","4":"1.9","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.2","4":"2.0","5":"virginica"},{"1":"6.2","2":"3.4","3":"5.4","4":"2.3","5":"virginica"},{"1":"5.9","2":"3.0","3":"5.1","4":"1.8","5":"virginica"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<div id="task-1" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Task</h2>
-<p>Repeat the above task by changing the parameters <span class="math inline">\(\kappa\)</span> in order to see how changing <span class="math inline">\(\kappa\)</span> affects the convergence and the
-noise of the chain.</p>
-<pre class="r"><code>#
-#
-#</code></pre>
-<p>ANSWER: As we discussed in the lectures, reducing <span class="math inline">\(\kappa\)</span>, increases the number of
-snapshots, reduces the variance in the gradients, reduces the variance
-of the trace, and hence aims at making the upper bound of the error
-smaller.</p>
+</div>
+<div id="task-modify-the-data-given" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Task: Modify the data
+(given)</h2>
+<p>Create an object “y” with the targets of the examples (dataset).</p>
+<p>To do this use the function “class.ind{nnet}” to generate a class
+indicator function from a given factor. Function “class.ind” receives as
+arguments factor or vector of classes for cases, and returns a matrix
+which is zero except for the column corresponding to the class.</p>
+<p>It is used in problems with classification problem with multiple
+classes, in order to create a suitable output for the function
+nnet{nnet}. Check “?class.ind”.</p>
+<pre class="r"><code>y&lt;- class.ind( c(rep(&quot;s&quot;, 50), rep(&quot;c&quot;, 50), rep(&quot;v&quot;, 50)) )</code></pre>
+<p>Create an object “x” with the features of the examples (dataset) that
+contains the variables; “Sepal.Length”, “Sepal.Width”, and
+“Petal.Length”</p>
+<pre class="r"><code>x &lt;-iris[,-c(4,5)] </code></pre>
+</div>
+<div id="create-a-training-dataset-and-a-validatin-data-set" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Create a training
+dataset and a validatin data-set</h2>
+<p>Get a random sub sample of the <span class="math inline">\(y\)</span>
+and <span class="math inline">\(x\)</span> of size <span class="math inline">\(75\)</span> to be used as a training data set.</p>
+<p>Name the target part as “y_train”,a nd the features part as
+“x_train”.</p>
+<pre class="r"><code>ind &lt;- c(sample(1:50,25), sample(51:100,25), sample(101:150,25))
+y_train &lt;- y[ind,]
+x_train &lt;- x[ind,]</code></pre>
+<p>The rest of the data set , use it as a validation data set.</p>
+<p>Name the target part as “y_valid”,a nd the features part as
+“x_valid”.</p>
+<pre class="r"><code>y_valid &lt;- y[-ind,]
+x_valid &lt;- x[-ind,]</code></pre>
+</div>
+<div id="create-a-training-dataset-and-a-validatin-data-set-1" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Create a training
+dataset and a validatin data-set</h2>
+<p>Train a NN to address the classification problem with purpose for a
+given feature “x” to be able to clasify it as setosa, versicolor, or
+virginica.</p>
+<p>By using the R function nnet{nnet} fit a feed forward neural network
+with:</p>
+<ul>
+<li><p>one hidden layer,</p></li>
+<li><p>units in the hidden layer; i.e. <span class="math inline">\(T=2\)</span></p></li>
+<li><p>the output activation function is softmax</p></li>
+<li><p>use decay “decay=5e-4” – the arguments of nnet</p></li>
+<li><p>use maximum number of iterations for the SGD “maxit = 200” – the
+arguments of nnet</p></li>
+</ul>
+<p>Do it below</p>
+<pre class="r"><code>nnet.2.out &lt;- nnet(x_train, y_train,  
+            size = 2, 
+            decay = 5e-4, 
+            softmax = TRUE, 
+            maxit = 200)</code></pre>
+<pre><code>## # weights:  17
+## initial  value 88.576374 
+## iter  10 value 56.611159
+## iter  20 value 33.995306
+## iter  30 value 31.467367
+## iter  40 value 22.622018
+## iter  50 value 11.161608
+## iter  60 value 9.085869
+## iter  70 value 8.974688
+## iter  80 value 8.970396
+## iter  90 value 8.950860
+## iter 100 value 8.942992
+## iter 110 value 8.941658
+## iter 120 value 8.941535
+## iter 130 value 8.939557
+## iter 140 value 8.427579
+## iter 150 value 7.836067
+## iter 160 value 6.746713
+## iter 170 value 6.451619
+## iter 180 value 6.244829
+## iter 190 value 6.214348
+## iter 200 value 6.148779
+## final  value 6.148779 
+## stopped after 200 iterations</code></pre>
+</div>
+<div id="predict" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Predict</h2>
+<p>Using the output from nnet{nnet}, predict / classify the features in
+the validation dataset, and compare with the actual classes.</p>
+<p>You may use function “maxCol {base}”</p>
+<p>Do it below</p>
+<pre class="r"><code>#predictions
+nnet.2.pred &lt;- predict(nnet.2.out, x_valid)
+max.col(nnet.2.pred)</code></pre>
+<pre><code>##  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 3 1 1 3
+## [39] 1 1 1 3 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</code></pre>
+<pre class="r"><code>#actual labels
+max.col(y_valid)</code></pre>
+<pre><code>##  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1
+## [39] 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</code></pre>
+<pre class="r"><code># compare
+match = mean(max.col(nnet.2.pred)==max.col(y_valid))
+match </code></pre>
+<pre><code>## [1] 0.96</code></pre>
 </div>
 </div>
 

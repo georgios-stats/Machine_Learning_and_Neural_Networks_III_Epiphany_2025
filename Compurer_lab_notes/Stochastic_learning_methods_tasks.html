@@ -12,7 +12,7 @@
 <meta name="author" content="Georgios P. Karagiannis @ MATH3431 Machine Learning and Neural Networks III" />
 
 
-<title>Stochastic learning methods</title>
+<title>Projected Stochastic Gradient Descent algorithm</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1626,57 +1626,74 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Stochastic learning methods</h1>
+<h1 class="title toc-ignore">Projected Stochastic Gradient Descent
+algorithm</h1>
 <h3 class="subtitle">…on a binary classification problem</h3>
-<h4 class="author">Georgios P. Karagiannis @ MATH3431 Machine Learning and Neural Networks III</h4>
+<h4 class="author">Georgios P. Karagiannis @ MATH3431 Machine Learning
+and Neural Networks III</h4>
 
 </div>
 
 
 <!-- -------------------------------------------------------------------------------- -->
-<!-- Copyright 2023 Georgios Karagiannis -->
+<!-- Copyright 2024 Georgios Karagiannis -->
 <!-- georgios.karagiannis@durham.ac.uk -->
 <!-- Associate Professor -->
 <!-- Department of Mathematical Sciences, Durham University, Durham,  UK  -->
-<!-- This file is part of Machine Learning and Neural Networks III (MATH3431) -->
-<!-- which is the material of the course (MATH3431 Machine Learning and Neural Networks III) -->
+<!-- This file is part of Spatio-Temporal_Statistics_Michaelmas_2025 -->
+<!-- which is the material of the course -->
+<!-- MATH4341: Spatio-Temporal Statistics -->
+<!-- Epiphany term -->
 <!-- taught by Georgios P. Katagiannis in the Department of Mathematical Sciences   -->
-<!-- in the University of Durham  in Michaelmas term in 2019 -->
-<!-- Machine_Learning_and_Neural_Networks_III_Epiphany_2024 is free software: you can redistribute it and/or modify -->
-<!-- it under the terms of the GNU General Public License as published by -->
+<!-- in the University of Durham  in Michaelmas term in 2025 -->
+<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is free software: -->
+<!-- you can redistribute it and/or modify it-->
+<!-- under the terms of the GNU General Public License as published by -->
 <!-- the Free Software Foundation version 3 of the License. -->
-<!-- Machine_Learning_and_Neural_Networks_III_Epiphany_2024 is distributed in the hope that it will be useful, -->
+<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is distributed ->
+<!-- in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
 <!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
 <!-- GNU General Public License for more details. -->
 <!-- You should have received a copy of the GNU General Public License -->
-<!-- along with Machine_Learning_and_Neural_Networks_III_Epiphany_2024  If not, see <http://www.gnu.org/licenses/>. -->
+<!-- along with Spatio-Temporal_Statistics_Michaelmas_2024 -->
+<!-- If not, see <http://www.gnu.org/licenses/>. -->
 <!-- -------------------------------------------------------------------------------- -->
-<p><a href="https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/tree/main/Computer_practical#aim">Back to README</a></p>
+<p><a href="https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main?tab=readme-ov-file#computer-lab-notes">Back
+to README</a></p>
 <pre class="r"><code>rm(list=ls())</code></pre>
 <hr />
 <p><strong><em>Aim</em></strong></p>
 <ul>
 <li><p>practice in R,</p></li>
-<li><p>implement GD, batch/online SGD, AdaGrad, SGD with projection, SVRG algorithms in R</p></li>
-<li><p>refresh logistic regression, with Ridge penalty from term 1</p></li>
+<li><p>implement GD, batch/online SGD, AdaGrad, SGD with projection,
+SVRG algorithms in R</p></li>
+<li><p>refresh logistic regression, with Ridge penalty from term
+1</p></li>
 </ul>
 <hr />
 <p><strong><em>Reading material</em></strong></p>
 <ul>
 <li><p>Reference for <em>R</em>:</p>
 <ul>
-<li><a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Cheat sheet with basic commands</a></li>
+<li><a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Cheat
+sheet with basic commands</a></li>
 </ul></li>
-<li><p>Reference of <em>rmarkdown</em> (optional, supplementary material):</p>
+<li><p>Reference of <em>rmarkdown</em> (optional, supplementary
+material):</p>
 <ul>
-<li><p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown-2.0.pdf">R Markdown cheatsheet</a></p></li>
-<li><p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">R Markdown Reference Guide</a></p></li>
-<li><p><a href="https://yihui.name/knitr/options">knitr options</a></p></li>
+<li><p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown-2.0.pdf">R
+Markdown cheatsheet</a></p></li>
+<li><p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">R
+Markdown Reference Guide</a></p></li>
+<li><p><a href="https://yihui.name/knitr/options">knitr
+options</a></p></li>
 </ul></li>
-<li><p>Reference for <em>Latex</em> (optional, supplementary material):</p>
+<li><p>Reference for <em>Latex</em> (optional, supplementary
+material):</p>
 <ul>
-<li><a href="https://wch.github.io/latexsheet/latexsheet-a4.pdf">Latex Cheat Sheet</a></li>
+<li><a href="https://wch.github.io/latexsheet/latexsheet-a4.pdf">Latex
+Cheat Sheet</a></li>
 </ul></li>
 </ul>
 <hr />
@@ -1711,13 +1728,16 @@ set.seed(2023)</code></pre>
 <p>Consider the binary classification problem with input <span class="math inline">\(x\in\mathbb{R}\)</span> and output/labels <span class="math inline">\(y\in\{0,1\}\)</span>.</p>
 <p>The prediction rule is <span class="math display">\[
 h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
-\]</span> where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span> is the unknown parameter we wish to learn, and hence we can consider that the hypothesis class is</p>
+\]</span> where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span>
+is the unknown parameter we wish to learn, and hence we can consider
+that the hypothesis class is</p>
 <p><span class="math display">\[
 \mathcal{H}=\{w\in\mathbb{R}^{2}\}
 \]</span></p>
 <p>Consider there is available a dataset<br />
 <span class="math display">\[
-\mathcal{S}_{n}=\left\{ z_{i}=\left(y_{i},x_{i}\right)\right\} _{i=1}^{n}
+\mathcal{S}_{n}=\left\{ z_{i}=\left(y_{i},x_{i}\right)\right\}
+_{i=1}^{n}
 \]</span></p>
 <p>with <span class="math inline">\(y_{i}\in\{0,1\}\)</span> and <span class="math inline">\(x_{i}\in\mathbb{R}\)</span>.</p>
 <p>Recall that the sampling distribution is<br />
@@ -1725,7 +1745,9 @@ h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
 y|w \sim \text{Bernulli}(h_{w}(x)) \\
 h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
 \]</span></p>
-<p>The dataset <span class="math inline">\(\mathcal{S}_{n}=\{z_i=(x_i,y_i)\}\)</span> is generated from the data generation probability <span class="math inline">\(g(\cdot)\)</span> provided below as a routine. We pretend that we do not know <span class="math inline">\(g(\cdot)\)</span>.</p>
+<p>The dataset <span class="math inline">\(\mathcal{S}_{n}=\{z_i=(x_i,y_i)\}\)</span> is
+generated from the data generation probability <span class="math inline">\(g(\cdot)\)</span> provided below as a routine. We
+pretend that we do not know <span class="math inline">\(g(\cdot)\)</span>.</p>
 <pre class="r"><code>data_generating_model &lt;- function(n,w) {
   z &lt;- rep( NaN, times=n*2 )
   z &lt;- matrix(z, nrow = n, ncol = 2)
@@ -1735,9 +1757,11 @@ h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
   z[,2] &lt;- rbinom(n, size = 1, prob = p)
   return(z)
 }</code></pre>
-<p>Let the dataset <span class="math inline">\(\mathcal{S}_{n}\)</span> has size <span class="math inline">\(n=500\)</span>.</p>
+<p>Let the dataset <span class="math inline">\(\mathcal{S}_{n}\)</span>
+has size <span class="math inline">\(n=500\)</span>.</p>
 <p>Assume that the real values for the unknown parameters <span class="math inline">\(w\)</span> is <span class="math inline">\(w_{\text{true}}=(0.0,1.0)^\top\)</span>.</p>
-<p>The dataset containing the examples to train the model are generated below, and stores in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
+<p>The dataset containing the examples to train the model are generated
+below, and stores in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
 <pre class="r"><code>set.seed(2023)
 n_obs &lt;- 500
 w_true &lt;- c(0,1)  
@@ -1747,7 +1771,9 @@ w_true &lt;- as.numeric(glm(z_obs[,2]~ 1+ z_obs[,1],family = &quot;binomial&quot
 h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
 \]</span></p>
 <p>where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span>.</p>
-<p>The function <strong>prediction_rule(x,w)</strong> that returns the rule <span class="math inline">\(h\)</span> where <span class="math inline">\(x\)</span> is the input argument and <span class="math inline">\(w\)</span> is the unknown parameter is given below.</p>
+<p>The function <strong>prediction_rule(x,w)</strong> that returns the
+rule <span class="math inline">\(h\)</span> where <span class="math inline">\(x\)</span> is the input argument and <span class="math inline">\(w\)</span> is the unknown parameter is given
+below.</p>
 <pre class="r"><code>prediction_rule &lt;- function(x,w) {
   h &lt;- w[1]+w[2]*x
   h &lt;- exp(h) / (1.0 + exp(h) )
@@ -1760,7 +1786,11 @@ f\left(y|w\right)=\prod_{i=1}^{n}\left(h_{i}\right)^{y_{i}}\left(1-h_{i}\right)^
 <p><span class="math display">\[
 \ell\left(w,z=\left(x,y\right)\right)=-y\log\left(h(x)\right)-\left(1-y\right)\log\left(1-h(x)\right)
 \]</span></p>
-<p>The code for the loss function is provided below as <strong>loss_fun(w,z)</strong> that computes the loss function, where <span class="math inline">\(z=(x,y)\)</span> is one example (observation) and <span class="math inline">\(w\)</span> is the unknown parameter.</p>
+<p>The code for the loss function is provided below as
+<strong>loss_fun(w,z)</strong> that computes the loss function, where
+<span class="math inline">\(z=(x,y)\)</span> is one example
+(observation) and <span class="math inline">\(w\)</span> is the unknown
+parameter.</p>
 <pre class="r"><code>loss_fun &lt;- function(w,z) {
   x = z[1]
   y = z[2]
@@ -1771,17 +1801,25 @@ f\left(y|w\right)=\prod_{i=1}^{n}\left(h_{i}\right)^{y_{i}}\left(1-h_{i}\right)^
 <p>The Risk function under the data generation model <span class="math inline">\(g\)</span> is</p>
 <p><span class="math display">\[
 \begin{align*}
-R_{g}\left(w\right)= &amp; \text{E}\left(\ell\left(w,z=\left(x,y\right)\right)\right)\\
-= &amp; \text{E}\left(-y\log\left(h\left(w;x\right)\right)-\left(1-y\right)\log\left(1-h\left(w;x\right)\right)\right)
+R_{g}\left(w\right)= &amp;
+\text{E}\left(\ell\left(w,z=\left(x,y\right)\right)\right)\\
+= &amp;
+\text{E}\left(-y\log\left(h\left(w;x\right)\right)-\left(1-y\right)\log\left(1-h\left(w;x\right)\right)\right)
 \end{align*}
 \]</span></p>
 <p>The Empirical risk function is <span class="math display">\[
 \begin{align*}
-\hat{R}_{S}\left(w\right) &amp; \frac{1}{n}\sum_{i=1}^{n}\ell\left(w,z_{i}=\left(x_{i},y_{i}\right)\right)\\
-= &amp; -\frac{1}{n}\sum_{i=1}^{n}\left(y_{i}\log\left(h(w;x_{i})\right)+\left(1-y\right)\log\left(1-h(w;x_{i})\right)\right)
+\hat{R}_{S}\left(w\right) &amp;
+\frac{1}{n}\sum_{i=1}^{n}\ell\left(w,z_{i}=\left(x_{i},y_{i}\right)\right)\\
+= &amp;
+-\frac{1}{n}\sum_{i=1}^{n}\left(y_{i}\log\left(h(w;x_{i})\right)+\left(1-y\right)\log\left(1-h(w;x_{i})\right)\right)
 \end{align*}
 \]</span></p>
-<p>The function <strong>empirical_risk_fun(w,z,n)</strong> computes the empirical risk, where <span class="math inline">\(z=(x,y)\)</span> is an example, <span class="math inline">\(w\)</span> is the unknown parameter, and <span class="math inline">\(n\)</span> is the data size is given below.</p>
+<p>The function <strong>empirical_risk_fun(w,z,n)</strong> computes the
+empirical risk, where <span class="math inline">\(z=(x,y)\)</span> is an
+example, <span class="math inline">\(w\)</span> is the unknown
+parameter, and <span class="math inline">\(n\)</span> is the data size
+is given below.</p>
 <pre class="r"><code>empirical_risk_fun &lt;- function(w,z,n) {
   x = z[,1]
   y = z[,2]
@@ -1795,16 +1833,19 @@ R_{g}\left(w\right)= &amp; \text{E}\left(\ell\left(w,z=\left(x,y\right)\right)\r
 </div>
 <div id="preparations" class="section level1 unnumbered">
 <h1 class="unnumbered">Preparations</h1>
-<p>Code a function <strong>learning_rate(t,t0)</strong> that computes the learning rate sequence <span class="math display">\[
+<p>Code a function <strong>learning_rate(t,t0)</strong> that computes
+the learning rate sequence <span class="math display">\[
 \eta_{t}=\frac{t_0}{t}
 \]</span><br />
-where <span class="math inline">\(t\)</span> is the iteration stage and <span class="math inline">\(t_0\)</span> is a constant.</p>
+where <span class="math inline">\(t\)</span> is the iteration stage and
+<span class="math inline">\(t_0\)</span> is a constant.</p>
 <p>Use <span class="math inline">\(t_0=3\)</span> as default value.</p>
 <pre class="r"><code>learning_rate &lt;-function(t,t0=3) {
   eta &lt;- t0 / t
   return( eta )
 }</code></pre>
-<p>Code the function <strong>grad_loss_fun(w,z)</strong> that returns the gradient of the loss function at parameter value <span class="math inline">\(w\)</span>, and at example value <span class="math inline">\(z=(x,y)\)</span>.</p>
+<p>Code the function <strong>grad_loss_fun(w,z)</strong> that returns
+the gradient of the loss function at parameter value <span class="math inline">\(w\)</span>, and at example value <span class="math inline">\(z=(x,y)\)</span>.</p>
 <pre class="r"><code>grad_loss_fun &lt;- function(w,z) {
   x = z[1]
   y = z[2]
@@ -1812,7 +1853,10 @@ where <span class="math inline">\(t\)</span> is the iteration stage and <span cl
   grd &lt;- c(h-y, (h-y)*x)
   return (grd)
 }</code></pre>
-<p>Code the function <strong>grad_risk_fun &lt;- function(w,z,n)</strong> that returns the gradient of the risk function at parameter value <span class="math inline">\(w\)</span>, and using the data set <span class="math inline">\(z\)</span> of size <span class="math inline">\(n\times 2\)</span>.</p>
+<p>Code the function <strong>grad_risk_fun &lt;-
+function(w,z,n)</strong> that returns the gradient of the risk function
+at parameter value <span class="math inline">\(w\)</span>, and using the
+data set <span class="math inline">\(z\)</span> of size <span class="math inline">\(n\times 2\)</span>.</p>
 <pre class="r"><code>grad_risk_fun &lt;- function(w,z,n) {
   grd &lt;- 0.0
   for (i in 1:n) {
@@ -1822,25 +1866,35 @@ where <span class="math inline">\(t\)</span> is the iteration stage and <span cl
   return (grd)
 }</code></pre>
 <p>Compute the gradient of the empirical risk function at point <span class="math inline">\(w=(-0.1,1.5)^\top\)</span>.</p>
-<p>Use the whole dataset <span class="math inline">\(\{z_{i};i=1,...,n\}\)</span> (set of examples).</p>
+<p>Use the whole dataset <span class="math inline">\(\{z_{i};i=1,...,n\}\)</span> (set of
+examples).</p>
 <p>Do this by using the command ‘grad_risk_fun’ provided above.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
-<p>Compute the gradient of the empirical risk function at point <span class="math inline">\(w=(-0.3,3)^\top\)</span>. Use the whole dataset <span class="math inline">\(\{z_{i};i=1,...,n\}\)</span> (set of examples). Do this by using the function ‘grad{numDeriv}’ from the R package numDeriv.</p>
-<p>E.g., you can use it as numDeriv::grad( fun, w ). You can try ?grad for more info.</p>
+<p>Compute the gradient of the empirical risk function at point <span class="math inline">\(w=(-0.3,3)^\top\)</span>. Use the whole dataset
+<span class="math inline">\(\{z_{i};i=1,...,n\}\)</span> (set of
+examples). Do this by using the function ‘grad{numDeriv}’ from the R
+package numDeriv.</p>
+<p>E.g., you can use it as numDeriv::grad( fun, w ). You can try ?grad
+for more info.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
 </div>
 <div id="gradient-descent" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Gradient descent</h1>
+<h1><span class="header-section-number">1</span> Gradient descent</h1>
 <div id="task" class="section level2" number="1.1">
-<h2 number="1.1"><span class="header-section-number">1.1</span> Task</h2>
-<p>Code a Gradient Descent (GD) algorithm with constant learning rate <span class="math inline">\(\eta_{t}=0.5\)</span> that returns the chain of all the <span class="math inline">\(\{w^{(t)}\}\)</span> produced.</p>
-<p>The termination criterion is such that the iterations stop when the the total number of iterations excesses <span class="math inline">\(T=300\)</span>.</p>
+<h2><span class="header-section-number">1.1</span> Task</h2>
+<p>Code a Gradient Descent (GD) algorithm with constant learning rate
+<span class="math inline">\(\eta_{t}=0.5\)</span> that returns the chain
+of all the <span class="math inline">\(\{w^{(t)}\}\)</span>
+produced.</p>
+<p>The termination criterion is such that the iterations stop when the
+the total number of iterations excesses <span class="math inline">\(T=300\)</span>.</p>
 <p>Use seed <span class="math inline">\(w^{(0)}=(-0.3,3)^\top\)</span>.</p>
-<p>You may use the R function <strong>grad{numDeriv}</strong> to numerically compute the gradient;</p>
+<p>You may use the R function <strong>grad{numDeriv}</strong> to
+numerically compute the gradient;</p>
 <ul>
 <li><p>e.g. numDeriv::grad( erf_fun, w ) .</p></li>
 <li><p>Try ?grad for more info.</p></li>
@@ -1870,91 +1924,120 @@ while ( Qstop == 0 ) {
 <pre><code>## 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300</code></pre>
 </div>
 <div id="task-1" class="section level2" number="1.2">
-<h2 number="1.2"><span class="header-section-number">1.2</span> Task</h2>
-<p>Plot the chain <span class="math inline">\(\{w_1^{(t)}\}\)</span> against the iteration <span class="math inline">\(t\)</span>.</p>
+<h2><span class="header-section-number">1.2</span> Task</h2>
+<p>Plot the chain <span class="math inline">\(\{w_1^{(t)}\}\)</span>
+against the iteration <span class="math inline">\(t\)</span>.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
-<p>Plot the chain <span class="math inline">\(\{w_2^{(t)}\}\)</span> against the iteration <span class="math inline">\(t\)</span>.</p>
+<p>Plot the chain <span class="math inline">\(\{w_2^{(t)}\}\)</span>
+against the iteration <span class="math inline">\(t\)</span>.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
 </div>
 <div id="task-2" class="section level2" number="1.3">
-<h2 number="1.3"><span class="header-section-number">1.3</span> Task</h2>
-<p>Re-run the previous GD by changing the algorithmic parameter values for <span class="math inline">\(\eta\)</span> for some in the range <span class="math inline">\((0.001,1.0)\)</span>.</p>
+<h2><span class="header-section-number">1.3</span> Task</h2>
+<p>Re-run the previous GD by changing the algorithmic parameter values
+for <span class="math inline">\(\eta\)</span> for some in the range
+<span class="math inline">\((0.001,1.0)\)</span>.</p>
 <p>Check how the algorithm behaves by plotting the chains <span class="math inline">\(\{w_1^{(t)}\}\)</span> and <span class="math inline">\(\{w_2^{(t)}\}\)</span> against the iteration <span class="math inline">\(t\)</span>.</p>
-<p>If necessary change the termination criterion to consider more or less iterations.</p>
+<p>If necessary change the termination criterion to consider more or
+less iterations.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
 </div>
 <div id="task-3" class="section level2" number="1.4">
-<h2 number="1.4"><span class="header-section-number">1.4</span> Task</h2>
-<p>Re run GD by using a learning rate sequence of the form <span class="math inline">\(\eta_t = t_0/t\)</span> for different values of <span class="math inline">\(t_0&gt;0\)</span> that you will choose.</p>
+<h2><span class="header-section-number">1.4</span> Task</h2>
+<p>Re run GD by using a learning rate sequence of the form <span class="math inline">\(\eta_t = t_0/t\)</span> for different values of
+<span class="math inline">\(t_0&gt;0\)</span> that you will choose.</p>
 <p>Check how the algorithm behaves by plotting the chains <span class="math inline">\(\{w_1^{(t)}\}\)</span> and <span class="math inline">\(\{w_2^{(t)}\}\)</span> against the iteration <span class="math inline">\(t\)</span>.</p>
-<p>If necessary change the termination criterion to consider more or less iterations.</p>
+<p>If necessary change the termination criterion to consider more or
+less iterations.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
 </div>
 </div>
 <div id="batch-stochastic-gradient-descent" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Batch Stochastic Gradient Descent</h1>
-<p>Let the data set <span class="math inline">\(\mathcal{S}_{n}\)</span> has size <span class="math inline">\(n=1000000\)</span>.</p>
+<h1><span class="header-section-number">2</span> Batch Stochastic
+Gradient Descent</h1>
+<p>Let the data set <span class="math inline">\(\mathcal{S}_{n}\)</span>
+has size <span class="math inline">\(n=1000000\)</span>.</p>
 <p>Assume that the real values for the unknown parameters <span class="math inline">\(w\)</span> is <span class="math inline">\(w_{\text{true}}=(0.0,1.0)^\top\)</span>.</p>
-<p>The dataset containing the examples to train the model are generated below, and stored in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
+<p>The dataset containing the examples to train the model are generated
+below, and stored in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
 <pre class="r"><code>set.seed(2023)
 n_obs &lt;- 1000000
 w_true &lt;- c(0,1)  
 z_obs &lt;- data_generating_model(n = n_obs, w = w_true)
 w_true &lt;- as.numeric(glm(z_obs[,2]~ 1+ z_obs[,1],family = &quot;binomial&quot; )$coefficients)</code></pre>
 <div id="task-4" class="section level2" number="2.1">
-<h2 number="2.1"><span class="header-section-number">2.1</span> Task</h2>
-<p>Code a batch Stochastic Gradient Descent (GD) algorithm with learning rate <span class="math inline">\(\eta_{t}=0.5\)</span> and batch size <span class="math inline">\(m=10\)</span> that returns the chain of <span class="math inline">\(\{w^{(t)}\}\)</span>.</p>
-<p>The batch sampling may be performed as a sampling with replacement (see ?sample.int).</p>
-<p>The termination criterion is when the total number of iterations excesses <span class="math inline">\(T=300\)</span>. Seed with <span class="math inline">\(w^{(0)}=(-0.3,3)^\top\)</span>.</p>
+<h2><span class="header-section-number">2.1</span> Task</h2>
+<p>Code a batch Stochastic Gradient Descent (GD) algorithm with learning
+rate <span class="math inline">\(\eta_{t}=0.5\)</span> and batch size
+<span class="math inline">\(m=10\)</span> that returns the chain of
+<span class="math inline">\(\{w^{(t)}\}\)</span>.</p>
+<p>The batch sampling may be performed as a sampling with replacement
+(see ?sample.int).</p>
+<p>The termination criterion is when the total number of iterations
+excesses <span class="math inline">\(T=300\)</span>. Seed with <span class="math inline">\(w^{(0)}=(-0.3,3)^\top\)</span>.</p>
 <pre class="r"><code>#
 #
 #</code></pre>
 </div>
 <div id="task-5" class="section level2" number="2.2">
-<h2 number="2.2"><span class="header-section-number">2.2</span> Task</h2>
-<p>Re run the batch SGD by experimenting and changing the values of the learning rate <span class="math inline">\(\eta\)</span> and that of the batch size <span class="math inline">\(m\)</span>.</p>
+<h2><span class="header-section-number">2.2</span> Task</h2>
+<p>Re run the batch SGD by experimenting and changing the values of the
+learning rate <span class="math inline">\(\eta\)</span> and that of the
+batch size <span class="math inline">\(m\)</span>.</p>
 <p>Plot the produced chains of <span class="math inline">\(\{w^{(t)}\}\)</span>.</p>
-<p>What is the impact of the the learning rate <span class="math inline">\(eta\)</span> and that of the batch size <span class="math inline">\(m\)</span> to the noise and the speed of the convergence ?</p>
+<p>What is the impact of the the learning rate <span class="math inline">\(eta\)</span> and that of the batch size <span class="math inline">\(m\)</span> to the noise and the speed of the
+convergence ?</p>
 <pre class="r"><code>#
 #
 #</code></pre>
-<p>ANSWER; As discussed in the lectures, the bigger the batch size the smaller the variation of the gradient, hence the error is smaller.</p>
+<p>ANSWER; As discussed in the lectures, the bigger the batch size the
+smaller the variation of the gradient, hence the error is smaller.</p>
 </div>
 <div id="additional-tasks" class="section level2" number="2.3">
-<h2 number="2.3"><span class="header-section-number">2.3</span> Additional tasks</h2>
+<h2><span class="header-section-number">2.3</span> Additional tasks</h2>
 <div id="adagrad" class="section level3" number="2.3.1">
-<h3 number="2.3.1"><span class="header-section-number">2.3.1</span> AdaGrad</h3>
-<p>What would you do it you wish the learning rate to be automatically adjusted?</p>
+<h3><span class="header-section-number">2.3.1</span> AdaGrad</h3>
+<p>What would you do it you wish the learning rate to be automatically
+adjusted?</p>
 <p>Practice on the following variation.</p>
 <ul>
-<li><p><a href="http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_practical/Stochastic_learning_methods_AdaGrad_tasks.nb.html">LINK TO TASKS</a></p></li>
-<li><p><a href="http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_practical/Stochastic_learning_methods_AdaGrad_solutions.nb.html">LINK TO SOLUTIONS</a></p></li>
+<li><p><a href="https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_AdaGrad_tasks.html">LINK
+TO TASKS</a></p></li>
+<li><p><a href="https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_AdaGrad_complete.html">LINK
+TO COMPLETE</a></p></li>
 </ul>
 </div>
 <div id="projection" class="section level3" number="2.3.2">
-<h3 number="2.3.2"><span class="header-section-number">2.3.2</span> Projection</h3>
-<p>What would you do if the parametric space / hypothesis class is constrained?</p>
+<h3><span class="header-section-number">2.3.2</span> Projection</h3>
+<p>What would you do if the parametric space / hypothesis class is
+constrained?</p>
 <p>Practice on the following variation.</p>
 <ul>
-<li><p><a href="http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_practical/Stochastic_learning_methods_PrSG_tasks.nb.html">LINK TO TASKS</a></p></li>
-<li><p><a href="http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_practical/Stochastic_learning_methods_PrSG_solutions.nb.html">LINK TO SOLUTIONS</a></p></li>
+<li><p><a href="https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_PrSG_tasks.html">LINK
+TO TASKS</a></p></li>
+<li><p><a href="https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_PrSG_complete.html">LINK
+TO COMPLETE</a></p></li>
 </ul>
 </div>
 <div id="variance-reduction" class="section level3" number="2.3.3">
-<h3 number="2.3.3"><span class="header-section-number">2.3.3</span> Variance reduction</h3>
-<p>What would you do it you wanted to reduce the variance of the stochastic gradient?</p>
+<h3><span class="header-section-number">2.3.3</span> Variance
+reduction</h3>
+<p>What would you do it you wanted to reduce the variance of the
+stochastic gradient?</p>
 <p>Practice on the following variation.</p>
 <ul>
-<li><p><a href="http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_practical/Stochastic_learning_methods_VRSG_tasks.nb.html">LINK TO TASKS</a></p></li>
-<li><p><a href="http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_practical/Stochastic_learning_methods_VRSG_solutions.nb.html">LINK TO SOLUTIONS</a></p></li>
+<li><p><a href="https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_tasks.html">LINK
+TO TASKS</a></p></li>
+<li><p><a href="https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_complete.html">LINK
+TO COMPLETE</a></p></li>
 </ul>
 </div>
 </div>
