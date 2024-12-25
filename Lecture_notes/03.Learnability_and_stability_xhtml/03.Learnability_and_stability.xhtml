@@ -1,0 +1,6843 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="generator" content="LyX 2.4.1" />
+<title>LyX Document</title>
+<style>
+/* Layout-provided Styles */
+div.standard {
+text-align: left;
+
+}
+div.plain_layout {
+text-align: left;
+
+}
+h3.subsection_ {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+ul.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+h2.section {
+font-weight: normal;
+font-style: normal;
+font-variant: small-caps;
+font-size: medium;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+div.theorem {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.theorem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.note {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.note_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.definition {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.definition_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+dl.description dt { font-weight: bold; }
+div.remark {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.remark_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.proposition {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.proposition_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.proof {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.proof_label {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.notation {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.notation_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+h3.subsection {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+span.subsection_label {
+font-weight: normal;
+font-size: medium;
+
+}
+div.assumption {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.assumption_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.fact {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.fact_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.summary {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.summary_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
+
+
+</style>
+</head>
+<body dir="auto">
+<div class='standard' id='magicparlabel-1'><div class='Shadowbox'>
+
+<div class='plain_layout' id='magicparlabel-10'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
+Epiphany term, 2024<div style='height:3ex'></div></div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Handout <a href="#enu_Handout___Learnability_">enu:Handout-:-Learnability,</a>: Learnability and stability in learning problems <div style='height:3ex'></div></div>
+
+<div class='plain_layout' id='magicparlabel-20'>Lecturer &amp; author: Georgios P. Karagiannis 
+<a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+
+<div class='plain_layout' id='magicparlabel-21'><hr />
+<div style='height:3ex'></div></div>
+<h3 class='subsection_' id='magicparlabel-22'>Aim</h3>
+<div class='plain_layout' id='magicparlabel-23'>To introduce concepts PAC, fitting vs stability trade off, stability, and their implementation in regularization problems and convex problems.</div>
+
+<div class='plain_layout' id='magicparlabel-24'><hr />
+</div>
+<h3 class='subsection_' id='magicparlabel-25'>Reading&#xA0;list&#xA0;&amp;&#xA0;references:</h3>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-26'>Shalev-Shwartz, S., &amp; Ben-David, S. (2014). Understanding machine learning: From theory to algorithms. Cambridge university press.
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-27'>Ch. 2, 3, 13</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-28'>Vapnik, V. (2000). The nature of statistical learning theory. Springer science &amp; business media. </li>
+</ul>
+</div></div>
+<section>
+<h2 class='section' id='magicparlabel-29'><span class="section_label">1</span> Learnable Probably Approximately Correct (PAC) Learning</h2>
+<div class='note'>
+<div class="note_item" id='magicparlabel-30'><span class="note_label">Note 1.</span>
+We formally define the broad learning problem we will work on. </div>
+</div>
+<div class='standard' id='magicparlabel-31'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-32'><span class="note_label">Note 2.</span>
+Learning algorithms <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ use training data sets <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+ which may miss characteristics of the unknown data-generating process <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+. Essentially, approximations (aka errors) are inevitable; some characteristics of data generating process <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ will be missed even if we use a very representative training set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+. We cannot hope that the learning algorithm will find a hypothesis whose error is smaller than the minimal possible error. </div>
+</div>
+<div class='standard' id='magicparlabel-33'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-34'><span class="note_label">Note 3.</span>
+The PAC learning problem requires no prior assumptions about the data-generating process <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+. It requires that the learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ will find a predictor <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ whose error is not much larger than the best possible error of a predictor in some given benchmark hypothesis class. So essentially, in practice, the researcher&#8217;s effort falls on the hypothesis class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+.</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-35'><span class="definition_label">Definition 4.</span>
+<a id="def__Agnostic_PAC_Learnability" /> (Agnostic PAC Learnability for General Loss Functions) A hypothesis class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ is agnostic PAC learnable with respect to a domain <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>Z</mi>
+</mstyle>
+</math>
+ and a loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+ <mo>&#x00D7;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <msub>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo stretchy='false'>+</mo>
+ </msub>
+</mrow>
+</math>
+, if there exist a function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>m</mi>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+ </msub>
+ <mo stretchy='false'>:</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mn>0</mn>
+    <mo stretchy='false'>,</mo>
+    <mn>1</mn>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ and a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ with the following property: </div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-36'>for every <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B4;</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ over <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>Z</mi>
+</mstyle>
+</math>
+, when running algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ given training set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mi>m</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>m</mi>
+   </msub>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>z</mi>
+  <mi>i</mi>
+ </msub>
+ <mover accent='false'>
+  <mo>&#x223C;</mo>
+  <mtext>IID</mtext>
+ </mover>
+ <mi>g</mi>
+</mrow>
+</math>
+ for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <msub>
+  <mi>m</mi>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3F5;</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3B4;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ returns <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+</mrow>
+</math>
+ such as <a id="eq__1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <munder>
+     <mo>Pr</mo>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mi>m</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <munder>
+       <mo>min</mo>
+       <mrow>
+        <mi>h</mi>
+        <mo stretchy='false'>'</mo>
+        <mo>&#x2208;</mo>
+        <mstyle mathvariant='script'>
+         <mi>H</mi>
+        </mstyle>
+       </mrow>
+      </munder>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <msub>
+         <mi>R</mi>
+         <mi>g</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>h</mi>
+          <mo stretchy='false'>'</mo>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo>&#x2264;</mo>
+      <mi>&#x3F5;</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2265;</mo>
+    <mn>1</mn>
+    <mo stretchy='false'>-</mo>
+    <mi>&#x3B4;</mi>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mtext>(1.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+</ul>
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-37'><span class="note_label">Note 5.</span>
+It may be easier to work with expectations: by using Markov inequality <a href="#eq__1">(1.1)</a> becomes <a id="eq__2" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <munder>
+     <mo>Pr</mo>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mi>m</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <munder>
+       <mo>min</mo>
+       <mrow>
+        <mi>h</mi>
+        <mo stretchy='false'>'</mo>
+        <mo>&#x2208;</mo>
+        <mstyle mathvariant='script'>
+         <mi>H</mi>
+        </mstyle>
+       </mrow>
+      </munder>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <msub>
+         <mi>R</mi>
+         <mi>g</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>h</mi>
+          <mo stretchy='false'>'</mo>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo>&#x2264;</mo>
+      <mi>&#x3F5;</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2265;</mo>
+    <mn>1</mn>
+    <mo stretchy='false'>-</mo>
+    <mfrac>
+     <mn>1</mn>
+     <mi>&#x3F5;</mi>
+    </mfrac>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mi>m</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <munder>
+       <mo>min</mo>
+       <mrow>
+        <mi>h</mi>
+        <mo stretchy='false'>'</mo>
+        <mo>&#x2208;</mo>
+        <mstyle mathvariant='script'>
+         <mi>H</mi>
+        </mstyle>
+       </mrow>
+      </munder>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <msub>
+         <mi>R</mi>
+         <mi>g</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>h</mi>
+          <mo stretchy='false'>'</mo>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(1.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ and hence we need to work with expectations and bounded above. </div>
+<dl class='description'>
+<dt class="description_label">Hint</dt>
+<dd class="description_item" id='magicparlabel-38'> Markov inequality <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>Pr</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>X</mi>
+   <mo>&#x2265;</mo>
+   <mi>a</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>a</mi>
+ </mfrac>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mi>X</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>X</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+. </dd>
+</dl>
+</div>
+<div class='standard' id='magicparlabel-39'>
+<br />
+</div>
+<div class='remark'>
+<div class="remark_item" id='magicparlabel-40'><span class="remark_label">Remark 6.</span>
+About <a href="#eq__2">1.2</a>: The accuracy parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3F5;</mi>
+</math>
+ determines how far the output rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mi>m</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ can be from the optimal one (this corresponds to the `approximately correct&#8217;). The confidence parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B4;</mi>
+</math>
+ indicates how likely the classifier is to meet that accuracy requirement (corresponds to the “probably” part of “PAC”). </div>
+</div>
+<div class='standard' id='magicparlabel-41'>
+<br />
+</div>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-42'><span class="section_label">2</span> Analysis of the risk based on the trade-off fitting vs stability</h2>
+<div class='note'>
+<div class="note_item" id='magicparlabel-43'><span class="note_label">Note 7.</span>
+Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>R</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>min</mo>
+  <mrow>
+   <mi>&#x2200;</mi>
+   <mi>h</mi>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>R</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>h</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ be an ideal/optimal (hence minimum) Risk, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ the learning rule from a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ trained against dataset <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+. The Risk of a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ can be decomposed as<a id="eq__7" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mi>g</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msup>
+     <mi>R</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02C6;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msup>
+     <mi>R</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+    <mo stretchy='false'>+</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <msub>
+        <mi>R</mi>
+        <mi>g</mi>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mstyle mathvariant='fraktur'>
+          <mi>A</mi>
+         </mstyle>
+         <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mover>
+         <mi>R</mi>
+         <mo stretchy='true'>&#x02C6;</mo>
+        </mover>
+        <mstyle mathvariant='script'>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+        </mstyle>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mstyle mathvariant='fraktur'>
+          <mi>A</mi>
+         </mstyle>
+         <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mtext>over-fitting</mtext>
+    </munder>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-44'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-45'><span class="note_label">Note 8.</span>
+Over-fitting can be represented by <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. However, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is a random variable and, here, for our computational convenience, we focus on its expectation w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo>&#x223C;</mo>
+ <mi>g</mi>
+</mrow>
+</math>
+. Hence, we provide the following (arguable) definition for over-fitting on which we base our analysis.</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-46'><span class="definition_label">Definition 9.</span>
+<a id="def_Let__be_1" />  For a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+, as a measure of over-fitting we consider the expected difference between true Risk and empirical Risk <a id="eq__8" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-55'>
+<br />
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-56'><span class="definition_label">Definition 10.</span>
+<a id="def_Let__be" /> We say that learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ suffers from over-fitting when <a href="#eq__8">(2.2)</a> is `too&#8217; large. </div>
+</div>
+<div class='standard' id='magicparlabel-57'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-58'><span class="note_label">Note 11.</span>
+The expected Risk of a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ can be decomposed as<a id="eq_" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <msub>
+        <mtext>E</mtext>
+        <mrow>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>&#x223C;</mo>
+         <mi>g</mi>
+        </mrow>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <msub>
+          <mover>
+           <mi>R</mi>
+           <mo stretchy='true'>&#x02C6;</mo>
+          </mover>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+         </msub>
+         <mrow>
+          <mo>(</mo>
+          <mrow>
+           <mstyle mathvariant='fraktur'>
+            <mi>A</mi>
+           </mstyle>
+           <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='script'>
+             <mi>S</mi>
+            </mstyle>
+            <mo>)</mo>
+           </mrow>
+          </mrow>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mtext>I</mtext>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </munder>
+    <mo stretchy='false'>+</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <msub>
+        <mtext>E</mtext>
+        <mrow>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>&#x223C;</mo>
+         <mi>g</mi>
+        </mrow>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <msub>
+          <mi>R</mi>
+          <mi>g</mi>
+         </msub>
+         <mrow>
+          <mo>(</mo>
+          <mrow>
+           <mstyle mathvariant='fraktur'>
+            <mi>A</mi>
+           </mstyle>
+           <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='script'>
+             <mi>S</mi>
+            </mstyle>
+            <mo>)</mo>
+           </mrow>
+          </mrow>
+          <mo>)</mo>
+         </mrow>
+         <mo stretchy='false'>-</mo>
+         <msub>
+          <mover>
+           <mi>R</mi>
+           <mo stretchy='true'>&#x02C6;</mo>
+          </mover>
+          <mstyle mathvariant='script'>
+           <mstyle mathvariant='script'>
+            <mi>S</mi>
+           </mstyle>
+          </mstyle>
+         </msub>
+         <mrow>
+          <mo>(</mo>
+          <mrow>
+           <mstyle mathvariant='fraktur'>
+            <mi>A</mi>
+           </mstyle>
+           <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant='script'>
+             <mi>S</mi>
+            </mstyle>
+            <mo>)</mo>
+           </mrow>
+          </mrow>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mtext>II</mtext>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </munder>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+by applying expectations in <a href="#eq__7">(2.1)</a> and ignoring <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>R</mi>
+ <mo stretchy='false'>*</mo>
+</msup>
+</math>
+. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>I</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ indicates how well <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ fits the training set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+ , and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>II</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ indicates the discrepancy between the true and empirical risks of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. In Section <a href="#sec_Stability_and_over_fitting">3</a>, we argue that the over-fitting term <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>II</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ is directly related to a certain type of stability of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-59'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-60'><span class="note_label">Note 12.</span>
+The following result connects the need for upper bounding (and minimizing this bound) the Expected Risk in <a href="#eq_">(2.3)</a> and PAC learning (Definition <a href="#def__Agnostic_PAC_Learnability">4</a>). </div>
+</div>
+<div class='standard' id='magicparlabel-61'>
+<br />
+</div>
+<div class='proposition'>
+<div class="proposition_item" id='magicparlabel-62'><span class="proposition_label">Proposition 13.</span>
+<a id="prop_Let__be" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ be a learning algorithm that guarantees the following: </div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-63'><i>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <msub>
+  <mi>m</mi>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>&#x3F5;</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ then for every distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+, it is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <msub>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mi>m</mi>
+      </msub>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <munder>
+  <mo>min</mo>
+  <mrow>
+   <mi>h</mi>
+   <mo stretchy='false'>'</mo>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>H</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>h</mi>
+     <mo stretchy='false'>'</mo>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>&#x3F5;</mi>
+</mrow>
+</math>
+</i></li>
+</ul>
+<div class='standard' id='magicparlabel-64'><i>Then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ satisfies the PAC guarantee in Definition <a href="#def__Agnostic_PAC_Learnability">4</a>:</i></div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-65'><i>for every <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B4;</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, if </i><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <msub>
+  <mi>m</mi>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3F5;</mi>
+   <mi>&#x3B4;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ then 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <munder>
+  <mo>Pr</mo>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <msub>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mi>m</mi>
+      </msub>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <munder>
+    <mo>min</mo>
+    <mrow>
+     <mi>h</mi>
+     <mo stretchy='false'>'</mo>
+     <mo>&#x2208;</mo>
+     <mstyle mathvariant='script'>
+      <mi>H</mi>
+     </mstyle>
+    </mrow>
+   </munder>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>R</mi>
+      <mi>g</mi>
+     </msub>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>h</mi>
+       <mo stretchy='false'>'</mo>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo>&#x2264;</mo>
+   <mi>&#x3F5;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2265;</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x3B4;</mi>
+</mrow>
+</math>
+</li>
+</ul>
+<div class='proof'>
+<div class="proof_item" id='magicparlabel-66'><span class="proof_label">Proof.</span>
+Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BE;</mi>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <msub>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+     <mi>m</mi>
+    </msub>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <munder>
+  <mo>min</mo>
+  <mrow>
+   <mi>h</mi>
+   <mo stretchy='false'>'</mo>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>H</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>h</mi>
+     <mo stretchy='false'>'</mo>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. From Markov&#8217;s inequality <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>Pr</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2265;</mo>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>&#x3BE;</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>/</mo>
+   <mi>&#x3B4;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mrow>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>&#x3BE;</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>/</mo>
+   <mi>&#x3B4;</mi>
+  </mrow>
+ </mfrac>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mi>&#x3BE;</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3B4;</mi>
+</mrow>
+</math>
+. Namely, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>Pr</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2264;</mo>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>&#x3BE;</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>/</mo>
+   <mi>&#x3B4;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x3B4;</mi>
+</mrow>
+</math>
+. But it is given that if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <msub>
+  <mi>m</mi>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>&#x3F5;</mi>
+    <mi>&#x3B4;</mi>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ for every distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mi>&#x3BE;</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3F5;</mi>
+   <mi>&#x3B4;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. So by substitution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>Pr</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2264;</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>&#x3F5;</mi>
+     <mi>&#x3B4;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>/</mo>
+   <mi>&#x3B4;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x3B4;</mi>
+</mrow>
+</math>
+ implies <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>Pr</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2264;</mo>
+   <mi>&#x3F5;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x3B4;</mi>
+</mrow>
+</math>
+. Now substitute back <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BE;</mi>
+</math>
+ and we conclude the proof. </div>
+</div>
+</div>
+<div class='standard' id='magicparlabel-67'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-68'><span class="note_label">Note 14.</span>
+Hence, we aim to design a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ that both fits the training set and is stable; i.e, keep both <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>I</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>II</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ in <a href="#eq_">(2.3)</a> small. As seen later, in certain learning problems, there may be a trade-off between empirical risk term <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>I</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>II</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ in <a href="#eq_">(2.3)</a>. Consequently, we aim to upper bound <a href="#eq_">(2.3)</a> by upper bounding <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>I</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>II</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ individually and decide which term we should benefit against the other to achieve a certain total bound.</div>
+</div>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-74'><span class="section_label">3</span> <a id="sec_Stability_and_over_fitting" />Stability and its association with over-fitting</h2>
+<div class='notation'>
+<div class="notation_item" id='magicparlabel-75'><span class="notation_label">Notation 15.</span>
+Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+. Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>m</mi>
+   </msub>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ be a training sample, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ be a learning algorithm with output <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-80'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-81'><span class="note_label">Note 16.</span>
+It is reasonable to consider that a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ can be stable if a small change of the algorithm input does not change the algorithm output much. Mathematically formalizing this, we can say that if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>i</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+   <mo stretchy='false'>'</mo>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>+</mo>
+     <mn>1</mn>
+    </mrow>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>m</mi>
+   </msub>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ is another training dataset equal to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+ but the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+th element being replaced by another independent example <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo stretchy='false'>'</mo>
+ <mo>&#x223C;</mo>
+ <mi>g</mi>
+</mrow>
+</math>
+, then a good learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ would produce a small value of 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <msup>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>i</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2265;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-82'><span class="definition_label">Definition 17.</span>
+<a id="def_A_learning_algorithm" /> A learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ is <b>on-average-replace-one-stable</b> with rate a decreasing function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ if for every distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ <a id="eq__5" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>&#x223C;</mo>
+         <mi>g</mi>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mi>z</mi>
+         <mo stretchy='false'>'</mo>
+         <mo>&#x223C;</mo>
+         <mi>g</mi>
+         <mo stretchy='false'>,</mo>
+         <mi>i</mi>
+         <mo>&#x223C;</mo>
+         <mtext>U</mtext>{
+         <mn>1</mn>
+         <mo stretchy='false'>,</mo>
+         <mn>...</mn>
+         <mo stretchy='false'>,</mo>
+         <mi>m</mi>}
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msup>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>i</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msup>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <mi>&#x3F5;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>m</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-83'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-84'><span class="note_label">Note 18.</span>
+The following result demonstrates the direct association of stability and over-fitting as defined in Definitions <a href="#def_Let__be">10</a> &amp; <a href="#def_A_learning_algorithm">17</a>.</div>
+</div>
+<div class='standard' id='magicparlabel-85'>
+<br />
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-86'><span class="theorem_label">Theorem 19.</span>
+<a id="thm_For_any_learning" /> For any learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ it is <a id="eq__6" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mtext>E</mtext>
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>&#x223C;</mo>
+         <mi>g</mi>
+         <mo stretchy='false'>,</mo>
+         <mspace width="6px"/>
+         <mi>z</mi>
+         <mo stretchy='false'>'</mo>
+         <mo>&#x223C;</mo>
+         <mi>g</mi>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+         <mi>i</mi>
+         <mo>&#x223C;</mo>
+         <mtext>U</mtext>
+         <mrow>
+          <mo>{</mo>
+          <mrow>
+           <mn>1</mn>
+           <mo stretchy='false'>,</mo>
+           <mn>...</mn>
+           <mo stretchy='false'>,</mo>
+           <mi>m</mi>
+          </mrow>
+          <mo>}</mo>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msup>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>i</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msup>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ is a distribution, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>m</mi>
+   </msub>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>i</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+   <mo stretchy='false'>'</mo>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>+</mo>
+     <mn>1</mn>
+    </mrow>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>m</mi>
+   </msub>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ are<i> training datasets with </i><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo stretchy='false'>'</mo>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>z</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>z</mi>
+  <mi>m</mi>
+ </msub>
+ <mover accent='false'>
+  <mo>&#x223C;</mo>
+  <mtext>iid</mtext>
+ </mover>
+ <mi>g</mi>
+</mrow>
+</math>
+.</div>
+<div class='proof'>
+<div class="proof_item" id='magicparlabel-87'><span class="proof_label">Proof.</span>
+As <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo stretchy='false'>'</mo>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>z</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>z</mi>
+  <mi>m</mi>
+ </msub>
+ <mover accent='false'>
+  <mo>&#x223C;</mo>
+  <mtext>iid</mtext>
+ </mover>
+ <mi>g</mi>
+</mrow>
+</math>
+, then for every <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mtable>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>z</mi>
+      <mo stretchy='false'>'</mo>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+  </mtable>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <mi>z</mi>
+     <mo stretchy='false'>'</mo>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mtable>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>z</mi>
+      <mo stretchy='false'>'</mo>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+  </mtable>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <msup>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>i</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>z</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ and 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mover>
+     <mi>R</mi>
+     <mo stretchy='true'>&#x02C6;</mo>
+    </mover>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mtable>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>i</mi>
+      <mo>&#x223C;</mo>
+      <mi>U</mi>
+      <mrow>
+       <mo>{</mo>
+       <mrow>
+        <mn>1</mn>
+        <mo stretchy='false'>,</mo>
+        <mn>...</mn>
+        <mo stretchy='false'>,</mo>
+        <mi>m</mi>
+       </mrow>
+       <mo>}</mo>
+      </mrow>
+     </mrow>
+    </mtd>
+   </mtr>
+  </mtable>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <msup>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>i</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>z</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+</div>
+</div>
+<div class='standard' id='magicparlabel-88'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-89'><span class="note_label">Note 20.</span>
+Hence, we desire to design learning algorithms corresponding to as small as possible <a href="#eq__6">(3.2)</a>.</div>
+</div>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-90'><span class="section_label">4</span> Implementation in regularized loss learning problems</h2>
+
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-96'><span class="definition_label">Definition 21.</span>
+A Regularized Loss Minimization (RLM) learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ with a regularization function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>J</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ aims at a RLM learning rule that is the minimizer <a id="eq__3" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>h</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>min</mo>
+     </mrow>
+     <mrow>
+      <mi>h</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>H</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>h</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>J</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>h</mi>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>m</mi>
+ </mfrac>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </munderover>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>m</mi>
+   </msub>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+ <mo>&#x2282;</mo>
+</mrow>
+</math>
+ an IID training sample.</div>
+</div>
+<div class='standard' id='magicparlabel-97'>
+<br />
+</div>
+<div class='remark'>
+<div class="remark_item" id='magicparlabel-98'><span class="remark_label">Remark 22.</span>
+The motivation for considering the regularization function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>J</mi>
+</math>
+ in <a href="#eq__3">(4.1)</a> is to: (1.) control complexity and (2.) improve stability; as we will see later.</div>
+</div>
+<div class='standard' id='magicparlabel-99'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-100'><span class="note_label">Note 23.</span>
+Here, we make our example more specific and narrow it to the Ridge RLM learning problem (could have been LASSO etc.). </div>
+</div>
+<div class='standard' id='magicparlabel-101'>
+<br />
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-102'><span class="definition_label">Definition 24.</span>
+<a id="def_The_Ridge_RLM" /> The Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+, with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo>&#x2282;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+, uses regularization function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>J</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>;</mo>
+   <mi>&#x3BB;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>w</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+ and produces learning rule <a id="eq__9" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mstyle mathvariant='fraktur'>
+     <mi>A</mi>
+    </mstyle>
+    <mrow>
+     <mo>(</mo>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>min</mo>
+     </mrow>
+     <mrow>
+      <mi>w</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>W</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>w</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x3BB;</mi>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>w</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-103'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-104'><span class="note_label">Note 25.</span>
+Recall (Term 1) how the regularization function in Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ penalizes complexity. Essentially, it implies a sequence of hypothesis <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x2282;</mo>
+ <msub>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x2282;</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mi>i</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <msup>
+    <mstyle mathvariant='double-struck'>
+     <mi>R</mi>
+    </mstyle>
+    <mi>d</mi>
+   </msup>
+   <mo stretchy='false'>:</mo>
+   <msub>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mi>w</mi>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>&lt;</mo>
+   <mi>i</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ due to duality of the corresponding minimization problem. </div>
+</div>
+<div class='standard' id='magicparlabel-105'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-106'><span class="note_label">Note 26.</span>
+Below, we will try to analyze the behavior of Ridge RLM learning rule <a href="#eq__9">(4.2)</a> w.r.t. the Risk decomposition <a href="#eq_">(2.3)</a>. In particular, to upper bounded w.r.t. the shrinkage term <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>,</mo>
+</mrow>
+</math>
+ training sample size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+, and other characteristics. </div>
+</div>
+<section>
+<h3 class='subsection' id='magicparlabel-107'><span class="subsection_label">4.1</span> Bounding the empirical risk (I) in <a href="#eq_">(2.3)</a> </h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-108'><span class="note_label">Note 27.</span>
+From <a href="#eq__9">(4.2)</a>, we have
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02C6;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02C6;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3BB;</mi>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mstyle mathvariant='fraktur'>
+        <mi>A</mi>
+       </mstyle>
+       <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02C6;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3BB;</mi>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mi>w</mi>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+    <mo stretchy='false'>;</mo>
+    <mspace width="20px"/>
+    <mi>&#x2200;</mi>
+    <mi>w</mi>
+    <mo>&#x2208;</mo>
+    <mstyle mathvariant='script'>
+     <mi>W</mi>
+    </mstyle>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+and by taking expectations w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+, it is <a id="eq__10" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <msub>
+     <mi>R</mi>
+     <mi>g</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3BB;</mi>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mi>w</mi>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+    <mo stretchy='false'>;</mo>
+    <mspace width="20px"/>
+    <mi>&#x2200;</mi>
+    <mi>w</mi>
+    <mo>&#x2208;</mo>
+    <mstyle mathvariant='script'>
+     <mi>W</mi>
+    </mstyle>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ because <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mover>
+     <mi>R</mi>
+     <mo stretchy='true'>&#x02C6;</mo>
+    </mover>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mo>&#x22C5;</mo>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>m</mi>
+ </mfrac>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </munderover>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mo>&#x22C5;</mo>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>z</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-109'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-110'><span class="note_label">Note 28.</span>
+From <a href="#eq__10">(4.3)</a>, we observe that part (I) in the expected risk decomposition <a href="#eq_">(2.3)</a>, (aka the upper bound of the expected empirical risk) increases with the regularization term <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+. (!!!) –Although anticipated, it did not start well.</div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-111'><span class="subsection_label">4.2</span> Bounding the empirical risk (II) in <a href="#eq_">(2.3)</a> </h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-112'><span class="note_label">Note 29.</span>
+As we will see to bound (II) in <a href="#eq_">(2.3)</a> we will have to impose an additional condition on the behavior of loss function apart from convexity; e.g. Lipstchitzness.</div>
+</div>
+<div class='standard' id='magicparlabel-113'>
+<br />
+</div>
+<div class='assumption'>
+<div class="assumption_item" id='magicparlabel-114'><span class="assumption_label">Assumption 30.</span>
+<a id="assu_The_loss_function" /> The loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ in <a href="#eq__9">(4.2)</a> is convex for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-115'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-116'><span class="note_label">Note 31.</span>
+Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02DC;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>w</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02DC;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex as the sum of a convex function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ (Assumption <a href="#assu_The_loss_function">30</a>) and a <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>J</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>;</mo>
+   <mi>&#x3BB;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mo>&#x22C5;</mo>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ (results directly from Definition <a href="#def__Strongly_convex_functions_">def:(Strongly-convex-functions)</a> in Handout <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>). </div>
+</div>
+<div class='standard' id='magicparlabel-121'>
+<br />
+</div>
+<div class='fact'>
+<div class="fact_item" id='magicparlabel-122'><span class="fact_label">Fact 32.</span>
+<a id="fact__To_be_used" /> (To be used in Note <a href="#note_Let__be">33</a>) If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>u</mi>
+</math>
+ is a minimizer of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ then for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>u</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2265;</mo>
+ <mfrac>
+  <mi>&#x3BB;</mi>
+  <mn>2</mn>
+ </mfrac>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>w</mi>
+    <mo stretchy='false'>-</mo>
+    <mi>u</mi>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-123'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-124'><span class="note_label">Note 33.</span>
+<a id="note_Let__be" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ be the Ridge learning algorithm output minimizing <a href="#eq__9">(4.2)</a>. Because <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02DC;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is its minimizer, according to Fact <a href="#fact__To_be_used">32</a>, for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ and any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+, it is <a id="eq__12" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2265;</mo>
+    <mi>&#x3BB;</mi>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>-</mo>
+       <mstyle mathvariant='fraktur'>
+        <mi>A</mi>
+       </mstyle>
+       <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+    <mo stretchy='false'>,</mo>
+    <mspace width="20px"/>
+    <mi>&#x2200;</mi>
+    <mi>w</mi>
+    <mo>&#x2208;</mo>
+    <mstyle mathvariant='script'>
+     <mi>W</mi>
+    </mstyle>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.4)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-125'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-126'><span class="note_label">Note 34.</span>
+Also, for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>u</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+, it is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>u</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>w</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x3BB;</mi>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>w</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>u</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x3BB;</mi>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>u</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>w</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x3BB;</mi>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>w</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>u</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x3BB;</mi>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>u</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mspace width="40px"/>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>u</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>u</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <msup>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>i</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msup>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <msup>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>i</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msup>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>u</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>u</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ Choosing <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>i</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>u</mi>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and the fact that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02DC;</mo>
+  </mover>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>i</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <msup>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>i</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02DC;</mo>
+  </mover>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>i</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, it is <a id="eq__11_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msup>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>i</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msup>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.5)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-127'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-128'><span class="note_label">Note 35.</span>
+Then <a href="#eq__12">(4.4)</a> and <a href="#eq__11_1">(4.5)</a> imply</div>
+<div class="note_item" id='magicparlabel-129'><a id="eq__11" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mi>&#x3BB;</mi>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <msup>
+          <mstyle mathvariant='script'>
+           <mi>S</mi>
+          </mstyle>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>i</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msup>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>z</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mi>m</mi>
+    </mfrac>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.6)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-130'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-131'><span class="note_label">Note 36.</span>
+Now that we brought it in form <a href="#eq__11">(4.6)</a>, we can impose/use an additional assumption on the loss to bound it. In this example we use Lipstchitzness. </div>
+</div>
+<div class='assumption'>
+<div class="assumption_item" id='magicparlabel-132'><span class="assumption_label">Assumption 37.</span>
+<a id="assu_The_loss_function_1" /> The loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ in <a href="#eq__9">(4.2)</a> is convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C1;</mi>
+</math>
+-Lipschitz for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+</mrow>
+</math>
+ . </div>
+</div>
+<div class='standard' id='magicparlabel-133'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-134'><span class="note_label">Note 38.</span>
+Given <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C1;</mi>
+</math>
+-Lipschitzness in Assumption <a href="#assu_The_loss_function_1">37</a>, it is <a id="eq__14" /><a id="eq__17" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>z</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>z</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mi>&#x3C1;</mi>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.7)</mtext>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>,</mo>
+      <mi>z</mi>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>i</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+      <mo stretchy='false'>,</mo>
+      <mi>z</mi>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mi>&#x3C1;</mi>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.8)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+and hence plugging <a href="#eq__14">4.7</a> and <a href="#eq__17">(4.8)</a> in <a href="#eq__11">(4.6)</a> yields <a id="eq__13" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <msup>
+        <mstyle mathvariant='script'>
+         <mi>S</mi>
+        </mstyle>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>i</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mstyle mathvariant='fraktur'>
+       <mi>A</mi>
+      </mstyle>
+      <mrow>
+       <mo>(</mo>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <mn>2</mn>
+    <mfrac>
+     <mi>&#x3C1;</mi>
+     <mrow>
+      <mi>&#x3BB;</mi>
+      <mi>m</mi>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.9)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-135'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-136'><span class="note_label">Note 39.</span>
+Plugging <a href="#eq__13">(4.9)</a> in <a href="#eq__14">(4.7)</a> yields 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <msup>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>i</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mstyle mathvariant='fraktur'>
+    <mi>A</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mn>2</mn>
+ <mfrac>
+  <msup>
+   <mi>&#x3C1;</mi>
+   <mn>2</mn>
+  </msup>
+  <mrow>
+   <mi>&#x3BB;</mi>
+   <mi>m</mi>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-137'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-138'><span class="note_label">Note 40.</span>
+Using Theorem <a href="#thm_For_any_learning">19</a>, we get an upper bound for the stability / over-fitting 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <msub>
+    <mover>
+     <mi>R</mi>
+     <mo stretchy='true'>&#x02C6;</mo>
+    </mover>
+    <mstyle mathvariant='script'>
+     <mi>D</mi>
+    </mstyle>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mtable>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+      <mo stretchy='false'>,</mo>
+      <mspace width="6px"/>
+      <mi>z</mi>
+      <mo stretchy='false'>'</mo>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>i</mi>
+      <mo>&#x223C;</mo>
+      <mtext>U</mtext>
+      <mrow>
+       <mo>{</mo>
+       <mrow>
+        <mn>1</mn>
+        <mo stretchy='false'>,</mo>
+        <mn>...</mn>
+        <mo stretchy='false'>,</mo>
+        <mi>m</mi>
+       </mrow>
+       <mo>}</mo>
+      </mrow>
+     </mrow>
+    </mtd>
+   </mtr>
+  </mtable>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <msup>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>i</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>z</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>z</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mn>2</mn>
+ <mfrac>
+  <msup>
+   <mi>&#x3C1;</mi>
+   <mn>2</mn>
+  </msup>
+  <mrow>
+   <mi>&#x3BB;</mi>
+   <mi>m</mi>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-139'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-140'><span class="note_label">Note 41.</span>
+After this saga, the researcher could come to the conclusion that: A Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ with the loss function which is convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C1;</mi>
+</math>
+-Lipschitz, regularizer <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>J</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>;</mo>
+   <mi>&#x3BB;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3BB;</mi>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mo>&#x22C5;</mo>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, and learning rule trained against an iid sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>{</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+   <mo>}</mo>
+  </mrow>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </msubsup>
+</mrow>
+</math>
+ from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ is on-averave-replace-one-stable with rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>m</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>2</mn>
+ <mfrac>
+  <msup>
+   <mi>&#x3C1;</mi>
+   <mn>2</mn>
+  </msup>
+  <mrow>
+   <mi>&#x3BB;</mi>
+   <mi>m</mi>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+; i.e. <a id="eq__15" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <mn>2</mn>
+    <mfrac>
+     <msup>
+      <mi>&#x3C1;</mi>
+      <mn>2</mn>
+     </msup>
+     <mrow>
+      <mi>&#x3BB;</mi>
+      <mi>m</mi>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.10)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ </div>
+</div>
+<div class='standard' id='magicparlabel-141'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-142'><span class="note_label">Note 42.</span>
+From <a href="#eq__15">(4.10)</a>, we see that stability improves (and over-fitting decreases) as the shrinkage parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+ increases. </div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-143'><span class="subsection_label">4.3</span> Bounding the Risk <a href="#eq_">(2.3)</a> </h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-144'><span class="note_label">Note 43.</span>
+<a id="note_Given_the_bounds" /> Given the bounds <a href="#eq__10">(4.3)</a> and <a href="#eq__15">(4.10)</a>, the decomposition of the expected Risk in <a href="#eq_">(2.3)</a> yields that: A Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ with the loss function which is convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C1;</mi>
+</math>
+-Lipschitz, regularizer <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>J</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>;</mo>
+   <mi>&#x3BB;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3BB;</mi>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mo>&#x22C5;</mo>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, and learning rule trained against an iid sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>{</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+   <mo>}</mo>
+  </mrow>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </msubsup>
+</mrow>
+</math>
+ from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ has Expected Risk bound <a id="eq__16" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <msub>
+        <mi>R</mi>
+        <mi>g</mi>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mi>w</mi>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>+</mo>
+       <mi>&#x3BB;</mi>
+       <msubsup>
+        <mrow>
+         <mo>&#x2225;</mo>
+         <mi>w</mi>
+         <mo>&#x2225;</mo>
+        </mrow>
+        <mn>2</mn>
+        <mn>2</mn>
+       </msubsup>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mtext>I</mtext>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </munder>
+    <mo stretchy='false'>+</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <mn>2</mn>
+       <mfrac>
+        <msup>
+         <mi>&#x3C1;</mi>
+         <mn>2</mn>
+        </msup>
+        <mrow>
+         <mi>&#x3BB;</mi>
+         <mi>m</mi>
+        </mrow>
+       </mfrac>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mtext>II</mtext>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </munder>
+    <mo stretchy='false'>;</mo>
+    <mspace width="20px"/>
+    <mi>&#x2200;</mi>
+    <mi>w</mi>
+    <mo>&#x2208;</mo>
+    <mstyle mathvariant='script'>
+     <mi>W</mi>
+    </mstyle>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.11)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-145'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-146'><span class="note_label">Note 44.</span>
+From <a href="#eq__16">4.11</a>, we see that there is a trade-off between Empirical Risk <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>I</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ and stability/overfitting <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>(</mo>
+ <mtext>II</mtext>
+ <mo stretchy='false'>)</mo>
+</mrow>
+</math>
+ with regards the regularization parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+. It is desirable to use the optimal <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ corresponding to the smallest bound in <a href="#eq__16">(4.11)</a>; it has to both fit the training data well (but perhaps not too well) and be very stable to different training data from the same <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ (but perhaps not too stable)!</div>
+</div>
+<div class='assumption'>
+<div class="assumption_item" id='magicparlabel-147'><span class="assumption_label">Assumption 45.</span>
+<a id="assu_The_loss_function_1_1" /> Assume that the learning problem is additionally <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+-bounded by <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>B</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+; i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <msup>
+    <mstyle mathvariant='double-struck'>
+     <mi>R</mi>
+    </mstyle>
+    <mi>d</mi>
+   </msup>
+   <mo stretchy='false'>:</mo>
+   <msub>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mi>w</mi>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x2264;</mo>
+   <mi>B</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-148'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-149'><span class="note_label">Note 46.</span>
+If additionally the learning problem is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+-bounded then the upper bound in <a href="#eq__16">(4.11)</a> becomes <a id="eq__16_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <munder>
+        <mo>min</mo>
+        <mrow>
+         <mi>w</mi>
+         <mo>&#x2208;</mo>
+         <mstyle mathvariant='script'>
+          <mi>H</mi>
+         </mstyle>
+        </mrow>
+       </munder>
+       <msub>
+        <mi>R</mi>
+        <mi>g</mi>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mi>w</mi>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>+</mo>
+       <mi>&#x3BB;</mi>
+       <msup>
+        <mi>B</mi>
+        <mn>2</mn>
+       </msup>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mtext>I</mtext>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </munder>
+    <mo stretchy='false'>+</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <mn>2</mn>
+       <mfrac>
+        <msup>
+         <mi>&#x3C1;</mi>
+         <mn>2</mn>
+        </msup>
+        <mrow>
+         <mi>&#x3BB;</mi>
+         <mi>m</mi>
+        </mrow>
+       </mfrac>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mtext>II</mtext>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </munder>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.12)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-150'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-151'><span class="note_label">Note 47.</span>
+Furthermore, if we choose a shrinkage parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3BB;</mi>
+  <mi>m</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msqrt>
+  <mfrac>
+   <mn>2</mn>
+   <mi>m</mi>
+  </mfrac>
+ </msqrt>
+ <mfrac>
+  <mi>&#x3C1;</mi>
+  <mi>B</mi>
+ </mfrac>
+</mrow>
+</math>
+ in <a href="#eq__9">(4.2)</a> the upper bound in <a href="#eq__16">(4.11)</a> becomes <a id="eq__16_1_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>min</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>H</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <msub>
+     <mi>R</mi>
+     <mi>g</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <msub>
+     <mi>&#x3BB;</mi>
+     <mi>m</mi>
+    </msub>
+    <mi>B</mi>
+    <msqrt>
+     <mfrac>
+      <mn>8</mn>
+      <mi>m</mi>
+     </mfrac>
+    </msqrt>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.13)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-152'>
+<br />
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-153'><span class="subsection_label">4.4</span> Deriving PAC guarantees</h3>
+<div class='standard' id='magicparlabel-154'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-155'><span class="note_label">Note 48.</span>
+In particular, if the size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ of the training sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+ is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <mfrac>
+  <mrow>
+   <msubsup>
+    <mi>&#x3BB;</mi>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msubsup>
+   <msup>
+    <mi>B</mi>
+    <mn>2</mn>
+   </msup>
+   <mn>8</mn>
+  </mrow>
+  <msup>
+   <mi>&#x3F5;</mi>
+   <mn>2</mn>
+  </msup>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <mn>8</mn>
+   <msup>
+    <mi>&#x3C1;</mi>
+    <mn>2</mn>
+   </msup>
+   <msup>
+    <mi>B</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+  <msup>
+   <mi>&#x3F5;</mi>
+   <mn>2</mn>
+  </msup>
+ </mfrac>
+</mrow>
+</math>
+ for some <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ then for every distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+, the upper bound in <a href="#eq__16">(4.11)</a> becomes <a id="eq__16_1_1_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mstyle mathvariant='fraktur'>
+         <mi>A</mi>
+        </mstyle>
+        <mrow>
+         <mo>(</mo>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>min</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>H</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <msub>
+     <mi>R</mi>
+     <mi>g</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3F5;</mi>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(4.14)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ and hence we can have a PAC guarantee that is summarized in the following. </div>
+</div>
+<div class='standard' id='magicparlabel-156'>
+<br />
+</div>
+<div class='summary'>
+<div class="summary_item" id='magicparlabel-157'><span class="summary_label">Summary 49.</span>
+Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ be a learning problem convex-Lipschitz-bounded with parameters <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C1;</mi>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+, and let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ be the training data size.  The associated Ridge Regularized Loss Minimization rule with regularization function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3BB;</mi>
+  <mi>m</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msqrt>
+  <mfrac>
+   <mn>2</mn>
+   <mi>m</mi>
+  </mfrac>
+ </msqrt>
+ <mfrac>
+  <mi>&#x3C1;</mi>
+  <mi>B</mi>
+ </mfrac>
+</mrow>
+</math>
+ satisfies 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <munder>
+  <mo>min</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>H</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>&#x3BB;</mi>
+  <mi>m</mi>
+ </msub>
+ <mi>B</mi>
+ <msqrt>
+  <mfrac>
+   <mn>8</mn>
+   <mi>m</mi>
+  </mfrac>
+ </msqrt>
+</mrow>
+</math>
+ Moreover, if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <mfrac>
+  <mrow>
+   <mn>8</mn>
+   <msup>
+    <mi>&#x3C1;</mi>
+    <mn>2</mn>
+   </msup>
+   <msup>
+    <mi>B</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+  <msup>
+   <mi>&#x3F5;</mi>
+   <mn>2</mn>
+  </msup>
+ </mfrac>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ then for every distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ we can get a PAC -guarantee 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mstyle mathvariant='fraktur'>
+      <mi>A</mi>
+     </mstyle>
+     <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant='script'>
+       <mi>S</mi>
+      </mstyle>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <munder>
+  <mo>min</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>H</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>&#x3F5;</mi>
+</mrow>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-163'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-164'><br /></div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-165'><span class="section_label">A</span> Recall strong convex functions from Handout <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>.</h2>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-166'>A function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex function is for all <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>u</mi>
+</math>
+, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B1;</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ we have 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mi>w</mi>
+   <mo stretchy='false'>+</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mn>1</mn>
+     <mo stretchy='false'>-</mo>
+     <mi>&#x3B1;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mi>u</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mi>a</mi>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>1</mn>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3B1;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>u</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <mi>&#x3BB;</mi>
+  <mn>2</mn>
+ </mfrac>
+ <mi>&#x3B1;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>1</mn>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3B1;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>w</mi>
+    <mo stretchy='false'>-</mo>
+    <mi>u</mi>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+</li>
+<li class="itemize_item" id='magicparlabel-167'>The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>w</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex </li>
+<li class="itemize_item" id='magicparlabel-168'>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ is convex then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>g</mi>
+</mrow>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex</li>
+<li class="itemize_item" id='magicparlabel-169'>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BB;</mi>
+</math>
+-strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>u</mi>
+</math>
+ is a minimizer of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ then for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>u</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2265;</mo>
+ <mfrac>
+  <mi>&#x3BB;</mi>
+  <mn>2</mn>
+ </mfrac>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>w</mi>
+    <mo stretchy='false'>-</mo>
+    <mi>u</mi>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+</li>
+</ul>
+</section>
+</body>
+</html>
