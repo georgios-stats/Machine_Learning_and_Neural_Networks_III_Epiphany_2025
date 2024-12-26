@@ -143,7 +143,7 @@ Required R packages are
 
 + Tasks: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_complete.nb.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_complete.Rmd)  
++ Complete: [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_complete.Rmd)  
 
 #### Lab 2:             
 
