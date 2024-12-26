@@ -80,7 +80,9 @@ Learnability and stability
 
 #### Training algorithms for machine learning      
 
-+ Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent..pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
+Gradient descent  
+
++ Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
 
 Stochastic gradient descent  
 
@@ -110,7 +112,7 @@ Artificial Neural Networks (application to feature space extensions)
 
 Gaussian process regression (application of kernel trick/methods)  
 
-+ Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/11.Gaussian_process_regression.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
 
 ------------------------------------------------------------------------
 
