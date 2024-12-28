@@ -232,8 +232,6 @@ Required R packages are
 
 #### Revision  
 
-... Not available yet  
-
 + [View (PDF)](./Exercise_sheets/Revision_sheet.pdf)  
 
 + [View (HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Revision_sheet_xhtml/Revision_sheet.xhtml)  
