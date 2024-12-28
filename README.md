@@ -18,7 +18,7 @@
 <!-- under the terms of the GNU General Public License as published by -->
 <!-- the Free Software Foundation version 3 of the License. -->
 
-<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is distributed ->
+<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is distributed -->
 <!-- in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
 <!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
@@ -239,8 +239,6 @@ Required R packages are
 ------------------------------------------------------------------------  
 
 # Practical Tests  
-
-#### Practical First Computer Based Test
 
 #### Practical First Computer Based Test  
 
