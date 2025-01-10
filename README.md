@@ -86,33 +86,61 @@ Gradient descent
 
 Stochastic gradient descent  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/05.Stochastic_gradient_descent.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml)  
+
+-->
 
 Stochastic gradient Langevin dynamics  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/06.Stochastic_gradient_Langevine_dynamics_xhtml/06.Stochastic_gradient_Langevine_dynamics.xhtml)  
+
+-->
 
 #### Models for supervised machine learning  
 
 Support Vector Machines  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/07.Support_Vector_Machines.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/07.Support_Vector_Machines_xhtml/07.Support_Vector_Machines.xhtml)  
+
+-->
 
 Kernel methods (extensions to non linear feature spaces)  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/08.Kernel_Methods.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/08.Kernel_Methods_xhtml/08.Kernel_Methods.xhtml)  
+
+-->
 
 Multiclass_classification (extensions to many classes)    
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/09.Multiclass_classification.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/09.Multiclass_classification_xhtml/09.Multiclass_classification.xhtml)  
+
+-->
 
 Artificial Neural Networks (application to feature space extensions)  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/10.Artificial_neural_networks_xhtml/10.Artificial_neural_networks.xhtml)  
+
+-->
 
 Gaussian process regression (application of kernel trick/methods)  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/11.Gaussian_process_regression.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
+
+-->
 
 ------------------------------------------------------------------------
 
@@ -306,4 +334,5 @@ Ways:
 2. You can use the GitZip add-on for Firefox available [HERE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjACegQIAhAB&url=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fgitzip%2F&usg=AOvVaw37servrJ29tuNcx9dIQDqy) or the Chrome add-on GitZip available [HERE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjABegQIARAB&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgitzip-for-github%2Fffabmkklhbepgcgfonabamgnfafbdlkn%3Fhl%3Den&usg=AOvVaw1Pn3VXuXz1Fphl7dsPEhDS)
 
 ------------------------------------------------------------------------
+
 
