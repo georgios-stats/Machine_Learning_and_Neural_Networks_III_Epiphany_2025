@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-<meta name="generator" content="LyX 2.4.1" />
+<meta name="generator" content="LyX 2.4.2.1" />
 <title>LyX Document</title>
 <style>
 /* LyX Provided Styles */
@@ -156,54 +156,6 @@ font-variant: normal;
 font-size: medium;
 
 }
-div.lemma {
-font-style: italic;
-font-variant: normal;
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: left;
-
-}
-span.lemma_label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.conclusion {
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: left;
-
-}
-span.conclusion_label {
-font-weight: normal;
-font-style: italic;
-font-variant: normal;
-font-size: medium;
-
-}
-div.remark {
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: left;
-
-}
-span.remark_label {
-font-weight: normal;
-font-style: italic;
-font-variant: normal;
-font-size: medium;
-
-}
 div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
 div.float {
 	border: 2px solid black;
@@ -223,7 +175,7 @@ div.float-caption {
 <div class='standard' id='magicparlabel-1'><div class='Shadowbox'>
 
 <div class='plain_layout' id='magicparlabel-10'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
-Epiphany term, 2024<div style='height:3ex'></div></div>
+Epiphany term, 2025<div style='height:3ex'></div></div>
 
 <div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Lecture notes <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>: Elements of convex learning problems  <div style='height:3ex'></div></div>
 
@@ -233,7 +185,7 @@ Epiphany term, 2024<div style='height:3ex'></div></div>
 <div class='plain_layout' id='magicparlabel-29'><hr />
 <div style='height:3ex'></div></div>
 <h3 class='subsection_' id='magicparlabel-30'>Aim</h3>
-<div class='plain_layout' id='magicparlabel-31'>To introduce elements of convexity, Lipschitzness, and smoothness that can be used for the analysis of stochastic gradient related learning algorithms.</div>
+<div class='plain_layout' id='magicparlabel-31'>To introduce convex learning problems that can be used as a framework for the analysis of stochastic gradient related learning algorithms.</div>
 
 <div class='plain_layout' id='magicparlabel-32'><hr />
 </div>
@@ -256,27 +208,20 @@ Epiphany term, 2024<div style='height:3ex'></div></div>
 </div>
 <div class='note'>
 <div class="note_item" id='magicparlabel-40'><span class="note_label">Note 1.</span>
-We introduce concepts of convexity and smoothness that facilitate the analysis and understanding of the learning problems and their solutions that we will discuss (eg stochastic gradient descent, SVM) later on. Also learning problems with such characteristics can be learned more efficiently.</div>
-</div>
-<div class='standard' id='magicparlabel-41'>
-<br />
-</div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-42'><span class="note_label">Note 2.</span>
-Some of the ML problems discussed in the course (eg, Artificial neural networks, Gaussian process regression) are non-convex. To overcome this problem, we will introduce the concept of surrogate loss function that allows a non-convex problem to be handled with the tools introduced int he convex setting.</div>
+We introduce learning problems associated with convexity, Lipschitzness and smoothness to be able to analyze and understand the machine learning (ML) tools we will discuss later on (eg stochastic gradient descent, SVM). We discuss ways allowing to address non-convex ML problems (eg, Artificial neural networks, Gaussian process regression) in the convex setting.</div>
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-70'><span class="section_label">2</span> Convexity</h2>
+<h2 class='section' id='magicparlabel-46'><span class="section_label">2</span> Convexity</h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-71'><span class="note_label">Note 3.</span>
+<div class="note_item" id='magicparlabel-47'><span class="note_label">Note 2.</span>
 Convexity is a central concept in learning, e.g. least squares, as it often considers a Euclidean distance as a Risk function to be minimized. </div>
 </div>
-<div class='standard' id='magicparlabel-72'>
+<div class='standard' id='magicparlabel-48'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-73'><span class="definition_label">Definition 4.</span>
+<div class="definition_item" id='magicparlabel-49'><span class="definition_label">Definition 3.</span>
 A set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>C</mi>
 </math>
@@ -325,49 +270,23 @@ A set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-74'>
-<br />
-</div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-75'><span class="note_label">Note 5.</span>
-Namely, a set <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>C</mi>
-</math>
- is convex if for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>u</mi>
- <mo stretchy='false'>,</mo>
- <mi>v</mi>
- <mo>&#x2208;</mo>
- <mi>C</mi>
-</mrow>
-</math>
-, the line segment between <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>u</mi>
-</math>
- and <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>v</mi>
-</math>
- is contained in <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>C</mi>
-</math>
-. <div class='float-figure'><div class='plain_layout' id='magicparlabel-79'> </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-83'><img style='width:20%;' src='e_bd9fdfec904d_Convex_polygon_illustration1_svg.png' alt='image: e_bd9fdfec904d_Convex_polygon_illustration1_svg.png' /></div>
 
-<div class='plain_layout' id='magicparlabel-84'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_" />&#xA0;</span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-92'><img style='width:20%;' src='e_781bdf0a90ae_220px-Convex_polygon_illustration2_svg.png' alt='image: e_781bdf0a90ae_220px-Convex_polygon_illustration2_svg.png' /></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-54'> </div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-58'><img style='width:20%;' src='e_473070690d23_Convex_polygon_illustration1_svg.png' alt='image: e_473070690d23_Convex_polygon_illustration1_svg.png' /></div>
 
-<div class='plain_layout' id='magicparlabel-93'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1" />&#xA0;</span></div>
+<div class='plain_layout' id='magicparlabel-59'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_" /> </span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-67'><img style='width:20%;' src='e_07315ca3a76f_220px-Convex_polygon_illustration2_svg.png' alt='image: e_07315ca3a76f_220px-Convex_polygon_illustration2_svg.png' /></div>
+
+<div class='plain_layout' id='magicparlabel-68'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1" /> </span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-98'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  <a href="#fig_">(a)</a> is a Convex set ; <a href="#fig__1">(b)</a> is a non-convex set </span></div>
+<div class='plain_layout' id='magicparlabel-73'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  <a href="#fig_">(a)</a> is a Convex set ; <a href="#fig__1">(b)</a> is a non-convex set </span></div>
 </div>
-</div>
-</div>
+
 <div class='example'>
-<div class="example_item" id='magicparlabel-103'><span class="example_label">Example 6.</span>
+<div class="example_item" id='magicparlabel-78'><span class="example_label">Example 4.</span>
 <a id="exa_For_instance_" />For instance <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mstyle mathvariant='double-struck'>
@@ -385,11 +304,11 @@ Namely, a set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  is a convex set.</div>
 </div>
-<div class='standard' id='magicparlabel-104'>
+<div class='standard' id='magicparlabel-79'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-105'><span class="definition_label">Definition 7.</span>
+<div class="definition_item" id='magicparlabel-80'><span class="definition_label">Definition 5.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>C</mi>
 </math>
@@ -477,29 +396,32 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-106'>
+<div class='standard' id='magicparlabel-81'>
 <br />
 </div>
 
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-111'><img style='width:15%;' src='e_eb6e6b94fb19_1920px-ConvexFunction_svg.png' alt='image: e_eb6e6b94fb19_1920px-ConvexFunction_svg.png' /></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-86'><img style='width:15%;' src='e_485441d60ec9_1920px-ConvexFunction_svg.png' alt='image: e_485441d60ec9_1920px-ConvexFunction_svg.png' /></div>
 
-<div class='plain_layout' id='magicparlabel-112'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  A convex function</span></div>
+<div class='plain_layout' id='magicparlabel-87'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  A convex function</span></div>
 </div>
 
 
-<div class='standard' id='magicparlabel-117'>
+<div class='standard' id='magicparlabel-92'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-118'><span class="example_label">Example 8.</span>
+<div class="example_item" id='magicparlabel-93'><span class="example_label">Example 6.</span>
 The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
  <mo stretchy='false'>:</mo>
- <mstyle mathvariant='double-struck'>
-  <mi>R</mi>
- </mstyle>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
  <mo>&#x2192;</mo>
  <msub>
   <mstyle mathvariant='double-struck'>
@@ -518,10 +440,15 @@ The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
   <mo stretchy='false'>)</mo>
  </mrow>
  <mo stretchy='false'>=</mo>
- <msup>
-  <mi>x</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>x</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
   <mn>2</mn>
- </msup>
+  <mn>2</mn>
+ </msubsup>
 </mrow>
 </math>
  is convex function. For any <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -550,14 +477,48 @@ The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  it is
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <msup>
-  <mrow>
-   <mo>(</mo>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
    <mrow>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>&#x3B1;</mi>
+       <mi>u</mi>
+       <mo stretchy='false'>+</mo>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mn>1</mn>
+         <mo stretchy='false'>−</mo>
+         <mi>&#x3B1;</mi>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+       <mi>v</mi>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+    <mo stretchy='false'>-</mo>
     <mi>&#x3B1;</mi>
-    <mi>u</mi>
-    <mo stretchy='false'>+</mo>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mi>u</mi>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+    <mo stretchy='false'>-</mo>
     <mrow>
      <mo>(</mo>
      <mrow>
@@ -567,83 +528,154 @@ The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
      </mrow>
      <mo>)</mo>
     </mrow>
-    <mi>v</mi>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mi>v</mi>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
    </mrow>
-   <mo>)</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
- <mo stretchy='false'>-</mo>
- <mi>&#x3B1;</mi>
- <msup>
-  <mrow>
-   <mo>(</mo>
-   <mi>u</mi>
-   <mo>)</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
- <mo stretchy='false'>+</mo>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mn>1</mn>
-   <mo stretchy='false'>−</mo>
-   <mi>&#x3B1;</mi>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <msup>
-  <mrow>
-   <mo>(</mo>
-   <mi>v</mi>
-   <mo>)</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
- <mo stretchy='false'>=</mo>
- <mo stretchy='false'>-</mo>
- <mi>&#x3B1;</mi>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mn>1</mn>
-   <mo stretchy='false'>−</mo>
-   <mi>&#x3B1;</mi>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <msup>
-  <mrow>
-   <mo>(</mo>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
    <mrow>
-    <mi>u</mi>
+    <mo stretchy='false'>=</mo>
+    <msup>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>&#x3B1;</mi>
+       <mi>u</mi>
+       <mo stretchy='false'>+</mo>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mn>1</mn>
+         <mo stretchy='false'>−</mo>
+         <mi>&#x3B1;</mi>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+       <mi>v</mi>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mi>&#x22A4;</mi>
+    </msup>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>&#x3B1;</mi>
+      <mi>u</mi>
+      <mo stretchy='false'>+</mo>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mn>1</mn>
+        <mo stretchy='false'>−</mo>
+        <mi>&#x3B1;</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mi>v</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
     <mo stretchy='false'>-</mo>
-    <mi>v</mi>
+    <mi>&#x3B1;</mi>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mi>u</mi>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+    <mo stretchy='false'>-</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mn>1</mn>
+      <mo stretchy='false'>−</mo>
+      <mi>&#x3B1;</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mi>v</mi>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
    </mrow>
-   <mo>)</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
- <mo>&#x2264;</mo>
- <mn>0</mn>
-</mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mn>...</mn>
+    <mo stretchy='false'>=</mo>
+    <mo stretchy='false'>-</mo>
+    <mi>&#x3B1;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mn>1</mn>
+      <mo stretchy='false'>−</mo>
+      <mi>&#x3B1;</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <msubsup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>u</mi>
+       <mo stretchy='false'>-</mo>
+       <mi>v</mi>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+     <mn>2</mn>
+    </msubsup>
+    <mo>&#x2264;</mo>
+    <mn>0</mn>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
 </math>
- </div>
 </div>
-<div class='standard' id='magicparlabel-123'>
+</div>
+<div class='standard' id='magicparlabel-94'>
 <br />
 </div>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-124'><span class="proposition_label">Proposition 9.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-95'><span class="note_label">Note 7.</span>
 Every local minimum of a convex function is the global minimum.</div>
 </div>
-<div class='standard' id='magicparlabel-125'>
+<div class='standard' id='magicparlabel-96'>
 <br />
 </div>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-126'><span class="proposition_label">Proposition 10.</span>
-<a id="prop_Let__be" />Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='note'>
+<div class="note_item" id='magicparlabel-97'><span class="note_label">Note 8.</span>
+<a id="prop_Let__be" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
  <mo stretchy='false'>:</mo>
@@ -713,12 +745,12 @@ at <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-127'>
+<div class='standard' id='magicparlabel-98'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-128'><span class="proposition_label">Proposition 11.</span>
-<a id="prop_Let__such" />Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="proposition_item" id='magicparlabel-99'><span class="proposition_label">Proposition 9.</span>
+<a id="prop_Let__such" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
  <mo stretchy='false'>:</mo>
@@ -790,17 +822,17 @@ at <math xmlns='http://www.w3.org/1998/Math/MathML'>
  is convex function then <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
- is convex function. </div>
+ is convex function.</div>
 <div class='proof'>
-<div class="proof_item" id='magicparlabel-129'><span class="proof_label">Proof.</span>
+<div class="proof_item" id='magicparlabel-100'><span class="proof_label">Proof.</span>
 See Exercise <a href="#exer___">exer:()</a> in the Exercise sheet.</div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-130'>
+<div class='standard' id='magicparlabel-101'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-131'><span class="example_label">Example 12.</span>
+<div class="example_item" id='magicparlabel-102'><span class="example_label">Example 10.</span>
 Consider the regression problem with regressor <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -876,6 +908,7 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
      </mrow>
      <mo stretchy='false'>&#x27E9;</mo>
     </mrow>
+    <mo stretchy='false'>-</mo>
     <mi>y</mi>
    </mrow>
    <mo>)</mo>
@@ -903,13 +936,13 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
  </msup>
 </mrow>
 </math>
- is convex and Proposition <a href="#prop_Let__such">11</a>.</div>
+ is convex and Proposition <a href="#prop_Let__such">9</a>.</div>
 </div>
-<div class='standard' id='magicparlabel-132'>
+<div class='standard' id='magicparlabel-103'>
 <br />
 </div>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-133'><span class="proposition_label">Proposition 13.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-104'><span class="note_label">Note 11.</span>
 <a id="exa_Let__convex" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -942,7 +975,7 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
 </math>
 . Then:</div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-134'><i><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-105'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>g</mi>
  <mrow>
@@ -975,8 +1008,8 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
  </mrow>
 </mrow>
 </math>
- is a convex function</i></li>
-<li class="enumerate_item" id='magicparlabel-135'><i><math xmlns='http://www.w3.org/1998/Math/MathML'>
+ is a convex function</li>
+<li class="enumerate_item" id='magicparlabel-106'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>g</mi>
  <mrow>
@@ -1019,13 +1052,13 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
  <mn>0</mn>
 </mrow>
 </math>
-</i></li>
+</li>
 </ol>
-<div class='solution_'>
-<div class="solution__item" id='magicparlabel-136'><span class="solution__label">Solution.</span>
+<div class='proof'>
+<div class="proof_item" id='magicparlabel-107'><span class="proof_label">Proof.</span>
 &#xA0;</div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-137'>For any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-108'>For any <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>u</mi>
  <mo stretchy='false'>,</mo>
@@ -1177,7 +1210,6 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
    </mrow>
   </mtd>
   <mtd>
-   <mtext>
    <mrow>
     <mo stretchy='false'>(</mo>
     <mstyle class='math'>
@@ -1187,7 +1219,7 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
      </msub>
     </mstyle>&#0160;is&#0160;convex
     <mo stretchy='false'>)</mo>
-   </mrow></mtext>
+   </mrow>
   </mtd>
  </mtr>
  <mtr>
@@ -1254,7 +1286,6 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
    </mrow>
   </mtd>
   <mtd>
-   <mtext>
    <mrow>
     <mo stretchy='false'>(</mo>
     <mstyle class='math'>
@@ -1268,7 +1299,7 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
      </mrow>
     </mstyle>&#0160;is&#0160;convex
     <mo stretchy='false'>)</mo>
-   </mrow></mtext>
+   </mrow>
   </mtd>
  </mtr>
  <mtr>
@@ -1309,7 +1340,7 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
 </mtable>
 </math>
 </li>
-<li class="enumerate_item" id='magicparlabel-138'>For any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-109'>For any <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>u</mi>
  <mo stretchy='false'>,</mo>
@@ -1474,7 +1505,6 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
    </mrow>
   </mtd>
   <mtd>
-   <mtext>
    <mrow>
     <mo stretchy='false'>(</mo>
     <mstyle class='math'>
@@ -1484,7 +1514,7 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
      </msub>
     </mstyle>&#0160;is&#0160;convex
     <mo stretchy='false'>)</mo>
-   </mrow></mtext>
+   </mrow>
   </mtd>
  </mtr>
  <mtr>
@@ -1528,11 +1558,11 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
 </ol>
 </div>
 </div>
-<div class='standard' id='magicparlabel-139'>
+<div class='standard' id='magicparlabel-110'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-140'><span class="example_label">Example 14.</span>
+<div class="example_item" id='magicparlabel-111'><span class="example_label">Example 12.</span>
 <a id="exa__is_convex" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>g</mi>
@@ -1542,25 +1572,24 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
   <mo>)</mo>
  </mrow>
  <mo stretchy='false'>=</mo>
- <mrow>
-  <mo>|</mo>
-  <mi>x</mi>
-  <mo>|</mo>
- </mrow>
+ <msub>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>x</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>1</mn>
+ </msub>
 </mrow>
 </math>
- is convex according to Example <a href="#exa_Let__convex">13</a>, as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ is convex according to Note <a href="#exa_Let__convex">11</a>, since <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
- <mi>g</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>x</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
  <mrow>
   <mo>|</mo>
-  <mi>x</mi>
+  <msub>
+   <mi>x</mi>
+   <mi>j</mi>
+  </msub>
   <mo>|</mo>
  </mrow>
  <mo stretchy='false'>=</mo>
@@ -1569,11 +1598,42 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
   <mo>(</mo>
   <mrow>
    <mo stretchy='false'>-</mo>
-   <mi>x</mi>
+   <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+   </msub>
    <mo stretchy='false'>,</mo>
-   <mi>x</mi>
+   <msub>
+    <mi>x</mi>
+    <mi>j</mi>
+   </msub>
   </mrow>
   <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>x</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>&#x2211;</mo>
+  <mi>j</mi>
+ </munder>
+ <mrow>
+  <mo>|</mo>
+  <msub>
+   <mi>x</mi>
+   <mi>j</mi>
+  </msub>
+  <mo>|</mo>
  </mrow>
 </mrow>
 </math>
@@ -1581,16 +1641,16 @@ Consider the regression problem with regressor <math xmlns='http://www.w3.org/19
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-141'><span class="section_label">3</span> Strong convexity</h2>
+<h2 class='section' id='magicparlabel-112'><span class="section_label">3</span> Strong convexity</h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-142'><span class="note_label">Note 15.</span>
-Strong convexity is a central concept in regularization, e.g. Ridge, as it makes a convex loss function strongly convex by adding a shrinkage term. </div>
+<div class="note_item" id='magicparlabel-113'><span class="note_label">Note 13.</span>
+Strong convexity is a central concept in Ridge regularization, as it makes a convex loss function strongly convex by adding a shrinkage term. </div>
 </div>
-<div class='standard' id='magicparlabel-143'>
+<div class='standard' id='magicparlabel-114'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-144'><span class="definition_label">Definition 16.</span>
+<div class="definition_item" id='magicparlabel-115'><span class="definition_label">Definition 14.</span>
 <a id="def__Strongly_convex_functions_" /> (Strongly convex functions) A function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
@@ -1706,18 +1766,18 @@ Strong convexity is a central concept in regularization, e.g. Ridge, as it makes
 </div>
 </div>
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-149'><img style='width:50%;' src='e_3b034c40ef21_strongly_convex_function.png' alt='image: e_3b034c40ef21_strongly_convex_function.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  Strongly convex function</span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-120'><img style='width:50%;' src='e_c2ae70f83137_strongly_convex_function.png' alt='image: e_c2ae70f83137_strongly_convex_function.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  Strongly convex function</span></div>
 </div>
 
 
-<div class='standard' id='magicparlabel-154'>
+<div class='standard' id='magicparlabel-125'>
 <br />
 </div>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-155'><span class="proposition_label">Proposition 17.</span>
-&#xA0;</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-126'><span class="note_label">Note 15.</span>
+The following can be checked from the definition by substitution</div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-156'><i>The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-127'>The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
  <mrow>
@@ -1743,14 +1803,14 @@ Strong convexity is a central concept in regularization, e.g. Ridge, as it makes
  <mi>&#x3BB;</mi>
 </mrow>
 </math>
-</i>-strongly convex </li>
-<li class="enumerate_item" id='magicparlabel-157'><i>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+-strongly convex </li>
+<li class="enumerate_item" id='magicparlabel-128'>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
 is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3BB;</mi>
 </math>
-</i>-strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+-strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>g</mi>
 </math>
  is convex then <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -1760,107 +1820,26 @@ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
  <mi>g</mi>
 </mrow>
 </math>
- is <i><math xmlns='http://www.w3.org/1998/Math/MathML'>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3BB;</mi>
 </math>
-</i>-strongly convex</li>
+-strongly convex</li>
 </ol>
-<div class='proof'>
-<div class="proof_item" id='magicparlabel-158'><span class="proof_label">Proof.</span>
-Both can be checked from the definition by substitution. </div>
 </div>
-</div>
-<div class='standard' id='magicparlabel-159'>
+<div class='standard' id='magicparlabel-129'>
 <br />
 </div>
-<div class='lemma'>
-<div class="lemma_item" id='magicparlabel-160'><span class="lemma_label">Lemma 18.</span>
-<a id="lem_If_is__strongly" /> If <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>f</mi>
-</math>
-is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3BB;</mi>
-</math>
--strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <msup>
-  <mi>w</mi>
-  <mo stretchy='false'>*</mo>
- </msup>
- <mo stretchy='false'>=</mo>
- <mo>arg</mo>
- <munder>
-  <mo>min</mo>
-  <mi>w</mi>
- </munder>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- is a minimizer of <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>f</mi>
-</math>
- then for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>w</mi>
-</math>
-<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>-</mo>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <msup>
-   <mi>w</mi>
-   <mo stretchy='false'>*</mo>
-  </msup>
-  <mo>)</mo>
- </mrow>
- <mo>&#x2265;</mo>
- <mfrac>
-  <mi>&#x3BB;</mi>
-  <mn>2</mn>
- </mfrac>
- <msup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mrow>
-    <mi>w</mi>
-    <mo stretchy='false'>-</mo>
-    <msup>
-     <mi>w</mi>
-     <mo stretchy='false'>*</mo>
-    </msup>
-   </mrow>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
-</mrow>
-</math>
-</div>
-<div class='proof'>
-<div class="proof_item" id='magicparlabel-161'><span class="proof_label">Proof.</span>
-Exercise <a href="#exer____2_1_1_1_2">exer:()-2-1-1-1-2</a> in the Exercise sheet.</div>
-</div>
-</div>
-<div class='standard' id='magicparlabel-162'>
+
+
+
+<div class='standard' id='magicparlabel-136'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-163'><span class="section_label">4</span> Lipschitzness</h2>
+<h2 class='section' id='magicparlabel-137'><span class="section_label">4</span> Lipschitzness</h2>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-164'><span class="definition_label">Definition 19.</span>
+<div class="definition_item" id='magicparlabel-138'><span class="definition_label">Definition 16.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>C</mi>
@@ -1977,11 +1956,11 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-165'>
+<div class='standard' id='magicparlabel-139'>
 <br />
 </div>
-<div class='conclusion'>
-<div class="conclusion_item" id='magicparlabel-166'><span class="conclusion_label">Conclusion 20.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-140'><span class="note_label">Note 17.</span>
 That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -1999,7 +1978,7 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
 </div>
 
 <div class='example'>
-<div class="example_item" id='magicparlabel-173'><span class="example_label">Example 21.</span>
+<div class="example_item" id='magicparlabel-147'><span class="example_label">Example 18.</span>
 <a id="exa_Consider_the_function" />Consider the function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -2033,7 +2012,7 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
 </math>
 .</div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-174'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-148'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
  is not a <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2045,7 +2024,7 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
 </mstyle>
 </math>
 . </li>
-<li class="enumerate_item" id='magicparlabel-175'><a id="enu__is_a" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-149'><a id="enu__is_a" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
  is a <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2203,10 +2182,10 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
 </li>
 </ol>
 <div class='solution_'>
-<div class="solution__item" id='magicparlabel-176'><span class="solution__label">Solution.</span>
+<div class="solution__item" id='magicparlabel-150'><span class="solution__label">Solution.</span>
 &#xA0;</div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-177'>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-151'>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>x</mi>
@@ -2300,7 +2279,7 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
 </mrow>
 </math>
 </li>
-<li class="enumerate_item" id='magicparlabel-178'>It is 
+<li class="enumerate_item" id='magicparlabel-152'>It is 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <mrow>
@@ -2426,11 +2405,11 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
 </ol>
 </div>
 </div>
-<div class='standard' id='magicparlabel-179'>
+<div class='standard' id='magicparlabel-153'>
 <br />
 </div>
-<div class='theorem'>
-<div class="theorem_item" id='magicparlabel-180'><span class="theorem_label">Theorem 22.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-154'><span class="note_label">Note 19.</span>
 <a id="thm_Let_functions_" />Let functions <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>g</mi>
@@ -2500,17 +2479,14 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
  </msub>
 </mrow>
 </math>
--Lipschitz.</div>
-<div class='solution_'>
-<div class="solution__item" id='magicparlabel-181'><span class="solution__label">Solution.</span>
-See Exercise <a href="#exer____1">exer:()-1</a> from the exercise sheet</div>
+-Lipschitz. </div>
+<div class='standard' style='text-align: right;' id='magicparlabel-155'>[See Exercise <a href="#exer____1">exer:()-1</a> from the exercise sheet]</div>
 </div>
-</div>
-<div class='standard' id='magicparlabel-182'>
+<div class='standard' id='magicparlabel-156'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-183'><span class="example_label">Example 23.</span>
+<div class="example_item" id='magicparlabel-157'><span class="example_label">Example 20.</span>
 <a id="exa_Let_functions_" />Let functions <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>g</mi>
 </math>
@@ -2560,9 +2536,8 @@ See Exercise <a href="#exer____1">exer:()-1</a> from the exercise sheet</div>
 </mrow>
 </math>
 -Lipschitz. </div>
-</div>
 <div class='solution_'>
-<div class="solution__item" id='magicparlabel-184'><span class="solution__label">Solution.</span>
+<div class="solution__item" id='magicparlabel-158'><span class="solution__label">Solution.</span>
 It is
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -2731,12 +2706,13 @@ It is
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-185'>
+</div>
+<div class='standard' id='magicparlabel-159'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-186'><span class="note_label">Note 24.</span>
-<a id="note_So__given_Examples" />So, given Examples <a href="#exa_Consider_the_function">21</a> and <a href="#exa_Let_functions_">23</a>, in the linear regression setting using loss <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="note_item" id='magicparlabel-160'><span class="note_label">Note 21.</span>
+<a id="note_So__given_Examples" />So, given Examples <a href="#exa_Consider_the_function">18</a> and <a href="#exa_Let_functions_">20</a>, in the linear regression setting using loss <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x2113;</mi>
  <mrow>
@@ -2805,14 +2781,14 @@ It is
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-187'>
+<div class='standard' id='magicparlabel-161'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-188'><span class="section_label">5</span> <a id="sec_Smoothness" /> Smoothness</h2>
+<h2 class='section' id='magicparlabel-162'><span class="section_label">5</span> <a id="sec_Smoothness" /> Smoothness</h2>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-189'><span class="definition_label">Definition 25.</span>
+<div class="definition_item" id='magicparlabel-163'><span class="definition_label">Definition 22.</span>
 A differentiable function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -2910,11 +2886,11 @@ A differentiable function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-190'>
+<div class='standard' id='magicparlabel-164'>
 <br />
 </div>
-<div class='theorem'>
-<div class="theorem_item" id='magicparlabel-191'><span class="theorem_label">Theorem 26.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-165'><span class="note_label">Note 23.</span>
 Function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -2998,13 +2974,11 @@ Function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-
-
-<div class='standard' id='magicparlabel-200'>
+<div class='standard' id='magicparlabel-166'>
 <br />
 </div>
-<div class='theorem'>
-<div class="theorem_item" id='magicparlabel-201'><span class="theorem_label">Theorem 27.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-167'><span class="note_label">Note 24.</span>
 <a id="thm_Let__with" />Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -3108,16 +3082,13 @@ Function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </mrow>
 </math>
 -smooth.</div>
-<div class='proof'>
-<div class="proof_item" id='magicparlabel-202'><span class="proof_label">Proof.</span>
-See Exercise <a href="#exer____2">exer:()-2</a> from the Exercise sheet</div>
+<div class='standard' style='text-align: right;' id='magicparlabel-168'>[See Exercise <a href="#exer____2">exer:()-2</a> from the Exercise sheet]</div>
 </div>
-</div>
-<div class='standard' id='magicparlabel-203'>
+<div class='standard' id='magicparlabel-169'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-204'><span class="example_label">Example 28.</span>
+<div class="example_item" id='magicparlabel-170'><span class="example_label">Example 25.</span>
 <a id="exa_Let__for" />Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -3188,7 +3159,7 @@ See Exercise <a href="#exer____2">exer:()-2</a> from the Exercise sheet</div>
 </math>
 -smooth.</div>
 <div class='solution_'>
-<div class="solution__item" id='magicparlabel-205'><span class="solution__label">Solution.</span>
+<div class="solution__item" id='magicparlabel-171'><span class="solution__label">Solution.</span>
 It is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -3303,7 +3274,7 @@ It is <math xmlns='http://www.w3.org/1998/Math/MathML'>
  <mn>.</mn>
 </mrow>
 </math>
-Hence from Theorem <a href="#thm_Let__with">27</a>, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+Hence from Theorem <a href="#thm_Let__with">24</a>, <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
  is <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -3326,11 +3297,11 @@ Hence from Theorem <a href="#thm_Let__with">27</a>, <math xmlns='http://www.w3.o
 -smooth.</div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-206'>
+<div class='standard' id='magicparlabel-172'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-207'><span class="example_label">Example 29.</span>
+<div class="example_item" id='magicparlabel-173'><span class="example_label">Example 26.</span>
 <a id="exa_Consider_the_regression" />Consider the regression problem with predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -3447,16 +3418,13 @@ Hence from Theorem <a href="#thm_Let__with">27</a>, <math xmlns='http://www.w3.o
 </mrow>
 </math>
 -smooth.</div>
-<div class='solution_'>
-<div class="solution__item" id='magicparlabel-208'><span class="solution__label">Solution.</span>
-Follows from Example <a href="#exa_Let__for">28</a>.</div>
-</div>
+<div class='standard' style='text-align: right;' id='magicparlabel-174'>[Follows from Example <a href="#exa_Let__for">25</a>.]</div>
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-209'><span class="section_label">6</span> <a id="sec_Convex_learning_problems" />Convex learning problems</h2>
+<h2 class='section' id='magicparlabel-175'><span class="section_label">6</span> <a id="sec_Convex_learning_problems" />Convex learning problems</h2>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-210'><span class="definition_label">Definition 30.</span>
+<div class="definition_item" id='magicparlabel-176'><span class="definition_label">Definition 27.</span>
 Convex learning problem is a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -3493,11 +3461,11 @@ Convex learning problem is a learning problem <math xmlns='http://www.w3.org/199
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-211'>
+<div class='standard' id='magicparlabel-177'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-212'><span class="example_label">Example 31.</span>
+<div class="example_item" id='magicparlabel-178'><span class="example_label">Example 28.</span>
 Consider the regression problem with predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -3582,13 +3550,13 @@ Consider the regression problem with predictor rule <math xmlns='http://www.w3.o
  </mstyle>
 </mrow>
 </math>
-. This imposes a convex learning problem due to Examples <a href="#exa_For_instance_">6</a> and <a href="#exa_Let__convex">13</a>.</div>
+. This imposes a convex learning problem due to Examples <a href="#exa_For_instance_">4</a> and <a href="#exa_Let__convex">11</a>.</div>
 </div>
-<div class='standard' id='magicparlabel-213'>
+<div class='standard' id='magicparlabel-179'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-214'><span class="definition_label">Definition 32.</span>
+<div class="definition_item" id='magicparlabel-180'><span class="definition_label">Definition 29.</span>
 Convex-Lipschitz-Bounded Learning Problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -3665,11 +3633,11 @@ Convex-Lipschitz-Bounded Learning Problem <math xmlns='http://www.w3.org/1998/Ma
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-215'>
+<div class='standard' id='magicparlabel-181'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-216'><span class="example_label">Example 33.</span>
+<div class="example_item" id='magicparlabel-182'><span class="example_label">Example 30.</span>
 Consider the regression problem with predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -3784,13 +3752,13 @@ Consider the regression problem with predictor rule <math xmlns='http://www.w3.o
  </mrow>
 </mrow>
 </math>
- due to Examples <a href="#exa_Let__convex">13</a>, and <a href="#exa_Consider_the_function">21</a>(<a href="#enu__is_a">2.</a>).</div>
+ due to Examples <a href="#exa_Let__convex">11</a>, and <a href="#exa_Consider_the_function">18</a>(<a href="#enu__is_a">2.</a>).</div>
 </div>
-<div class='standard' id='magicparlabel-217'>
+<div class='standard' id='magicparlabel-183'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-218'><span class="definition_label">Definition 34.</span>
+<div class="definition_item" id='magicparlabel-184'><span class="definition_label">Definition 31.</span>
 Convex-Smooth-Bounded Learning Problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -3867,11 +3835,11 @@ Convex-Smooth-Bounded Learning Problem <math xmlns='http://www.w3.org/1998/Math/
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-219'>
+<div class='standard' id='magicparlabel-185'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-220'><span class="example_label">Example 35.</span>
+<div class="example_item" id='magicparlabel-186'><span class="example_label">Example 32.</span>
 Consider the regression problem with predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -3986,11 +3954,14 @@ Consider the regression problem with predictor rule <math xmlns='http://www.w3.o
  </mrow>
 </mrow>
 </math>
- due to Examples <a href="#exa_Let__convex">13</a>, and <a href="#exa_Consider_the_regression">29</a>.</div>
+ due to Examples <a href="#exa_Let__convex">11</a>, and <a href="#exa_Consider_the_regression">26</a>.</div>
 </div>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-221'><span class="proposition_label">Proposition 36.</span>
-<a id="prop_If__is" />If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-187'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-188'><span class="note_label">Note 33.</span>
+<a id="prop_If__is" /> If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2113;</mi>
 </math>
  is a convex loss function and the class <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -4029,9 +4000,9 @@ Consider the regression problem with predictor rule <math xmlns='http://www.w3.o
  <mi>H</mi>
 </mstyle>
 </math>
-, is a convex optimization problem (that is, a problem of minimizing a convex function over a convex set).</div>
+, is a convex optimization problem</div>
 <div class='proof'>
-<div class="proof_item" id='magicparlabel-222'><span class="proof_label">Proof.</span>
+<div class="proof_item" id='magicparlabel-193'><span class="proof_label">Proof.</span>
 The <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mtext>ERM</mtext>
@@ -4171,11 +4142,11 @@ The <math xmlns='http://www.w3.org/1998/Math/MathML'>
  </mrow>
 </mrow>
 </math>
- is a convex function from Proposition <a href="#exa_Let__convex">(13)</a>. Hence ERM rule is a problem of minimizing a convex function subject to the constraint that the solution should be in a convex set.</div>
+ is a convex function from Note <a href="#exa_Let__convex">(11)</a>. Hence ERM rule is a problem of minimizing a convex function subject to the constraint that the solution should be in a convex set.</div>
 </div>
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-223'><span class="example_label">Example 37.</span>
+<div class="example_item" id='magicparlabel-194'><span class="example_label">Example 34.</span>
 Multiple linear regression with predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -4357,17 +4328,249 @@ or
  </msup>
 </mrow>
 </math>
-is a convex learning problem –from Proposition <a href="#prop_If__is">36</a>.</div>
+is a convex learning problem –from Proposition <a href="#prop_If__is">33</a>.</div>
+</div>
+<div class='standard' id='magicparlabel-199'>
+<br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-224'><span class="note_label">Note 38.</span>
-Problems like that in Proposition <a href="#prop_If__is">36</a> can be efficiently solved with algorithms such as Stochastic Gradients Descent to be introduced later.</div>
+<div class="note_item" id='magicparlabel-200'><span class="note_label">Note 35.</span>
+<a id="prop_If__is_2" /> (Ridge / <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mn>2</mn>
+</msub>
+</math>
+-RLM problem) If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2113;</mi>
+</math>
+ is a convex loss function w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+, the class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ is convex, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>J</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>;</mo>
+   <mi>&#x3BB;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mo>&#x22C5;</mo>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>w</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ is a <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex function, and hence the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mn>2</mn>
+</msub>
+</math>
+-RLM problem 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>min</mo>
+  </mrow>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>H</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mover>
+     <mi>R</mi>
+     <mo stretchy='true'>&#x02C6;</mo>
+    </mover>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>w</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <mi>&#x3BB;</mi>
+   <msubsup>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mi>w</mi>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mn>2</mn>
+    <mn>2</mn>
+   </msubsup>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+  is a strongly convex optimization problem (i.e. the learning rule is the minimizer of a strongly convex function over a convex set).</div>
+<div class='proof'>
+<div class="proof_item" id='magicparlabel-209'><span class="proof_label">Proof.</span>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is a convex function from Proposition <a href="#prop_If__is">33</a>, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mo>&#x22C5;</mo>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex, hence <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mi>R</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>&#x3BB;</mi>
+ <msubsup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mi>w</mi>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msubsup>
+</mrow>
+</math>
+ is a <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3BB;</mi>
+</mrow>
+</math>
+-strongly convex function. Hence the above <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mtext>ERM</mtext>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+</msub>
+</math>
+ problem is a strongly convex optimization problem.</div>
+</div>
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-225'><span class="section_label">7</span> Non-convex learning problems (surrogate treatment)</h2>
-<div class='remark'>
-<div class="remark_item" id='magicparlabel-226'><span class="remark_label">Remark 39.</span>
+<h2 class='section' id='magicparlabel-214'><span class="section_label">7</span> Non-convex learning problems (surrogate treatment)</h2>
+<div class='note'>
+<div class="note_item" id='magicparlabel-215'><span class="note_label">Note 36.</span>
 A learning problem may involve non-convex loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x2113;</mi>
@@ -4395,7 +4598,7 @@ A learning problem may involve non-convex loss function <math xmlns='http://www.
  </mrow>
 </mrow>
 </math>
-. However, our learning algorithm will be analyzed in the convex setting. A suitable treatment to overcome this difficulty would be to upper bound the non-convex loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+. A suitable treatment to analyze the associated learning tools within the convex setting would be to upper bound the non-convex loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x2113;</mi>
  <mrow>
@@ -4463,7 +4666,7 @@ A learning problem may involve non-convex loss function <math xmlns='http://www.
 .</div>
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-227'><span class="example_label">Example 40.</span>
+<div class="example_item" id='magicparlabel-216'><span class="example_label">Example 37.</span>
 Consider the binary classification problem with inputs <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -4536,8 +4739,7 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
  </mrow>
  <mo stretchy='false'>=</mo>
  <msub>
-  <mtext>
-  <mn>1</mn></mtext>
+  <mn>1</mn>
   <mrow>
    <mo>(</mo>
    <mrow>
@@ -4638,12 +4840,12 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
  </mrow>
 </mrow>
 </math>
- which is convex (Example <a href="#exa_Let__convex">13</a>) wrt <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ which is convex (Example <a href="#exa_Let__convex">11</a>) wrt <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>w</mi>
 </math>
 . Note that:</div>
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-228'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-217'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mover>
   <mi>&#x2113;</mi>
@@ -4682,7 +4884,7 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
 </mrow>
 </math>
  is convex </li>
-<li class="itemize_item" id='magicparlabel-229'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-218'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x2113;</mi>
  <mrow>
@@ -4737,7 +4939,7 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
 </math>
 </li>
 </ul>
-<div class='standard' id='magicparlabel-230'>Then we can compute
+<div class='standard' id='magicparlabel-219'>Then we can compute
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <msub>
@@ -4896,8 +5098,7 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
    <mrow>
     <mo>(</mo>
     <msub>
-     <mtext>
-     <mn>1</mn></mtext>
+     <mn>1</mn>
      <mrow>
       <mo>(</mo>
       <mrow>
@@ -4942,13 +5143,13 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-231'>
+<div class='standard' id='magicparlabel-220'>
 <br />
 </div>
 
 
-<div class='remark'>
-<div class="remark_item" id='magicparlabel-242'><span class="remark_label">Remark 41.</span>
+<div class='note'>
+<div class="note_item" id='magicparlabel-231'><span class="note_label">Note 38.</span>
 <a id="rem__Intuitions_____Using_a" />(Intuitions...) Using a convex surrogate loss function instead the convex one, facilitates computations but introduces extra error to the solution. If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -5135,330 +5336,9 @@ Consider the binary classification problem with inputs <math xmlns='http://www.w
  where term <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mtext>I</mtext>
 </math>
- is the approximation error measuring how well the hypothesis class performs on the generating model, term II is the optimization error due to the use of surrogate loss instead of the actual non-convex one, and term III is the estimation error due to the use of a training set and not the whole generation model. </div>
+ is the approximation error measuring how well the hypothesis class performs on the generating model, term II is the optimization error due to the use of surrogate loss instead of the actual non-convex one, and term III is the estimation error due to the use of a training set and not the whole generation model.</div>
 </div>
-
-</section>
-<section>
-<h2 class='section' id='magicparlabel-252'><span class="section_label">8</span> &#xA0;</h2>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-253'><span class="proposition_label">Proposition 42.</span>
-<a id="prop_If__is_1" />If <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x2113;</mi>
-</math>
- is a convex loss function and the class <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mstyle mathvariant='script'>
- <mi>H</mi>
-</mstyle>
-</math>
- is convex, then the Ridge <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<msub>
- <mtext>ERM</mtext>
- <mstyle mathvariant='script'>
-  <mi>H</mi>
- </mstyle>
-</msub>
-</math>
- problem, with learning rule
-<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <munder accent='false'>
-  <mrow>
-   <mo>arg</mo>
-   <mo>min</mo>
-  </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
- </munder>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <msub>
-    <mover>
-     <mi>R</mi>
-     <mo stretchy='true'>&#x02C6;</mo>
-    </mover>
-    <mstyle mathvariant='script'>
-     <mi>S</mi>
-    </mstyle>
-   </msub>
-   <mrow>
-    <mo>(</mo>
-    <mi>w</mi>
-    <mo>)</mo>
-   </mrow>
-   <mo stretchy='false'>+</mo>
-   <mi>&#x3BB;</mi>
-   <msubsup>
-    <mrow>
-     <mo>&#x2225;</mo>
-     <mi>w</mi>
-     <mo>&#x2225;</mo>
-    </mrow>
-    <mn>2</mn>
-    <mn>2</mn>
-   </msubsup>
-  </mrow>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- is a <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mn>2</mn>
- <mi>&#x3BB;</mi>
-</mrow>
-</math>
--strongly convex learning problem. </div>
-</div>
-<div class='standard' id='magicparlabel-254'>
-<br />
-</div>
-<div class='proposition'>
-<div class="proposition_item" id='magicparlabel-255'><span class="proposition_label">Proposition 43.</span>
-<a id="prop_If__is_2" /> (ERM<i> with Ridge regularization) If <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x2113;</mi>
-</math>
- is a convex loss function, the class <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mstyle mathvariant='script'>
- <mi>H</mi>
-</mstyle>
-</math>
- is convex, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>J</mi>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mo>&#x22C5;</mo>
-   <mo stretchy='false'>;</mo>
-   <mi>&#x3BB;</mi>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <mi>&#x3BB;</mi>
- <msubsup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mo>&#x22C5;</mo>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
-  <mn>2</mn>
- </msubsup>
-</mrow>
-</math>
- with <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>&#x3BB;</mi>
- <mo stretchy='false'>&gt;</mo>
- <mn>0</mn>
-</mrow>
-</math>
- then <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <msub>
-  <mover>
-   <mi>R</mi>
-   <mo stretchy='true'>&#x02C6;</mo>
-  </mover>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
- </msub>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>+</mo>
- <mi>&#x3BB;</mi>
- <msubsup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mi>w</mi>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
-  <mn>2</mn>
- </msubsup>
-</mrow>
-</math>
- is a <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mn>2</mn>
- <mi>&#x3BB;</mi>
-</mrow>
-</math>
--strongly convex function, and the <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<msub>
- <mtext>ERM</mtext>
- <mstyle mathvariant='script'>
-  <mi>H</mi>
- </mstyle>
-</msub>
-</math>
- problem 
-<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <msup>
-  <mi>w</mi>
-  <mo stretchy='false'>*</mo>
- </msup>
- <mo stretchy='false'>=</mo>
- <munder accent='false'>
-  <mrow>
-   <mo>arg</mo>
-   <mo>min</mo>
-  </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
- </munder>
- <mrow>
-  <mo>{</mo>
-  <mrow>
-   <msub>
-    <mover>
-     <mi>R</mi>
-     <mo stretchy='true'>&#x02C6;</mo>
-    </mover>
-    <mstyle mathvariant='script'>
-     <mi>S</mi>
-    </mstyle>
-   </msub>
-   <mrow>
-    <mo>(</mo>
-    <mi>w</mi>
-    <mo>)</mo>
-   </mrow>
-   <mo stretchy='false'>+</mo>
-   <mi>&#x3BB;</mi>
-   <msubsup>
-    <mrow>
-     <mo>&#x2225;</mo>
-     <mi>w</mi>
-     <mo>&#x2225;</mo>
-    </mrow>
-    <mn>2</mn>
-    <mn>2</mn>
-   </msubsup>
-  </mrow>
-  <mo>}</mo>
- </mrow>
-</mrow>
-</math>
-  is a strongly convex optimization problem (i.e. the learning rule is the minimizer of a strongly convex function over a convex set).</i></div>
-<div class='proof'>
-<div class="proof_item" id='magicparlabel-264'><span class="proof_label">Proof.</span>
-<math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <msub>
-  <mover>
-   <mi>R</mi>
-   <mo stretchy='true'>&#x02C6;</mo>
-  </mover>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
- </msub>
- <mrow>
-  <mo>(</mo>
-  <mo>&#x22C5;</mo>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- is a convex function from Proposition <a href="#prop_If__is">36</a>, <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>&#x3BB;</mi>
- <msubsup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mo>&#x22C5;</mo>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
-  <mn>2</mn>
- </msubsup>
-</mrow>
-</math>
- is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mn>2</mn>
- <mi>&#x3BB;</mi>
-</mrow>
-</math>
--strongly convex, hence <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <msub>
-  <mover>
-   <mi>R</mi>
-   <mo stretchy='true'>&#x02C6;</mo>
-  </mover>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
- </msub>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>+</mo>
- <mi>&#x3BB;</mi>
- <msubsup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mi>w</mi>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
-  <mn>2</mn>
- </msubsup>
-</mrow>
-</math>
- is a <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mn>2</mn>
- <mi>&#x3BB;</mi>
-</mrow>
-</math>
--strongly convex function. Hence the above <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<msub>
- <mtext>ERM</mtext>
- <mstyle mathvariant='script'>
-  <mi>H</mi>
- </mstyle>
-</msub>
-</math>
- problem is a strongly convex optimization problem.</div>
-</div>
-</div>
-<div class='standard' id='magicparlabel-269'>
-<br />
-</div>
+<div class='standard' id='magicparlabel-232'> </div>
 </section>
 </body>
 </html>

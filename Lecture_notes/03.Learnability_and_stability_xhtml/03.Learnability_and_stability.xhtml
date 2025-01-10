@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-<meta name="generator" content="LyX 2.4.1" />
+<meta name="generator" content="LyX 2.4.2.1" />
 <title>LyX Document</title>
 <style>
 /* Layout-provided Styles */
@@ -87,22 +87,6 @@ font-size: medium;
 
 }
 dl.description dt { font-weight: bold; }
-div.remark {
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: left;
-
-}
-span.remark_label {
-font-weight: normal;
-font-style: italic;
-font-variant: normal;
-font-size: medium;
-
-}
 div.proposition {
 font-style: italic;
 font-variant: normal;
@@ -144,6 +128,22 @@ text-align: left;
 
 }
 span.notation_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.remark {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.remark_label {
 font-weight: normal;
 font-style: italic;
 font-variant: normal;
@@ -220,9 +220,9 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
 <div class='standard' id='magicparlabel-1'><div class='Shadowbox'>
 
 <div class='plain_layout' id='magicparlabel-10'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
-Epiphany term, 2024<div style='height:3ex'></div></div>
+Epiphany term, 2025<div style='height:3ex'></div></div>
 
-<div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Handout <a href="#enu_Handout___Learnability_">enu:Handout-:-Learnability,</a>: Learnability and stability in learning problems <div style='height:3ex'></div></div>
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Lecture notes <a href="#enu_Handout___Learnability_">enu:Handout-:-Learnability,</a>: Learnability and stability in learning problems <div style='height:3ex'></div></div>
 
 <div class='plain_layout' id='magicparlabel-20'>Lecturer &amp; author: Georgios P. Karagiannis 
 <a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
@@ -600,8 +600,50 @@ The PAC learning problem requires no prior assumptions about the data-generating
 </li>
 </ul>
 </div>
+<div class='standard' id='magicparlabel-37'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-38'>
+<br />
+</div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-37'><span class="note_label">Note 5.</span>
+<div class="note_item" id='magicparlabel-39'><span class="note_label">Note 5.</span>
+About <a href="#eq__1">1.1</a>: The accuracy parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3F5;</mi>
+</math>
+ determines how far the output rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mi>m</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ can be from the optimal one (this corresponds to the `approximately correct&#8217;). The confidence parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B4;</mi>
+</math>
+ indicates how likely the classifier is to meet that accuracy requirement (corresponds to the “probably” part of “PAC”).</div>
+</div>
+<div class='standard' id='magicparlabel-40'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-41'><span class="note_label">Note 6.</span>
 It may be easier to work with expectations: by using Markov inequality <a href="#eq__1">(1.1)</a> becomes <a id="eq__2" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -763,10 +805,10 @@ It may be easier to work with expectations: by using Markov inequality <a href="
  </mtr>
 </mtable>
 </math>
- and hence we need to work with expectations and bounded above. </div>
+ and hence can just compute expectations and bound them from above. </div>
 <dl class='description'>
 <dt class="description_label">Hint</dt>
-<dd class="description_item" id='magicparlabel-38'> Markov inequality <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<dd class="description_item" id='magicparlabel-42'> Markov inequality <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>Pr</mo>
  <mrow>
@@ -801,49 +843,14 @@ It may be easier to work with expectations: by using Markov inequality <a href="
 . </dd>
 </dl>
 </div>
-<div class='standard' id='magicparlabel-39'>
-<br />
-</div>
-<div class='remark'>
-<div class="remark_item" id='magicparlabel-40'><span class="remark_label">Remark 6.</span>
-About <a href="#eq__2">1.2</a>: The accuracy parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3F5;</mi>
-</math>
- determines how far the output rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <msub>
-   <mstyle mathvariant='script'>
-    <mi>S</mi>
-   </mstyle>
-   <mi>m</mi>
-  </msub>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- of <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mstyle mathvariant='fraktur'>
- <mi>A</mi>
-</mstyle>
-</math>
- can be from the optimal one (this corresponds to the `approximately correct&#8217;). The confidence parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3B4;</mi>
-</math>
- indicates how likely the classifier is to meet that accuracy requirement (corresponds to the “probably” part of “PAC”). </div>
-</div>
-<div class='standard' id='magicparlabel-41'>
+<div class='standard' id='magicparlabel-43'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-42'><span class="section_label">2</span> Analysis of the risk based on the trade-off fitting vs stability</h2>
+<h2 class='section' id='magicparlabel-44'><span class="section_label">2</span> Analysis of the risk based on the trade-off fitting vs stability</h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-43'><span class="note_label">Note 7.</span>
+<div class="note_item" id='magicparlabel-45'><span class="note_label">Note 7.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
@@ -1032,11 +1039,11 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-44'>
+<div class='standard' id='magicparlabel-46'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-45'><span class="note_label">Note 8.</span>
+<div class="note_item" id='magicparlabel-47'><span class="note_label">Note 8.</span>
 Over-fitting can be represented by <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -1117,7 +1124,7 @@ Over-fitting can be represented by <math xmlns='http://www.w3.org/1998/Math/Math
 . Hence, we provide the following (arguable) definition for over-fitting on which we base our analysis.</div>
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-46'><span class="definition_label">Definition 9.</span>
+<div class="definition_item" id='magicparlabel-48'><span class="definition_label">Definition 9.</span>
 <a id="def_Let__be_1" />  For a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
@@ -1201,11 +1208,11 @@ Over-fitting can be represented by <math xmlns='http://www.w3.org/1998/Math/Math
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-55'>
+<div class='standard' id='magicparlabel-57'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-56'><span class="definition_label">Definition 10.</span>
+<div class="definition_item" id='magicparlabel-58'><span class="definition_label">Definition 10.</span>
 <a id="def_Let__be" /> We say that learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
@@ -1213,11 +1220,11 @@ Over-fitting can be represented by <math xmlns='http://www.w3.org/1998/Math/Math
 </math>
  suffers from over-fitting when <a href="#eq__8">(2.2)</a> is `too&#8217; large. </div>
 </div>
-<div class='standard' id='magicparlabel-57'>
+<div class='standard' id='magicparlabel-59'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-58'><span class="note_label">Note 11.</span>
+<div class="note_item" id='magicparlabel-60'><span class="note_label">Note 11.</span>
 The expected Risk of a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mstyle mathvariant='fraktur'>
@@ -1491,18 +1498,18 @@ by applying expectations in <a href="#eq__7">(2.1)</a> and ignoring <math xmlns=
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-59'>
-<br />
-</div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-60'><span class="note_label">Note 12.</span>
-The following result connects the need for upper bounding (and minimizing this bound) the Expected Risk in <a href="#eq_">(2.3)</a> and PAC learning (Definition <a href="#def__Agnostic_PAC_Learnability">4</a>). </div>
-</div>
 <div class='standard' id='magicparlabel-61'>
 <br />
 </div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-62'><span class="note_label">Note 12.</span>
+The following result connects the need for upper bounding (and minimizing this bound) the Expected Risk in <a href="#eq_">(2.3)</a> and PAC learning (Definition <a href="#def__Agnostic_PAC_Learnability">4</a>). </div>
+</div>
+<div class='standard' id='magicparlabel-63'>
+<br />
+</div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-62'><span class="proposition_label">Proposition 13.</span>
+<div class="proposition_item" id='magicparlabel-64'><span class="proposition_label">Proposition 13.</span>
 <a id="prop_Let__be" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
@@ -1510,7 +1517,7 @@ The following result connects the need for upper bounding (and minimizing this b
 </math>
  be a learning algorithm that guarantees the following: </div>
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-63'><i>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-65'><i>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo>&#x2265;</mo>
@@ -1608,14 +1615,14 @@ The following result connects the need for upper bounding (and minimizing this b
 </math>
 </i></li>
 </ul>
-<div class='standard' id='magicparlabel-64'><i>Then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-66'><i>Then <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
 </mstyle>
 </math>
  satisfies the PAC guarantee in Definition <a href="#def__Agnostic_PAC_Learnability">4</a>:</i></div>
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-65'><i>for every <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-67'><i>for every <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3B4;</mi>
  <mo>&#x2208;</mo>
@@ -1733,7 +1740,7 @@ The following result connects the need for upper bounding (and minimizing this b
 </li>
 </ul>
 <div class='proof'>
-<div class="proof_item" id='magicparlabel-66'><span class="proof_label">Proof.</span>
+<div class="proof_item" id='magicparlabel-68'><span class="proof_label">Proof.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BE;</mi>
@@ -1958,11 +1965,11 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
  and we conclude the proof. </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-67'>
+<div class='standard' id='magicparlabel-69'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-68'><span class="note_label">Note 14.</span>
+<div class="note_item" id='magicparlabel-70'><span class="note_label">Note 14.</span>
 Hence, we aim to design a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mstyle mathvariant='fraktur'>
@@ -2023,9 +2030,9 @@ Hence, we aim to design a learning algorithm <math xmlns='http://www.w3.org/1998
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-74'><span class="section_label">3</span> <a id="sec_Stability_and_over_fitting" />Stability and its association with over-fitting</h2>
+<h2 class='section' id='magicparlabel-76'><span class="section_label">3</span> <a id="sec_Stability_and_over_fitting" />Stability and its association with over-fitting</h2>
 <div class='notation'>
-<div class="notation_item" id='magicparlabel-75'><span class="notation_label">Notation 15.</span>
+<div class="notation_item" id='magicparlabel-77'><span class="notation_label">Notation 15.</span>
 Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -2089,11 +2096,11 @@ Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-80'>
+<div class='standard' id='magicparlabel-82'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-81'><span class="note_label">Note 16.</span>
+<div class="note_item" id='magicparlabel-83'><span class="note_label">Note 16.</span>
 It is reasonable to consider that a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
@@ -2237,7 +2244,7 @@ th element being replaced by another independent example <math xmlns='http://www
 </div>
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-82'><span class="definition_label">Definition 17.</span>
+<div class="definition_item" id='magicparlabel-84'><span class="definition_label">Definition 17.</span>
 <a id="def_A_learning_algorithm" /> A learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
@@ -2375,18 +2382,18 @@ th element being replaced by another independent example <math xmlns='http://www
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-83'>
-<br />
-</div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-84'><span class="note_label">Note 18.</span>
-The following result demonstrates the direct association of stability and over-fitting as defined in Definitions <a href="#def_Let__be">10</a> &amp; <a href="#def_A_learning_algorithm">17</a>.</div>
-</div>
 <div class='standard' id='magicparlabel-85'>
 <br />
 </div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-86'><span class="note_label">Note 18.</span>
+The following result demonstrates the direct association of stability and over-fitting as defined in Definitions <a href="#def_Let__be">10</a> &amp; <a href="#def_A_learning_algorithm">17</a>.</div>
+</div>
+<div class='standard' id='magicparlabel-87'>
+<br />
+</div>
 <div class='theorem'>
-<div class="theorem_item" id='magicparlabel-86'><span class="theorem_label">Theorem 19.</span>
+<div class="theorem_item" id='magicparlabel-88'><span class="theorem_label">Theorem 19.</span>
 <a id="thm_For_any_learning" /> For any learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='fraktur'>
  <mi>A</mi>
@@ -2677,7 +2684,7 @@ The following result demonstrates the direct association of stability and over-f
 </math>
 .</div>
 <div class='proof'>
-<div class="proof_item" id='magicparlabel-87'><span class="proof_label">Proof.</span>
+<div class="proof_item" id='magicparlabel-89'><span class="proof_label">Proof.</span>
 As <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>z</mi>
@@ -2981,19 +2988,19 @@ As <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-88'>
+<div class='standard' id='magicparlabel-90'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-89'><span class="note_label">Note 20.</span>
+<div class="note_item" id='magicparlabel-91'><span class="note_label">Note 20.</span>
 Hence, we desire to design learning algorithms corresponding to as small as possible <a href="#eq__6">(3.2)</a>.</div>
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-90'><span class="section_label">4</span> Implementation in regularized loss learning problems</h2>
+<h2 class='section' id='magicparlabel-92'><span class="section_label">4</span> Implementation in regularized loss learning problems</h2>
 
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-96'><span class="definition_label">Definition 21.</span>
+<div class="definition_item" id='magicparlabel-98'><span class="definition_label">Definition 21.</span>
 A Regularized Loss Minimization (RLM) learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -3156,28 +3163,28 @@ A Regularized Loss Minimization (RLM) learning problem <math xmlns='http://www.w
 </math>
  an IID training sample.</div>
 </div>
-<div class='standard' id='magicparlabel-97'>
+<div class='standard' id='magicparlabel-99'>
 <br />
 </div>
 <div class='remark'>
-<div class="remark_item" id='magicparlabel-98'><span class="remark_label">Remark 22.</span>
+<div class="remark_item" id='magicparlabel-100'><span class="remark_label">Remark 22.</span>
 The motivation for considering the regularization function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>J</mi>
 </math>
  in <a href="#eq__3">(4.1)</a> is to: (1.) control complexity and (2.) improve stability; as we will see later.</div>
 </div>
-<div class='standard' id='magicparlabel-99'>
-<br />
-</div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-100'><span class="note_label">Note 23.</span>
-Here, we make our example more specific and narrow it to the Ridge RLM learning problem (could have been LASSO etc.). </div>
-</div>
 <div class='standard' id='magicparlabel-101'>
 <br />
 </div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-102'><span class="note_label">Note 23.</span>
+Here, we make our example more specific and narrow it to the Ridge RLM learning problem (could have been LASSO etc.). </div>
+</div>
+<div class='standard' id='magicparlabel-103'>
+<br />
+</div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-102'><span class="definition_label">Definition 24.</span>
+<div class="definition_item" id='magicparlabel-104'><span class="definition_label">Definition 24.</span>
 <a id="def_The_Ridge_RLM" /> The Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -3325,11 +3332,11 @@ Here, we make our example more specific and narrow it to the Ridge RLM learning 
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-103'>
+<div class='standard' id='magicparlabel-105'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-104'><span class="note_label">Note 25.</span>
+<div class="note_item" id='magicparlabel-106'><span class="note_label">Note 25.</span>
 Recall (Term 1) how the regularization function in Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -3404,11 +3411,11 @@ Recall (Term 1) how the regularization function in Ridge RLM learning problem <m
 </math>
  due to duality of the corresponding minimization problem. </div>
 </div>
-<div class='standard' id='magicparlabel-105'>
+<div class='standard' id='magicparlabel-107'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-106'><span class="note_label">Note 26.</span>
+<div class="note_item" id='magicparlabel-108'><span class="note_label">Note 26.</span>
 Below, we will try to analyze the behavior of Ridge RLM learning rule <a href="#eq__9">(4.2)</a> w.r.t. the Risk decomposition <a href="#eq_">(2.3)</a>. In particular, to upper bounded w.r.t. the shrinkage term <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BB;</mi>
@@ -3421,9 +3428,9 @@ Below, we will try to analyze the behavior of Ridge RLM learning rule <a href="#
 , and other characteristics. </div>
 </div>
 <section>
-<h3 class='subsection' id='magicparlabel-107'><span class="subsection_label">4.1</span> Bounding the empirical risk (I) in <a href="#eq_">(2.3)</a> </h3>
+<h3 class='subsection' id='magicparlabel-109'><span class="subsection_label">4.1</span> Bounding the empirical risk (I) in <a href="#eq_">(2.3)</a> </h3>
 <div class='note'>
-<div class="note_item" id='magicparlabel-108'><span class="note_label">Note 27.</span>
+<div class="note_item" id='magicparlabel-110'><span class="note_label">Note 27.</span>
 From <a href="#eq__9">(4.2)</a>, we have
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -3733,11 +3740,11 @@ and by taking expectations w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathM
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-109'>
+<div class='standard' id='magicparlabel-111'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-110'><span class="note_label">Note 28.</span>
+<div class="note_item" id='magicparlabel-112'><span class="note_label">Note 28.</span>
 From <a href="#eq__10">(4.3)</a>, we observe that part (I) in the expected risk decomposition <a href="#eq_">(2.3)</a>, (aka the upper bound of the expected empirical risk) increases with the regularization term <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BB;</mi>
@@ -3749,16 +3756,16 @@ From <a href="#eq__10">(4.3)</a>, we observe that part (I) in the expected risk 
 </div>
 </section>
 <section>
-<h3 class='subsection' id='magicparlabel-111'><span class="subsection_label">4.2</span> Bounding the empirical risk (II) in <a href="#eq_">(2.3)</a> </h3>
+<h3 class='subsection' id='magicparlabel-113'><span class="subsection_label">4.2</span> Bounding the empirical risk (II) in <a href="#eq_">(2.3)</a> </h3>
 <div class='note'>
-<div class="note_item" id='magicparlabel-112'><span class="note_label">Note 29.</span>
+<div class="note_item" id='magicparlabel-114'><span class="note_label">Note 29.</span>
 As we will see to bound (II) in <a href="#eq_">(2.3)</a> we will have to impose an additional condition on the behavior of loss function apart from convexity; e.g. Lipstchitzness.</div>
 </div>
-<div class='standard' id='magicparlabel-113'>
+<div class='standard' id='magicparlabel-115'>
 <br />
 </div>
 <div class='assumption'>
-<div class="assumption_item" id='magicparlabel-114'><span class="assumption_label">Assumption 30.</span>
+<div class="assumption_item" id='magicparlabel-116'><span class="assumption_label">Assumption 30.</span>
 <a id="assu_The_loss_function" /> The loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x2113;</mi>
@@ -3784,11 +3791,11 @@ As we will see to bound (II) in <a href="#eq_">(2.3)</a> we will have to impose 
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-115'>
+<div class='standard' id='magicparlabel-117'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-116'><span class="note_label">Note 31.</span>
+<div class="note_item" id='magicparlabel-118'><span class="note_label">Note 31.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -3906,13 +3913,15 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
  </msubsup>
 </mrow>
 </math>
- (results directly from Definition <a href="#def__Strongly_convex_functions_">def:(Strongly-convex-functions)</a> in Handout <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>). </div>
+ (results directly from Definition <a href="#def__Strongly_convex_functions_">def:(Strongly-convex-functions)</a> in Lecture notes <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>). </div>
 </div>
-<div class='standard' id='magicparlabel-121'>
+<div class='standard' id='magicparlabel-123'>
 <br />
 </div>
+
+
 <div class='fact'>
-<div class="fact_item" id='magicparlabel-122'><span class="fact_label">Fact 32.</span>
+<div class="fact_item" id='magicparlabel-130'><span class="fact_label">Fact 32.</span>
 <a id="fact__To_be_used" /> (To be used in Note <a href="#note_Let__be">33</a>) If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
@@ -3928,6 +3937,7 @@ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
  then for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>w</mi>
 </math>
+ 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <mi>f</mi>
@@ -3964,11 +3974,17 @@ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-123'>
+<div class='standard' id='magicparlabel-131'>
+<br />
+</div>
+
+
+
+<div class='standard' id='magicparlabel-137'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-124'><span class="note_label">Note 33.</span>
+<div class="note_item" id='magicparlabel-138'><span class="note_label">Note 33.</span>
 <a id="note_Let__be" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mstyle mathvariant='fraktur'>
@@ -4131,11 +4147,11 @@ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-125'>
+<div class='standard' id='magicparlabel-139'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-126'><span class="note_label">Note 34.</span>
+<div class="note_item" id='magicparlabel-140'><span class="note_label">Note 34.</span>
 Also, for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>w</mi>
@@ -4819,13 +4835,13 @@ Also, for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-127'>
+<div class='standard' id='magicparlabel-141'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-128'><span class="note_label">Note 35.</span>
+<div class="note_item" id='magicparlabel-142'><span class="note_label">Note 35.</span>
 Then <a href="#eq__12">(4.4)</a> and <a href="#eq__11_1">(4.5)</a> imply</div>
-<div class="note_item" id='magicparlabel-129'><a id="eq__11" />
+<div class="note_item" id='magicparlabel-143'><a id="eq__11" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
  <mtr>
@@ -4979,15 +4995,15 @@ Then <a href="#eq__12">(4.4)</a> and <a href="#eq__11_1">(4.5)</a> imply</div>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-130'>
+<div class='standard' id='magicparlabel-144'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-131'><span class="note_label">Note 36.</span>
+<div class="note_item" id='magicparlabel-145'><span class="note_label">Note 36.</span>
 Now that we brought it in form <a href="#eq__11">(4.6)</a>, we can impose/use an additional assumption on the loss to bound it. In this example we use Lipstchitzness. </div>
 </div>
 <div class='assumption'>
-<div class="assumption_item" id='magicparlabel-132'><span class="assumption_label">Assumption 37.</span>
+<div class="assumption_item" id='magicparlabel-146'><span class="assumption_label">Assumption 37.</span>
 <a id="assu_The_loss_function_1" /> The loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x2113;</mi>
@@ -5014,13 +5030,13 @@ Now that we brought it in form <a href="#eq__11">(4.6)</a>, we can impose/use an
  </mstyle>
 </mrow>
 </math>
- . </div>
+. </div>
 </div>
-<div class='standard' id='magicparlabel-133'>
+<div class='standard' id='magicparlabel-147'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-134'><span class="note_label">Note 38.</span>
+<div class="note_item" id='magicparlabel-148'><span class="note_label">Note 38.</span>
 Given <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3C1;</mi>
 </math>
@@ -5279,11 +5295,11 @@ and hence plugging <a href="#eq__14">4.7</a> and <a href="#eq__17">(4.8)</a> in 
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-135'>
+<div class='standard' id='magicparlabel-149'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-136'><span class="note_label">Note 39.</span>
+<div class="note_item" id='magicparlabel-150'><span class="note_label">Note 39.</span>
 Plugging <a href="#eq__13">(4.9)</a> in <a href="#eq__14">(4.7)</a> yields 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
@@ -5355,11 +5371,11 @@ Plugging <a href="#eq__13">(4.9)</a> in <a href="#eq__14">(4.7)</a> yields
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-137'>
+<div class='standard' id='magicparlabel-151'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-138'><span class="note_label">Note 40.</span>
+<div class="note_item" id='magicparlabel-152'><span class="note_label">Note 40.</span>
 Using Theorem <a href="#thm_For_any_learning">19</a>, we get an upper bound for the stability / over-fitting 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
@@ -5542,11 +5558,11 @@ Using Theorem <a href="#thm_For_any_learning">19</a>, we get an upper bound for 
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-139'>
+<div class='standard' id='magicparlabel-153'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-140'><span class="note_label">Note 41.</span>
+<div class="note_item" id='magicparlabel-154'><span class="note_label">Note 41.</span>
 After this saga, the researcher could come to the conclusion that: A Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -5737,11 +5753,11 @@ After this saga, the researcher could come to the conclusion that: A Ridge RLM l
 </math>
  </div>
 </div>
-<div class='standard' id='magicparlabel-141'>
+<div class='standard' id='magicparlabel-155'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-142'><span class="note_label">Note 42.</span>
+<div class="note_item" id='magicparlabel-156'><span class="note_label">Note 42.</span>
 From <a href="#eq__15">(4.10)</a>, we see that stability improves (and over-fitting decreases) as the shrinkage parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3BB;</mi>
 </math>
@@ -5749,9 +5765,9 @@ From <a href="#eq__15">(4.10)</a>, we see that stability improves (and over-fitt
 </div>
 </section>
 <section>
-<h3 class='subsection' id='magicparlabel-143'><span class="subsection_label">4.3</span> Bounding the Risk <a href="#eq_">(2.3)</a> </h3>
+<h3 class='subsection' id='magicparlabel-157'><span class="subsection_label">4.3</span> Bounding the Risk <a href="#eq_">(2.3)</a> </h3>
 <div class='note'>
-<div class="note_item" id='magicparlabel-144'><span class="note_label">Note 43.</span>
+<div class="note_item" id='magicparlabel-158'><span class="note_label">Note 43.</span>
 <a id="note_Given_the_bounds" /> Given the bounds <a href="#eq__10">(4.3)</a> and <a href="#eq__15">(4.10)</a>, the decomposition of the expected Risk in <a href="#eq_">(2.3)</a> yields that: A Ridge RLM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -5947,12 +5963,12 @@ From <a href="#eq__15">(4.10)</a>, we see that stability improves (and over-fitt
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-145'>
+<div class='standard' id='magicparlabel-159'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-146'><span class="note_label">Note 44.</span>
-From <a href="#eq__16">4.11</a>, we see that there is a trade-off between Empirical Risk <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="note_item" id='magicparlabel-160'><span class="note_label">Note 44.</span>
+From <a href="#eq__16">(4.11)</a>, we see that there is a trade-off between Empirical Risk <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo stretchy='false'>(</mo>
  <mtext>I</mtext>
@@ -5982,7 +5998,7 @@ From <a href="#eq__16">4.11</a>, we see that there is a trade-off between Empiri
  (but perhaps not too stable)!</div>
 </div>
 <div class='assumption'>
-<div class="assumption_item" id='magicparlabel-147'><span class="assumption_label">Assumption 45.</span>
+<div class="assumption_item" id='magicparlabel-161'><span class="assumption_label">Assumption 45.</span>
 <a id="assu_The_loss_function_1_1" /> Assume that the learning problem is additionally <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>B</mi>
 </math>
@@ -6028,11 +6044,11 @@ From <a href="#eq__16">4.11</a>, we see that there is a trade-off between Empiri
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-148'>
+<div class='standard' id='magicparlabel-162'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-149'><span class="note_label">Note 46.</span>
+<div class="note_item" id='magicparlabel-163'><span class="note_label">Note 46.</span>
 If additionally the learning problem is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>B</mi>
 </math>
@@ -6150,11 +6166,11 @@ If additionally the learning problem is <math xmlns='http://www.w3.org/1998/Math
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-150'>
+<div class='standard' id='magicparlabel-164'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-151'><span class="note_label">Note 47.</span>
+<div class="note_item" id='magicparlabel-165'><span class="note_label">Note 47.</span>
 Furthermore, if we choose a shrinkage parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -6258,17 +6274,17 @@ Furthermore, if we choose a shrinkage parameter <math xmlns='http://www.w3.org/1
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-152'>
+<div class='standard' id='magicparlabel-166'>
 <br />
 </div>
 </section>
 <section>
-<h3 class='subsection' id='magicparlabel-153'><span class="subsection_label">4.4</span> Deriving PAC guarantees</h3>
-<div class='standard' id='magicparlabel-154'>
+<h3 class='subsection' id='magicparlabel-167'><span class="subsection_label">4.4</span> Deriving PAC guarantees</h3>
+<div class='standard' id='magicparlabel-168'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-155'><span class="note_label">Note 48.</span>
+<div class="note_item" id='magicparlabel-169'><span class="note_label">Note 48.</span>
 In particular, if the size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
@@ -6404,11 +6420,11 @@ In particular, if the size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  and hence we can have a PAC guarantee that is summarized in the following. </div>
 </div>
-<div class='standard' id='magicparlabel-156'>
+<div class='standard' id='magicparlabel-170'>
 <br />
 </div>
 <div class='summary'>
-<div class="summary_item" id='magicparlabel-157'><span class="summary_label">Summary 49.</span>
+<div class="summary_item" id='magicparlabel-171'><span class="summary_label">Summary 49.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -6625,219 +6641,8 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-163'>
-<br />
-</div>
 
-<div class='standard' id='magicparlabel-164'><br /></div>
 </section>
-</section>
-<section>
-<h2 class='section' id='magicparlabel-165'><span class="section_label">A</span> Recall strong convex functions from Handout <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>.</h2>
-<ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-166'>A function <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>f</mi>
-</math>
- is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3BB;</mi>
-</math>
--strongly convex function is for all <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>w</mi>
-</math>
-, <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>u</mi>
-</math>
-, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>&#x3B1;</mi>
- <mo>&#x2208;</mo>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mn>0</mn>
-   <mo stretchy='false'>,</mo>
-   <mn>1</mn>
-  </mrow>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- we have 
-<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mi>a</mi>
-   <mi>w</mi>
-   <mo stretchy='false'>+</mo>
-   <mrow>
-    <mo>(</mo>
-    <mrow>
-     <mn>1</mn>
-     <mo stretchy='false'>-</mo>
-     <mi>&#x3B1;</mi>
-    </mrow>
-    <mo>)</mo>
-   </mrow>
-   <mi>u</mi>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <mo>&#x2264;</mo>
- <mi>a</mi>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>+</mo>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mn>1</mn>
-   <mo stretchy='false'>-</mo>
-   <mi>&#x3B1;</mi>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>u</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>-</mo>
- <mfrac>
-  <mi>&#x3BB;</mi>
-  <mn>2</mn>
- </mfrac>
- <mi>&#x3B1;</mi>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <mn>1</mn>
-   <mo stretchy='false'>-</mo>
-   <mi>&#x3B1;</mi>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <msup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mrow>
-    <mi>w</mi>
-    <mo stretchy='false'>-</mo>
-    <mi>u</mi>
-   </mrow>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
-</mrow>
-</math>
-</li>
-<li class="itemize_item" id='magicparlabel-167'>The function <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <mi>&#x3BB;</mi>
- <msubsup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mi>w</mi>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
-  <mn>2</mn>
- </msubsup>
-</mrow>
-</math>
- is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mn>2</mn>
- <mi>&#x3BB;</mi>
-</mrow>
-</math>
--strongly convex </li>
-<li class="itemize_item" id='magicparlabel-168'>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>f</mi>
-</math>
-is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3BB;</mi>
-</math>
--strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>g</mi>
-</math>
- is convex then <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>f</mi>
- <mo stretchy='false'>+</mo>
- <mi>g</mi>
-</mrow>
-</math>
- is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3BB;</mi>
-</math>
--strongly convex</li>
-<li class="itemize_item" id='magicparlabel-169'>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>f</mi>
-</math>
-is <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x3BB;</mi>
-</math>
--strongly convex and <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>u</mi>
-</math>
- is a minimizer of <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>f</mi>
-</math>
- then for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>w</mi>
-</math>
-<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>w</mi>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>-</mo>
- <mi>f</mi>
- <mrow>
-  <mo>(</mo>
-  <mi>u</mi>
-  <mo>)</mo>
- </mrow>
- <mo>&#x2265;</mo>
- <mfrac>
-  <mi>&#x3BB;</mi>
-  <mn>2</mn>
- </mfrac>
- <msup>
-  <mrow>
-   <mo>&#x2225;</mo>
-   <mrow>
-    <mi>w</mi>
-    <mo stretchy='false'>-</mo>
-    <mi>u</mi>
-   </mrow>
-   <mo>&#x2225;</mo>
-  </mrow>
-  <mn>2</mn>
- </msup>
-</mrow>
-</math>
-</li>
-</ul>
 </section>
 </body>
 </html>
