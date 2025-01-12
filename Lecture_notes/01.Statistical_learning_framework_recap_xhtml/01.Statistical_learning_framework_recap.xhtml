@@ -57,6 +57,22 @@ font-variant: normal;
 font-size: medium;
 
 }
+div.note {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.note_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
 div.definition {
 font-style: normal;
 font-variant: normal;
@@ -101,22 +117,6 @@ text-align: left;
 span.example_label {
 font-weight: bold;
 font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.note {
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: left;
-
-}
-span.note_label {
-font-weight: normal;
-font-style: italic;
 font-variant: normal;
 font-size: medium;
 
@@ -334,7 +334,7 @@ Epiphany term, 2025<div style='height:3ex'></div></div>
 </mrow>
 </math>
  that act as outputs; i.e. 
-<span style = "text-align: center;"><img src="lyxpreviewAqQHVM1.png" alt="Mathematical Equation" /></span>
+<span style = "text-align: center;"><img src="lyxpreviewMOQJFG1.png" alt="Mathematical Equation" /></span>
 . Hence, <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='script'>
  <mi>X</mi>
@@ -398,8 +398,91 @@ Epiphany term, 2025<div style='height:3ex'></div></div>
 </section>
 <section>
 <h2 class='section' id='magicparlabel-34'><span class="section_label">2</span> Notation &amp; definitions in learning</h2>
+<div class='note'>
+<div class="note_item" id='magicparlabel-35'><span class="note_label">Note 1.</span>
+The aim is to learn the mapping <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2192;</mo>
+ <mi>y</mi>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+ with purpose to predict <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+ from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+</mrow>
+</math>
+. Denote <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>y</mi>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>&#x22A4;</mi>
+ </msup>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x00D7;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-36'>
+<br />
+</div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-35'><span class="definition_label">Definition 1.</span>
+<div class="definition_item" id='magicparlabel-37'><span class="definition_label">Definition 2.</span>
 The learner&#8217;s output is a function, <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -433,11 +516,11 @@ The learner&#8217;s output is a function, <math xmlns='http://www.w3.org/1998/Ma
 </math>
 . It is also called hypothesis, prediction rule, predictor, or classifier.</div>
 </div>
-<div class='standard' id='magicparlabel-36'>
+<div class='standard' id='magicparlabel-38'>
 <br />
 </div>
 <div class='notation'>
-<div class="notation_item" id='magicparlabel-37'><span class="notation_label">Notation 2.</span>
+<div class="notation_item" id='magicparlabel-39'><span class="notation_label">Notation 3.</span>
 We often denote the set of hypothesis as <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='script'>
  <mi>H</mi>
@@ -454,12 +537,12 @@ We often denote the set of hypothesis as <math xmlns='http://www.w3.org/1998/Mat
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-38'>
+<div class='standard' id='magicparlabel-40'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-39'><span class="example_label">Example 3.</span>
-<a id="exa__Linear_Regression__Consider" />(Linear Regression)<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-43'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-41'><span class="example_label">Example 4.</span>
+<a id="exa__Linear_Regression__Consider" />(Linear Regression)<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-45'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo stretchy='false'>&#x27E8;</mo>
@@ -591,11 +674,11 @@ We often denote the set of hypothesis as <math xmlns='http://www.w3.org/1998/Mat
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-44'>
+<div class='standard' id='magicparlabel-46'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-45'><span class="example_label">Example 4.</span>
+<div class="example_item" id='magicparlabel-47'><span class="example_label">Example 5.</span>
 <a id="exa__Linear_Regression__Consider_1" />(Binary Classification) Consider the classification problem where the goal is to learn the mapping <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -626,6 +709,7 @@ We often denote the set of hypothesis as <math xmlns='http://www.w3.org/1998/Mat
  <mstyle mathvariant='script'>
   <mi>Y</mi>
  </mstyle>
+ <mo stretchy='false'>=</mo>
  <mrow>
   <mo>{</mo>
   <mrow>
@@ -725,196 +809,15 @@ We often denote the set of hypothesis as <math xmlns='http://www.w3.org/1998/Mat
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-46'>
+
+
+
+
+<div class='standard' id='magicparlabel-60'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-47'><span class="definition_label">Definition 5.</span>
-Training data set <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mstyle mathvariant='script'>
- <mi>S</mi>
-</mstyle>
-</math>
- of size <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>m</mi>
-</math>
- is any finite sequence of pairs <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mo>(</mo>
- <mrow>
-  <msub>
-   <mi>z</mi>
-   <mi>i</mi>
-  </msub>
-  <mo stretchy='false'>=</mo>
-  <mrow>
-   <mo>(</mo>
-   <mrow>
-    <msub>
-     <mi>x</mi>
-     <mi>i</mi>
-    </msub>
-    <mo stretchy='false'>,</mo>
-    <msub>
-     <mi>y</mi>
-     <mi>i</mi>
-    </msub>
-   </mrow>
-   <mo>)</mo>
-  </mrow>
-  <mo stretchy='false'>;</mo>
-  <mi>i</mi>
-  <mo stretchy='false'>=</mo>
-  <mn>1</mn>
-  <mo stretchy='false'>,</mo>
-  <mn>...</mn>
-  <mo stretchy='false'>,</mo>
-  <mi>m</mi>
- </mrow>
- <mo>)</mo>
-</mrow>
-</math>
- in <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mstyle mathvariant='script'>
-  <mi>Z</mi>
- </mstyle>
- <mo stretchy='false'>=</mo>
- <mstyle mathvariant='script'>
-  <mi>X</mi>
- </mstyle>
- <mo>&#x00D7;</mo>
- <mstyle mathvariant='script'>
-  <mi>Y</mi>
- </mstyle>
-</mrow>
-</math>
-; i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mstyle mathvariant='script'>
-  <mi>S</mi>
- </mstyle>
- <mo stretchy='false'>=</mo>
- <mrow>
-  <mo>{</mo>
-  <mrow>
-   <mrow>
-    <mo>(</mo>
-    <mrow>
-     <msub>
-      <mi>x</mi>
-      <mi>i</mi>
-     </msub>
-     <mo stretchy='false'>,</mo>
-     <msub>
-      <mi>y</mi>
-      <mi>i</mi>
-     </msub>
-    </mrow>
-    <mo>)</mo>
-   </mrow>
-   <mo stretchy='false'>;</mo>
-   <mi>i</mi>
-   <mo stretchy='false'>=</mo>
-   <mn>1</mn>
-   <mo stretchy='false'>,</mo>
-   <mn>...</mn>
-   <mo stretchy='false'>,</mo>
-   <mi>m</mi>
-  </mrow>
-  <mo>}</mo>
- </mrow>
-</mrow>
-</math>
-. This is the information that the learner has assess. </div>
-</div>
-<div class='standard' id='magicparlabel-48'>
-<br />
-</div>
-<div class='definition'>
-<div class="definition_item" id='magicparlabel-49'><span class="definition_label">Definition 6.</span>
-Data generation model <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>g</mi>
- <mrow>
-  <mo>(</mo>
-  <mo>&#x22C5;</mo>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- is the probability distribution over <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mstyle mathvariant='script'>
-  <mi>Z</mi>
- </mstyle>
- <mo stretchy='false'>=</mo>
- <mstyle mathvariant='script'>
-  <mi>X</mi>
- </mstyle>
- <mo>&#x00D7;</mo>
- <mstyle mathvariant='script'>
-  <mi>Y</mi>
- </mstyle>
-</mrow>
-</math>
-, unknown to the learner that has generated the data. E.g. <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <msub>
-  <mi>z</mi>
-  <mi>i</mi>
- </msub>
- <mo>&#x223C;</mo>
- <mi>g</mi>
-</mrow>
-</math>
-, <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>i</mi>
- <mo stretchy='false'>=</mo>
- <mn>1</mn>
- <mo stretchy='false'>,</mo>
- <mn>2</mn>
- <mo stretchy='false'>,</mo>
- <mn>...</mn>
-</mrow>
-</math>
-.</div>
-</div>
-<div class='standard' id='magicparlabel-50'>
-<br />
-</div>
-<div class='definition'>
-<div class="definition_item" id='magicparlabel-51'><span class="definition_label">Definition 7.</span>
-We denote as <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
-</mrow>
-</math>
- the hypothesis (outcome) that a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mstyle mathvariant='fraktur'>
- <mi>A</mi>
-</mstyle>
-</math>
- returns given training sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>S</mi>
-</math>
-. </div>
-</div>
-<div class='standard' id='magicparlabel-52'>
-<br />
-</div>
-<div class='definition'>
-<div class="definition_item" id='magicparlabel-53'><span class="definition_label">Definition 8.</span>
+<div class="definition_item" id='magicparlabel-61'><span class="definition_label">Definition 6.</span>
 (Loss function) Given any set of hypothesis <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='script'>
  <mi>H</mi>
@@ -1005,12 +908,12 @@ We denote as <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 . The rule is &#8220;the greater the error the greater the value of the loss&#8221;.</div>
 </div>
-<div class='standard' id='magicparlabel-54'>
+<div class='standard' id='magicparlabel-62'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-55'><span class="example_label">Example 9.</span>
-<a id="exa_In_regression_problems" />(Cont. Example <a href="#exa__Linear_Regression__Consider">3</a>) In regression problems <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-63'><span class="example_label">Example 7.</span>
+<a id="exa_In_regression_problems" />(Cont. Example <a href="#exa__Linear_Regression__Consider">4</a>) In regression problems <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mstyle mathvariant='script'>
   <mi>Z</mi>
@@ -1082,12 +985,12 @@ We denote as <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-56'>
+<div class='standard' id='magicparlabel-64'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-57'><span class="example_label">Example 10.</span>
-<a id="exa__Cont__Example___1" />(Cont. Example <a href="#exa__Linear_Regression__Consider_1">4</a>) In binary classification problems with hypothesis <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-65'><span class="example_label">Example 8.</span>
+<a id="exa__Cont__Example___1" />(Cont. Example <a href="#exa__Linear_Regression__Consider_1">5</a>) In binary classification problems with hypothesis <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
  <mo stretchy='false'>:</mo>
@@ -1166,11 +1069,11 @@ We denote as <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-66'>
+<div class='standard' id='magicparlabel-74'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-67'><span class="definition_label">Definition 11.</span>
+<div class="definition_item" id='magicparlabel-75'><span class="definition_label">Definition 9.</span>
 A learning problem with hypothesis class <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='script'>
  <mi>H</mi>
@@ -1203,11 +1106,11 @@ A learning problem with hypothesis class <math xmlns='http://www.w3.org/1998/Mat
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-68'>
+<div class='standard' id='magicparlabel-76'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-69'><span class="example_label">Example 12.</span>
+<div class="example_item" id='magicparlabel-77'><span class="example_label">Example 10.</span>
 The standard multiple linear regression problem with regressors <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -1344,11 +1247,11 @@ The standard multiple linear regression problem with regressors <math xmlns='htt
 <br />
 </div>
 </div>
-<div class='standard' id='magicparlabel-70'>
+<div class='standard' id='magicparlabel-78'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-71'><span class="example_label">Example 13.</span>
+<div class="example_item" id='magicparlabel-79'><span class="example_label">Example 11.</span>
 The binary classification regression problem with regressors <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -1416,13 +1319,13 @@ The binary classification regression problem with regressors <math xmlns='http:/
    <mrow>
     <mo>(</mo>
     <mrow>
-     <mo stretchy='false'>&#x27E8;</mo>
+     <mo>&#x27E8;</mo>
      <mrow>
       <mi>w</mi>
       <mo stretchy='false'>,</mo>
       <mi>x</mi>
      </mrow>
-     <mo stretchy='false'>&#x27E9;</mo>
+     <mo>&#x27E9;</mo>
     </mrow>
     <mo>)</mo>
    </mrow>
@@ -1483,15 +1386,91 @@ The binary classification regression problem with regressors <math xmlns='http:/
   </mrow>
   <mo>)</mo>
  </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>x</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+   <mi>y</mi>
+   <mo stretchy='false'>&lt;</mo>
+   <mn>0</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
 </mrow>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-72'>
+<div class='standard' id='magicparlabel-80'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-73'><span class="definition_label">Definition 14.</span>
+<div class="definition_item" id='magicparlabel-81'><span class="definition_label">Definition 12.</span>
+Data generation model <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is the probability distribution over <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x00D7;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+, unknown to the learner which describes the probabilistic law that realizations <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+</mrow>
+</math>
+ are realized. </div>
+</div>
+<div class='standard' id='magicparlabel-86'>
+<br />
+</div>
+<section>
+<h3 class='subsection' id='magicparlabel-87'><span class="subsection_label">2.1</span> Learning...</h3>
+<div class='standard' id='magicparlabel-88'>
+<br />
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-89'><span class="definition_label">Definition 13.</span>
 (Risk function) The risk function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -1573,11 +1552,11 @@ The binary classification regression problem with regressors <math xmlns='http:/
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-74'>
+<div class='standard' id='magicparlabel-90'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-75'><span class="definition_label">Definition 15.</span>
+<div class="definition_item" id='magicparlabel-91'><span class="definition_label">Definition 14.</span>
 <a id="note_The_learning_paradigm" /> (Risk minimization learning) The Risk minimization (RM) learning paradigm computes the optimal predictor <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>h</mi>
@@ -1641,12 +1620,12 @@ The binary classification regression problem with regressors <math xmlns='http:/
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-76'>
+<div class='standard' id='magicparlabel-92'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-77'><span class="example_label">Example 16.</span>
-<a id="exa__Cont__Example__" />(Cont. Ex. <a href="#exa_In_regression_problems">9</a>) The risk function is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-93'><span class="example_label">Example 15.</span>
+<a id="exa__Cont__Example__" />(Cont. Ex. <a href="#exa_In_regression_problems">7</a>) The risk function is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>R</mi>
@@ -1675,6 +1654,35 @@ The binary classification regression problem with regressors <math xmlns='http:/
      <mo stretchy='false'>(</mo>
      <mi>x</mi>
      <mo stretchy='false'>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>y</mi>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mrow>
+     <mo stretchy='false'>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>x</mi>
+     </mrow>
+     <mo stretchy='false'>&#x27E9;</mo>
     </mrow>
     <mo stretchy='false'>-</mo>
     <mi>y</mi>
@@ -1717,21 +1725,201 @@ The binary classification regression problem with regressors <math xmlns='http:/
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-78'>
+<div class='standard' id='magicparlabel-94'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-95'><span class="example_label">Example 16.</span>
+<a id="exa__Cont__Example___2" /> (Cont. Ex. ) The risk function is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>h</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>1</mn>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>h</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>x</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+     <mo>&#x2260;</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>Pr</mo>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>w</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+   <mi>y</mi>
+   <mo stretchy='false'>&lt;</mo>
+   <mn>0</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-96'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-79'><span class="note_label">Note 17.</span>
+<div class="note_item" id='magicparlabel-97'><span class="note_label">Note 17.</span>
 Computing the risk minimizer may be practically challenging due to the integration w.r.t. the unknown data generation model <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>g</mi>
 </math>
- involved in the expectation <a href="#eq_asfgasfgasg">(2.1)</a>. Sub-optimally, one may use the Empirical risk function in the learning paradigm (Note <a href="#note_The_learning_paradigm">15</a>) instead of the Risk function in <a href="#eq_">(2.2)</a>.</div>
+ involved in the expectation <a href="#eq_asfgasfgasg">(2.1)</a>. Sub-optimally, instead of the Risk function in <a href="#eq_">(2.2)</a>, one use the Empirical risk function as a Monte Carlo approximation of it.</div>
 </div>
-<div class='standard' id='magicparlabel-80'>
+<div class='standard' id='magicparlabel-98'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-81'><span class="definition_label">Definition 18.</span>
+<div class="definition_item" id='magicparlabel-99'><span class="definition_label">Definition 18.</span>
+Training data set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+ of size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ is any finite sequence of pairs <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mi>z</mi>
+   <mi>i</mi>
+  </msub>
+  <mo stretchy='false'>=</mo>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <msub>
+     <mi>x</mi>
+     <mi>i</mi>
+    </msub>
+    <mo stretchy='false'>,</mo>
+    <msub>
+     <mi>y</mi>
+     <mi>i</mi>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mo stretchy='false'>;</mo>
+  <mi>i</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+  <mo stretchy='false'>,</mo>
+  <mn>...</mn>
+  <mo stretchy='false'>,</mo>
+  <mi>m</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ , called examples, in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>Z</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x00D7;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+; i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>;</mo>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+. This is the information that the learner has assess. </div>
+</div>
+<div class='standard' id='magicparlabel-100'>
+<br />
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-101'><span class="definition_label">Definition 19.</span>
 (Empirical risk function) The Empirical Risk Function (ERF) <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -1831,11 +2019,11 @@ Computing the risk minimizer may be practically challenging due to the integrati
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-82'>
+<div class='standard' id='magicparlabel-102'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-83'><span class="definition_label">Definition 19.</span>
+<div class="definition_item" id='magicparlabel-103'><span class="definition_label">Definition 20.</span>
 (Empirical risk minimization learning) The Empirical risk minimization (ERM) learning paradigm computes the optimal predictor <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>h</mi>
@@ -1905,12 +2093,12 @@ Computing the risk minimizer may be practically challenging due to the integrati
 </math>
  </div>
 </div>
-<div class='standard' id='magicparlabel-84'>
+<div class='standard' id='magicparlabel-104'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-85'><span class="example_label">Example 20.</span>
-(Cont. Example <a href="#exa__Cont__Example__">16</a>) Given given sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-105'><span class="example_label">Example 21.</span>
+(Cont. Example <a href="#exa__Cont__Example__">15</a>) Given given sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>S</mi>
  <mo stretchy='false'>=</mo>
@@ -1996,16 +2184,50 @@ Computing the risk minimizer may be practically challenging due to the integrati
   </mrow>
   <mn>2</mn>
  </msup>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>m</mi>
+ </mfrac>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </munderover>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <msubsup>
+     <mi>x</mi>
+     <mi>i</mi>
+     <mi>&#x22A4;</mi>
+    </msubsup>
+    <mi>w</mi>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>y</mi>
+     <mi>i</mi>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
 </mrow>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-86'>
+<div class='standard' id='magicparlabel-106'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-87'><span class="example_label">Example 21.</span>
-(Cont. Example <a href="#exa__Cont__Example___1">10</a>) Given given sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-107'><span class="example_label">Example 22.</span>
+(Cont. Example <a href="#exa__Cont__Example___1">8</a>) Given given sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>S</mi>
  <mo stretchy='false'>=</mo>
@@ -2089,15 +2311,88 @@ Computing the risk minimizer may be practically challenging due to the integrati
   </mrow>
   <mo>)</mo>
  </mrow>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>m</mi>
+ </mfrac>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </munderover>
+ <mn>1</mn>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <mi>w</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+   <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy='false'>&lt;</mo>
+   <mn>0</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
 </mrow>
 </math>
-.</div>
+.
+<br />
 </div>
-<div class='standard' id='magicparlabel-88'>
+</div>
+<div class='standard' id='magicparlabel-108'>
+<br />
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-109'><span class="definition_label">Definition 23.</span>
+We denote as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ the hypothesis (outcome) that a learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='fraktur'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ returns given training sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+. </div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-110'><span class="subsection_label">2.2</span> Conventions...</h3>
+<div class='standard' id='magicparlabel-111'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-89'><span class="note_label">Note 22.</span>
+<div class="note_item" id='magicparlabel-112'><span class="note_label">Note 24.</span>
 <a id="note_If_the_Hypothesis" /> If the Hypothesis set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='script'>
  <mi>H</mi>
@@ -2141,7 +2436,7 @@ Computing the risk minimizer may be practically challenging due to the integrati
  </mstyle>
 </mrow>
 </math>
-, then we can equivalently consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
+, then we can equivalently consider the convention <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mstyle mathvariant='script'>
   <mi>H</mi>
@@ -2164,7 +2459,7 @@ Computing the risk minimizer may be practically challenging due to the integrati
  </mstyle>
 </mrow>
 </math>
- keeping in mind that the learner&#8217;s output is restricted to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ keeping in mind that the learner&#8217;s output is restricted to formula <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>h</mi>
@@ -2179,41 +2474,12 @@ Computing the risk minimizer may be practically challenging due to the integrati
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-90'>
+<div class='standard' id='magicparlabel-113'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-91'><span class="example_label">Example 23.</span>
-<a id="exa_Consider_the_multiple" /> Consider the multiple linear regression problem with regressors <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>x</mi>
- <mo>&#x2208;</mo>
- <mstyle mathvariant='script'>
-  <mi>X</mi>
- </mstyle>
- <mo>&#x2286;</mo>
- <msup>
-  <mstyle mathvariant='double-struck'>
-   <mi>R</mi>
-  </mstyle>
-  <mi>d</mi>
- </msup>
-</mrow>
-</math>
- and response <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mi>y</mi>
- <mo>&#x2208;</mo>
- <mstyle mathvariant='script'>
-  <mi>Y</mi>
- </mstyle>
- <mo>&#x2286;</mo>
- <mstyle mathvariant='double-struck'>
-  <mi>R</mi>
- </mstyle>
-</mrow>
-</math>
-.  Because it involves only linear functions as predictors <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-114'><span class="example_label">Example 25.</span>
+<a id="exa_Consider_the_multiple" /> Because it involves only linear functions as predictors <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>h</mi>
@@ -2308,13 +2574,119 @@ Computing the risk minimizer may be practically challenging due to the integrati
  </msup>
 </mrow>
 </math>
- for computational simplicity. The latter will be mainly used.</div>
+ for simplicity. </div>
 </div>
-<div class='standard' id='magicparlabel-102'>
+<div class='standard' id='magicparlabel-133'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-103'><span class="example_label">Example 24.</span>
+<div class="example_item" id='magicparlabel-134'><span class="example_label">Example 26.</span>
+<a id="exa_Consider_the_multiple_1" /> Because it involves only linear functions as predictors <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>h</mi>
+  <mi>w</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>sign</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x27E8;</mo>
+   <mrow>
+    <mi>w</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>x</mi>
+   </mrow>
+   <mo>&#x27E9;</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, we could consider a hypothesis class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <msup>
+    <mstyle mathvariant='double-struck'>
+     <mi>R</mi>
+    </mstyle>
+    <mi>d</mi>
+   </msup>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ and loss function loss <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>,</mo>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>w</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+   <mi>y</mi>
+   <mo stretchy='false'>&lt;</mo>
+   <mn>0</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ for simplicity. </div>
+</div>
+<div class='standard' id='magicparlabel-143'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-144'><span class="example_label">Example 27.</span>
 Consider a learning problem where the true data generation distribution (unknown to the learner) is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>g</mi>
@@ -2757,14 +3129,15 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </div>
 
 
-<div class='standard' id='magicparlabel-105'>
+<div class='standard' id='magicparlabel-146'>
 <br />
 </div>
 </section>
+</section>
 <section>
-<h2 class='section' id='magicparlabel-106'><span class="section_label">3</span> Regularized loss minimization (RLM) learning </h2>
+<h2 class='section' id='magicparlabel-147'><span class="section_label">3</span> Regularized loss minimization (RLM) learning </h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-107'><span class="note_label">Note 25.</span>
+<div class="note_item" id='magicparlabel-148'><span class="note_label">Note 28.</span>
 Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -2789,11 +3162,11 @@ Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-116'>
+<div class='standard' id='magicparlabel-157'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-117'><span class="definition_label">Definition 26.</span>
+<div class="definition_item" id='magicparlabel-158'><span class="definition_label">Definition 29.</span>
 (Regularized loss minimization learning) Regularized loss minimization learning paradigm computes the optimal rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
@@ -2996,7 +3369,7 @@ Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </div>
 </div>
 <section>
-<h3 class='subsection' id='magicparlabel-122'><span class="subsection_label">3.1</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h3 class='subsection' id='magicparlabel-163'><span class="subsection_label">3.1</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>0</mn>
@@ -3016,7 +3389,7 @@ Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 <b> norm regularization problems</b></h3>
 <div class='note'>
-<div class="note_item" id='magicparlabel-123'><span class="note_label">Note 27.</span>
+<div class="note_item" id='magicparlabel-164'><span class="note_label">Note 30.</span>
 Consider a parameterized hypothesis <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -3113,27 +3486,27 @@ Consider a parameterized hypothesis <math xmlns='http://www.w3.org/1998/Math/Mat
  </msup>
 </mrow>
 </math>
- of Note <a href="#note_If_the_Hypothesis">22</a>. Assume we want the vector <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ of Note <a href="#note_If_the_Hypothesis">24</a>. Assume we want the vector <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>w</mi>
 </math>
  to be sparse, in the sense that &#8220;sparser&#8221; means more zero elements.</div>
 </div>
-<div class='standard' id='magicparlabel-128'>
+<div class='standard' id='magicparlabel-169'>
 <br />
 </div>
 <section>
-<h4 class='subsubsection' id='magicparlabel-129'><span class="subsubsection_label">3.1.1</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h4 class='subsubsection' id='magicparlabel-170'><span class="subsubsection_label">3.1.1</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>0</mn>
 </msub>
 </math>
  norm regularization</h4>
-<div class='standard' id='magicparlabel-130'>
+<div class='standard' id='magicparlabel-171'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-131'><span class="note_label">Note 28.</span>
+<div class="note_item" id='magicparlabel-172'><span class="note_label">Note 31.</span>
 The problem of minimizing the empirical risk subject to a budget of <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>k</mi>
 </math>
@@ -3220,16 +3593,10 @@ The problem of minimizing the empirical risk subject to a budget of <math xmlns=
 . By Lagrange multiplies we can re-write it as 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
@@ -3287,45 +3654,59 @@ The problem of minimizing the empirical risk subject to a budget of <math xmlns=
  <mn>0</mn>
 </msub>
 </math>
- dependent).</div>
+ dependent). Hence, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>h</mi>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
 </div>
-<div class='standard' id='magicparlabel-132'>
+<div class='standard' id='magicparlabel-173'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-133'><span class="example_label">Example 29.</span>
-(Cont. Example <a href="#exa_Consider_the_multiple">23</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-174'><span class="example_label">Example 32.</span>
+(Cont. Example <a href="#exa_Consider_the_multiple">25</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>0</mn>
 </msub>
 </math>
--RLM rule in Example <a href="#exa_Consider_the_multiple">23</a> becomes
+-RLM rule in Example <a href="#exa_Consider_the_multiple">25</a> becomes
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -3382,29 +3763,17 @@ The problem of minimizing the empirical risk subject to a budget of <math xmlns=
  using the Risk function, and 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -3470,7 +3839,7 @@ The problem of minimizing the empirical risk subject to a budget of <math xmlns=
 </div>
 </section>
 <section>
-<h4 class='subsubsection' id='magicparlabel-142'><span class="subsubsection_label">3.1.2</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h4 class='subsubsection' id='magicparlabel-183'><span class="subsubsection_label">3.1.2</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>1</mn>
@@ -3478,7 +3847,7 @@ The problem of minimizing the empirical risk subject to a budget of <math xmlns=
 </math>
  norm regularization (LASSO)</h4>
 <div class='note'>
-<div class="note_item" id='magicparlabel-143'><span class="note_label">Note 30.</span>
+<div class="note_item" id='magicparlabel-184'><span class="note_label">Note 33.</span>
 Solving <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
@@ -3604,29 +3973,17 @@ Solving <math xmlns='http://www.w3.org/1998/Math/MathML'>
 . By Lagrange multiplies we can re-write it as 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -3671,45 +4028,59 @@ Solving <math xmlns='http://www.w3.org/1998/Math/MathML'>
  <mn>1</mn>
 </msub>
 </math>
- dependent).</div>
+ dependent). Hence, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>h</mi>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
 </div>
-<div class='standard' id='magicparlabel-144'>
+<div class='standard' id='magicparlabel-185'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-145'><span class="example_label">Example 31.</span>
-(Cont. Example <a href="#exa_Consider_the_multiple">23</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-186'><span class="example_label">Example 34.</span>
+(Cont. Example <a href="#exa_Consider_the_multiple">25</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>1</mn>
 </msub>
 </math>
--RLM rule in Example <a href="#exa_Consider_the_multiple">23</a> becomes
+-RLM rule in Example <a href="#exa_Consider_the_multiple">25</a> becomes
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -3772,29 +4143,17 @@ Solving <math xmlns='http://www.w3.org/1998/Math/MathML'>
  using the Risk function , and 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -3869,7 +4228,7 @@ Solving <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </div>
 </section>
 <section>
-<h4 class='subsubsection' id='magicparlabel-154'><span class="subsubsection_label">3.1.3</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h4 class='subsubsection' id='magicparlabel-195'><span class="subsubsection_label">3.1.3</span> <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>2</mn>
@@ -3877,7 +4236,7 @@ Solving <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  norm regularization (Ridge)</h4>
 <div class='note'>
-<div class="note_item" id='magicparlabel-155'><span class="note_label">Note 32.</span>
+<div class="note_item" id='magicparlabel-196'><span class="note_label">Note 35.</span>
 To further simplify computations, we can consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>J</mi>
@@ -3893,7 +4252,7 @@ To further simplify computations, we can consider <math xmlns='http://www.w3.org
    <mo>&#x22C5;</mo>
    <mo>&#x2225;</mo>
   </mrow>
-  <mn>1</mn>
+  <mn>2</mn>
  </msub>
 </mrow>
 </math>
@@ -3904,13 +4263,7 @@ To further simplify computations, we can consider <math xmlns='http://www.w3.org
   <mtd>
    <munder accent='false'>
     <mtext>minimize</mtext>
-    <mrow>
-     <mi>w</mi>
-     <mo>&#x2208;</mo>
-     <mstyle mathvariant='script'>
-      <mi>H</mi>
-     </mstyle>
-    </mrow>
+    <mi>w</mi>
    </munder>
   </mtd>
   <mtd>
@@ -3977,29 +4330,17 @@ To further simplify computations, we can consider <math xmlns='http://www.w3.org
 . By Lagrange multiplies we can re-write it as 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -4045,45 +4386,59 @@ To further simplify computations, we can consider <math xmlns='http://www.w3.org
  <mn>1</mn>
 </msub>
 </math>
- dependent).</div>
+ dependent). Hence, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>h</mi>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
 </div>
-<div class='standard' id='magicparlabel-156'>
+<div class='standard' id='magicparlabel-197'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-157'><span class="example_label">Example 33.</span>
-(Cont. Example <a href="#exa_Consider_the_multiple">23</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="example_item" id='magicparlabel-198'><span class="example_label">Example 36.</span>
+(Cont. Example <a href="#exa_Consider_the_multiple">25</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x2113;</mi>
  <mn>2</mn>
 </msub>
 </math>
--RLM rule in Example <a href="#exa_Consider_the_multiple">23</a> becomes
+-RLM rule in Example <a href="#exa_Consider_the_multiple">25</a> becomes
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -4143,29 +4498,17 @@ To further simplify computations, we can consider <math xmlns='http://www.w3.org
  using the Risk function, and 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
- <mstyle mathvariant='fraktur'>
-  <mi>A</mi>
- </mstyle>
- <mrow>
-  <mo>(</mo>
-  <mstyle mathvariant='script'>
-   <mi>S</mi>
-  </mstyle>
-  <mo>)</mo>
- </mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
  <mo stretchy='false'>=</mo>
  <munder accent='false'>
   <mrow>
    <mo>arg</mo>
    <mo>min</mo>
   </mrow>
-  <mrow>
-   <mi>w</mi>
-   <mo>&#x2208;</mo>
-   <mstyle mathvariant='script'>
-    <mi>H</mi>
-   </mstyle>
-  </mrow>
+  <mi>w</mi>
  </munder>
  <mrow>
   <mo>(</mo>
@@ -4230,7 +4573,172 @@ To further simplify computations, we can consider <math xmlns='http://www.w3.org
  </mrow>
 </mrow>
 </math>
- using the Empirical risk function.</div>
+ using the Empirical risk function. </div>
+</div>
+<div class='standard' id='magicparlabel-207'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-208'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-209'><span class="example_label">Example 37.</span>
+(Cont. Example <a href="#exa_Consider_the_multiple_1">26</a>) The <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mn>2</mn>
+</msub>
+</math>
+-RLM rule in Example <a href="#exa_Consider_the_multiple_1">26</a> becomes
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>min</mo>
+  </mrow>
+  <mi>w</mi>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <munder>
+    <mo>Pr</mo>
+    <mrow>
+     <mi>z</mi>
+     <mo>&#x223C;</mo>
+     <mi>g</mi>
+    </mrow>
+   </munder>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mrow>
+      <mo>&#x27E8;</mo>
+      <mrow>
+       <mi>x</mi>
+       <mo stretchy='false'>,</mo>
+       <mi>w</mi>
+      </mrow>
+      <mo>&#x27E9;</mo>
+     </mrow>
+     <mi>y</mi>
+     <mo stretchy='false'>&lt;</mo>
+     <mn>0</mn>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>&#x3BB;</mi>
+    <mn>2</mn>
+   </msub>
+   <munderover>
+    <mo>&#x2211;</mo>
+    <mrow>
+     <mi>j</mi>
+     <mo stretchy='false'>=</mo>
+     <mn>1</mn>
+    </mrow>
+    <mi>d</mi>
+   </munderover>
+   <msubsup>
+    <mi>w</mi>
+    <mi>j</mi>
+    <mn>2</mn>
+   </msubsup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ using the Risk function, and 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>min</mo>
+  </mrow>
+  <mi>w</mi>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <mn>1</mn>
+    <mi>m</mi>
+   </mfrac>
+   <munderover>
+    <mo>&#x2211;</mo>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>=</mo>
+     <mn>1</mn>
+    </mrow>
+    <mi>m</mi>
+   </munderover>
+   <mn>1</mn>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mrow>
+      <mo>&#x27E8;</mo>
+      <mrow>
+       <msub>
+        <mi>x</mi>
+        <mi>i</mi>
+       </msub>
+       <mo stretchy='false'>,</mo>
+       <mi>w</mi>
+      </mrow>
+      <mo>&#x27E9;</mo>
+     </mrow>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>&lt;</mo>
+     <mn>0</mn>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>&#x3BB;</mi>
+    <mn>2</mn>
+   </msub>
+   <munderover>
+    <mo>&#x2211;</mo>
+    <mrow>
+     <mi>j</mi>
+     <mo stretchy='false'>=</mo>
+     <mn>1</mn>
+    </mrow>
+    <mi>d</mi>
+   </munderover>
+   <msubsup>
+    <mi>w</mi>
+    <mi>j</mi>
+    <mn>2</mn>
+   </msubsup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ using the Empirical risk function. </div>
 </div>
 </section>
 </section>
