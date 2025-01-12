@@ -1843,7 +1843,7 @@ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>C</mi>
- <mo>&#x2208;</mo>
+ <mo>&#x2286;</mo>
  <msup>
   <mstyle mathvariant='double-struck'>
    <mi>R</mi>
@@ -1856,12 +1856,7 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
  <mo stretchy='false'>:</mo>
- <msup>
-  <mstyle mathvariant='double-struck'>
-   <mi>R</mi>
-  </mstyle>
-  <mi>d</mi>
- </msup>
+ <mi>C</mi>
  <mo>&#x2192;</mo>
  <msup>
   <mstyle mathvariant='double-struck'>
@@ -2057,129 +2052,7 @@ That means: a Lipschitz function <math xmlns='http://www.w3.org/1998/Math/MathML
  </mrow>
 </mrow>
 </math>
-. 
-<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-<mrow>
- <mrow>
-  <mo>|</mo>
-  <mrow>
-   <mi>f</mi>
-   <mrow>
-    <mo>(</mo>
-    <msub>
-     <mi>x</mi>
-     <mn>2</mn>
-    </msub>
-    <mo>)</mo>
-   </mrow>
-   <mo stretchy='false'>-</mo>
-   <mi>f</mi>
-   <mrow>
-    <mo>(</mo>
-    <msub>
-     <mi>x</mi>
-     <mn>1</mn>
-    </msub>
-    <mo>)</mo>
-   </mrow>
-  </mrow>
-  <mo>|</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <mrow>
-  <mo>|</mo>
-  <mrow>
-   <msubsup>
-    <mi>x</mi>
-    <mn>2</mn>
-    <mn>2</mn>
-   </msubsup>
-   <mo stretchy='false'>-</mo>
-   <msubsup>
-    <mi>x</mi>
-    <mn>1</mn>
-    <mn>2</mn>
-   </msubsup>
-  </mrow>
-  <mo>|</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <mrow>
-  <mo>|</mo>
-  <mrow>
-   <mrow>
-    <mo>(</mo>
-    <mrow>
-     <msub>
-      <mi>x</mi>
-      <mn>2</mn>
-     </msub>
-     <mo stretchy='false'>+</mo>
-     <msub>
-      <mi>x</mi>
-      <mn>1</mn>
-     </msub>
-    </mrow>
-    <mo>)</mo>
-   </mrow>
-   <mrow>
-    <mo>(</mo>
-    <mrow>
-     <msub>
-      <mi>x</mi>
-      <mn>2</mn>
-     </msub>
-     <mo stretchy='false'>-</mo>
-     <msub>
-      <mi>x</mi>
-      <mn>1</mn>
-     </msub>
-    </mrow>
-    <mo>)</mo>
-   </mrow>
-  </mrow>
-  <mo>|</mo>
- </mrow>
- <mo>&#x2264;</mo>
- <mn>2</mn>
- <mi>&#x3C1;</mi>
- <mo stretchy='false'>/</mo>
- <mn>2</mn>
- <mrow>
-  <mo>(</mo>
-  <mrow>
-   <msub>
-    <mi>x</mi>
-    <mn>2</mn>
-   </msub>
-   <mo stretchy='false'>-</mo>
-   <msub>
-    <mi>x</mi>
-    <mn>1</mn>
-   </msub>
-  </mrow>
-  <mo>)</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <mi>&#x3C1;</mi>
- <mrow>
-  <mo>|</mo>
-  <mrow>
-   <msub>
-    <mi>x</mi>
-    <mn>2</mn>
-   </msub>
-   <mo stretchy='false'>-</mo>
-   <msub>
-    <mi>x</mi>
-    <mn>1</mn>
-   </msub>
-  </mrow>
-  <mo>|</mo>
- </mrow>
-</mrow>
-</math>
-</li>
+. </li>
 </ol>
 <div class='solution_'>
 <div class="solution__item" id='magicparlabel-150'><span class="solution__label">Solution.</span>
@@ -3158,9 +3031,7 @@ Function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </mrow>
 </math>
 -smooth.</div>
-<div class='solution_'>
-<div class="solution__item" id='magicparlabel-171'><span class="solution__label">Solution.</span>
-It is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-171'>To show that we set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
  <mrow>
@@ -3185,7 +3056,7 @@ It is <math xmlns='http://www.w3.org/1998/Math/MathML'>
  </mrow>
 </mrow>
 </math>
- for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>g</mi>
  <mrow>
@@ -3295,7 +3166,6 @@ Hence from Theorem <a href="#thm_Let__with">24</a>, <math xmlns='http://www.w3.o
 </mrow>
 </math>
 -smooth.</div>
-</div>
 </div>
 <div class='standard' id='magicparlabel-172'>
 <br />
@@ -3448,7 +3318,18 @@ Convex learning problem is a learning problem <math xmlns='http://www.w3.org/199
 </mstyle>
 </math>
  is a convex set, and the loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mi>&#x2113;</mi>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
 </math>
  is a convex function for each example <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
@@ -3961,7 +3842,7 @@ Consider the regression problem with predictor rule <math xmlns='http://www.w3.o
 </div>
 <div class='note'>
 <div class="note_item" id='magicparlabel-188'><span class="note_label">Note 33.</span>
-<a id="prop_If__is" /> If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<a id="prop_If__is" /> (Empirical risk minimization learning problem) If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2113;</mi>
 </math>
  is a convex loss function and the class <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -4003,15 +3884,24 @@ Consider the regression problem with predictor rule <math xmlns='http://www.w3.o
 , is a convex optimization problem</div>
 <div class='proof'>
 <div class="proof_item" id='magicparlabel-193'><span class="proof_label">Proof.</span>
-The <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<msub>
- <mtext>ERM</mtext>
- <mstyle mathvariant='script'>
-  <mi>H</mi>
- </mstyle>
-</msub>
+The Empirical risk minimization (ERM) problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
 </math>
- problem is 
+ is 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <msup>
@@ -4328,7 +4218,7 @@ or
  </msup>
 </mrow>
 </math>
-is a convex learning problem –from Proposition <a href="#prop_If__is">33</a>.</div>
+is a convex learning problem –from Note <a href="#prop_If__is">33</a>.</div>
 </div>
 <div class='standard' id='magicparlabel-199'>
 <br />
@@ -4500,7 +4390,7 @@ is a convex learning problem –from Proposition <a href="#prop_If__is">33</a>.<
  </mrow>
 </mrow>
 </math>
- is a convex function from Proposition <a href="#prop_If__is">33</a>, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ is a convex function from Note <a href="#prop_If__is">33</a>, <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BB;</mi>
  <msubsup>
@@ -4555,15 +4445,7 @@ is a convex learning problem –from Proposition <a href="#prop_If__is">33</a>.<
  <mi>&#x3BB;</mi>
 </mrow>
 </math>
--strongly convex function. Hence the above <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<msub>
- <mtext>ERM</mtext>
- <mstyle mathvariant='script'>
-  <mi>H</mi>
- </mstyle>
-</msub>
-</math>
- problem is a strongly convex optimization problem.</div>
+-strongly convex function. Hence the above Ridge RLM problem is a strongly convex optimization problem.</div>
 </div>
 </div>
 </section>
@@ -4584,6 +4466,9 @@ A learning problem may involve non-convex loss function <math xmlns='http://www.
   <mo>)</mo>
  </mrow>
 </mrow>
+</math>
+ w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
 </math>
  which implies a non-convex risk function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
