@@ -76,13 +76,21 @@ Elements of convex learning problems
 
 Learnability and stability  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/03.Learnability_and_stability.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/03.Learnability_and_stability_xhtml/03.Learnability_and_stability.xhtml)  
+
+-->
 
 #### Training algorithms for machine learning      
 
 Gradient descent  
 
+<!--
+
 + Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent.pdf), [(HTML)](https://html-preview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
+
+-->
 
 Stochastic gradient descent  
 
