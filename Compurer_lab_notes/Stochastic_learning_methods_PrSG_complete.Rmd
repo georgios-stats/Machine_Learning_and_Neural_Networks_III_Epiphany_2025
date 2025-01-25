@@ -1,13 +1,13 @@
 ---
-title: "Stochastic learning methods"
+title: "Stochastic Gradient Descent algorithms"
 subtitle: "...on a binary classification problem"
 author: "Georgios P. Karagiannis @ MATH3431 Machine Learning and Neural Networks III"
 output:
-  html_notebook: 
-    number_sections: true
-  word_document: default
   html_document:
     df_print: paged
+    number_sections: true
+  word_document: default
+  html_notebook: 
     number_sections: true
   pdf_document: default
 header-includes: 
@@ -18,34 +18,39 @@ header-includes:
 
 <!-- -------------------------------------------------------------------------------- -->
 
-<!-- Copyright 2023 Georgios Karagiannis -->
+<!-- Copyright 2024 Georgios Karagiannis -->
 
 <!-- georgios.karagiannis@durham.ac.uk -->
 <!-- Associate Professor -->
 <!-- Department of Mathematical Sciences, Durham University, Durham,  UK  -->
 
-<!-- This file is part of Machine Learning and Neural Networks III (MATH3431) -->
-<!-- which is the material of the course (MATH3431 Machine Learning and Neural Networks III) -->
+<!-- This file is part of Spatio-Temporal_Statistics_Michaelmas_2025 -->
+<!-- which is the material of the course -->
+<!-- MATH4341: Spatio-Temporal Statistics -->
+<!-- Epiphany term -->
 <!-- taught by Georgios P. Katagiannis in the Department of Mathematical Sciences   -->
-<!-- in the University of Durham  in Michaelmas term in 2019 -->
+<!-- in the University of Durham  in Michaelmas term in 2025 -->
 
-<!-- Machine_Learning_and_Neural_Networks_III_Epiphany_2024 is free software: you can redistribute it and/or modify -->
-<!-- it under the terms of the GNU General Public License as published by -->
+<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is free software: -->
+<!-- you can redistribute it and/or modify it-->
+<!-- under the terms of the GNU General Public License as published by -->
 <!-- the Free Software Foundation version 3 of the License. -->
 
-<!-- Machine_Learning_and_Neural_Networks_III_Epiphany_2024 is distributed in the hope that it will be useful, -->
+<!-- Spatio-Temporal_Statistics_Michaelmas_2025 is distributed ->
+<!-- in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
 <!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
 <!-- GNU General Public License for more details. -->
 
 <!-- You should have received a copy of the GNU General Public License -->
-<!-- along with Machine_Learning_and_Neural_Networks_III_Epiphany_2024  If not, see <http://www.gnu.org/licenses/>. -->
+<!-- along with Spatio-Temporal_Statistics_Michaelmas_2024 -->
+<!-- If not, see <http://www.gnu.org/licenses/>. -->
 
 <!-- -------------------------------------------------------------------------------- -->
 
 
 
-[Back to README](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/tree/main/Computer_practical#aim)
+[Back to README](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main?tab=readme-ov-file#computer-lab-notes)
 
 ```{r}
 rm(list=ls())
