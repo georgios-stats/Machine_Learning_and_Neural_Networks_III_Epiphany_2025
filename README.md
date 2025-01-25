@@ -86,7 +86,7 @@ Gradient descent
 
 Stochastic gradient descent (subject to changes)  
 
-+ Lecture notes [(PDF)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/05.Stochastic_gradient_descent.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml) 
++ Lecture notes [(PDF)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/05.Stochastic_gradient_descent.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml) 
 
 <!--
 + Lecture notes [(PDF)](./Lecture_notes/05.Stochastic_gradient_descent.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml)  
