@@ -68,27 +68,27 @@ Lecture notes and lecture handouts are in folder **[[Lecture_notes]](./Lecture_n
 
 Learning problem: Definitions, notation, and formulation -A recap  
 
-+ Lecture notes [(PDF)](./Lecture_notes/01.Statistical_learning_framework_recap.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/01.Statistical_learning_framework_recap_xhtml/01.Statistical_learning_framework_recap.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/01.Statistical_learning_framework_recap.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/01.Statistical_learning_framework_recap_xhtml/01.Statistical_learning_framework_recap.xhtml)  
 
 Elements of convex learning problems  
 
-+ Lecture notes [(PDF)](./Lecture_notes/02.Convex_learning_problems.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/02.Convex_learning_problems_xhtml/02.Convex_learning_problems.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/02.Convex_learning_problems.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/02.Convex_learning_problems_xhtml/02.Convex_learning_problems.xhtml)  
 
 Learnability and stability  
 
-+ Lecture notes [(PDF)](./Lecture_notes/03.Learnability_and_stability.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/03.Learnability_and_stability_xhtml/03.Learnability_and_stability.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/03.Learnability_and_stability.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/03.Learnability_and_stability_xhtml/03.Learnability_and_stability.xhtml)  
 
 #### Training algorithms for machine learning      
 
 Gradient descent  
 
-+ Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
 
 Stochastic gradient descent  
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/05.Stochastic_gradient_descent.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/05.Stochastic_gradient_descent.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml)  
 
 -->
 
@@ -96,7 +96,7 @@ Stochastic gradient Langevin dynamics
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/06.Stochastic_gradient_Langevine_dynamics_xhtml/06.Stochastic_gradient_Langevine_dynamics.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/06.Stochastic_gradient_Langevine_dynamics_xhtml/06.Stochastic_gradient_Langevine_dynamics.xhtml)  
 
 -->
 
@@ -106,7 +106,7 @@ Support Vector Machines
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/07.Support_Vector_Machines.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/07.Support_Vector_Machines_xhtml/07.Support_Vector_Machines.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/07.Support_Vector_Machines.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/07.Support_Vector_Machines_xhtml/07.Support_Vector_Machines.xhtml)  
 
 -->
 
@@ -114,7 +114,7 @@ Kernel methods (extensions to non linear feature spaces)
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/08.Kernel_Methods.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/08.Kernel_Methods_xhtml/08.Kernel_Methods.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/08.Kernel_Methods.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/08.Kernel_Methods_xhtml/08.Kernel_Methods.xhtml)  
 
 -->
 
@@ -122,7 +122,7 @@ Multiclass_classification (extensions to many classes)
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/09.Multiclass_classification.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/09.Multiclass_classification_xhtml/09.Multiclass_classification.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/09.Multiclass_classification.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/09.Multiclass_classification_xhtml/09.Multiclass_classification.xhtml)  
 
 -->
 
@@ -130,7 +130,7 @@ Artificial Neural Networks (application to feature space extensions)
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/10.Artificial_neural_networks_xhtml/10.Artificial_neural_networks.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/10.Artificial_neural_networks_xhtml/10.Artificial_neural_networks.xhtml)  
 
 -->
 
@@ -138,7 +138,7 @@ Gaussian process regression (application of kernel trick/methods)
 
 <!--
 
-+ Lecture notes [(PDF)](./Lecture_notes/11.Gaussian_process_regression.pdf), [(HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
++ Lecture notes [(PDF)](./Lecture_notes/11.Gaussian_process_regression.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
 
 -->
 
@@ -169,27 +169,27 @@ Required R packages are
 
 #### Lab 1:   
 
-+ Tasks: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.Rmd)  
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_complete.Rmd)  
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_complete.Rmd)  
 
 #### Lab 2:             
 
-+ Tasks: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.Rmd)  
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.Rmd)  
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.Rmd)  
 
 #### Lab 3:             
 
-+ Tasks: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Support_Vector_Machines_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Support_Vector_Machines_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Support_Vector_Machines_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_complete.Rmd)  
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Support_Vector_Machines_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Support_Vector_Machines_complete.Rmd)  
 
 #### Lab 4:              
 
-+ Tasks: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.Rmd)  
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_tasks.Rmd)  
 
-+ Complete: [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_complete.Rmd)  
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Artificial_Neural_Networks_complete.Rmd)  
 
 ------------------------------------------------------------------------
 
@@ -199,21 +199,21 @@ Required R packages are
 
 + [Problems only (PDF)](./Exercise_sheets/Exercise_sheet_questions.pdf)  
 
-+ [Problems only (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Exercise_sheet_questions_xhtml/Exercise_sheet_questions.xhtml)  
++ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Exercise_sheet_questions_xhtml/Exercise_sheet_questions.xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Exercise_sheet_complete.pdf)  
 
-+ [Problems and solutions (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Exercise_sheet_complete_xhtml/Exercise_sheet_complete.xhtml)  
++ [Problems and solutions (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Exercise_sheet_complete_xhtml/Exercise_sheet_complete.xhtml)  
 
 #### Homework 1  
 
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_1_questions.pdf)  
 
-+ [Problems only (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_questions_xhtml/Homework_sheet_1_questions.xhtml)  
++ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_questions_xhtml/Homework_sheet_1_questions.xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_1_complete.pdf)  
 
-+ [Problems and solutions (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_complete_xhtml/Homework_sheet_1_complete.xhtml)  
++ [Problems and solutions (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_complete_xhtml/Homework_sheet_1_complete.xhtml)  
 
 #### Homework 2  
 
@@ -222,11 +222,11 @@ Required R packages are
 <!--
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_2_questions.pdf)  
 
-+ [Problems only (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_2_complete_xhtml/Homework_sheet_2_questions.xhtml)  
++ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_2_complete_xhtml/Homework_sheet_2_questions.xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_2_complete.pdf)  
 
-+ [Problems and solutions (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_2_complete_xhtml/Homework_sheet_2_complete.xhtml)    
++ [Problems and solutions (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_2_complete_xhtml/Homework_sheet_2_complete.xhtml)    
 -->
 
 #### Homework 3  
@@ -236,11 +236,11 @@ Required R packages are
 <!--
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_3_questions.pdf)  
 
-+ [Problems only (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_3_complete_xhtml/Homework_sheet_3_questions.xhtml)  
++ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_3_complete_xhtml/Homework_sheet_3_questions.xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_3_complete.pdf)  
 
-+ [Problems and solutions (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_3_complete_xhtml/Homework_sheet_3_complete.xhtml)  
++ [Problems and solutions (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_3_complete_xhtml/Homework_sheet_3_complete.xhtml)  
 -->
 
 #### Homework 4  
@@ -250,11 +250,11 @@ Required R packages are
 <!--
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_4_questions.pdf)  
 
-+ [Problems only (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_complete_xhtml/Homework_sheet_4_questions.xhtml)  
++ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_complete_xhtml/Homework_sheet_4_questions.xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_4_complete.pdf)  
 
-+ [Problems and solutions (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_complete_xhtml/Homework_sheet_4_complete.xhtml)  
++ [Problems and solutions (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_complete_xhtml/Homework_sheet_4_complete.xhtml)  
 -->
 
 
@@ -262,7 +262,7 @@ Required R packages are
 
 + [View (PDF)](./Exercise_sheets/Revision_sheet.pdf)  
 
-+ [View (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Revision_sheet_xhtml/Revision_sheet.xhtml)  
++ [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Revision_sheet_xhtml/Revision_sheet.xhtml)  
 
 ------------------------------------------------------------------------  
 
@@ -276,11 +276,11 @@ Required R packages are
 
 Solutions only  
 
-+ [Spatial data (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Spatial-data.html)    
++ [Spatial data (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Spatial-data.html)    
 
-+ [Geostatistical data (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Geostatistical-data.html)        
++ [Geostatistical data (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Geostatistical-data.html)        
 
-+ [Aerial unit data (HTML)](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2024/blob/main/README.mdhttps://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Aerial-unit-data.html)    
++ [Aerial unit data (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Aerial-unit-data.html)    
 -->
 
 ------------------------------------------------------------------------
