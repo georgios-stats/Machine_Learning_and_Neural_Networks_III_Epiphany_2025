@@ -84,13 +84,15 @@ Gradient descent
 
 + Lecture notes [(PDF)](./Lecture_notes/04.Gradient_descent.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/04.Gradient_descent_xhtml/04.Gradient_descent.xhtml)  
 
-Stochastic gradient descent  
+Stochastic gradient descent (subject to changes)  
+
++ Lecture notes [(PDF)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/05.Stochastic_gradient_descent.pdf), [(HTML)](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml) 
 
 <!--
-
 + Lecture notes [(PDF)](./Lecture_notes/05.Stochastic_gradient_descent.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/05.Stochastic_gradient_descent_xhtml/05.Stochastic_gradient_descent.xhtml)  
-
 -->
+
+Stochastic gradient descent --special versions   
 
 Stochastic gradient Langevin dynamics  
 
