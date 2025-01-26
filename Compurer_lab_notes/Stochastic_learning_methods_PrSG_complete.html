@@ -1724,28 +1724,15 @@ set.seed(2023)</code></pre>
 <div id="application-binary-classification-problem" class="section level1 unnumbered">
 <h1 class="unnumbered">Application: Binary classification problem</h1>
 <p>Consider the binary classification problem with input <span class="math inline">\(x\in\mathbb{R}\)</span> and output/labels <span class="math inline">\(y\in\{0,1\}\)</span>.</p>
-<p>The prediction rule is <span class="math display">\[
-h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
-\]</span> where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span>
-is the unknown parameter we wish to learn, and hence we can consider
-that the hypothesis class is</p>
+<p>Let <span class="math inline">\(z=\left(y,x\right)\)</span>.</p>
+<p>Consider data generation process (sampling distribution) <span class="math inline">\(g(\cdot)\)</span></p>
 <p><span class="math display">\[
-\mathcal{H}=\{w\in\mathbb{R}^{2}\}
-\]</span></p>
-<p>Consider there is available a dataset<br />
-<span class="math display">\[
-\mathcal{S}_{n}=\left\{ z_{i}=\left(y_{i},x_{i}\right)\right\}
-_{i=1}^{n}
-\]</span></p>
-<p>with <span class="math inline">\(y_{i}\in\{0,1\}\)</span> and <span class="math inline">\(x_{i}\in\mathbb{R}\)</span>.</p>
-<p>Recall that the sampling distribution is<br />
-<span class="math display">\[
 y|w \sim \text{Bernulli}(h_{w}(x)) \\
 h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
 \]</span></p>
-<p>The dataset <span class="math inline">\(\mathcal{S}_{n}=\{z_i=(x_i,y_i)\}\)</span> is
-generated from the data generation probability <span class="math inline">\(g(\cdot)\)</span> provided below as a routine. We
-pretend that we do not know <span class="math inline">\(g(\cdot)\)</span>.</p>
+<p>We pretend that we do not know <span class="math inline">\(g(\cdot)\)</span>.</p>
+<p>The routine to simulate <span class="math inline">\(n\)</span> values
+from the data generation process <span class="math inline">\(g(\cdot)\)</span> is provided below.</p>
 <pre class="r"><code>data_generating_model &lt;- function(n,w) {
   z &lt;- rep( NaN, times=n*2 )
   z &lt;- matrix(z, nrow = n, ncol = 2)
@@ -1755,17 +1742,25 @@ pretend that we do not know <span class="math inline">\(g(\cdot)\)</span>.</p>
   z[,2] &lt;- rbinom(n, size = 1, prob = p)
   return(z)
 }</code></pre>
-<p>Let the dataset <span class="math inline">\(\mathcal{S}_{n}\)</span>
-has size <span class="math inline">\(n=500\)</span>.</p>
-<p>Assume that the real values for the unknown parameters <span class="math inline">\(w\)</span> is <span class="math inline">\(w_{\text{true}}=(0.0,1.0)^\top\)</span>.</p>
+<p>Consider there is available a training dataset<br />
+<span class="math display">\[
+\mathcal{S}_{n}=\left\{ z_{i}=\left(y_{i},x_{i}\right)\right\}
+_{i=1}^{n}
+\]</span></p>
+<p>with <span class="math inline">\(y_{i}\in\{0,1\}\)</span> and <span class="math inline">\(x_{i}\in\mathbb{R}\)</span> which is generated
+according to the data generation process <span class="math inline">\(g(\cdot)\)</span>.</p>
+<p>Let the training dataset <span class="math inline">\(\mathcal{S}_{n}\)</span> be <span class="math inline">\(n=500\)</span>.</p>
+<p>Let the real value for the vector of the unknown parameters <span class="math inline">\(w\)</span> be <span class="math inline">\(w_{\text{true}}=(0.0,1.0)^\top\)</span>.</p>
 <p>The dataset containing the examples to train the model are generated
-below, and stores in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
+below, and stored in the array <span class="math inline">\(z_{\text{obs}}\)</span>.</p>
 <pre class="r"><code>set.seed(2023)
 n_obs &lt;- 500
 w_true &lt;- c(0,1)  
 z_obs &lt;- data_generating_model(n = n_obs, w = w_true) 
 w_true &lt;- as.numeric(glm(z_obs[,2]~ 1+ z_obs[,1],family = &quot;binomial&quot; )$coefficients)</code></pre>
-<p>The prediction rule is <span class="math display">\[
+<p>For the learning problem, we consider a prediction rule (hypothesis)
+with formula<br />
+<span class="math display">\[
 h_{w}(x) = \frac {\exp(w^\top x)}{1+\exp(w^\top x)}
 \]</span></p>
 <p>where <span class="math inline">\(w\in\mathbb{R}^{2}\)</span>.</p>
@@ -1777,10 +1772,11 @@ below.</p>
   h &lt;- exp(h) / (1.0 + exp(h) )
   return (h)
 }</code></pre>
-<p>The likelihood function is <span class="math display">\[
-f\left(y|w\right)=\prod_{i=1}^{n}\left(h_{i}\right)^{y_{i}}\left(1-h_{i}\right)^{1-y_{i}}
+<p>Hence the hypothesis class is</p>
+<p><span class="math display">\[
+\mathcal{H}=\{w\in\mathbb{R}^{2}\}
 \]</span></p>
-<p>We consider a loss function as</p>
+<p>We consider a loss function</p>
 <p><span class="math display">\[
 \ell\left(w,z=\left(x,y\right)\right)=-y\log\left(h(x)\right)-\left(1-y\right)\log\left(1-h(x)\right)
 \]</span></p>
