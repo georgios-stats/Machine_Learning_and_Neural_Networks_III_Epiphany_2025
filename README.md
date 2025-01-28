@@ -213,7 +213,7 @@ Required R packages are
 
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_1_questions.pdf)  
 
-+ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_questions_xhtml/Homework_sheet_1_questions.xhtml)  
++ [Problems only (HTML)](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_1_questions_xhtml/Homework_sheet_1_questions_xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_1_complete.pdf)  
 
@@ -223,7 +223,7 @@ Required R packages are
 
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_2_questions.pdf)  
 
-+ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_2_questions_xhtml/Homework_sheet_2_questions.xhtml)  
++ [Problems only (HTML)](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_2_questions_xhtml/Homework_sheet_2_questions_xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_2_complete.pdf)  
 
