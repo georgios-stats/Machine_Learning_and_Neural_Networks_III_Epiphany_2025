@@ -95,11 +95,7 @@ Stochastic gradient descent --variations
   
 Stochastic gradient Langevin dynamics  
 
-<!--
-
-+ Lecture notes [(PDF)](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/06.Stochastic_gradient_Langevine_dynamics_xhtml/06.Stochastic_gradient_Langevine_dynamics.xhtml)  
-
--->
++ Lecture notes [(PDF)](./Lecture_notes/06.Stochastic_gradient_Langevine_dynamics.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/06.Stochastic_gradient_Langevine_dynamics_xhtml/06.Stochastic_gradient_Langevine_dynamics.xhtml)
 
 #### Models for supervised machine learning  
 
