@@ -497,9 +497,9 @@ What happens when the learning problem is non convex? Aka where there are multip
 
 You will see that you will not be able to visit both of the models (maxima) with one run.  
 
-+ [LINK TO TASKS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_NMM_tasks.nb.html)  
++ [LINK TO TASKS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_NMM_tasks.html)  
 
-+ [LINK TO SOLUTIONS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_NMM_complete.nb.html)  
++ [LINK TO SOLUTIONS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_NMM_complete.html)  
 
 
 
