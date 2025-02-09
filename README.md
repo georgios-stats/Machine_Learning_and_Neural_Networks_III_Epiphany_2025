@@ -174,7 +174,7 @@ About GD, SGD (online and mini batches), SGD with projection, adaGrad, VRSG-SGD,
 
 #### Lab 2:             
 
-About SGLD, binary classification via Bernulli regression and Bayesian learning        
+About SGLD, binary classification via Bernulli regression and Bayesian learning. An example in Normal mixture model where SGLD fails is provided.          
 
 + Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_tasks.Rmd)  
 
