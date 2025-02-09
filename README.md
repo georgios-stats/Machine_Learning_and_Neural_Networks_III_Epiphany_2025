@@ -166,17 +166,19 @@ Required R packages are
 
 #### Lab 1:   
 
+About GD, SGD (online and mini batches), SGD with projection, adaGrad, VRSG-SGD, binary classification via Bernulli regression    
+
 + Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_tasks.Rmd)  
 
 + Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_complete.Rmd)  
 
 #### Lab 2:             
 
-<!--
-+ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_tasks.Rmd)  
+About SGLD, binary classification via Bernulli regression and Bayesian learning        
 
-+ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_gradient_langevin_dynamics_complete.Rmd)  
--->
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_tasks.Rmd)  
+
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Compurer_lab_notes/Stochastic_learning_methods_SGLD_complete.Rmd)  
 
 #### Lab 3:             
 
