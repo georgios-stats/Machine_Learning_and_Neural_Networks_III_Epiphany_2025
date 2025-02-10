@@ -79,23 +79,25 @@ Students are suggested to practice on the Mixture model example at home where th
 
 
 + Lecture notes:  
-    + Bayesian Learning via Stochastic gradient and Stochastic gradient Langevin dynamics
+  
+  + Bayesian Learning via Stochastic gradient and Stochastic gradient Langevin dynamics
 
 + Reference for *R*:  
     
-    + [Cheat sheet with basic commands](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)   
+  + [Cheat sheet with basic commands](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)   
 
 + Reference of *rmarkdown* (optional, supplementary material):  
   
-    + [R Markdown cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown-2.0.pdf)  
-
-    + [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)  
-
-    + [knitr options](https://yihui.name/knitr/options)
+  + [R Markdown cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown-2.0.pdf)  
+  
+  + [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)  
+  
+  + [knitr options](https://yihui.name/knitr/options)
 
 + Reference for *Latex* (optional, supplementary material):  
   
-    + [Latex Cheat Sheet](https://wch.github.io/latexsheet/latexsheet-a4.pdf)  
+  + [Latex Cheat Sheet](https://wch.github.io/latexsheet/latexsheet-a4.pdf)  
+
 ---
 
 ***New software***   
@@ -378,7 +380,7 @@ You may use the R function 'grad{numDeriv}' to numerically compute the gradient;
 If the gradient explodes apply gradient clipping/scaling with threshold $C=10.0$, as 
 
 \[
-w^{(t+1)}=w^{(t)}+\eta_{t}\left(\text{clip}\left(\frac{n}{m}\sum_{j\in\mathcal{J}^{(t)}}\nabla_{w}\log\left(f\left(z^{(t)}|w^{(t)}\right)\right),c\right)+\nabla_{w}\log\left(f\left(w^{(t)}\right)\right)\right)+\sqrt{\eta_{t}\tau}\epsilon_{t},\,\epsilon_{t}\sim\text{N}\left(0,I\right)
+w^{(t+1)}=w^{(t)}+\eta_{t}\left(\text{clip}\left(\frac{n}{m}\sum_{j\in\mathcal{J}^{(t)}}\nabla_{w}\log\left(f\left(z^{(t)}|w^{(t)}\right)\right),c\right)+\nabla_{w}\log\left(f\left(w^{(t)}\right)\right)\right)+\sqrt{2\eta_{t}\tau}\epsilon_{t},\,\epsilon_{t}\sim\text{N}\left(0,I\right)
 \]
  where 
 \[
