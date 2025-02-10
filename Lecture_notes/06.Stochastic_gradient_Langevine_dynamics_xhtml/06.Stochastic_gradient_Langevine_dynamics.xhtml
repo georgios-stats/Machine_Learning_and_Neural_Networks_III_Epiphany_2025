@@ -186,7 +186,7 @@ div.float-caption {
 <div class='plain_layout' id='magicparlabel-10'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
 Epiphany term, 2025<div style='height:3ex'></div></div>
 
-<div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Handout <a href="#enu_Handout___Bayesian">enu:Handout-:-Bayesian</a>: Bayesian Learning via 
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Lecture notes <a href="#enu_Handout___Bayesian">enu:Handout-:-Bayesian</a>: Bayesian Learning via 
 <br />
 Stochastic gradient and 
 <br />
@@ -241,7 +241,9 @@ Bayesian methods are appealing in their ability to capture uncertainty in learne
 <mrow>
  <mi>w</mi>
  <mo>&#x2208;</mo>
- <mi>&#x398;</mi>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
  <mo>&#x2286;</mo>
  <msup>
   <mstyle mathvariant='double-struck'>
@@ -757,11 +759,7 @@ Point estimation of <math xmlns='http://www.w3.org/1998/Math/MathML'>
       <mo>arg</mo>
       <mo>max</mo>
      </mrow>
-     <mrow>
-      <mi>w</mi>
-      <mo>&#x2208;</mo>
-      <mi>&#x398;</mi>
-     </mrow>
+     <mi>w</mi>
     </munder>
     <mrow>
      <mo>(</mo>
@@ -804,11 +802,7 @@ Point estimation of <math xmlns='http://www.w3.org/1998/Math/MathML'>
       <mo>arg</mo>
       <mo>max</mo>
      </mrow>
-     <mrow>
-      <mi>w</mi>
-      <mo>&#x2208;</mo>
-      <mi>&#x398;</mi>
-     </mrow>
+     <mi>w</mi>
     </munder>
     <mrow>
      <mo>(</mo>
@@ -973,11 +967,7 @@ In what follows, we first present the implementation of GD and SGD addressing MA
       <mo>arg</mo>
       <mo>max</mo>
      </mrow>
-     <mrow>
-      <mi>w</mi>
-      <mo>&#x2208;</mo>
-      <mi>&#x398;</mi>
-     </mrow>
+     <mi>w</mi>
     </munder>
     <mrow>
      <mo>(</mo>
@@ -1014,11 +1004,7 @@ In what follows, we first present the implementation of GD and SGD addressing MA
       <mo>arg</mo>
       <mo>max</mo>
      </mrow>
-     <mrow>
-      <mi>w</mi>
-      <mo>&#x2208;</mo>
-      <mi>&#x398;</mi>
-     </mrow>
+     <mi>w</mi>
     </munder>
     <mrow>
      <mo>(</mo>
@@ -1040,12 +1026,12 @@ In what follows, we first present the implementation of GD and SGD addressing MA
         <mrow>
          <mo>(</mo>
          <mrow>
-          <mi>w</mi>
-          <mo stretchy='false'>|</mo>
           <msub>
            <mi>z</mi>
            <mi>i</mi>
           </msub>
+          <mo stretchy='false'>|</mo>
+          <mi>w</mi>
          </mrow>
          <mo>)</mo>
         </mrow>
@@ -1272,9 +1258,10 @@ GD is particularly suitable to solve <a href="#eq__5_1">(2.1)</a> when <math xml
  and batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
- <hr />
 </div>
-<div class='plain_layout' style='text-align: left;' id='magicparlabel-115'><i>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="algorithm_item" id='magicparlabel-115'><hr />
+</div>
+<div class='plain_layout' style='text-align: left;' id='magicparlabel-116'><i>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>t</mi>
  <mo stretchy='false'>=</mo>
@@ -1289,7 +1276,7 @@ GD is particularly suitable to solve <a href="#eq__5_1">(2.1)</a> when <math xml
 </math>
  iterate: </i></div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-116'><i>generate a random set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-117'><i>generate a random set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mstyle mathvariant='script'>
@@ -1328,7 +1315,7 @@ GD is particularly suitable to solve <a href="#eq__5_1">(2.1)</a> when <math xml
 <mi>n</mi>
 </math>
  with or without replacement</i></li>
-<li class="enumerate_item" id='magicparlabel-121'><i>compute <a id="eq__6_1" />
+<li class="enumerate_item" id='magicparlabel-122'><i>compute <a id="eq__6_1" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
  <mtr>
@@ -1458,11 +1445,11 @@ GD is particularly suitable to solve <a href="#eq__5_1">(2.1)</a> when <math xml
 </div>
 </div></div>
 
-<div class='standard' id='magicparlabel-122'>
+<div class='standard' id='magicparlabel-123'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-123'><span class="note_label">Note 14.</span>
+<div class="note_item" id='magicparlabel-124'><span class="note_label">Note 14.</span>
 Recursion <a href="#eq__6_1">(2.3)</a> is justified in terms of SGD theory as <a id="eq__10" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -1595,21 +1582,21 @@ Recursion <a href="#eq__6_1">(2.3)</a> is justified in terms of SGD theory as <a
 </math>
  see Exercise <a href="#exer____2_1_1_1_1">exer:()-2-1-1-1-1</a> from the Exercise sheet. </div>
 </div>
-<div class='standard' id='magicparlabel-124'>
+<div class='standard' id='magicparlabel-125'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-125'><span class="note_label">Note 15.</span>
+<div class="note_item" id='magicparlabel-126'><span class="note_label">Note 15.</span>
 The implementation of the SGD variants (Algorithms <a href="#alg_batch_Stochastic_Gradient">alg:batch-Stochastic-Gradient</a>, <a href="#alg_Stochastic_Variance_Reduced">alg:Stochastic-Variance-Reduced</a>, <a href="#alg_Stochastic_Gradient_descent_2">alg:Stochastic-Gradient-descent-2</a>, <a href="#def_Adaptive_Stochastic_Gradient">def:Adaptive-Stochastic-Gradient</a> in Handout 3)) is straightforward based on Algorithm <a href="#alg_Batch_Stochastic_Gradient">13</a> and <a href="#eq__10">(2.4)</a>. </div>
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-126'><span class="section_label">3</span> <a id="sec_Full_Bayesian_learning" /> Fully Bayesian learning via SGLD</h2>
-<div class='standard' id='magicparlabel-127'>
+<h2 class='section' id='magicparlabel-127'><span class="section_label">3</span> <a id="sec_Full_Bayesian_learning" /> Fully Bayesian learning via SGLD</h2>
+<div class='standard' id='magicparlabel-128'>
 <br />
 </div>
 <div class='problem'>
-<div class="problem_item" id='magicparlabel-128'><span class="problem_label">Problem 16.</span>
+<div class="problem_item" id='magicparlabel-129'><span class="problem_label">Problem 16.</span>
 Fully Bayesian learning, computationally, is the problem of recovering the posterior distribution <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -1677,11 +1664,11 @@ Fully Bayesian learning, computationally, is the problem of recovering the poste
 </math>
  </div>
 </div>
-<div class='standard' id='magicparlabel-137'>
+<div class='standard' id='magicparlabel-138'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-138'><span class="note_label">Note 17.</span>
+<div class="note_item" id='magicparlabel-139'><span class="note_label">Note 17.</span>
 <a id="rem_Monte_Carlo_integration" /> Monte Carlo integration aims at approximating <a href="#eq__2">(1.3)</a> when intractable, by using Central Limit Theorem or Law of Large Numbers arguments as <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -1786,11 +1773,11 @@ Fully Bayesian learning, computationally, is the problem of recovering the poste
 </math>
  simulations drawn (approximately) from the posterior distribution <a href="#eq__1">(1.2)</a>. This theory is subject to conditions we skip. </div>
 </div>
-<div class='standard' id='magicparlabel-144'>
+<div class='standard' id='magicparlabel-145'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-145'><span class="note_label">Note 18.</span>
+<div class="note_item" id='magicparlabel-146'><span class="note_label">Note 18.</span>
 Stochastic gradient Langevin dynamics (SGLD) algorithm generates as output a random chain <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>{</mo>
@@ -1972,12 +1959,12 @@ Stochastic gradient Langevin dynamics (SGLD) algorithm generates as output a ran
 </math>
 ) and approximate posterior expectations based on the Monte Carlo integration (Note <a href="#rem_Monte_Carlo_integration">17</a>). </div>
 </div>
-<div class='standard' id='magicparlabel-146'>
+<div class='standard' id='magicparlabel-147'>
 <br />
 </div>
 
-<div class='standard' id='magicparlabel-147'><div class='Boxed'><div class='algorithm'>
-<div class="algorithm_item" id='magicparlabel-151'><span class="algorithm_label">Algorithm 19.</span>
+<div class='standard' id='magicparlabel-148'><div class='Boxed'><div class='algorithm'>
+<div class="algorithm_item" id='magicparlabel-152'><span class="algorithm_label">Algorithm 19.</span>
 <a id="alg_Stochastic_Gradient_Langevin" /> Stochastic Gradient Langevin Dynamics (SGLD) with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -1999,10 +1986,10 @@ Stochastic gradient Langevin dynamics (SGLD) algorithm generates as output a ran
 </mrow>
 </math>
  is </div>
-<div class="algorithm_item" id='magicparlabel-152'><hr />
+<div class="algorithm_item" id='magicparlabel-153'><hr />
 </div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-153'><i>Generate a random set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-154'><i>Generate a random set <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mstyle mathvariant='script'>
@@ -2041,7 +2028,7 @@ Stochastic gradient Langevin dynamics (SGLD) algorithm generates as output a ran
 <mi>n</mi>
 </math>
  with or without replacement</i></li>
-<li class="enumerate_item" id='magicparlabel-158'><i>Compute </i><a id="eq__7" />
+<li class="enumerate_item" id='magicparlabel-159'><i>Compute </i><a id="eq__7" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
  <mtr>
@@ -2182,7 +2169,7 @@ Stochastic gradient Langevin dynamics (SGLD) algorithm generates as output a ran
 </mrow>
 </math>
  .</li>
-<li class="enumerate_item" id='magicparlabel-159'><i>Terminate if a termination criterion is satisfied; E.g., <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-160'><i>Terminate if a termination criterion is satisfied; E.g., <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>t</mi>
  <mo>&#x2265;</mo>
@@ -2205,31 +2192,31 @@ Stochastic gradient Langevin dynamics (SGLD) algorithm generates as output a ran
 .</i></li>
 </ol>
 </div>
-</div><div class='marginal'><div class='plain_layout' id='magicparlabel-163'>Ref [<a href="#enu_Welling__M_____">1.</a>]</div>
+</div><div class='marginal'><div class='plain_layout' id='magicparlabel-164'>Ref [<a href="#enu_Welling__M_____">1.</a>]</div>
 </div>
 <br />
 </div>
 
-<div class='standard' id='magicparlabel-164'>
+<div class='standard' id='magicparlabel-165'>
 <br />
 </div>
-<h4 class='subsubsection_' id='magicparlabel-165'><b>How / why it works...</b></h4>
-<div class='standard' id='magicparlabel-166'>
-<br />
-</div>
-
+<h4 class='subsubsection_' id='magicparlabel-166'><b>How / why it works...</b></h4>
 <div class='standard' id='magicparlabel-167'>
 <br />
 </div>
 
+<div class='standard' id='magicparlabel-168'>
+<br />
+</div>
 
 
-<div class='standard' id='magicparlabel-174'>
+
+<div class='standard' id='magicparlabel-175'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-175'><span class="note_label">Note 20.</span>
-<a id="rem__Mathematically_speaking__The" /> (Mathematically speaking)<div class='marginal'><div class='plain_layout' id='magicparlabel-179'>Ref [<a href="#enu_Sato__I____">3.</a>]</div>
+<div class="note_item" id='magicparlabel-176'><span class="note_label">Note 20.</span>
+<a id="rem__Mathematically_speaking__The" /> (Mathematically speaking)<div class='marginal'><div class='plain_layout' id='magicparlabel-180'>Ref [<a href="#enu_Sato__I____">3.</a>]</div>
 </div> The stochastic chain in <a href="#eq__7">(3.4)</a> can be viewed as a discretization of the continuous-time Langevin diffusion described by the stochastic differential equation<a id="eq__8" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -2323,7 +2310,7 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
  <mo>}</mo>
 </mrow>
 </math>
- is a standard Brownian motion<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-183'>A a continuous-time stochastic process: (1) <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ is a standard Brownian motion<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-184'>A a continuous-time stochastic process: (1) <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>B</mi>
  <mrow>
@@ -2505,7 +2492,7 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </div>
 
 <div class='note'>
-<div class="note_item" id='magicparlabel-189'><span class="note_label">Note 21.</span>
+<div class="note_item" id='magicparlabel-190'><span class="note_label">Note 21.</span>
 (Heuristically speaking) SGLD relies on injecting the `right&#8217; amount of noise <a href="#eq__7">(3.4)</a> to a standard stochastic gradient optimization recursion <a href="#eq__6">(2.2)</a>, such that, as the stepsize <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x3B7;</mi>
@@ -2571,15 +2558,15 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  will dominate the stochastic gradient noise, so the SGLD will imitate a Langevin dynamics for the target distribution <a href="#eq__1">(1.2)</a>. The aim is for to the algorithm to transition smoothly between the two phases. Whether the algorithm is in the stochastic optimization phase or Langevin dynamics phase depends on the variance of the injected noise versus that of the stochastic gradient. </div>
 </div>
-<div class='standard' id='magicparlabel-198'>
+<div class='standard' id='magicparlabel-199'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-199'><span class="note_label">Note 22.</span>
-One can argue that, the output of SGLD is also an &#8220;almost&#8221; minimizer of the empirical risk for large enough <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class="note_item" id='magicparlabel-200'><span class="note_label">Note 22.</span>
+One can argue that, the output of SGLD is also an &#8220;almost&#8221; maximizer of the (minus) empirical risk with shrinkage for large enough <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>t</mi>
 </math>
-. A draw from the Gibbs distribution <a href="#eq__9">(3.6)</a> is approximately a minimizer of <a href="#eq__5_1">(2.1)</a>. Also one can show that the SGLD recursion tracks the Langevin diffusion <a href="#eq__8">(3.5)</a> in a suitable sense. Hence, both imply that the distributions of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+. A draw from the Gibbs distribution <a href="#eq__9">(3.6)</a> is approximately a maximizer of <a href="#eq__5_1">(2.1)</a>. Also one can show that the SGLD recursion tracks the Langevin diffusion <a href="#eq__8">(3.5)</a> in a suitable sense. Hence, both imply that the distributions of <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>W</mi>
  <mrow>
@@ -2594,15 +2581,15 @@ One can argue that, the output of SGLD is also an &#8220;almost&#8221; minimizer
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-200'>
+<div class='standard' id='magicparlabel-201'>
 <br />
 </div>
-<h4 class='subsubsection_' id='magicparlabel-201'><b>About the learning rate alg. parameter...</b></h4>
-<div class='standard' id='magicparlabel-202'>
+<h4 class='subsubsection_' id='magicparlabel-202'><b>About the learning rate alg. parameter...</b></h4>
+<div class='standard' id='magicparlabel-203'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-203'><span class="note_label">Note 23.</span>
+<div class="note_item" id='magicparlabel-204'><span class="note_label">Note 23.</span>
 To guarantee the algorithm to work it is important for the step sizes <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x3B7;</mi>
@@ -2620,11 +2607,11 @@ To guarantee the algorithm to work it is important for the step sizes <math xmln
 </math>
  constant once it has decreased below a critical level.</div>
 </div>
-<div class='standard' id='magicparlabel-204'>
+<div class='standard' id='magicparlabel-205'>
 <br />
 </div>
 <div class='condition'>
-<div class="condition_item" id='magicparlabel-205'><span class="condition_label">Condition 24.</span>
+<div class="condition_item" id='magicparlabel-206'><span class="condition_label">Condition 24.</span>
 <a id="cond_Regarding_the_learning" />Regarding the learning rate (or gain) <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>{</mo>
@@ -2651,7 +2638,7 @@ To guarantee the algorithm to work it is important for the step sizes <math xmln
 </math>
  approximately distributed according to <a href="#eq__3">(3.2)</a></div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-206'><a id="enu__" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-207'><a id="enu__" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>&#x3B7;</mi>
@@ -2662,7 +2649,7 @@ To guarantee the algorithm to work it is important for the step sizes <math xmln
 </mrow>
 </math>
 , </li>
-<li class="enumerate_item" id='magicparlabel-207'><a id="enu_" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-208'><a id="enu_" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <munderover>
   <mo>&#x2211;</mo>
@@ -2682,7 +2669,7 @@ To guarantee the algorithm to work it is important for the step sizes <math xmln
 </mrow>
 </math>
 </li>
-<li class="enumerate_item" id='magicparlabel-208'><a id="enu__1" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-209'><a id="enu__1" /><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <munderover>
   <mo>&#x2211;</mo>
@@ -2705,11 +2692,11 @@ To guarantee the algorithm to work it is important for the step sizes <math xmln
 </li>
 </ol>
 </div>
-<div class='standard' id='magicparlabel-209'>
+<div class='standard' id='magicparlabel-210'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-210'><span class="note_label">Note 25.</span>
+<div class="note_item" id='magicparlabel-211'><span class="note_label">Note 25.</span>
 The popular learning rates <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>{</mo>
@@ -2728,12 +2715,12 @@ The popular learning rates <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  can be tuned based on pilot runs using a reasonably small number of data.</div>
 </div>
-<h4 class='subsubsection_' id='magicparlabel-211'>About the temperature alg. parameter...</h4>
-<div class='standard' id='magicparlabel-212'>
+<h4 class='subsubsection_' id='magicparlabel-212'>About the temperature alg. parameter...</h4>
+<div class='standard' id='magicparlabel-213'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-213'><span class="note_label">Note 26.</span>
+<div class="note_item" id='magicparlabel-214'><span class="note_label">Note 26.</span>
 The temperature parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3C4;</mi>
@@ -2743,23 +2730,23 @@ The temperature parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  is user specified and aims at controlling (eg; inflating) the variance of the produced chain for instance with practical purpose to escape from local modes (otherwise energy barriers) in non-convex problems. </div>
 </div>
-<div class='standard' id='magicparlabel-214'>
-<br />
-</div>
-
 <div class='standard' id='magicparlabel-215'>
 <br />
 </div>
-<h4 class='subsubsection_' id='magicparlabel-216'><b>About the output of the alg...</b></h4>
+
+<div class='standard' id='magicparlabel-216'>
+<br />
+</div>
+<h4 class='subsubsection_' id='magicparlabel-217'><b>About the output of the alg...</b></h4>
 <div class='note'>
-<div class="note_item" id='magicparlabel-217'><span class="note_label">Note 27.</span>
+<div class="note_item" id='magicparlabel-218'><span class="note_label">Note 27.</span>
 The first few iterations of SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>) involve values generated at the beginning of the running algorithm while the chain have not yet converged to (or reached) an area of substantial posterior mass. Hence they are discarded from the output of the SGLD. These values are called burn-in. </div>
 </div>
-<div class='standard' id='magicparlabel-218'>
+<div class='standard' id='magicparlabel-219'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-219'><span class="note_label">Note 28.</span>
+<div class="note_item" id='magicparlabel-220'><span class="note_label">Note 28.</span>
 The output of SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>) <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>{</mo>
@@ -2779,11 +2766,11 @@ The output of SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>
 </math>
  produced during the last few iterations of the running algorithm and after discarding the burn-in generated values. </div>
 </div>
-<div class='standard' id='magicparlabel-225'>
+<div class='standard' id='magicparlabel-226'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-226'><span class="note_label">Note 29.</span>
+<div class="note_item" id='magicparlabel-227'><span class="note_label">Note 29.</span>
 SGLD for <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3C4;</mi>
@@ -2793,12 +2780,12 @@ SGLD for <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  approximately simulates from the posterior <a href="#eq__1">(1.2)</a>. </div>
 </div>
-<h4 class='subsubsection_' id='magicparlabel-227'>About facilitating inference...</h4>
-<div class='standard' id='magicparlabel-228'>
+<h4 class='subsubsection_' id='magicparlabel-228'>About facilitating inference...</h4>
+<div class='standard' id='magicparlabel-229'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-229'><span class="note_label">Note 30.</span>
+<div class="note_item" id='magicparlabel-230'><span class="note_label">Note 30.</span>
 Expectation <a href="#eq__2">(1.3)</a>,  can be estimated as an arithmetic average<a id="eq__4" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -2900,11 +2887,11 @@ as <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  based on LLN arguments.</div>
 </div>
-<div class='standard' id='magicparlabel-234'>
+<div class='standard' id='magicparlabel-235'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-235'><span class="note_label">Note 31.</span>
+<div class="note_item" id='magicparlabel-236'><span class="note_label">Note 31.</span>
 Another more efficient estimator for the expectation <a href="#eq__2">(1.3)</a> is the weighted arithmetic average<a id="eq__4_1" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -2995,11 +2982,11 @@ Another more efficient estimator for the expectation <a href="#eq__2">(1.3)</a> 
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-236'>
+<div class='standard' id='magicparlabel-237'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-237'><span class="note_label">Note 32.</span>
+<div class="note_item" id='magicparlabel-238'><span class="note_label">Note 32.</span>
 Estimator <a href="#eq__4_1">(3.8)</a> has a smaller standard error than estimator <a href="#eq__4">(3.7)</a>. As the step size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>&#x3B7;</mi>
@@ -3024,19 +3011,19 @@ Estimator <a href="#eq__4_1">(3.8)</a> has a smaller standard error than estimat
 </div>
 
 
-<div class='standard' id='magicparlabel-256'>
+<div class='standard' id='magicparlabel-257'>
 <br />
 </div>
-<h3 class='subsection_' id='magicparlabel-257'>About the exploding gradient phenomenon...</h3>
+<h3 class='subsection_' id='magicparlabel-258'>About the exploding gradient phenomenon...</h3>
 <div class='note'>
-<div class="note_item" id='magicparlabel-258'><span class="note_label">Note 33.</span>
+<div class="note_item" id='magicparlabel-259'><span class="note_label">Note 33.</span>
 `Exploding gradients&#8217; is the practical phenomenon in which large updates to weights during training can cause a numerical overflow or underflow due to the machine error of the computer.</div>
 </div>
-<div class='standard' id='magicparlabel-267'>
+<div class='standard' id='magicparlabel-268'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-268'><span class="note_label">Note 34.</span>
+<div class="note_item" id='magicparlabel-269'><span class="note_label">Note 34.</span>
 Practical solutions to `Exploding gradient&#8217; involve, at each iteration <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>t</mi>
 </math>
@@ -3058,11 +3045,11 @@ Practical solutions to `Exploding gradient&#8217; involve, at each iteration <ma
 </math>
 ), and instantly changing it (e.g., gradient scaling or clipping) if it is gonna result an overflow. </div>
 </div>
-<div class='standard' id='magicparlabel-269'>
+<div class='standard' id='magicparlabel-270'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-270'><span class="note_label">Note 35.</span>
+<div class="note_item" id='magicparlabel-271'><span class="note_label">Note 35.</span>
 <a id="note_Gradient_scaling_involves" /> Gradient scaling involves normalizing the gradient vector such that vector norm (magnitude) equals a user-specified value. More formally, given a gradient <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>v</mi>
@@ -3208,30 +3195,30 @@ as
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-271'>
+<div class='standard' id='magicparlabel-272'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-272'><span class="note_label">Note 36.</span>
+<div class="note_item" id='magicparlabel-273'><span class="note_label">Note 36.</span>
 Gradient&#xA0;clipping involves forcing the gradient values (element-wise) to a specific minimum or maximum value if the gradient exceeded an expected range.</div>
 </div>
-<div class='standard' id='magicparlabel-273'>
+<div class='standard' id='magicparlabel-274'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-274'><span class="note_label">Note 37.</span>
+<div class="note_item" id='magicparlabel-275'><span class="note_label">Note 37.</span>
 Unreasonably frequent scaling or clipping may introduce significant bias and hence it should not be applied carelessly.</div>
 </div>
-<div class='standard' id='magicparlabel-275'>
+<div class='standard' id='magicparlabel-276'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-276'><span class="section_label">4</span> <a id="sec_Examples" />Examples <div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-280'>Code is available from <span class='flex_url'>https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main/Lecture_notes/code/06.Stochastic_gradient_Langevine_dynamics</span></div>
+<h2 class='section' id='magicparlabel-277'><span class="section_label">4</span> <a id="sec_Examples" />Examples <div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-281'>Code is available from <span class='flex_url'>https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main/Lecture_notes/code/06.Stochastic_gradient_Langevine_dynamics</span></div>
 </div></div></h2>
-<div class='standard' id='magicparlabel-285'>We continue the Example <a href="#exa_Consider_the_simple">exa:Consider-the-simple</a> in <a href="#enu_Handout___Gradient">enu:Handout-:-Gradient</a>: Gradient descent. </div>
-<h3 class='subsection_' id='magicparlabel-286'>Specifying the Bayesian model</h3>
-<div class='standard' id='magicparlabel-287'>Consider the Bayesian Normal linear regression model
+<div class='standard' id='magicparlabel-286'>We continue the Example <a href="#exa_Consider_the_simple">exa:Consider-the-simple</a> in <a href="#enu_Handout___Gradient">enu:Handout-:-Gradient</a>: Gradient descent. </div>
+<h3 class='subsection_' id='magicparlabel-287'>Specifying the Bayesian model</h3>
+<div class='standard' id='magicparlabel-288'>Consider the Bayesian Normal linear regression model
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 <mtable>
@@ -3605,8 +3592,8 @@ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </mtable>
 </math>
 </div>
-<h3 class='subsection_' id='magicparlabel-292'>Performing computationally convenient transformations</h3>
-<div class='standard' id='magicparlabel-293'>Because SGD (Algorithm <a href="#alg_Batch_Stochastic_Gradient">13</a>) and SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>) can handle cases where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h3 class='subsection_' id='magicparlabel-293'>Performing computationally convenient transformations</h3>
+<div class='standard' id='magicparlabel-294'>Because SGD (Algorithm <a href="#alg_Batch_Stochastic_Gradient">13</a>) and SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>) can handle cases where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>w</mi>
  <mo>&#x2208;</mo>
@@ -3921,8 +3908,8 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </mrow>
 </math>
 </div>
-<h3 class='subsection_' id='magicparlabel-294'>Computing the require quantities for SGLD</h3>
-<div class='standard' id='magicparlabel-295'>Then we can compute the required gradients in order to run the SGD, and SGLD with respect to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h3 class='subsection_' id='magicparlabel-295'>Computing the require quantities for SGLD</h3>
+<div class='standard' id='magicparlabel-296'>Then we can compute the required gradients in order to run the SGD, and SGLD with respect to <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>w</mi>
  <mo stretchy='false'>=</mo>
@@ -5046,8 +5033,8 @@ Hence for the log a priori PDF we have
 </mtable>
 </math>
  </div>
-<h3 class='subsection_' id='magicparlabel-313'>Implementation of SGLD</h3>
-<div class='standard' id='magicparlabel-314'>We consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h3 class='subsection_' id='magicparlabel-314'>Implementation of SGLD</h3>
+<div class='standard' id='magicparlabel-315'>We consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BC;</mi>
  <mo stretchy='false'>=</mo>
@@ -5081,7 +5068,7 @@ Hence for the log a priori PDF we have
 </math>
 , for our simulations below. </div>
 
-<div class='standard' id='magicparlabel-315'>To implement SGD (Algorithm <a href="#alg_Batch_Stochastic_Gradient">13</a>) and SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>) , we just need to plug in the computed gradients <a href="#eq__12">(4.1)</a> and <a href="#eq__13">(4.2)</a> for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-316'>To implement SGD (Algorithm <a href="#alg_Batch_Stochastic_Gradient">13</a>) and SGLD (Algorithm <a href="#alg_Stochastic_Gradient_Langevin">19</a>) , we just need to plug in the computed gradients <a href="#eq__12">(4.1)</a> and <a href="#eq__13">(4.2)</a> for <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>w</mi>
  <mo stretchy='false'>=</mo>
@@ -5272,12 +5259,12 @@ Hence for the log a priori PDF we have
 </math>
 .</div>
 
-<div class='standard' id='magicparlabel-316'>In Figures <a href="#fig_">4.1</a>, we ran the SGD for different batch sizes <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-317'>In Figures <a href="#fig_">4.1</a>, we ran the SGD for different batch sizes <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
  and compared it against the exact MLE. We observe that SGD trace converges to the exact MLE. The oscillations are due to the stochastic gradient (ie, noise in the gradient). </div>
 
-<div class='standard' id='magicparlabel-317'>In Figures <a href="#fig__2">4.2</a>, we ran the SGLD for different batch sizes <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-318'>In Figures <a href="#fig__2">4.2</a>, we ran the SGLD for different batch sizes <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
  but the same temperature <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -5306,7 +5293,7 @@ Hence for the log a priori PDF we have
 </math>
  is bigger. As we said this is not a panacea; if the landscape of the exact psterior density was multimodal (aka not convex but with had several maxima), then the SGLD using smaller batch sizes could have performed better, in the sense that the inflated noise from the stochastic gradient could accidentally make the generated chain to pass the low mass barrier and visit a different mode, unlike the one with larger batch-size and hence smaller variation.</div>
 
-<div class='standard' id='magicparlabel-318'>In Figures <a href="#fig__2_1">4.3</a>, we ran the SGLD for different temperatures <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-319'>In Figures <a href="#fig__2_1">4.3</a>, we ran the SGLD for different temperatures <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3C4;</mi>
 </math>
  but the same batch sizes <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -5331,39 +5318,39 @@ Hence for the log a priori PDF we have
 </math>
 . </div>
 
-<div class='standard' id='magicparlabel-319'>
+<div class='standard' id='magicparlabel-320'>
 <br />
 </div>
 
 
 <div class='float-figure'>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-328'><img style='width:33%;' src='e_c89808d32d59_SGD_w1_batch_size=10.png' alt='image: e_c89808d32d59_SGD_w1_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1" /> </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-329'><img style='width:33%;' src='e_c89808d32d59_SGD_w1_batch_size=10.png' alt='image: e_c89808d32d59_SGD_w1_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1" /> </span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-336'><img style='width:33%;' src='e_d55e6e1fbe5d_SGD_w1_batch_size=100.png' alt='image: e_d55e6e1fbe5d_SGD_w1_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1" /> </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-337'><img style='width:33%;' src='e_d55e6e1fbe5d_SGD_w1_batch_size=100.png' alt='image: e_d55e6e1fbe5d_SGD_w1_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1" /> </span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-344'><img style='width:33%;' src='e_c04ba867f1c8_SGD_w1_batch_size=1000.png' alt='image: e_c04ba867f1c8_SGD_w1_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig__1_2" /> </span></div>
-</div>
-
-
-
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-353'><img style='width:33%;' src='e_3aaa2173666c_SGD_w2_batch_size=10.png' alt='image: e_3aaa2173666c_SGD_w2_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  <a id="fig__1_3" /> </span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-361'><img style='width:33%;' src='e_d8b07dda32ea_SGD_w2_batch_size=100.png' alt='image: e_d8b07dda32ea_SGD_w2_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  <a id="fig__1_1_1" /> </span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-369'><img style='width:33%;' src='e_ef5e9afc3332_SGD_w2_batch_size=1000.png' alt='image: e_ef5e9afc3332_SGD_w2_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  <a id="fig__1_2_1" /> </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-345'><img style='width:33%;' src='e_c04ba867f1c8_SGD_w1_batch_size=1000.png' alt='image: e_c04ba867f1c8_SGD_w1_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig__1_2" /> </span></div>
 </div>
 
 
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-378'><img style='width:33%;' src='e_64e330eded62_SGD_w3_batch_size=10.png' alt='image: e_64e330eded62_SGD_w3_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  <a id="fig__1_3_1" /> </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-354'><img style='width:33%;' src='e_3aaa2173666c_SGD_w2_batch_size=10.png' alt='image: e_3aaa2173666c_SGD_w2_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  <a id="fig__1_3" /> </span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-386'><img style='width:33%;' src='e_e749a8b68076_SGD_w3_batch_size=100.png' alt='image: e_e749a8b68076_SGD_w3_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  <a id="fig__1_1_1_1" /> </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-362'><img style='width:33%;' src='e_d8b07dda32ea_SGD_w2_batch_size=100.png' alt='image: e_d8b07dda32ea_SGD_w2_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  <a id="fig__1_1_1" /> </span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-394'><img style='width:33%;' src='e_563145278167_SGD_w3_batch_size=1000.png' alt='image: e_563145278167_SGD_w3_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure i:  <a id="fig__1_2_1_1" /> </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-370'><img style='width:33%;' src='e_ef5e9afc3332_SGD_w2_batch_size=1000.png' alt='image: e_ef5e9afc3332_SGD_w2_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  <a id="fig__1_2_1" /> </span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-399'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.1:  <a id="fig_" /> Bayesian learning via SGD (SGD vs (exact)MLE) Study on batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-379'><img style='width:33%;' src='e_64e330eded62_SGD_w3_batch_size=10.png' alt='image: e_64e330eded62_SGD_w3_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  <a id="fig__1_3_1" /> </span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-387'><img style='width:33%;' src='e_e749a8b68076_SGD_w3_batch_size=100.png' alt='image: e_e749a8b68076_SGD_w3_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  <a id="fig__1_1_1_1" /> </span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-395'><img style='width:33%;' src='e_563145278167_SGD_w3_batch_size=1000.png' alt='image: e_563145278167_SGD_w3_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure i:  <a id="fig__1_2_1_1" /> </span></div>
+</div>
+
+
+<div class='plain_layout' id='magicparlabel-400'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.1:  <a id="fig_" /> Bayesian learning via SGD (SGD vs (exact)MLE) Study on batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
 . </span></div>
@@ -5374,33 +5361,33 @@ Hence for the log a priori PDF we have
 
 
 <div class='float-figure'>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-413'><img style='width:33%;' src='e_f557d54b9b5d_SGLD_w1_batch_size=10.png' alt='image: e_f557d54b9b5d_SGLD_w1_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1_4" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-414'><img style='width:33%;' src='e_f557d54b9b5d_SGLD_w1_batch_size=10.png' alt='image: e_f557d54b9b5d_SGLD_w1_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1_4" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-421'><img style='width:33%;' src='e_c7a9eda1f962_SGLD_w1_batch_size=100.png' alt='image: e_c7a9eda1f962_SGLD_w1_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1_2" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-422'><img style='width:33%;' src='e_c7a9eda1f962_SGLD_w1_batch_size=100.png' alt='image: e_c7a9eda1f962_SGLD_w1_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1_2" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-429'><img style='width:33%;' src='e_6d876b01da64_SGLD_w1_batch_size=1000.png' alt='image: e_6d876b01da64_SGLD_w1_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig__1_2_2" /></span></div>
-</div>
-
-
-
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-438'><img style='width:33%;' src='e_936992fa6752_SGLD_w2_batch_size=10.png' alt='image: e_936992fa6752_SGLD_w2_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  <a id="fig__1_3_2" /></span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-446'><img style='width:33%;' src='e_7feb47e62b80_SGLD_w2_batch_size=100.png' alt='image: e_7feb47e62b80_SGLD_w2_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  <a id="fig__1_1_1_2" /></span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-454'><img style='width:33%;' src='e_ec6b997e8286_SGLD_w2_batch_size=1000.png' alt='image: e_ec6b997e8286_SGLD_w2_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  <a id="fig__1_2_1_2" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-430'><img style='width:33%;' src='e_6d876b01da64_SGLD_w1_batch_size=1000.png' alt='image: e_6d876b01da64_SGLD_w1_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig__1_2_2" /></span></div>
 </div>
 
 
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-463'><img style='width:33%;' src='e_2f43aec803e4_SGLD_w3_batch_size=10.png' alt='image: e_2f43aec803e4_SGLD_w3_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  <a id="fig__1_3_1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-439'><img style='width:33%;' src='e_936992fa6752_SGLD_w2_batch_size=10.png' alt='image: e_936992fa6752_SGLD_w2_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  <a id="fig__1_3_2" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-471'><img style='width:33%;' src='e_3ddfd5d854f6_SGLD_w3_batch_size=100.png' alt='image: e_3ddfd5d854f6_SGLD_w3_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  <a id="fig__1_1_1_1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-447'><img style='width:33%;' src='e_7feb47e62b80_SGLD_w2_batch_size=100.png' alt='image: e_7feb47e62b80_SGLD_w2_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  <a id="fig__1_1_1_2" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-479'><img style='width:33%;' src='e_1525f2b710a0_SGLD_w3_batch_size=1000.png' alt='image: e_1525f2b710a0_SGLD_w3_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure i:  <a id="fig__1_2_1_1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-455'><img style='width:33%;' src='e_ec6b997e8286_SGLD_w2_batch_size=1000.png' alt='image: e_ec6b997e8286_SGLD_w2_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  <a id="fig__1_2_1_2" /></span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-484'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.2:  <a id="fig__2" /> Bayesian learning: SGLD vs exact posterior (in red). Temperature <math xmlns='http://www.w3.org/1998/Math/MathML'>
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-464'><img style='width:33%;' src='e_2f43aec803e4_SGLD_w3_batch_size=10.png' alt='image: e_2f43aec803e4_SGLD_w3_batch_size=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  <a id="fig__1_3_1_1" /></span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-472'><img style='width:33%;' src='e_3ddfd5d854f6_SGLD_w3_batch_size=100.png' alt='image: e_3ddfd5d854f6_SGLD_w3_batch_size=100.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  <a id="fig__1_1_1_1_1" /></span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-480'><img style='width:33%;' src='e_1525f2b710a0_SGLD_w3_batch_size=1000.png' alt='image: e_1525f2b710a0_SGLD_w3_batch_size=1000.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure i:  <a id="fig__1_2_1_1_1" /></span></div>
+</div>
+
+
+<div class='plain_layout' id='magicparlabel-485'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.2:  <a id="fig__2" /> Bayesian learning: SGLD vs exact posterior (in red). Temperature <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3C4;</mi>
  <mo stretchy='false'>=</mo>
@@ -5416,33 +5403,33 @@ Hence for the log a priori PDF we have
 
 
 <div class='float-figure'>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-497'><img style='width:33%;' src='e_8414c5b79527_SGLD_w1_tau=0_01.png' alt='image: e_8414c5b79527_SGLD_w1_tau=0_01.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1_4_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-498'><img style='width:33%;' src='e_8414c5b79527_SGLD_w1_tau=0_01.png' alt='image: e_8414c5b79527_SGLD_w1_tau=0_01.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1_4_1" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-505'><img style='width:33%;' src='e_8be09813f59f_SGLD_w1_tau=1.png' alt='image: e_8be09813f59f_SGLD_w1_tau=1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1_2_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-506'><img style='width:33%;' src='e_8be09813f59f_SGLD_w1_tau=1.png' alt='image: e_8be09813f59f_SGLD_w1_tau=1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1_2_1" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-513'><img style='width:33%;' src='e_30c07152ed3f_SGLD_w1_tau=10.png' alt='image: e_30c07152ed3f_SGLD_w1_tau=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig__1_2_2_1" /></span></div>
-</div>
-
-
-
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-522'><img style='width:33%;' src='e_ae9ae1ca175b_SGLD_w2_tau=0_01.png' alt='image: e_ae9ae1ca175b_SGLD_w2_tau=0_01.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  <a id="fig__1_3_2_1" /></span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-530'><img style='width:33%;' src='e_d9331b2e0bbf_SGLD_w2_tau=1.png' alt='image: e_d9331b2e0bbf_SGLD_w2_tau=1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  <a id="fig__1_1_1_2_1" /></span></div>
-</div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-538'><img style='width:33%;' src='e_3e9d7dbe8303_SGLD_w2_tau=10.png' alt='image: e_3e9d7dbe8303_SGLD_w2_tau=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  <a id="fig__1_2_1_2_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-514'><img style='width:33%;' src='e_30c07152ed3f_SGLD_w1_tau=10.png' alt='image: e_30c07152ed3f_SGLD_w1_tau=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig__1_2_2_1" /></span></div>
 </div>
 
 
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-547'><img style='width:33%;' src='e_3dc5c8f5ed5c_SGLD_w3_tau=0_01.png' alt='image: e_3dc5c8f5ed5c_SGLD_w3_tau=0_01.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  <a id="fig__1_3_1_1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-523'><img style='width:33%;' src='e_ae9ae1ca175b_SGLD_w2_tau=0_01.png' alt='image: e_ae9ae1ca175b_SGLD_w2_tau=0_01.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  <a id="fig__1_3_2_1" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-555'><img style='width:33%;' src='e_15fe402ad8b5_SGLD_w3_tau=1.png' alt='image: e_15fe402ad8b5_SGLD_w3_tau=1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  <a id="fig__1_1_1_1_1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-531'><img style='width:33%;' src='e_d9331b2e0bbf_SGLD_w2_tau=1.png' alt='image: e_d9331b2e0bbf_SGLD_w2_tau=1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  <a id="fig__1_1_1_2_1" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-563'><img style='width:33%;' src='e_43ee7e522a71_SGLD_w3_tau=10.png' alt='image: e_43ee7e522a71_SGLD_w3_tau=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure i:  <a id="fig__1_2_1_1_1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-539'><img style='width:33%;' src='e_3e9d7dbe8303_SGLD_w2_tau=10.png' alt='image: e_3e9d7dbe8303_SGLD_w2_tau=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  <a id="fig__1_2_1_2_1" /></span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-568'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.3:  <a id="fig__2_1" /> Bayesian learning: SGLD vs exact posterior (in red). Batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-548'><img style='width:33%;' src='e_3dc5c8f5ed5c_SGLD_w3_tau=0_01.png' alt='image: e_3dc5c8f5ed5c_SGLD_w3_tau=0_01.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  <a id="fig__1_3_1_1_1" /></span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-556'><img style='width:33%;' src='e_15fe402ad8b5_SGLD_w3_tau=1.png' alt='image: e_15fe402ad8b5_SGLD_w3_tau=1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  <a id="fig__1_1_1_1_1_1" /></span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-564'><img style='width:33%;' src='e_43ee7e522a71_SGLD_w3_tau=10.png' alt='image: e_43ee7e522a71_SGLD_w3_tau=10.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure i:  <a id="fig__1_2_1_1_1_1" /></span></div>
+</div>
+
+
+<div class='plain_layout' id='magicparlabel-569'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.3:  <a id="fig__2_1" /> Bayesian learning: SGLD vs exact posterior (in red). Batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo stretchy='false'>=</mo>
  <mn>100</mn>
