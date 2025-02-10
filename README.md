@@ -101,11 +101,7 @@ Stochastic gradient Langevin dynamics
 
 Support Vector Machines  
 
-<!--
-
 + Lecture notes [(PDF)](./Lecture_notes/07.Support_Vector_Machines.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/07.Support_Vector_Machines_xhtml/07.Support_Vector_Machines.xhtml)  
-
--->
 
 Kernel methods (extensions to non linear feature spaces)  
 
