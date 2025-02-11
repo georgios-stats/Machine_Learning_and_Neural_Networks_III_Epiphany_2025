@@ -3,11 +3,11 @@ title: "Stochastic Gradient Descent algorithms"
 subtitle: "...on a binary classification problem"
 author: "Georgios P. Karagiannis @ MATH3431 Machine Learning and Neural Networks III"
 output:
-  html_document:
-    df_print: paged
+  html_notebook: 
     number_sections: true
   word_document: default
-  html_notebook: 
+  html_document:
+    df_print: paged
     number_sections: true
   pdf_document: default
 header-includes: 
@@ -604,9 +604,9 @@ What would you do it you wanted to reduce the variance of the stochastic gradien
 
 Practice on the following variation.  
 
-+ [LINK TO TASKS](https://htmlpreview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_tasks.html)  
++ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_tasks.html)  
 
-+ [LINK TO COMPLETE](https://htmlpreview.github.io/?url=https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_complete.html)  
++ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_complete.html)  
 
 
 

@@ -461,9 +461,9 @@ What would you do it you wish the learning rate to be automatically adjusted?
 
 Practice on the following variation.  
 
-+ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_AdaGrad_tasks.html)  
++ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_AdaGrad_tasks.html)  
 
-+ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_AdaGrad_complete.html)  
++ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_AdaGrad_complete.html)  
 
 ### Projection  
 
@@ -471,9 +471,9 @@ What would you do if the parametric space / hypothesis class is constrained?
 
 Practice on the following variation.  
 
-+ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_PrSG_tasks.html)  
++ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_PrSG_tasks.html)  
 
-+ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_PrSG_complete.html)  
++ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_PrSG_complete.html)  
 
 ### Variance reduction  
 
@@ -481,9 +481,9 @@ What would you do it you wanted to reduce the variance of the stochastic gradien
 
 Practice on the following variation.  
 
-+ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_VRSG_tasks.html)  
++ [LINK TO TASKS](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_tasks.html)  
 
-+ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Compurer_lab_notes/Stochastic_learning_methods_VRSG_complete.html)  
++ [LINK TO COMPLETE](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_VRSG_complete.html)  
 
 
 
