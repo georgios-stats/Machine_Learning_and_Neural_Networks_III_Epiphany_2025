@@ -461,11 +461,11 @@ while ( (Qterm != 1) ) {
 ```
 
 ```{r}
-plot(w_chain[,1], type='l') +
+plot(w_chain_clipping[,1], type='l') +
 abline(h=w_true[1], col='red')
 #
 plot(w_chain[,2], type='l') +
-abline(h=w_true[2], col='red')
+abline(h=w_chain_clipping[2], col='red')
 ```
 
 
