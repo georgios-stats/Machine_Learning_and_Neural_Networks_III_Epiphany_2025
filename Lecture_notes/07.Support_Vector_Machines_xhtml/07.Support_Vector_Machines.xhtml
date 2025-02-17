@@ -476,7 +476,7 @@ Hyperplane <a href="#eq__20">(1.1)</a> separates <math xmlns='http://www.w3.org/
 </mrow>
 </math>
  defined as 
-<div style = "text-align: center;"><img src="lyxpreviewmCaHno1.png" alt="Mathematical Equation" /></div>
+<div style = "text-align: center;"><img src="lyxpreviewsUJNDt1.png" alt="Mathematical Equation" /></div>
  where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>b</mi>
 </math>
@@ -1510,7 +1510,9 @@ Hard-SVM in Problem <a href="#alg__Hard_SVM__Given_a">15</a> searches for the hy
 <div class="proof_item" id='magicparlabel-138'><span class="proof_label">Proof.</span>
 (Sketch of the proof of Problem <a href="#alg__Hard_SVM__Given_a">15</a>)&#xA0; </div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-139'>Based on Note <a href="#note_Hard_SVM_is_the">14</a>, and Lemma <a href="#fact_The_distance_between">17</a>, the closest point in the training set to the separating hyperplane has distance <a id="eq__22" />
+<li class="enumerate_item" id='magicparlabel-139'>Let&#8217;s formulate the Hard SVM problem according to the SVM definition under the linear separation assumption.
+<ol class='lyxenum enumii'>
+<li class="enumerate_item" id='magicparlabel-140'> Based on Note <a href="#note_Hard_SVM_is_the">14</a>, and Lemma <a href="#fact_The_distance_between">17</a>, the closest point in the training set to the separating hyperplane has distance <a id="eq__22" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
  <mtr>
@@ -1560,18 +1562,7 @@ Hard-SVM in Problem <a href="#alg__Hard_SVM__Given_a">15</a> searches for the hy
  </mtr>
 </mtable>
 </math>
-Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by just picking those with <math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mrow>
- <mrow>
-  <mo>&#x2225;</mo>
-  <mi>w</mi>
-  <mo>&#x2225;</mo>
- </mrow>
- <mo stretchy='false'>=</mo>
- <mn>1</mn>
-</mrow>
-</math>
-. Hence, by Definition <a href="#note_Hard_SVM_is_the">14</a>, the Hard-SVM hypothesis should be such as <a id="eq_" /><a id="eq__6" />
+According to Definition <a href="#note_Hard_SVM_is_the">14</a>, the Hard-SVM hypothesis can be formulated as having to find <a id="eq_" /><a id="eq__6" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
  <mtr>
@@ -1601,23 +1592,13 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
       <mo>max</mo>
      </mrow>
      <mrow>
+      <mo>(</mo>
       <mrow>
-       <mo>(</mo>
-       <mrow>
-        <mi>w</mi>
-        <mo stretchy='false'>,</mo>
-        <mi>b</mi>
-       </mrow>
-       <mo>)</mo>
-      </mrow>
-      <mo stretchy='false'>:</mo>
-      <mrow>
-       <mo>&#x2225;</mo>
        <mi>w</mi>
-       <mo>&#x2225;</mo>
+       <mo stretchy='false'>,</mo>
+       <mi>b</mi>
       </mrow>
-      <mo stretchy='false'>=</mo>
-      <mn>1</mn>
+      <mo>)</mo>
      </mrow>
     </munder>
     <mrow>
@@ -1630,24 +1611,34 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
       <mrow>
        <mo>(</mo>
        <mrow>
-        <mo>|</mo>
-        <mrow>
+        <mfrac>
+         <mn>1</mn>
          <mrow>
-          <mo stretchy='false'>&#x27E8;</mo>
-          <mrow>
-           <mi>w</mi>
-           <mo stretchy='false'>,</mo>
-           <msub>
-            <mi>x</mi>
-            <mi>i</mi>
-           </msub>
-          </mrow>
-          <mo stretchy='false'>&#x27E9;</mo>
+          <mo>&#x2225;</mo>
+          <mi>w</mi>
+          <mo>&#x2225;</mo>
          </mrow>
-         <mo stretchy='false'>+</mo>
-         <mi>b</mi>
+        </mfrac>
+        <mrow>
+         <mo>|</mo>
+         <mrow>
+          <mrow>
+           <mo stretchy='false'>&#x27E8;</mo>
+           <mrow>
+            <mi>w</mi>
+            <mo stretchy='false'>,</mo>
+            <msub>
+             <mi>x</mi>
+             <mi>i</mi>
+            </msub>
+           </mrow>
+           <mo stretchy='false'>&#x27E9;</mo>
+          </mrow>
+          <mo stretchy='false'>+</mo>
+          <mi>b</mi>
+         </mrow>
+         <mo>|</mo>
         </mrow>
-        <mo>|</mo>
        </mrow>
        <mo>)</mo>
       </mrow>
@@ -1715,7 +1706,127 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
 </mtable>
 </math>
  </li>
-<li class="enumerate_item" id='magicparlabel-140'>If there is a solution in <a href="#eq_">(2.4)</a> (namely, linearly separable dataset), then <a href="#eq_">(2.4)</a> is equivalent to (proof is omitted)<a id="eq__1" />
+<li class="enumerate_item" id='magicparlabel-149'>We observe that <a href="#eq_">(2.4)</a> &amp; <a href="#eq__6">(2.5)</a> is non-identifiable in the sense that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mi>&#x3BA;</mi>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x3BA;</mi>
+  <msup>
+   <mi>b</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ for any <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BA;</mi>
+ <mo>&#x2260;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ are solutions. To make <a href="#eq__22">(2.3)</a> identifiable (without loss of generality) we pick only <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+  <mo stretchy='false'>,</mo>
+  <msup>
+   <mi>b</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>&#x2225;</mo>
+  <mi>w</mi>
+  <mo>&#x2225;</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+. Additionally, because we consider only <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+  <mo stretchy='false'>,</mo>
+  <msup>
+   <mi>b</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ which correctly separate the linearly separable training dataset into the two the categories (i.e. <a href="#eq__6">(2.5)</a>), it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>|</mo>
+  <mrow>
+   <mrow>
+    <mo stretchy='false'>&#x27E8;</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo stretchy='false'>&#x27E9;</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <mi>b</mi>
+  </mrow>
+  <mo>|</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>y</mi>
+  <mi>i</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mrow>
+    <mo stretchy='false'>&#x27E8;</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo stretchy='false'>&#x27E9;</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <mi>b</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.  Hence, <a href="#eq_">(2.4)</a> &amp; <a href="#eq__6">(2.5)</a> is equivalent to computing <a id="eq__1" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
  <mtr>
@@ -1811,7 +1922,8 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
 </mtable>
 </math>
 </li>
-<li class="enumerate_item" id='magicparlabel-141'>Next we show that <a href="#eq__1">(2.6)</a> is equivalent to the solution of Problem <a href="#alg__Hard_SVM__Given_a">15</a>; i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+</ol>
+</li><li class="enumerate_item" id='magicparlabel-154'>Next we show that the solution of <a href="#eq__1">(2.6)</a> is equivalent to the solution of Problem <a href="#alg__Hard_SVM__Given_a">15</a>; i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>(</mo>
@@ -1847,7 +1959,7 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
 </mrow>
 </math>
 . 
-<div class='standard' id='magicparlabel-142'>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-155'>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mi>&#x3B3;</mi>
@@ -2200,11 +2312,11 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
  is the optimal solution of <a href="#eq__1">(2.6)</a>.</div>
 </li></ol>
 </div>
-<div class='standard' id='magicparlabel-143'>
+<div class='standard' id='magicparlabel-156'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-144'><span class="definition_label">Definition 21.</span>
+<div class="definition_item" id='magicparlabel-157'><span class="definition_label">Definition 21.</span>
 <b>Homogeneous halfspaces</b> in SVM is the case where the halfspaces pass from the origin; that is when the bias term in <a href="#eq__3">(2.2)</a> is zero <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>b</mi>
@@ -2216,23 +2328,23 @@ Without loss of generality, we make <a href="#eq__22">(2.3)</a> identifiable by 
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-145'><span class="section_label">3</span> Soft Support Vector Machine </h2>
+<h2 class='section' id='magicparlabel-158'><span class="section_label">3</span> Soft Support Vector Machine </h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-146'><span class="note_label">Note 22.</span>
+<div class="note_item" id='magicparlabel-159'><span class="note_label">Note 22.</span>
 Hard-SVM assumes the strong Assumption <a href="#assu_Assume_the_training">13</a> that the training set is linearly separable. This might not always the case, and hence there is need to derive a procedure that weakens this assumption.</div>
 </div>
-<div class='standard' id='magicparlabel-147'>
+<div class='standard' id='magicparlabel-160'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-148'><span class="note_label">Note 23.</span>
+<div class="note_item" id='magicparlabel-161'><span class="note_label">Note 23.</span>
 Soft Support Vector Machine (Soft-SVM) aims to relax the strong assumption of Hard-SVM that the training set is linearly separable <a href="#eq__6">(2.5)</a> with purpose to extend the scope of application. Soft-SVM does not assume Assumption <a href="#assu_Assume_the_training">13</a>. Soft-SVM rule is given as the solution to the quadratic optimization problem <a href="#alg__Hard_SVM__Given_a_1">24</a>. </div>
 </div>
-<div class='standard' id='magicparlabel-149'>
+<div class='standard' id='magicparlabel-162'>
 <br />
 </div>
 <div class='problem'>
-<div class="problem_item" id='magicparlabel-150'><span class="problem_label">Problem 24.</span>
+<div class="problem_item" id='magicparlabel-163'><span class="problem_label">Problem 24.</span>
 <a id="alg__Hard_SVM__Given_a_1" /> (Soft-SVM) Given a training sample <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>S</mi>
@@ -2267,7 +2379,7 @@ Soft Support Vector Machine (Soft-SVM) aims to relax the strong assumption of Ha
 </mrow>
 </math>
  the Soft-SVM rule for the binary classification learning problem is solution to the quadratic optimization Problem</div>
-<div class='standard' id='magicparlabel-151'><a id="eq__2_1" /><a id="eq__3_1" /><a id="eq__5" />
+<div class='standard' id='magicparlabel-164'><a id="eq__2_1" /><a id="eq__3_1" /><a id="eq__5" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
  <mtr>
@@ -2455,11 +2567,11 @@ Soft Support Vector Machine (Soft-SVM) aims to relax the strong assumption of Ha
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-152'>
+<div class='standard' id='magicparlabel-165'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-153'><span class="note_label">Note 25.</span>
+<div class="note_item" id='magicparlabel-166'><span class="note_label">Note 25.</span>
 To relax the linearly separable training set Assumption <a href="#assu_Assume_the_training">13</a>, Soft-SVM relies on replacing the &#8220;harder&#8221; constraint <a href="#eq__3">(2.2)</a> with the &#8220;softer&#8221; one in <a href="#eq__3_1">(3.2)</a> through the introduction of non-negative unknown quantities (slack variables) <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msubsup>
  <mrow>
@@ -2507,11 +2619,11 @@ To relax the linearly separable training set Assumption <a href="#assu_Assume_th
 </math>
  is an upper bound on the number of misclassified points. </div>
 </div>
-<div class='standard' id='magicparlabel-154'>
+<div class='standard' id='magicparlabel-167'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-155'><span class="note_label">Note 26.</span>
+<div class="note_item" id='magicparlabel-168'><span class="note_label">Note 26.</span>
 Parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>C</mi>
@@ -2521,11 +2633,11 @@ Parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  controls the trade-off between the slack variable penalty and the margin. It controls the trade-off between minimizing training errors and controlling model complexity. </div>
 </div>
-<div class='standard' id='magicparlabel-156'>
+<div class='standard' id='magicparlabel-169'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-157'><span class="note_label">Note 27.</span>
+<div class="note_item" id='magicparlabel-170'><span class="note_label">Note 27.</span>
 Soft-SVM learns all <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>(</mo>
@@ -2544,18 +2656,18 @@ Soft-SVM learns all <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-158'>
+<div class='standard' id='magicparlabel-171'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-159'><span class="note_label">Note 28.</span>
+<div class="note_item" id='magicparlabel-172'><span class="note_label">Note 28.</span>
 Proposition <a href="#prop_Consider_the_hinge">29</a> shows that the Soft-SVM is a binary classification learning problem under the hinge loss function and with a regularization term biasing toward low norm separators. </div>
 </div>
-<div class='standard' id='magicparlabel-160'>
+<div class='standard' id='magicparlabel-173'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-161'><span class="proposition_label">Proposition 29.</span>
+<div class="proposition_item" id='magicparlabel-174'><span class="proposition_label">Proposition 29.</span>
 <a id="prop_Consider_the_hinge" /> The solution of Problem <a href="#alg__Hard_SVM__Given_a_1">24</a> is equivalent to the Ridge regularized loss minimization problem <a id="eq__19" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -2777,7 +2889,7 @@ regularization parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 <div class='proof'>
-<div class="proof_item" id='magicparlabel-162'><span class="proof_label">Proof.</span>
+<div class="proof_item" id='magicparlabel-175'><span class="proof_label">Proof.</span>
 In Algorithm <a href="#alg__Hard_SVM__Given_a_1">24</a>, we consider <a href="#eq__2_1">(3.1)</a> as <a id="eq__4" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -3100,11 +3212,11 @@ In Algorithm <a href="#alg__Hard_SVM__Given_a_1">24</a>, we consider <a href="#e
 .</div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-163'>
+<div class='standard' id='magicparlabel-176'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-164'><span class="example_label">Example 30.</span>
+<div class="example_item" id='magicparlabel-177'><span class="example_label">Example 30.</span>
 Consider the Soft-SVM as a Ridge regularized loss minimization learning problem in <a href="#eq__19">(3.4)</a> on a training dataset <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>S</mi>
@@ -3224,7 +3336,7 @@ Consider the Soft-SVM as a Ridge regularized loss minimization learning problem 
 </math>
  be the solution of the Soft-SVM. Then: </div>
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-172'>Because <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-185'>Because <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mi>&#x2113;</mi>
@@ -3360,7 +3472,7 @@ Consider the Soft-SVM as a Ridge regularized loss minimization learning problem 
 </mrow>
 </math>
 [Hint: Note <a href="#note_Given_the_bounds">note:Given-the-bounds</a> Handout <a href="#enu_Handout___Learnability_">enu:Handout-:-Learnability,</a>: Learnability and stability in learning problems]</li>
-<li class="itemize_item" id='magicparlabel-173'>If we assume a bounded learning problem, i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-186'>If we assume a bounded learning problem, i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mstyle mathvariant='script'>
   <mi>H</mi>
@@ -3494,7 +3606,7 @@ Consider the Soft-SVM as a Ridge regularized loss minimization learning problem 
 </mrow>
 </math>
 </li>
-<li class="itemize_item" id='magicparlabel-174'>If we choose <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-187'>If we choose <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BB;</mi>
  <mo stretchy='false'>=</mo>
@@ -3613,7 +3725,7 @@ Consider the Soft-SVM as a Ridge regularized loss minimization learning problem 
 </mrow>
 </math>
 </li>
-<li class="itemize_item" id='magicparlabel-175'>Assume one was interested in minimizing a <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-188'>Assume one was interested in minimizing a <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>0</mn>
  <mo stretchy='false'>-</mo>
@@ -3941,11 +4053,11 @@ Consider the Soft-SVM as a Ridge regularized loss minimization learning problem 
 </li>
 </ul>
 </div>
-<div class='standard' id='magicparlabel-176'>
+<div class='standard' id='magicparlabel-189'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-177'><span class="example_label">Example 31.</span>
+<div class="example_item" id='magicparlabel-190'><span class="example_label">Example 31.</span>
 Given Proposition <a href="#prop_Consider_the_hinge">29</a>, Soft-SVM in Problem <a href="#alg__Hard_SVM__Given_a_1">24</a> can be learned via any variation of SGD, eg online SGD (batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
@@ -4293,19 +4405,19 @@ Given Proposition <a href="#prop_Consider_the_hinge">29</a>, Soft-SVM in Problem
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-183'>
+<div class='standard' id='magicparlabel-196'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-184'><span class="section_label">4</span> Duality and sparsity</h2>
+<h2 class='section' id='magicparlabel-197'><span class="section_label">4</span> Duality and sparsity</h2>
 
 
 
 <section>
-<h3 class='subsection' id='magicparlabel-195'><span class="subsection_label">4.1</span> Lagrangian duality (recall from previous years)</h3>
+<h3 class='subsection' id='magicparlabel-208'><span class="subsection_label">4.1</span> Lagrangian duality (recall from previous years)</h3>
 <div class='notation'>
-<div class="notation_item" id='magicparlabel-204'><span class="notation_label">Notation 32.</span>
+<div class="notation_item" id='magicparlabel-217'><span class="notation_label">Notation 32.</span>
 <a id="fact__Karush_Kuhn_Tucker__KKT__condit" /> Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -4386,11 +4498,11 @@ Given Proposition <a href="#prop_Consider_the_hinge">29</a>, Soft-SVM in Problem
 </math>
  equality constraint functions.</div>
 </div>
-<div class='standard' id='magicparlabel-213'>
+<div class='standard' id='magicparlabel-226'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-214'><span class="definition_label">Definition 33.</span>
+<div class="definition_item" id='magicparlabel-227'><span class="definition_label">Definition 33.</span>
 <a id="def__Primal_problem__Consider" /> (Primal problem) Consider we have the following minimization problem that we will call Primal problem<a id="eq__16" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -4501,11 +4613,11 @@ Given Proposition <a href="#prop_Consider_the_hinge">29</a>, Soft-SVM in Problem
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-219'>
+<div class='standard' id='magicparlabel-232'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-220'><span class="definition_label">Definition 34.</span>
+<div class="definition_item" id='magicparlabel-233'><span class="definition_label">Definition 34.</span>
 <a id="def__Lagrangian_function__To" /> (Lagrangian function) To the Primal problem <a href="#def__Primal_problem__Consider">33</a>, we associate the Lagrangian function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>L</mi>
@@ -4617,11 +4729,11 @@ Given Proposition <a href="#prop_Consider_the_hinge">29</a>, Soft-SVM in Problem
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-229'>
+<div class='standard' id='magicparlabel-242'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-230'><span class="note_label">Note 35.</span>
+<div class="note_item" id='magicparlabel-243'><span class="note_label">Note 35.</span>
 <a id="note_Note_that_the" /> Note that the Primal problem is equivalent to 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
@@ -4775,11 +4887,11 @@ For instance, if I ignore the <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-231'>
+<div class='standard' id='magicparlabel-244'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-232'><span class="definition_label">Definition 36.</span>
+<div class="definition_item" id='magicparlabel-245'><span class="definition_label">Definition 36.</span>
 (Lagrangian dual problem) The associated Lagrangian dual problem is 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -4871,11 +4983,11 @@ For instance, if I ignore the <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-233'>
+<div class='standard' id='magicparlabel-246'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-234'><span class="definition_label">Definition 37.</span>
+<div class="definition_item" id='magicparlabel-247'><span class="definition_label">Definition 37.</span>
 (Dual function) To the Dual problem, we associate a function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mover>
@@ -4942,11 +5054,11 @@ For instance, if I ignore the <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  called dual function.</div>
 </div>
-<div class='standard' id='magicparlabel-235'>
+<div class='standard' id='magicparlabel-248'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-236'><span class="proposition_label">Proposition 38.</span>
+<div class="proposition_item" id='magicparlabel-249'><span class="proposition_label">Proposition 38.</span>
 In general it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
@@ -5032,11 +5144,11 @@ In general it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-237'>
+<div class='standard' id='magicparlabel-250'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-238'><span class="definition_label">Definition 39.</span>
+<div class="definition_item" id='magicparlabel-251'><span class="definition_label">Definition 39.</span>
 We call the general case <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
@@ -5052,11 +5164,11 @@ We call the general case <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  weak duality.</div>
 </div>
-<div class='standard' id='magicparlabel-239'>
+<div class='standard' id='magicparlabel-252'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-240'><span class="definition_label">Definition 40.</span>
+<div class="definition_item" id='magicparlabel-253'><span class="definition_label">Definition 40.</span>
 When <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
@@ -5072,11 +5184,11 @@ When <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  we say we have a strong duality.</div>
 </div>
-<div class='standard' id='magicparlabel-241'>
+<div class='standard' id='magicparlabel-254'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-242'><span class="proposition_label">Proposition 41.</span>
+<div class="proposition_item" id='magicparlabel-255'><span class="proposition_label">Proposition 41.</span>
 <a id="prop__StrongdualityviaSlatercondition" /> (Strong&#xA0;duality&#xA0;via&#xA0;Slater&#xA0;condition) If the primal problem <a href="#eq__16">(4.1)</a> is convex, and satisfies the weak Slater’s condition, i.e.
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
@@ -5254,11 +5366,11 @@ then strong duality holds, that is: <math xmlns='http://www.w3.org/1998/Math/Mat
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-248'>
+<div class='standard' id='magicparlabel-261'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-249'><span class="proposition_label">Proposition 42.</span>
+<div class="proposition_item" id='magicparlabel-262'><span class="proposition_label">Proposition 42.</span>
 <a id="prop_When____" /> When <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>f</mi>
 </math>
@@ -5532,23 +5644,23 @@ then strong duality holds, that is: <math xmlns='http://www.w3.org/1998/Math/Mat
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-250'>
+<div class='standard' id='magicparlabel-263'>
 <br />
 </div>
 
 
 </section>
 <section>
-<h3 class='subsection' id='magicparlabel-256'><span class="subsection_label">4.2</span> Implementation in the Hand SVM </h3>
+<h3 class='subsection' id='magicparlabel-269'><span class="subsection_label">4.2</span> Implementation in the Hand SVM </h3>
 <div class='note'>
-<div class="note_item" id='magicparlabel-257'><span class="note_label">Note 43.</span>
+<div class="note_item" id='magicparlabel-270'><span class="note_label">Note 43.</span>
 Consider the Primal problem in Hard-SVM Algorithm <a href="#alg__Hard_SVM__Given_a">15</a> <a href="#eq__3">(2.2)</a> and <a href="#eq__3">(2.2)</a>. </div>
 </div>
-<div class='standard' id='magicparlabel-262'>
+<div class='standard' id='magicparlabel-275'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-263'><span class="note_label">Note 44.</span>
+<div class="note_item" id='magicparlabel-276'><span class="note_label">Note 44.</span>
 According to Definition <a href="#def__Lagrangian_function__To">34</a> the Lagrangian function is<a id="eq__7" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -5655,13 +5767,13 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  are non-negative Lagrange multipliers. </div>
 </div>
-<div class='standard' id='magicparlabel-264'>
+<div class='standard' id='magicparlabel-277'>
 <br />
 </div>
 
 
 <div class='note'>
-<div class="note_item" id='magicparlabel-270'><span class="note_label">Note 45.</span>
+<div class="note_item" id='magicparlabel-283'><span class="note_label">Note 45.</span>
 (Insight with regards to Note <a href="#note_Note_that_the">35</a>) The Hard-SVM Problem <a href="#alg__Hard_SVM__Given_a">15</a> <a href="#eq__3">(2.2)</a> and <a href="#eq__3">(2.2)</a>, can be rewritten in the form <a id="eq__10" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -6033,13 +6145,13 @@ Hence we get the weak duality<a id="eq__11" />
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-271'>
+<div class='standard' id='magicparlabel-284'>
 <br />
 </div>
 
 
 <div class='note'>
-<div class="note_item" id='magicparlabel-277'><span class="note_label">Note 46.</span>
+<div class="note_item" id='magicparlabel-290'><span class="note_label">Note 46.</span>
 Strong duality (equality) holds because of the convexity. Here, keeping <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3B1;</mi>
 </math>
@@ -6544,11 +6656,11 @@ Then dual problem is
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-278'>
+<div class='standard' id='magicparlabel-291'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-279'><span class="note_label">Note 47.</span>
+<div class="note_item" id='magicparlabel-292'><span class="note_label">Note 47.</span>
 <a id="note_The_Dual_problem" /> The Dual problem of the Hard-SVM (primal) problem <a href="#alg__Hard_SVM__Given_a">15</a> is <a id="eq__15" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -6698,11 +6810,11 @@ Then dual problem is
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-280'>
+<div class='standard' id='magicparlabel-293'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-281'><span class="note_label">Note 48.</span>
+<div class="note_item" id='magicparlabel-294'><span class="note_label">Note 48.</span>
 Once the optimal <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>&#x3B1;</mi>
@@ -6758,11 +6870,11 @@ Once the optimal <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-282'>
+<div class='standard' id='magicparlabel-295'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-283'><span class="note_label">Note 49.</span>
+<div class="note_item" id='magicparlabel-296'><span class="note_label">Note 49.</span>
 If <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msubsup>
@@ -6955,17 +7067,17 @@ implies that <math xmlns='http://www.w3.org/1998/Math/MathML'>
  </mrow>
 </msub>
 </math>
- are called <b>supporting vectors</b> (see Figure <a href="#fig_">4.1</a>). <div class='float-figure'><div class='plain_layout' id='magicparlabel-287'><img style='width:45%;' src='e_9a349284019d_svm-support-vectors.png' alt='image: e_9a349284019d_svm-support-vectors.png' /></div>
+ are called <b>supporting vectors</b> (see Figure <a href="#fig_">4.1</a>). <div class='float-figure'><div class='plain_layout' id='magicparlabel-300'><img style='width:45%;' src='e_9a349284019d_svm-support-vectors.png' alt='image: e_9a349284019d_svm-support-vectors.png' /></div>
 
-<div class='plain_layout' id='magicparlabel-288'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.1:  <a id="fig_" /></span></div>
+<div class='plain_layout' id='magicparlabel-301'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.1:  <a id="fig_" /></span></div>
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-293'>
+<div class='standard' id='magicparlabel-306'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-294'><span class="note_label">Note 50.</span>
+<div class="note_item" id='magicparlabel-307'><span class="note_label">Note 50.</span>
 <a id="note_Given_optimal__" /> Given optimal <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>&#x3B1;</mi>
@@ -7066,11 +7178,11 @@ implies that <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-305'>
+<div class='standard' id='magicparlabel-318'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-306'><span class="note_label">Note 51.</span>
+<div class="note_item" id='magicparlabel-319'><span class="note_label">Note 51.</span>
 The bias <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>b</mi>
 </math>
@@ -7385,11 +7497,11 @@ Consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-307'>
+<div class='standard' id='magicparlabel-320'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-308'><span class="note_label">Note 52.</span>
+<div class="note_item" id='magicparlabel-321'><span class="note_label">Note 52.</span>
 <a id="note_Therefore_the_predictive" /> Therefore the predictive halfspace hypothesis is given as <a id="eq__14" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -7553,11 +7665,11 @@ Consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-309'>
+<div class='standard' id='magicparlabel-322'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-310'><span class="note_label">Note 53.</span>
+<div class="note_item" id='magicparlabel-323'><span class="note_label">Note 53.</span>
 Compared to the Primal problem (Problem <a href="#alg__Hard_SVM__Given_a">15</a>), the dual problem (Note <a href="#note_The_Dual_problem">47</a>) is computationally desirable in cases that the training data size <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
@@ -7607,18 +7719,18 @@ Compared to the Primal problem (Problem <a href="#alg__Hard_SVM__Given_a">15</a>
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-311'>
+<div class='standard' id='magicparlabel-324'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-312'><span class="note_label">Note 54.</span>
+<div class="note_item" id='magicparlabel-325'><span class="note_label">Note 54.</span>
 Compared to the Primal problem, the dual problem (Note <a href="#note_The_Dual_problem">47</a>), can provide sparse solutions relying on a small number of support vectors (see Eq. <a href="#eq__17_2">4.11</a>, <a href="#eq__18">4.12</a>, and <a href="#eq__14">4.13</a>).</div>
 </div>
-<div class='standard' id='magicparlabel-313'>
+<div class='standard' id='magicparlabel-326'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-314'><span class="note_label">Note 55.</span>
+<div class="note_item" id='magicparlabel-327'><span class="note_label">Note 55.</span>
 (Snapshot of the next concept &#8220;The kernel trick&#8221;) The importance of the existence of the dual problem is that eg <a href="#eq__15">(4.9)</a> and <a href="#eq__14">(4.13)</a> involves the inner products between instances and does not require the direct access to specific elements of features within instance. For instance, if we consider the hypothesis <a href="#eq__13">(1.2)</a> as an expansion of bases <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -7939,11 +8051,11 @@ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-315'>
+<div class='standard' id='magicparlabel-328'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-316'><span class="note_label">Note 56.</span>
+<div class="note_item" id='magicparlabel-329'><span class="note_label">Note 56.</span>
 In the Soft-SVM case, the solution is the same as in the Hard-SVM <a href="#eq__17">(4.10)</a> and <a href="#eq__14">(4.13)</a>, the only difference is that in the quadratic programming problem <a href="#eq__15">(4.9)</a> it is subject to <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -7984,18 +8096,18 @@ In the Soft-SVM case, the solution is the same as in the Hard-SVM <a href="#eq__
 </math>
 . (See Exercise <a href="#exer____">exer:()-</a> from the Exercise sheet). </div>
 </div>
-<div class='standard' id='magicparlabel-338'>
+<div class='standard' id='magicparlabel-351'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-339'><span class="note_label">Note 57.</span>
+<div class="note_item" id='magicparlabel-352'><span class="note_label">Note 57.</span>
 Sparsity and duality in Soft SVM can be seen in Exercise <a href="#exer____">exer:()-</a> in the Exercise sheet. </div>
 </div>
-<div class='standard' id='magicparlabel-340'>
+<div class='standard' id='magicparlabel-353'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-341'><span class="note_label">Note 58.</span>
+<div class="note_item" id='magicparlabel-354'><span class="note_label">Note 58.</span>
 Relevance Vector Machine (a version of Bayesian SVM) can be seen in Exercise <a href="#exer_____1">exer:()--1</a> in the Exercise sheet. </div>
 </div>
 
