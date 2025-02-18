@@ -174,18 +174,19 @@ About SGLD, binary classification via Bernulli regression and Bayesian learning.
 
 #### Lab 3:             
 
-<!--
-+ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
+About Support Vector Machines  
 
-+ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Support_Vector_Machines_complete.Rmd)  
--->
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_tasks.Rmd)  
+
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_complete.Rmd) 
+
 
 #### Lab 4:              
 
 <!--
-+ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Artificial_Neural_Networks_tasks.Rmd)  
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
 
-+ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Artificial_Neural_Networks_complete.Rmd)  
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Support_Vector_Machines_complete.Rmd)  
 -->
 
 ------------------------------------------------------------------------
