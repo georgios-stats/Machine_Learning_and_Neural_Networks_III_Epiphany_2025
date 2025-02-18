@@ -1,0 +1,4331 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="generator" content="LyX 2.4.2.1" />
+<title>LyX Document</title>
+<style>
+/* LyX Provided Styles */
+mstyle.math { font-style: italic; }
+
+/* Layout-provided Styles */
+div.standard {
+text-align: left;
+
+}
+div.plain_layout {
+text-align: left;
+
+}
+h3.subsection_ {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+ol.enumi   { list-style-type: decimal; }
+ol.enumii  { list-style-type: lower-latin; }
+ol.enumiii { list-style-type: lower-roman; }
+ol.enumiv  { list-style-type: upper-latin; }
+ul.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+h2.section {
+font-weight: normal;
+font-style: normal;
+font-variant: small-caps;
+font-size: medium;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+div.theorem {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.theorem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.note {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.note_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.example {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.example_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+h3.subsection {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+span.subsection_label {
+font-weight: normal;
+font-size: medium;
+
+}
+dl.description dt { font-weight: bold; }
+div.problem {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.problem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
+div.float {
+	border: 2px solid black;
+	text-align: center;
+}
+div.float-caption {
+	text-align: center;
+	border: 2px solid black;
+	padding: 1ex;
+	margin: 1ex;
+}
+
+
+</style>
+</head>
+<body dir="auto">
+<div class='standard' id='magicparlabel-1'><div class='Shadowbox'>
+
+<div class='plain_layout' id='magicparlabel-15'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
+Epiphany term, 2025<div style='height:3ex'></div></div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-16'> Lecture notes <a href="#enu_Handout___Multi_class">enu:Handout-:-Multi-class</a>: Multi-class classification   <div style='height:3ex'></div></div>
+
+<div class='plain_layout' id='magicparlabel-25'>Lecturer &amp; author: Georgios P. Karagiannis 
+<a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+
+<div class='plain_layout' id='magicparlabel-26'><hr />
+<div style='height:3ex'></div></div>
+<h3 class='subsection_' id='magicparlabel-27'>Aim</h3>
+<div class='plain_layout' id='magicparlabel-28'>To introduce the Support Vector Machines as a procedure. Motivation, set-up, description, computation, and implementation. We focus on the classical treatment.</div>
+
+<div class='plain_layout' id='magicparlabel-29'><hr />
+<div style='height:3ex'></div></div>
+<h3 class='subsection_' id='magicparlabel-30'>Reading list &amp; references:</h3>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-31'><a id="enu_Shalev_Shwartz__S____" /> Shalev-Shwartz, S., &amp; Ben-David, S. (2014). Understanding machine learning: From theory to algorithms. Cambridge university press. 
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-32'>Ch. 17 (pp. 190-198) </li>
+</ul>
+</li><li class="enumerate_item" id='magicparlabel-33'>Bishop, C. M. (2006). Pattern recognition and machine learning (Vol. 4, No. 4, p. 738). New York: Springer.
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-34'>Ch. 7.1 Sparse Kernel Machines/Maximum marginal classifiers </li>
+</ul>
+</li><li class="enumerate_item" id='magicparlabel-35'>Vapnik, V. (2013). The nature of statistical learning theory. Springer science &amp; business media.</li>
+<li class="enumerate_item" id='magicparlabel-36'><a id="enu_Boyd__S__P__" /> Boyd, S. P., &amp; Vandenberghe, L. (2004). Convex optimization. Cambridge university press.</li>
+<li class="enumerate_item" id='magicparlabel-37'><a id="enu_Strang__G___2019__" /> Strang, G. (2019). Linear algebra and learning from data. Wellesley-Cambridge Press.</li>
+</ol>
+</div></div>
+<section>
+<h2 class='section' id='magicparlabel-38'><span class="section_label">1</span> Intro and motivation</h2>
+<div class='note'>
+<div class="note_item" id='magicparlabel-39'><span class="note_label">Note 1.</span>
+Multi-class classification is the machine learning problem of classifying instances into one of several possible target classes. </div>
+</div>
+<div class='standard' id='magicparlabel-40'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-41'><span class="example_label">Example 2.</span>
+Applications include: (i.) categorizing documents according to topic (input features is the set of documents and target is the set of possible topics); (ii.) determining which object appears in a given image (input is the set of images and target is the set of possible objects); etc...</div>
+</div>
+<div class='standard' id='magicparlabel-42'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-43'><span class="note_label">Note 3.</span>
+We wish to classify objects with given features <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+</mrow>
+</math>
+ into one of the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+ <mo stretchy='false'>-</mo>
+ <mrow>
+  <mo>{</mo>
+  <mn>0</mn>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ categories <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <mrow>
+  <msub>
+   <mstyle mathvariant='script'>
+    <mi>C</mi>
+   </mstyle>
+   <mn>1</mn>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <mn>...</mn>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mstyle mathvariant='script'>
+    <mi>C</mi>
+   </mstyle>
+   <mi>k</mi>
+  </msub>
+ </mrow>
+ <mo>}</mo>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-44'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-45'><span class="note_label">Note 4.</span>
+To achieve that we aim to learn a predictive rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+ from a hypothesis class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+</mrow>
+</math>
+. Here, to easy the notation we define a set of targets <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ implying that the multi-class categorization involves <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+ <mo stretchy='false'>-</mo>
+ <mrow>
+  <mo>{</mo>
+  <mn>0</mn>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ possible target classes . If the object <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ belongs to class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mi>j</mi>
+</msub>
+</math>
+ i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>z</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mi>j</mi>
+ </msub>
+</mrow>
+</math>
+ then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>j</mi>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-46'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-47'><span class="note_label">Note 5.</span>
+There is available a training data-set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle class='math'>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo stretchy='false'>=</mo>
+  </mrow>
+ </mstyle>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy='false'>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>;</mo>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ examples where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>y</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+ independently generated from a data-generating process <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+; i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo>&#x223C;</mo>
+ <mi>g</mi>
+</mrow>
+</math>
+. </div>
+</div>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-48'><span class="section_label">2</span> Reduction to the binary classification approaches</h2>
+<div class='note'>
+<div class="note_item" id='magicparlabel-49'><span class="note_label">Note 6.</span>
+The multi-class categorization problem can be addressed by a reduction to the binary classification. –We discuss two simple ways. </div>
+</div>
+<div class='standard' id='magicparlabel-50'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-51'><span class="note_label">Note 7.</span>
+Assume that there is available a binary classification learning algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mtext>binary</mtext>
+</msub>
+</math>
+, such as the soft-SVM or the Bernoulli regression.</div>
+</div>
+<section>
+<h3 class='subsection' id='magicparlabel-52'><span class="subsection_label">2.1</span> One-versus-all approach </h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-53'><span class="note_label">Note 8.</span>
+The one-versus-all approach involves training <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ binary classifiers, each of which discriminates between one class and the rest of the classes.</div>
+</div>
+<div class='standard' id='magicparlabel-54'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-55'><span class="note_label">Note 9.</span>
+<a id="note_For_every_class" /> It works as follows</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-56'>For each class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>j</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+ <mo stretchy='false'>,</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+, construct a binary training data-sets 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mstyle class='math'>
+  <mrow>
+   <msup>
+    <mstyle mathvariant='script'>
+     <mi>S</mi>
+    </mstyle>
+    <mrow>
+     <mo stretchy='false'>[</mo>
+     <mi>j</mi>
+     <mo stretchy='false'>]</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>=</mo>
+  </mrow>
+ </mstyle>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msubsup>
+      <mi>t</mi>
+      <mn>1</mn>
+      <mrow>
+       <mo stretchy='false'>[</mo>
+       <mi>j</mi>
+       <mo stretchy='false'>]</mo>
+      </mrow>
+     </msubsup>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>n</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msubsup>
+      <mi>t</mi>
+      <mi>n</mi>
+      <mrow>
+       <mo stretchy='false'>[</mo>
+       <mi>j</mi>
+       <mo stretchy='false'>]</mo>
+      </mrow>
+     </msubsup>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mi>t</mi>
+  <mi>i</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+     <mo>&#x2260;</mo>
+     <mi>j</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mn>1</mn>
+   </mtd>
+   <mtd>
+    <mrow>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>=</mo>
+     <mi>j</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+</mrow>
+</math>
+ from the original available training data-set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle class='math'>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo stretchy='false'>=</mo>
+  </mrow>
+ </mstyle>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy='false'>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>;</mo>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mi>j</mi>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ is the set of examples labeled <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ if their label in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle class='math'>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+</mstyle>
+</math>
+ was <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>−</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ otherwise. </li>
+<li class="enumerate_item" id='magicparlabel-61'><a id="enu_For_each_binary" /> For each binary training data-set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo>}</mo>
+</mrow>
+</math>
+, consider a binary predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mo stretchy='false'>+</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ and train it against <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mi>j</mi>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ such that 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mstyle mathvariant='fraktur'>
+   <mi>A</mi>
+  </mstyle>
+  <mtext>binary</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mrow>
+    <mo stretchy='false'>[</mo>
+    <mi>j</mi>
+    <mo stretchy='false'>]</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-62'>Given <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo>}</mo>
+</mrow>
+</math>
+, the one-versus-all multiclass hypothesis is defined as 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>h</mi>
+  <mtext>ova</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>max</mo>
+  </mrow>
+  <mrow>
+   <mi>j</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msup>
+    <mi>h</mi>
+    <mrow>
+     <mo stretchy='false'>[</mo>
+     <mi>j</mi>
+     <mo stretchy='false'>]</mo>
+    </mrow>
+   </msup>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+</ol>
+</div>
+<div class='standard' id='magicparlabel-63'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-64'><span class="note_label">Note 10.</span>
+In cases where there are ties, it is reasonable to decide the classification based on some reasonable weights. E.g. if algorithm <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='fraktur'>
+  <mi>A</mi>
+ </mstyle>
+ <mtext>binary</mtext>
+</msub>
+</math>
+ is a SVM with hypothesis of the form <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>sign</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x27E8;</mo>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>[</mo>
+      <mi>j</mi>
+      <mo stretchy='false'>]</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>,</mo>
+    <mi>x</mi>
+   </mrow>
+   <mo>&#x27E9;</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and I get <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mi>j</mi>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mrow>
+    <mi>j</mi>
+    <mo stretchy='false'>'</mo>
+   </mrow>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>&#x27E8;</mo>
+  <mrow>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>[</mo>
+     <mi>j</mi>
+     <mo stretchy='false'>]</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <mi>x</mi>
+  </mrow>
+  <mo>&#x27E9;</mo>
+ </mrow>
+ <mo stretchy='false'>&gt;</mo>
+ <mrow>
+  <mo>&#x27E8;</mo>
+  <mrow>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>[</mo>
+     <mrow>
+      <mi>j</mi>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+     <mo stretchy='false'>]</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <mi>x</mi>
+  </mrow>
+  <mo>&#x27E9;</mo>
+ </mrow>
+</mrow>
+</math>
+ then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>j</mi>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-65'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-66'><span class="note_label">Note 11.</span>
+In Note <a href="#note_For_every_class">9</a>(<a href="#enu_For_each_binary">2.</a>), we make the strong assumption that hoping that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>h</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mi>j</mi>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ should equal <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ if and only if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ belongs to class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+. However, this is not always true. Figure <a href="#fig_Two_discriminants_">2.1</a> shows a case involving three classes <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mo stretchy='false'>?</mo>
+</msub>
+</math>
+ where this approach leads to regions <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>R</mi>
+ </mstyle>
+ <mo stretchy='false'>?</mo>
+</msub>
+</math>
+ of input space that are ambiguously classified. </div>
+</div>
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-71'><img style='width:40%;' src='e_d5ca59194cce_one-vs-all-issue.png' alt='image: e_d5ca59194cce_one-vs-all-issue.png' /></div>
+
+<div class='plain_layout' id='magicparlabel-72'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  <a id="fig_Two_discriminants_" /> Two binary classification rules <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>h</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mn>1</mn>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>h</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mn>2</mn>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ designed to distinguish points in class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mi>j</mi>
+</msub>
+</math>
+ from points not in class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mi>j</mi>
+</msub>
+</math>
+ for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>j</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>2</mn>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+.</span></div>
+</div>
+
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-77'><span class="subsection_label">2.2</span> One-versus-one approach</h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-78'><span class="note_label">Note 12.</span>
+The one-versus-one approach involves the introduction of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>/</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ binary classification rules, one for every possible pair of classes, and their comparison to each other, in a manner that each point is classified according to a majority vote amongst these binary classification rules. </div>
+</div>
+<div class='standard' id='magicparlabel-79'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-80'><span class="note_label">Note 13.</span>
+<a id="note_It_works_as" /> It works as follows</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-81'>For each pair of classes <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mi>i</mi>
+  <mo stretchy='false'>,</mo>
+  <mi>j</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo>&#x2264;</mo>
+ <mi>i</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>j</mi>
+ <mo>&#x2264;</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+, construct binary training data-sets <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ containing all examples from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+ whose label is either <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ or <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+.
+<dl class='description'>
+<dt class="description_label">I.e.</dt>
+<dd class="description_item" id='magicparlabel-82'> For each binary training data-set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ set the binary label as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ if the class is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ and as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ if the class is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+; i.e. Starting with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mrow>
+    <mi>i</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>j</mi>
+   </mrow>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x2205;</mi>
+</mrow>
+</math>
+ for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+ <mo stretchy='false'>,</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ 
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-83'>if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>y</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mi>i</mi>
+</mrow>
+</math>
+ add <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mi>x</mi>
+   <mi>t</mi>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <mn>1</mn>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ </li>
+<li class="itemize_item" id='magicparlabel-84'>if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>y</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mi>j</mi>
+</mrow>
+</math>
+ add <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mi>x</mi>
+   <mi>t</mi>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <mo stretchy='false'>-</mo>
+  <mn>1</mn>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ </li>
+</ul>
+</dd></dl>
+</li><li class="enumerate_item" id='magicparlabel-85'>For each pair <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mi>i</mi>
+  <mo stretchy='false'>,</mo>
+  <mi>j</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo>&#x2264;</mo>
+ <mi>i</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>j</mi>
+ <mo>&#x2264;</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+, train a binary classification algorithm against <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</msup>
+</math>
+ to get 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mrow>
+    <mi>i</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>j</mi>
+   </mrow>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mstyle mathvariant='fraktur'>
+   <mi>A</mi>
+  </mstyle>
+  <mtext>binary</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mrow>
+    <mo stretchy='false'>[</mo>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>j</mi>
+    </mrow>
+    <mo stretchy='false'>]</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-86'>Given <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msup>
+  <mi>h</mi>
+  <mrow>
+   <mo stretchy='false'>[</mo>
+   <mrow>
+    <mi>i</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>j</mi>
+   </mrow>
+   <mo stretchy='false'>]</mo>
+  </mrow>
+ </msup>
+ <mo>}</mo>
+</mrow>
+</math>
+, the one-versus-one multiclass hypothesis is defined as the one with the highest number of &#8220;wins&#8221;; i.e. 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>h</mi>
+  <mtext>ovo</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>max</mo>
+  </mrow>
+  <mrow>
+   <mi>i</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <munder>
+    <mo>&#x2211;</mo>
+    <mrow>
+     <mi>j</mi>
+     <mo>&#x2208;</mo>
+     <mstyle mathvariant='script'>
+      <mi>Y</mi>
+     </mstyle>
+    </mrow>
+   </munder>
+   <mtext>sign</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>j</mi>
+     <mo stretchy='false'>-</mo>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <msup>
+    <mi>h</mi>
+    <mrow>
+     <mo stretchy='false'>[</mo>
+     <mrow>
+      <mi>i</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>j</mi>
+     </mrow>
+     <mo stretchy='false'>]</mo>
+    </mrow>
+   </msup>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+</ol>
+</div>
+<div class='standard' id='magicparlabel-87'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-88'><span class="note_label">Note 14.</span>
+The one-versus-one approach suffers from the problem of ambiguous regions as seen in Figure <a href="#fig_Two_discriminants__1">2.2</a>. </div>
+</div>
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-93'><img style='width:40%;' src='e_99093b39504f_one-vs-one-issue.png' alt='image: e_99093b39504f_one-vs-one-issue.png' /></div>
+
+<div class='plain_layout' id='magicparlabel-94'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  <a id="fig_Two_discriminants__1" /> three binary classification rules each of which is used to separate a pair of classes <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mi>k</mi>
+</msub>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mi>j</mi>
+</msub>
+</math>
+.</span></div>
+</div>
+
+
+<div class='standard' id='magicparlabel-99'>
+<br />
+</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-100'><span class="section_label">3</span> Linear multi-class predictors </h2>
+<section>
+<h3 class='subsection' id='magicparlabel-101'><span class="subsection_label">3.1</span> Setting up the predictive rule and class of hypotheses </h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-102'><span class="note_label">Note 15.</span>
+We try to generalize the linear predictor for binary classifications taking the form 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>h</mi>
+     <mtext>bin</mtext>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mtext>sign</mtext>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mo>&#x27E8;</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>,</mo>
+       <mi>x</mi>
+      </mrow>
+      <mo>&#x27E9;</mo>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>max</mo>
+     </mrow>
+     <mrow>
+      <mi>y</mi>
+      <mo>&#x2208;</mo>
+      <mrow>
+       <mo>{</mo>
+       <mrow>
+        <mo stretchy='false'>-</mo>
+        <mn>1</mn>
+        <mo stretchy='false'>,</mo>
+        <mo stretchy='false'>+</mo>
+        <mn>1</mn>
+       </mrow>
+       <mo>}</mo>
+      </mrow>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>y</mi>
+      <mi>x</mi>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ into linear predictor for multi-class classifications. </div>
+</div>
+<div class='standard' id='magicparlabel-103'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-104'><span class="note_label">Note 16.</span>
+In the multi-class setting, we extend the binary SVM idea as follows. </div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-105'>Define a multi-class predictor rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+</mrow>
+</math>
+ with formula <a id="eq__2" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>h</mi>
+     <mi>w</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+     </mrow>
+     <mrow>
+      <mi>y</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo>&#x2282;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-106'>In <a href="#eq__2">(3.1)</a>, we need to specify a class-sensitive feature mapping <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3A8;</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>X</mi>
+ </mstyle>
+ <mo>&#x00D7;</mo>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ whose function&#8217;s <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3A8;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ role is to act as a score function that assesses how well the label <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ fits the instance <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+. </li>
+<li class="itemize_item" id='magicparlabel-107'>The hypothesis class of multi-class predictors is 
+<div style = "text-align: center;"><img src="lyxpreviewivXqbr1.png" alt="Mathematical Equation" /></div>
+</li>
+</ul>
+</div>
+<div class='standard' id='magicparlabel-108'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-109'><span class="note_label">Note 17.</span>
+The equation of class-sensitive feature mapping <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3A8;</mi>
+</math>
+ depends on the application.</div>
+</div>
+<div class='standard' id='magicparlabel-110'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-111'><span class="example_label">Example 18.</span>
+An example of class-sensitive feature mapping <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3A8;</mi>
+</math>
+ such that 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>&#x3A8;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <munder accent='false'>
+     <mrow>
+      <munder>
+       <mrow>
+        <mn>0</mn>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x2026;</mi>
+        <mn>0</mn>
+       </mrow>
+       <mo stretchy='true'>&#x23DF;</mo>
+      </munder>
+      <mo stretchy='false'>,</mo>
+     </mrow>
+     <mrow>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>y</mi>
+        <mo stretchy='false'>-</mo>
+        <mn>1</mn>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mi>n</mi>
+      <mspace width="6px"/>
+      <mtext>elements</mtext>
+     </mrow>
+    </munder>
+    <mover accent='false'>
+     <mover>
+      <mrow>
+       <msub>
+        <mi>x</mi>
+        <mn>1</mn>
+       </msub>
+       <mo stretchy='false'>,</mo>
+       <mi>&#x2026;</mi>
+       <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+       </msub>
+      </mrow>
+      <mo stretchy='true'>&#x23DE;</mo>
+     </mover>
+     <mrow>
+      <mi>n</mi>
+      <mspace width="6px"/>
+      <mtext>elements</mtext>
+     </mrow>
+    </mover>
+    <mo stretchy='false'>,</mo>
+    <munder accent='false'>
+     <mrow>
+      <munder>
+       <mrow>
+        <mn>0</mn>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x2026;</mi>
+        <mn>0</mn>
+       </mrow>
+       <mo stretchy='true'>&#x23DF;</mo>
+      </munder>
+      <mo stretchy='false'>,</mo>
+     </mrow>
+     <mrow>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>k</mi>
+        <mo stretchy='false'>-</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mi>n</mi>
+      <mspace width="6px"/>
+      <mtext>elements</mtext>
+     </mrow>
+    </munder>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>&#x22A4;</mi>
+ </msup>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3A8;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mrow>
+   <mi>n</mi>
+   <mi>k</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo>&#x2282;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mrow>
+   <mi>n</mi>
+   <mi>k</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+. In that way, the predictive rule simplifies to 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>h</mi>
+     <mi>w</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>max</mo>
+     </mrow>
+     <mrow>
+      <mi>y</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>max</mo>
+     </mrow>
+     <mrow>
+      <mi>y</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <msub>
+       <mi>w</mi>
+       <mi>y</mi>
+      </msub>
+      <mo stretchy='false'>,</mo>
+      <mi>x</mi>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <msub>
+     <mi>w</mi>
+     <mn>1</mn>
+    </msub>
+    <mo stretchy='false'>,</mo>
+    <mn>...</mn>
+    <mo stretchy='false'>,</mo>
+    <msub>
+     <mi>w</mi>
+     <mi>k</mi>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>&#x22A4;</mi>
+ </msup>
+</mrow>
+</math>
+ and each <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mi>j</mi>
+</msub>
+</math>
+ has <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ elements. </div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-112'><span class="subsection_label">3.2</span> About the learning problem </h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-113'><span class="note_label">Note 19.</span>
+(<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ loss function) The 0-1 loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mn>0</mn>
+  <mo stretchy='false'>-</mo>
+  <mn>1</mn>
+ </mrow>
+</msub>
+</math>
+ in the multi-class framework can be specified as <a id="eq__1_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mn>0</mn>
+      <mo stretchy='false'>-</mo>
+      <mn>1</mn>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>h</mi>
+       <mi>w</mi>
+      </msub>
+      <mo stretchy='false'>,</mo>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mn>1</mn>
+     <mrow>
+      <mo>{</mo>
+      <mi>y</mi>
+      <mo>}</mo>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>h</mi>
+       <mi>w</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>x</mi>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mn>1</mn>
+        <mo stretchy='false'>,</mo>
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <msub>
+         <mi>h</mi>
+         <mi>w</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>=</mo>
+        <mi>y</mi>
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mn>0</mn>
+        <mo stretchy='false'>,</mo>
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow>
+        <msub>
+         <mi>h</mi>
+         <mi>w</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mo>&#x2260;</mo>
+        <mi>y</mi>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+as a straightforward extension of the one in binary classification. </div>
+</div>
+<div class='standard' id='magicparlabel-114'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-115'><span class="note_label">Note 20.</span>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ loss <a href="#eq__1_1">(3.2)</a> is non-convex as the one in the binary classification problem. </div>
+</div>
+<div class='standard' id='magicparlabel-116'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-117'><span class="note_label">Note 21.</span>
+(Hinge loss function) The hinge loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mtext>hinge</mtext>
+</msub>
+</math>
+ in the multi-class framework can be specified as <a id="eq__1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>&#x2113;</mi>
+     <mtext>hinge</mtext>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>h</mi>
+       <mi>w</mi>
+      </msub>
+      <mo stretchy='false'>,</mo>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <munder>
+     <mo>max</mo>
+     <mrow>
+      <mi>&#x3BE;</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>&#x2113;</mi>
+       <mrow>
+        <mn>0</mn>
+        <mo stretchy='false'>-</mo>
+        <mn>1</mn>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>&#x3BE;</mi>
+        <mo stretchy='false'>,</mo>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>y</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mrow>
+       <mo>&#x27E8;</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>&#x3BE;</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>-</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>y</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>&#x27E9;</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+extending on in binary classification. Example <a href="#exa_The_hinge_loss">24</a> provides a rational for its construction. </div>
+</div>
+<div class='standard' id='magicparlabel-118'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-119'><span class="example_label">Example 22.</span>
+<a id="note_The_hinge_loss" /> The hinge loss function <a href="#eq__1">(3.3)</a> is convex w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+</div>
+<div class='standard' id='magicparlabel-120'><i>Solution:</i> Straightforward as it is the maximum over linear functions of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-121'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-122'><span class="example_label">Example 23.</span>
+<a id="exa_The_hinge_loss_1" /> The hinge loss function <a href="#eq__1">(3.3)</a> is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3C1;</mi>
+ <mo stretchy='false'>-</mo>
+</mrow>
+</math>
+Lipschitz w.r.t. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+ with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3C1;</mi>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>max</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x3BE;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. </div>
+<div class='standard' id='magicparlabel-123'><i>Solution:</i>  Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3BE;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>&#x2113;</mi>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo stretchy='false'>,</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>&#x27E8;</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x3BE;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>&#x27E9;</mo>
+ </mrow>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>&#x2113;</mi>
+  <mtext>hinge</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>h</mi>
+    <mi>w</mi>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>max</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>g</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x3BE;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. It is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mo>|</mo>
+    <mrow>
+     <mi>f</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>w</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>-</mo>
+     <mi>f</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>'</mo>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>|</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mrow>
+     <mo>|</mo>
+     <mrow>
+      <munder>
+       <mo>max</mo>
+       <mrow>
+        <mi>&#x3BE;</mi>
+        <mo>&#x2208;</mo>
+        <mstyle mathvariant='script'>
+         <mi>Y</mi>
+        </mstyle>
+       </mrow>
+      </munder>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>g</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>w</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>&#x3BE;</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <munder>
+       <mo>max</mo>
+       <mrow>
+        <mi>&#x3BE;</mi>
+        <mo stretchy='false'>'</mo>
+        <mo>&#x2208;</mo>
+        <mstyle mathvariant='script'>
+         <mi>Y</mi>
+        </mstyle>
+       </mrow>
+      </munder>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>g</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>w</mi>
+          <mo stretchy='false'>'</mo>
+          <mo stretchy='false'>,</mo>
+          <mi>&#x3BE;</mi>
+          <mo stretchy='false'>'</mo>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>|</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>max</mo>
+     <mrow>
+      <mi>&#x3BE;</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>|</mo>
+     <mrow>
+      <mi>g</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x3BE;</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>g</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>'</mo>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x3BE;</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>|</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>max</mo>
+     <mrow>
+      <mi>&#x3BE;</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>|</mo>
+     <mrow>
+      <mo>&#x27E8;</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>-</mo>
+       <mi>w</mi>
+       <mo stretchy='false'>'</mo>
+       <mo stretchy='false'>,</mo>
+       <mi>&#x3A8;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mi>x</mi>
+         <mo stretchy='false'>,</mo>
+         <mi>&#x3BE;</mi>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>-</mo>
+       <mi>&#x3A8;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mi>x</mi>
+         <mo stretchy='false'>,</mo>
+         <mi>y</mi>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x27E9;</mo>
+     </mrow>
+     <mo>|</mo>
+    </mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>max</mo>
+     <mrow>
+      <mi>&#x3BE;</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mrow>
+       <mo>|</mo>
+       <mrow>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>&#x3BE;</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>-</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>y</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>|</mo>
+      </mrow>
+      <mrow>
+       <mo>|</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>-</mo>
+        <mi>w</mi>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+       <mo>|</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>max</mo>
+     <mrow>
+      <mi>&#x3BE;</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mo>|</mo>
+      <mrow>
+       <mi>&#x3A8;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mi>x</mi>
+         <mo stretchy='false'>,</mo>
+         <mi>&#x3BE;</mi>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>-</mo>
+       <mi>&#x3A8;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mi>x</mi>
+         <mo stretchy='false'>,</mo>
+         <mi>y</mi>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>|</mo>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mrow>
+     <mo>|</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>-</mo>
+      <mi>w</mi>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+     <mo>|</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-128'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-129'><span class="example_label">Example 24.</span>
+<a id="exa_The_hinge_loss" /> The hinge loss function <a href="#eq__1">(3.3)</a> upper bounds the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ loss function <a href="#eq__1_1">(3.2)</a>.</div>
+<div class='standard' id='magicparlabel-130'><i>Solution:</i> It is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x3A8;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>x</mi>
+       <mo stretchy='false'>,</mo>
+       <mi>y</mi>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>h</mi>
+         <mi>w</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+    <mspace width="40px"/>
+    <mtext>by&#0160;construction</mtext>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mo>&#x27F9;</mo>
+    <msub>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mn>0</mn>
+      <mo stretchy='false'>-</mo>
+      <mn>1</mn>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>h</mi>
+       <mi>w</mi>
+      </msub>
+      <mo stretchy='false'>,</mo>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <msub>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mn>0</mn>
+      <mo stretchy='false'>-</mo>
+      <mn>1</mn>
+     </mrow>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>h</mi>
+       <mi>w</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>x</mi>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>,</mo>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>h</mi>
+         <mi>w</mi>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <munder>
+     <mo>max</mo>
+     <mrow>
+      <mi>&#x3BE;</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>Y</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>&#x2113;</mi>
+       <mrow>
+        <mn>0</mn>
+        <mo stretchy='false'>-</mo>
+        <mn>1</mn>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>&#x3BE;</mi>
+        <mo stretchy='false'>,</mo>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>y</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mrow>
+       <mo>&#x27E8;</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>&#x3BE;</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>-</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>x</mi>
+          <mo stretchy='false'>,</mo>
+          <mi>y</mi>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>&#x27E9;</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-131'><span class="note_label">Note 25.</span>
+The hinge loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mtext>hinge</mtext>
+</msub>
+</math>
+ can be used as a surrogate loss instead of the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ loss <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mn>0</mn>
+  <mo stretchy='false'>-</mo>
+  <mn>1</mn>
+ </mrow>
+</msub>
+</math>
+ to address the non-convex learning problem with convex learning problem tools. This results from Note <a href="#note_The_hinge_loss">22</a> and Example <a href="#exa_The_hinge_loss">24</a>. Hence the computation of error bounds and the derivation of assumptions guarantee PAC learning algorithm is straightforward. </div>
+</div>
+<div class='standard' id='magicparlabel-132'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-133'><span class="example_label">Example 26.</span>
+The hinge loss function <a href="#eq__1">(3.3)</a> reduces to the hinge loss <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x2113;</mi>
+  <mtext>hinge</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>h</mi>
+    <mi>w</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo>max</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>-</mo>
+   <mi>y</mi>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>x</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ in binary classification. </div>
+<div class='standard' id='magicparlabel-134'><i>Solution:</i> n the binary scenario, I have <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>Y</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mo stretchy='false'>+</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+. If I set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3A8;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mn>2</mn>
+ </mfrac>
+ <mi>y</mi>
+ <mi>x</mi>
+</mrow>
+</math>
+ then <a href="#eq__1">(3.3)</a> reduces to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>max</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>-</mo>
+   <mi>y</mi>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>x</mi>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+
+
+<div class='standard' id='magicparlabel-149'>
+<br />
+</div>
+<div class='problem'>
+<div class="problem_item" id='magicparlabel-150'><span class="problem_label">Problem 27.</span>
+<a id="prob_The_Multi_class_SVM" /> The Multi-class SVM learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mstyle mathvariant='script'>
+    <mi>H</mi>
+   </mstyle>
+   <mrow>
+    <mi>&#x3A8;</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>W</mi>
+   </mrow>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>&#x2113;</mi>
+   <mtext>hinge</mtext>
+  </msub>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ using Ridge regularization with shrinkage parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3BB;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ is <a id="eq_" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>min</mo>
+     </mrow>
+     <mi>w</mi>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <munder accent='false'>
+       <munder>
+        <mrow>
+         <mfrac>
+          <mn>1</mn>
+          <mi>m</mi>
+         </mfrac>
+         <munderover>
+          <mo>&#x2211;</mo>
+          <mrow>
+           <mi>i</mi>
+           <mo stretchy='false'>=</mo>
+           <mn>1</mn>
+          </mrow>
+          <mi>m</mi>
+         </munderover>
+         <munder>
+          <mo>max</mo>
+          <mrow>
+           <mi>&#x3BE;</mi>
+           <mo>&#x2208;</mo>
+           <mstyle mathvariant='script'>
+            <mi>Y</mi>
+           </mstyle>
+          </mrow>
+         </munder>
+         <mrow>
+          <mo>(</mo>
+          <mrow>
+           <msub>
+            <mi>&#x2113;</mi>
+            <mrow>
+             <mn>0</mn>
+             <mo stretchy='false'>-</mo>
+             <mn>1</mn>
+            </mrow>
+           </msub>
+           <mrow>
+            <mo>(</mo>
+            <mrow>
+             <mi>&#x3BE;</mi>
+             <mo stretchy='false'>,</mo>
+             <msub>
+              <mi>z</mi>
+              <mi>i</mi>
+             </msub>
+            </mrow>
+            <mo>)</mo>
+           </mrow>
+           <mo stretchy='false'>+</mo>
+           <mrow>
+            <mo>&#x27E8;</mo>
+            <mrow>
+             <mi>w</mi>
+             <mo stretchy='false'>,</mo>
+             <mi>&#x3A8;</mi>
+             <mrow>
+              <mo>(</mo>
+              <mrow>
+               <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+               </msub>
+               <mo stretchy='false'>,</mo>
+               <mi>&#x3BE;</mi>
+              </mrow>
+              <mo>)</mo>
+             </mrow>
+             <mo stretchy='false'>-</mo>
+             <mi>&#x3A8;</mi>
+             <mrow>
+              <mo>(</mo>
+              <mrow>
+               <msub>
+                <mi>x</mi>
+                <mi>i</mi>
+               </msub>
+               <mo stretchy='false'>,</mo>
+               <msub>
+                <mi>y</mi>
+                <mi>i</mi>
+               </msub>
+              </mrow>
+              <mo>)</mo>
+             </mrow>
+            </mrow>
+            <mo>&#x27E9;</mo>
+           </mrow>
+          </mrow>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo stretchy='true'>&#x23DF;</mo>
+       </munder>
+       <mrow>
+        <msub>
+         <mover>
+          <mi>R</mi>
+          <mo stretchy='true'>&#x02C6;</mo>
+         </mover>
+         <mstyle mathvariant='script'>
+          <mi>S</mi>
+         </mstyle>
+        </msub>
+        <mrow>
+         <mo>(</mo>
+         <mi>w</mi>
+         <mo>)</mo>
+        </mrow>
+        <mspace/>
+        <mtext>as&#0160;empirical&#0160;risk&#0160;function</mtext>
+       </mrow>
+      </munder>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x3BB;</mi>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>w</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.4)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+with predictive rule 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>h</mi>
+  <msup>
+   <mi>w</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>max</mo>
+  </mrow>
+  <mrow>
+   <mi>y</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>&#x27E8;</mo>
+  <mrow>
+   <msup>
+    <mi>w</mi>
+    <mo stretchy='false'>*</mo>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>&#x27E9;</mo>
+ </mrow>
+</mrow>
+</math>
+ </div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-151'><span class="subsection_label">3.3</span> About the learning algorithm</h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-152'><span class="note_label">Note 28.</span>
+Problem <a href="#prob_The_Multi_class_SVM">27</a> can be solved with linear programming algorithms, as well as any variation of the SGD algorithm. –We discuss the latter. </div>
+</div>
+<div class='standard' id='magicparlabel-153'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-154'><span class="example_label">Example 29.</span>
+The recursion of SGD applied in <a href="#eq_">(3.4)</a> is
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>t</mi>
+    <mo stretchy='false'>+</mo>
+    <mn>1</mn>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo>(</mo>
+   <mi>t</mi>
+   <mo>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msup>
+      <mi>x</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>t</mi>
+       <mo>)</mo>
+      </mrow>
+     </msup>
+     <mo stretchy='false'>,</mo>
+     <msup>
+      <mover>
+       <mi>y</mi>
+       <mo stretchy='true'>&#x02C6;</mo>
+      </mover>
+      <mrow>
+       <mo>(</mo>
+       <mi>t</mi>
+       <mo>)</mo>
+      </mrow>
+     </msup>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msup>
+      <mi>x</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>t</mi>
+       <mo>)</mo>
+      </mrow>
+     </msup>
+     <mo stretchy='false'>,</mo>
+     <msup>
+      <mi>y</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>t</mi>
+       <mo>)</mo>
+      </mrow>
+     </msup>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ with 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mover>
+   <mi>y</mi>
+   <mo stretchy='true'>&#x02C6;</mo>
+  </mover>
+  <mrow>
+   <mo>(</mo>
+   <mi>t</mi>
+   <mo>)</mo>
+  </mrow>
+ </msup>
+ <mo>&#x2208;</mo>
+ <munder>
+  <mo>max</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mn>0</mn>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>&#x3BE;</mi>
+     <mo stretchy='false'>,</mo>
+     <msup>
+      <mi>z</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>t</mi>
+       <mo>)</mo>
+      </mrow>
+     </msup>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>+</mo>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <msup>
+      <mi>w</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>t</mi>
+       <mo>)</mo>
+      </mrow>
+     </msup>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x3A8;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msup>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mi>t</mi>
+         <mo>)</mo>
+        </mrow>
+       </msup>
+       <mo stretchy='false'>,</mo>
+       <mi>&#x3BE;</mi>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>-</mo>
+     <mi>&#x3A8;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msup>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mi>t</mi>
+         <mo>)</mo>
+        </mrow>
+       </msup>
+       <mo stretchy='false'>,</mo>
+       <msup>
+        <mi>y</mi>
+        <mrow>
+         <mo>(</mo>
+         <mi>t</mi>
+         <mo>)</mo>
+        </mrow>
+       </msup>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+</mrow>
+</math>
+ learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x3B7;</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ and for a randomly chosen example <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msup>
+    <mi>x</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>t</mi>
+     <mo>)</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <msup>
+    <mi>y</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>t</mi>
+     <mo>)</mo>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x223C;</mo>
+ <mi>g</mi>
+</mrow>
+</math>
+, at iteration <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+.</div>
+<div class='standard' style='text-align: left;' id='magicparlabel-155'><i>Solution:</i> The recursion is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>t</mi>
+    <mo stretchy='false'>+</mo>
+    <mn>1</mn>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo>(</mo>
+   <mi>t</mi>
+   <mo>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <msub>
+  <mi>v</mi>
+  <mi>t</mi>
+ </msub>
+</mrow>
+</math>
+ where 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>v</mi>
+  <mi>t</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>&#x2202;</mi>
+  <mi>w</mi>
+ </msub>
+ <msub>
+  <mi>&#x2113;</mi>
+  <mtext>hinge</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>h</mi>
+    <mi>w</mi>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+   <mo stretchy='false'>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+I will use Proposition <a href="#exa_Let__convex">exa:Let--convex</a> from Handout <a href="#enu_Handout__Elements_of">enu:Handout:-Elements-of</a>: Elements of convex learning problems. Because I can write 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>&#x2113;</mi>
+  <mtext>hinge</mtext>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>h</mi>
+    <mi>w</mi>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>max</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>c</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>;</mo>
+     <mi>&#x3BE;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ with 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>c</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>;</mo>
+   <mi>&#x3BE;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>&#x2113;</mi>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>&#x27E8;</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x3BE;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3A8;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>&#x27E9;</mo>
+ </mrow>
+</mrow>
+</math>
+if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mover>
+ <mi>y</mi>
+ <mo stretchy='true'>&#x02C6;</mo>
+</mover>
+</math>
+ is such as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>;</mo>
+   <mover>
+    <mi>y</mi>
+    <mo stretchy='true'>&#x02C6;</mo>
+   </mover>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>max</mo>
+  <mrow>
+   <mi>&#x3BE;</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Y</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>w</mi>
+     <mo stretchy='false'>;</mo>
+     <mi>&#x3BE;</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ then 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <msub>
+    <mi>v</mi>
+    <mi>t</mi>
+   </msub>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2208;</mo>
+    <msub>
+     <mi>&#x2202;</mi>
+     <mi>w</mi>
+    </msub>
+    <msub>
+     <mi>&#x2113;</mi>
+     <mtext>hinge</mtext>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>h</mi>
+       <mi>w</mi>
+      </msub>
+      <mo stretchy='false'>,</mo>
+      <mi>z</mi>
+      <mo stretchy='false'>=</mo>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>&#x2202;</mi>
+     <mi>w</mi>
+    </msub>
+    <mi>c</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>;</mo>
+      <mover>
+       <mi>y</mi>
+       <mo stretchy='true'>&#x02C6;</mo>
+      </mover>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>&#x2202;</mi>
+     <mi>w</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>&#x2113;</mi>
+       <mrow>
+        <mn>0</mn>
+        <mo stretchy='false'>-</mo>
+        <mn>1</mn>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>&#x3BE;</mi>
+        <mo stretchy='false'>,</mo>
+        <mover>
+         <mi>y</mi>
+         <mo stretchy='true'>&#x02C6;</mo>
+        </mover>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mrow>
+       <mo>&#x27E8;</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <msup>
+           <mi>x</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+          <mo stretchy='false'>,</mo>
+          <mover>
+           <mi>y</mi>
+           <mo stretchy='true'>&#x02C6;</mo>
+          </mover>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>-</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <msup>
+           <mi>x</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+          <mo stretchy='false'>,</mo>
+          <msup>
+           <mi>y</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>&#x27E9;</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>&#x2207;</mi>
+     <mi>w</mi>
+    </msub>
+    <mrow>
+     <mo>&#x27E8;</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <msup>
+         <mi>x</mi>
+         <mrow>
+          <mo>(</mo>
+          <mi>t</mi>
+          <mo>)</mo>
+         </mrow>
+        </msup>
+        <mo stretchy='false'>,</mo>
+        <mover>
+         <mi>y</mi>
+         <mo stretchy='true'>&#x02C6;</mo>
+        </mover>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <mi>&#x3A8;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <msup>
+         <mi>x</mi>
+         <mrow>
+          <mo>(</mo>
+          <mi>t</mi>
+          <mo>)</mo>
+         </mrow>
+        </msup>
+        <mo stretchy='false'>,</mo>
+        <msup>
+         <mi>y</mi>
+         <mrow>
+          <mo>(</mo>
+          <mi>t</mi>
+          <mo>)</mo>
+         </mrow>
+        </msup>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x27E9;</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mi>&#x3A8;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>x</mi>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+      <mo stretchy='false'>,</mo>
+      <mover>
+       <mi>y</mi>
+       <mo stretchy='true'>&#x02C6;</mo>
+      </mover>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>&#x3A8;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>x</mi>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+      <mo stretchy='false'>,</mo>
+      <msup>
+       <mi>y</mi>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-160'><span class="note_label">Note 30.</span>
+For the SGD implementation, the computation of error bounds and the derivation of assumptions that guarantee a PAC learning algorithm is straightforward. </div>
+</div>
+</section>
+</section>
+</body>
+</html>
