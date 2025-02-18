@@ -176,9 +176,9 @@ About SGLD, binary classification via Bernulli regression and Bayesian learning.
 
 About Support Vector Machines  
 
-+ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_tasks.Rmd)  
++ Tasks: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_tasks.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Support_Vector_Machines_tasks.Rmd)  
 
-+ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Stochastic_learning_methods_SGLD_complete.Rmd) 
++ Complete: [View (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Support_Vector_Machines_complete.html) ; [Download (Rmd)](https://raw.githubusercontent.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/refs/heads/main/Computer_lab_notes/Support_Vector_Machines_complete.Rmd) 
 
 
 #### Lab 4:              
