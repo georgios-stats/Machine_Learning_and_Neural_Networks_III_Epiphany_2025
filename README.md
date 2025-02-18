@@ -107,13 +107,9 @@ Kernel methods (extensions to non linear feature spaces)
 
 + Lecture notes [(PDF)](./Lecture_notes/08.Kernel_Methods.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/08.Kernel_Methods_xhtml/08.Kernel_Methods.xhtml)  
 
-Multiclass_classification (extensions to many classes)    
-
-<!--
+Multiclass classification (extensions to many classes)    
 
 + Lecture notes [(PDF)](./Lecture_notes/09.Multiclass_classification.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/09.Multiclass_classification_xhtml/09.Multiclass_classification.xhtml)  
-
--->
 
 Artificial Neural Networks (application to feature space extensions)  
 
