@@ -227,7 +227,7 @@ About Support Vector Machines
 
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_3_questions.pdf)  
 
-+ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_3_questions_xhtml/Homework_sheet_3_questions.xhtml)  
++ [Problems only (HTML)](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_3_questions_xhtml/Homework_sheet_3_questions_xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_3_complete.pdf)  
 
