@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="generator" content="LyX 2.4.2.1" />
+<title>LyX Document</title>
+<style>
+/* Layout-provided Styles */
+div.standard {
+	margin-bottom: 2ex;
+}
+div.plain_layout {
+text-align: left;
+
+}
+div.theorem {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.theorem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.exercise {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.exercise_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+dl.description dt { font-weight: bold; }
+ol.enumi   { list-style-type: decimal; }
+ol.enumii  { list-style-type: lower-latin; }
+ol.enumiii { list-style-type: lower-roman; }
+ol.enumiv  { list-style-type: upper-latin; }
+div.solution_ {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.solution__label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
+
+
+</style>
+</head>
+<body dir="auto">
+<div class='standard' id='magicparlabel-3'><div class='Shadowbox'><div class='plain_layout' id='magicparlabel-7'>MATH3431 Machine Learning and Neural Networks III 
+Epiphany term 2025<div style='height:3ex'></div></div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-8'><b><span style='font-size:x-large;'>Homework 3: Support Vector Machines</span></b><div style='height:3ex'></div></div>
+
+<div class='plain_layout' id='magicparlabel-9'>Lecturer: Georgios P. Karagiannis&#xA0;&#xA0; 
+<a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+
+<div class='plain_layout' id='magicparlabel-10'><hr />
+</div>
+
+<div class='plain_layout' id='magicparlabel-11'>Instructions: For Formative assessment, submit the solutions to all of the parts of the Exercise</div>
+</div></div>
+
+<div class='standard' id='magicparlabel-12'>&#xA0;<div style='height:1ex'></div><div style='height:1ex'></div></div>
+
+<div class='standard' id='magicparlabel-13'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-14'>
+<br />
+</div>
+<div class='exercise'>
+<div class="exercise_item" id='magicparlabel-15'><span class="exercise_label">Exercise 1.</span>
+ <div class='standard' id='magicparlabel-17'>Consider a training data set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>S</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>{</mo>
+   <mrow>
+    <msub>
+     <mi>z</mi>
+     <mi>i</mi>
+    </msub>
+    <mo stretchy='false'>=</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>x</mi>
+       <mi>i</mi>
+      </msub>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>y</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>}</mo>
+  </mrow>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>m</mi>
+ </msubsup>
+</mrow>
+</math>
+. Consider the Soft-SVM Algorithm that requires the solution of the following quadratic minimization problem (in a slightly modified but equivalent form to what we have discussed) </div>
+<dl class='description'>
+<dt class="description_label">Primal&#xA0;problem</dt>
+<dd class="description_item" id='magicparlabel-18'> &#xA0; </dd>
+</dl>
+<div class='standard' id='magicparlabel-19'><a id="eq__2_1" /><a id="eq__3_1" /><a id="eq__5" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msup>
+      <mi>w</mi>
+      <mo stretchy='false'>*</mo>
+     </msup>
+     <mo stretchy='false'>,</mo>
+     <msup>
+      <mi>b</mi>
+      <mo stretchy='false'>*</mo>
+     </msup>
+     <mo stretchy='false'>,</mo>
+     <msup>
+      <mi>&#x3BE;</mi>
+      <mo stretchy='false'>*</mo>
+     </msup>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>min</mo>
+     </mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>,</mo>
+       <mi>b</mi>
+       <mo stretchy='false'>,</mo>
+       <mi>&#x3BE;</mi>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mfrac>
+       <mn>1</mn>
+       <mn>2</mn>
+      </mfrac>
+      <msubsup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mi>w</mi>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+       <mn>2</mn>
+      </msubsup>
+      <mo stretchy='false'>+</mo>
+      <mi>C</mi>
+      <munderover>
+       <mo>&#x2211;</mo>
+       <mrow>
+        <mi>i</mi>
+        <mo stretchy='false'>=</mo>
+        <mn>1</mn>
+       </mrow>
+       <mi>m</mi>
+      </munderover>
+      <msub>
+       <mi>&#x3BE;</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(1)</mtext>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mtext>subject&#0160;to:</mtext>
+    <mspace width="6px"/>
+    <mspace width="6px"/>
+    <mspace width="6px"/>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>y</mi>
+     <mi>i</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mrow>
+       <mo stretchy='false'>&#x27E8;</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>x</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo stretchy='false'>&#x27E9;</mo>
+      </mrow>
+      <mo stretchy='false'>+</mo>
+      <mi>b</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x2265;</mo>
+    <mn>1</mn>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x3BE;</mi>
+     <mi>i</mi>
+    </msub>
+    <mo stretchy='false'>,</mo>
+    <mspace width="6px"/>
+    <mspace width="6px"/>
+    <mi>&#x2200;</mi>
+    <mi>i</mi>
+    <mo stretchy='false'>=</mo>
+    <mn>1</mn>
+    <mo stretchy='false'>,</mo>
+    <mn>...</mn>
+    <mo stretchy='false'>,</mo>
+    <mi>m</mi>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2)</mtext>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>&#x3BE;</mi>
+     <mi>i</mi>
+    </msub>
+    <mo>&#x2265;</mo>
+    <mn>0</mn>
+    <mo stretchy='false'>,</mo>
+    <mspace width="6px"/>
+    <mspace width="6px"/>
+    <mi>&#x2200;</mi>
+    <mi>i</mi>
+    <mo stretchy='false'>=</mo>
+    <mn>1</mn>
+    <mo stretchy='false'>,</mo>
+    <mn>...</mn>
+    <mo stretchy='false'>,</mo>
+    <mi>m</mi>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ for some user-specified fixed parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>C</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+. </div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-24'>Specify the Lagrangian function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>L</mi>
+</math>
+ associated to the above primal quadratic minimization problem, where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msub>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>}</mo>
+</mrow>
+</math>
+ are the Lagrange coefficients wrt <a href="#eq__3_1">(2)</a>, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msub>
+  <mi>&#x3B2;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>}</mo>
+</mrow>
+</math>
+ are the Lagrange coefficients wrt <a href="#eq__5">(3)</a>. Write down any possible restrictions on the Lagrange coefficients.</li>
+<li class="enumerate_item" id='magicparlabel-25'>Compute the dual Lagrangian function denoted as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mover>
+ <mi>L</mi>
+ <mo stretchy='true'>&#x02DC;</mo>
+</mover>
+</math>
+ as a function of the Lagrange coefficients and the data points <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+. </li>
+<li class="enumerate_item" id='magicparlabel-26'>Apply the Karush–Kuhn–Tucker (KKT) conditions to the above problem, and write them down. </li>
+<li class="enumerate_item" id='magicparlabel-27'><a id="enu_Derive_and_write" />Derive and write down the dual Lagrangian quadratic maximization problem, along with the inequality and equality constraints, where you seek to find <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msub>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>}</mo>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-28'>Justify why the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+-th point <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mi>i</mi>
+</msub>
+</math>
+ lies on the margin boundary when <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>C</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ( beware it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>&#x2260;</mo>
+ <mi>C</mi>
+</mrow>
+</math>
+), and why the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+-th point <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mi>i</mi>
+</msub>
+</math>
+ lies inside the margin when <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mi>C</mi>
+</mrow>
+</math>
+. </li>
+<li class="enumerate_item" id='magicparlabel-29'>Given optimal values <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msubsup>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+  <mo stretchy='false'>*</mo>
+ </msubsup>
+ <mo>}</mo>
+</mrow>
+</math>
+ for Lagrangian coefficients <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <msub>
+  <mi>&#x3B1;</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>}</mo>
+</mrow>
+</math>
+ as they are derived by solving the dual Lagrangian maximization problem in part <a href="#enu_Derive_and_write">4.</a>, derive the optimal values <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>w</mi>
+ <mo stretchy='false'>*</mo>
+</msup>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>b</mi>
+ <mo stretchy='false'>*</mo>
+</msup>
+</math>
+ for the parameters <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ as function of the support vectors. Regarding parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ it should be in the derived in the form 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>b</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mrow>
+   <mo>|</mo>
+   <mstyle mathvariant='script'>
+    <mi>M</mi>
+   </mstyle>
+   <mo>|</mo>
+  </mrow>
+ </mfrac>
+ <munder>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>M</mi>
+   </mstyle>
+  </mrow>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy='false'>-</mo>
+   <munder>
+    <mo>&#x2211;</mo>
+    <mrow>
+     <mi>j</mi>
+     <mo>&#x2208;</mo>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </mrow>
+   </munder>
+   <msubsup>
+    <mi>&#x3B1;</mi>
+    <mi>j</mi>
+    <mo stretchy='false'>*</mo>
+   </msubsup>
+   <msub>
+    <mi>y</mi>
+    <mi>j</mi>
+   </msub>
+   <mrow>
+    <mo stretchy='false'>&#x27E8;</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>j</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo stretchy='false'>&#x27E9;</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ where you determine the sets <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>M</mi>
+</mstyle>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>S</mi>
+</mstyle>
+</math>
+. </li>
+<li class="enumerate_item" id='magicparlabel-30'>Report the halfspace predictive rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>h</mi>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>b</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ of the above problem as a function of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>&#x3B1;</mi>
+ <mo stretchy='false'>*</mo>
+</msup>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>b</mi>
+ <mo stretchy='false'>*</mo>
+</msup>
+</math>
+.</li>
+</ol>
+
+<div class='solution_'>
+<div class="solution__item" id='magicparlabel-36'><span class="solution__label">Solution.</span>
+&#xA0;&#xA0; </div>
+</div>
+
+ </div>
+</div>
+<div class='standard' id='magicparlabel-57'>
+<br />
+</div>
+
+</body>
+</html>
