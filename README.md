@@ -113,11 +113,7 @@ Multiclass classification (extensions to many classes)
 
 Artificial Neural Networks (application to feature space extensions)  
 
-<!--
-
 + Lecture notes [(PDF)](./Lecture_notes/10.Artificial_neural_networks.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/10.Artificial_neural_networks_xhtml/10.Artificial_neural_networks.xhtml)  
-
--->
 
 Gaussian process regression (application of kernel trick/methods)  
 
