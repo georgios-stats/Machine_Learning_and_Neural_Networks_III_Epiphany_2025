@@ -45,7 +45,7 @@ header-includes:
 
 
 
-[Back to README](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/tree/main/Computer_practical#aim)
+[Back to README](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main?tab=readme-ov-file#computer-lab-notes)
 
 ```{r}
 rm(list=ls())
@@ -68,7 +68,7 @@ Students will become able to:
 
 
 + Lecture notes:  
-    + [Handout 9: Artificial neural networks](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Lecture_handouts/09.Artificial_neural_networks.pdf)  
+    + Lecture notes: Artificial Neural Networks   
     + [Ripley, B., Venables, W., & Ripley, M. B. (2016). Package ‘nnet’. R package version, 7(3-12), 700.](https://cran.r-project.org/web/packages/nnet/nnet.pdf)  
 
 + Reference for *R*:  

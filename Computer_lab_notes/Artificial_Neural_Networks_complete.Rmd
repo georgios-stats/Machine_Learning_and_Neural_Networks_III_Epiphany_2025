@@ -45,7 +45,7 @@ header-includes:
 
 
 
-[Back to README](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/tree/main/Computer_practical#aim)
+[Back to README](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main?tab=readme-ov-file#computer-lab-notes)
 
 ```{r}
 rm(list=ls())
@@ -68,7 +68,7 @@ Students will become able to:
 
 
 + Lecture notes:  
-    + [Lecture notes: Artificial neural  
+    + Lecture notes: Artificial Neural Networks  
     + [Ripley, B., Venables, W., & Ripley, M. B. (2016). Package ‘nnet’. R package version, 7(3-12), 700.](https://cran.r-project.org/web/packages/nnet/nnet.pdf)  
 
 + Reference for *R*:  
@@ -649,7 +649,7 @@ Practice on the following variation.
 
 + [LINK TO TASKS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_MultiClassClassification_tasks.html)  
 
-+ [LINK TO SOLUTIONS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2024/blob/main/Computer_lab_notes/Artificial_Neural_Networks_MultiClassClassification_complete.html)   
++ [LINK TO SOLUTIONS](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Computer_lab_notes/Artificial_Neural_Networks_MultiClassClassification_complete.html)   
 
 
 
