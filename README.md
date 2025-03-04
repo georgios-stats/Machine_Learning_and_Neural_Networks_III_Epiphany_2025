@@ -117,11 +117,7 @@ Artificial Neural Networks (application to feature space extensions)
 
 Gaussian process regression (application of kernel trick/methods)  
 
-<!--
-
-+ Lecture notes [(PDF)](./Lecture_notes/11.Gaussian_process_regression.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)  
-
--->
++ Lecture notes [(PDF)](./Lecture_notes/11.Gaussian_process_regression.pdf), [(HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Lecture_notes/11.Gaussian_process_regression_xhtml/11.Gaussian_process_regression.xhtml)
 
 ------------------------------------------------------------------------
 
@@ -229,17 +225,13 @@ About Artificial Neural Networks
 
 #### Homework 4  
 
-... Not available yet  
-
-<!--
 + [Problems only (PDF)](./Exercise_sheets/Homework_sheet_4_questions.pdf)  
 
-+ [Problems only (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_complete_xhtml/Homework_sheet_4_questions.xhtml)  
++ [Problems only (HTML)](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_questions_xhtml/Homework_sheet_4_questions_xhtml)  
 
 + [Problems and solutions (PDF)](./Exercise_sheets/Homework_sheet_4_complete.pdf)  
 
 + [Problems and solutions (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/Homework_sheet_4_complete_xhtml/Homework_sheet_4_complete.xhtml)  
--->
 
 
 #### Revision  
@@ -252,20 +244,9 @@ About Artificial Neural Networks
 
 # Practical Tests  
 
-#### Practical First Computer Based Test  
+#### Practical Second Computer Based Test  
 
-... Not available yet  
-
-<!--
-
-Solutions only  
-
-+ [Spatial data (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Spatial-data.html)    
-
-+ [Geostatistical data (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Geostatistical-data.html)        
-
-+ [Aerial unit data (HTML)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/Exercise_sheets/FPCBT-Topic-Aerial-unit-data.html)    
--->
+See in Blackboard Ultra   
 
 ------------------------------------------------------------------------
 
