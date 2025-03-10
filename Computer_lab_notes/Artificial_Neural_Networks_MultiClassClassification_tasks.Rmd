@@ -3,11 +3,11 @@ title: "Artificial Neural Networks"
 subtitle: "Introductory analysis via NNET"
 author: "Georgios P. Karagiannis @ MATH3431 Machine Learning and Neural Networks III"
 output:
-  html_notebook: 
-    number_sections: true
-  word_document: default
   html_document:
     df_print: paged
+    number_sections: true
+  word_document: default
+  html_notebook: 
     number_sections: true
   pdf_document: default
 header-includes: 
