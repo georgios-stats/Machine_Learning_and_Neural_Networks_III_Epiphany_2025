@@ -201,50 +201,50 @@ div.marginal {
 <body dir="auto">
 
 
-<div class='standard' id='magicparlabel-11'><div class='Shadowbox'>
+<div class='standard' id='magicparlabel-7'><div class='Shadowbox'>
 
-<div class='plain_layout' id='magicparlabel-20'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
+<div class='plain_layout' id='magicparlabel-16'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
 Epiphany term, 2025<div style='height:3ex'></div></div>
 
-<div class='plain_layout' style='text-align: center;' id='magicparlabel-21'> Lecture notes <a href="#enu_Handout___Gaussian">enu:Handout-:-Gaussian</a>: Gaussian process regression <div style='height:3ex'></div></div>
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-17'> Lecture notes <a href="#enu_Handout___Gaussian">enu:Handout-:-Gaussian</a>: Gaussian process regression <div style='height:3ex'></div></div>
 
-<div class='plain_layout' id='magicparlabel-38'>Lecturer &amp; author: Georgios P. Karagiannis 
+<div class='plain_layout' id='magicparlabel-34'>Lecturer &amp; author: Georgios P. Karagiannis 
 <a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
 
-<div class='plain_layout' id='magicparlabel-39'><hr />
+<div class='plain_layout' id='magicparlabel-35'><hr />
 <div style='height:3ex'></div></div>
-<h3 class='subsection_' id='magicparlabel-40'>Aim</h3>
-<div class='plain_layout' id='magicparlabel-41'>To introduce the Gaussian process regression as a kernel method.</div>
+<h3 class='subsection_' id='magicparlabel-36'>Aim</h3>
+<div class='plain_layout' id='magicparlabel-37'>To introduce the Gaussian process regression as a kernel method.</div>
 
-<div class='plain_layout' id='magicparlabel-42'><hr />
+<div class='plain_layout' id='magicparlabel-38'><hr />
 <div style='height:3ex'></div></div>
-<h3 class='subsection_' id='magicparlabel-43'>Reading list &amp; references:</h3>
+<h3 class='subsection_' id='magicparlabel-39'>Reading list &amp; references:</h3>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-44'>Bishop, C. M. (2006). Pattern recognition and machine learning (Vol. 4, No. 4, p. 738). New York: Springer.
+<li class="enumerate_item" id='magicparlabel-40'>Bishop, C. M. (2006). Pattern recognition and machine learning (Vol. 4, No. 4, p. 738). New York: Springer.
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-45'>Ch. 6.4 Gaussian process</li>
+<li class="itemize_item" id='magicparlabel-41'>Ch. 6.4 Gaussian process</li>
 </ul>
-</li><li class="enumerate_item" id='magicparlabel-46'>Rasmussen, C. E., &amp; Williams, C. K. (2006). Gaussian processes for machine learning (Vol. 1, p. 159). Cambridge, MA: MIT press.
+</li><li class="enumerate_item" id='magicparlabel-42'>Rasmussen, C. E., &amp; Williams, C. K. (2006). Gaussian processes for machine learning (Vol. 1, p. 159). Cambridge, MA: MIT press.
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-47'>Chapter 2, Regression (supplementary)</li>
+<li class="itemize_item" id='magicparlabel-43'>Chapter 2, Regression (supplementary)</li>
 </ul>
-</li><li class="enumerate_item" id='magicparlabel-48'>Roustant, O., Ginsbourger, D., &amp; Deville, Y. (2012). DiceKriging, DiceOptim: Two R packages for the analysis of computer experiments by kriging-based metamodeling and optimization. Journal of statistical software, 51, 1-55.
+</li><li class="enumerate_item" id='magicparlabel-44'>Roustant, O., Ginsbourger, D., &amp; Deville, Y. (2012). DiceKriging, DiceOptim: Two R packages for the analysis of computer experiments by kriging-based metamodeling and optimization. Journal of statistical software, 51, 1-55.
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-49'>Supplementary material related to the the implementation of GP in R computing environment. </li>
+<li class="itemize_item" id='magicparlabel-45'>Supplementary material related to the the implementation of GP in R computing environment. </li>
 </ul>
 </li></ol>
 </div></div>
 <section>
-<h2 class='section' id='magicparlabel-50'><span class="section_label">1</span> Intro and motivation </h2>
+<h2 class='section' id='magicparlabel-46'><span class="section_label">1</span> Intro and motivation </h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-51'><span class="note_label">Note 1.</span>
+<div class="note_item" id='magicparlabel-47'><span class="note_label">Note 1.</span>
 As motivation for the Gaussian process regression, we &#8220;Kernelize&#8221; the standard Bayesian normal linear regression in the machine learning framework.</div>
 </div>
-<div class='standard' id='magicparlabel-52'>
+<div class='standard' id='magicparlabel-48'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-53'><span class="note_label">Note 2.</span>
+<div class="note_item" id='magicparlabel-49'><span class="note_label">Note 2.</span>
 <a id="note_Consider_the_predictive" />Consider the predictive rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -641,11 +641,11 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-54'>
+<div class='standard' id='magicparlabel-50'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-55'><span class="note_label">Note 3.</span>
+<div class="note_item" id='magicparlabel-51'><span class="note_label">Note 3.</span>
 <a id="note_The_marginal_likelihood" />The marginal likelihood is <a id="eq__6" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true'>
@@ -729,12 +729,12 @@ and covariance matrix <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-60'>
+<div class='standard' id='magicparlabel-56'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-61'><span class="note_label">Note 4.</span>
-<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-65'>No need to memorize the formulas in <a href="#eq__6">(1.2)</a>, <a href="#eq_">(1.3)</a>, and <a href="#eq__1">(1.4)</a>. The material in Notes <a href="#note_Consider_the_predictive">2</a>, <a href="#note_The_marginal_likelihood">3</a>, and <a href="#note_The_predictive_distribution">4</a> is given as a motivation for the Gaussian process regression. </div>
+<div class="note_item" id='magicparlabel-57'><span class="note_label">Note 4.</span>
+<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-61'>No need to memorize the formulas in <a href="#eq__6">(1.2)</a>, <a href="#eq_">(1.3)</a>, and <a href="#eq__1">(1.4)</a>. The material in Notes <a href="#note_Consider_the_predictive">2</a>, <a href="#note_The_marginal_likelihood">3</a>, and <a href="#note_The_predictive_distribution">4</a> is given as a motivation for the Gaussian process regression. </div>
 </div></div><a id="note_The_predictive_distribution" />The predictive distribution of a new outcome <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>y</mi>
@@ -1223,11 +1223,11 @@ and covariance matrix <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  according to Proposition <a href="#prop_Let___Consider">44</a>. </div>
 </div>
-<div class='standard' id='magicparlabel-66'>
+<div class='standard' id='magicparlabel-62'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-67'><span class="note_label">Note 5.</span>
+<div class="note_item" id='magicparlabel-63'><span class="note_label">Note 5.</span>
 In the prior part of <a href="#eq__2">(1.1)</a>, let&#8217;s assume <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -1399,14 +1399,14 @@ In the prior part of <a href="#eq__2">(1.1)</a>, let&#8217;s assume <math xmlns=
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-68'>
+<div class='standard' id='magicparlabel-64'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-69'><span class="section_label">2</span> The Gaussian process regression model </h2>
+<h2 class='section' id='magicparlabel-65'><span class="section_label">2</span> The Gaussian process regression model </h2>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-70'><span class="definition_label">Definition 6.</span>
+<div class="definition_item" id='magicparlabel-66'><span class="definition_label">Definition 6.</span>
 <a id="def_Gaussian_process__GP_" />Gaussian process (GP) is a collection of random variables <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>{
  <mi>f</mi>
@@ -1559,18 +1559,18 @@ In the prior part of <a href="#eq__2">(1.1)</a>, let&#8217;s assume <math xmlns=
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-75'>
+<div class='standard' id='magicparlabel-71'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-76'><span class="note_label">Note 7.</span>
+<div class="note_item" id='magicparlabel-72'><span class="note_label">Note 7.</span>
 Essentially, GP is a distribution defined over functions. </div>
 </div>
-<div class='standard' id='magicparlabel-77'>
+<div class='standard' id='magicparlabel-73'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-78'><span class="example_label">Example 8.</span>
+<div class="example_item" id='magicparlabel-74'><span class="example_label">Example 8.</span>
 One way to simulate a GP realization <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -1681,49 +1681,49 @@ One way to simulate a GP realization <math xmlns='http://www.w3.org/1998/Math/Ma
 </mrow>
 </math>
  is given in the following R code.</div>
-<div class='standard' id='magicparlabel-79'><span style='font-family:monospace;'><div class='Frameless'><div class='plain_layout' id='magicparlabel-83'><span style='font-family:monospace;'><div class='Boxed' style='width: 60%; '><div class='plain_layout' id='magicparlabel-87'><span style='font-family:monospace;'><span style='font-size:small;'>rm(list=ls())</span></span></div>
+<div class='standard' id='magicparlabel-75'><span style='font-family:monospace;'><div class='Frameless'><div class='plain_layout' id='magicparlabel-79'><span style='font-family:monospace;'><div class='Boxed' style='width: 60%; '><div class='plain_layout' id='magicparlabel-83'><span style='font-family:monospace;'><span style='font-size:small;'>rm(list=ls())</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-88'><span style='font-family:monospace;'><span style='font-size:small;'>set.seed(99)</span></span></div>
+<div class='plain_layout' id='magicparlabel-84'><span style='font-family:monospace;'><span style='font-size:small;'>set.seed(99)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-89'><span style='font-family:monospace;'><span style='font-size:small;'>n &lt;- 50 #descretize the problem</span></span></div>
+<div class='plain_layout' id='magicparlabel-85'><span style='font-family:monospace;'><span style='font-size:small;'>n &lt;- 50 #descretize the problem</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-90'><span style='font-family:monospace;'><span style='font-size:small;'>x &lt;- seq(from = 0, to = 10, length = n)</span></span></div>
+<div class='plain_layout' id='magicparlabel-86'><span style='font-family:monospace;'><span style='font-size:small;'>x &lt;- seq(from = 0, to = 10, length = n)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-91'><span style='font-family:monospace;'><span style='font-size:small;'>mu_x &lt;- matrix(1,n)</span></span></div>
+<div class='plain_layout' id='magicparlabel-87'><span style='font-family:monospace;'><span style='font-size:small;'>mu_x &lt;- matrix(1,n)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-92'><span style='font-family:monospace;'><span style='font-size:small;'>cov_x_x &lt;- matrix(nrow = n, ncol = n)</span></span></div>
+<div class='plain_layout' id='magicparlabel-88'><span style='font-family:monospace;'><span style='font-size:small;'>cov_x_x &lt;- matrix(nrow = n, ncol = n)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-93'><span style='font-family:monospace;'><span style='font-size:small;'>for (i in 1:n) {</span></span></div>
+<div class='plain_layout' id='magicparlabel-89'><span style='font-family:monospace;'><span style='font-size:small;'>for (i in 1:n) {</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-94'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;mu_x[i] &lt;- 1+0.01*x[i]</span></span></div>
+<div class='plain_layout' id='magicparlabel-90'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;mu_x[i] &lt;- 1+0.01*x[i]</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-95'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;for (j in 1:n) {</span></span></div>
+<div class='plain_layout' id='magicparlabel-91'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;for (j in 1:n) {</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-96'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;&#x2003;cov_x_x[i,j]&lt;- 10*exp(-0.5*(x[i]-x[j])^2/1.5)</span></span></div>
+<div class='plain_layout' id='magicparlabel-92'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;&#x2003;cov_x_x[i,j]&lt;- 10*exp(-0.5*(x[i]-x[j])^2/1.5)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-97'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;}</span></span></div>
+<div class='plain_layout' id='magicparlabel-93'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;}</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-98'><span style='font-family:monospace;'><span style='font-size:small;'>}</span></span></div>
+<div class='plain_layout' id='magicparlabel-94'><span style='font-family:monospace;'><span style='font-size:small;'>}</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-99'><span style='font-family:monospace;'><span style='font-size:small;'>f &lt;- rmvnorm(n = 1, mean = mu_x , sigma = cov_x_x)</span></span></div>
+<div class='plain_layout' id='magicparlabel-95'><span style='font-family:monospace;'><span style='font-size:small;'>f &lt;- rmvnorm(n = 1, mean = mu_x , sigma = cov_x_x)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-100'><span style='font-family:monospace;'><span style='font-size:small;'>plot(x,f,type="l",</span></span></div>
+<div class='plain_layout' id='magicparlabel-96'><span style='font-family:monospace;'><span style='font-size:small;'>plot(x,f,type="l",</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-101'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;main="f(.)~GP(m(.),c(.,.))",</span></span></div>
+<div class='plain_layout' id='magicparlabel-97'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;main="f(.)~GP(m(.),c(.,.))",</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-102'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;ylab="f(x)",xlab="x",</span></span></div>
+<div class='plain_layout' id='magicparlabel-98'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;ylab="f(x)",xlab="x",</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-103'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;cex.axis=2, cex.lab=2, cex.main=2, cex.sub=2)</span></span></div>
+<div class='plain_layout' id='magicparlabel-99'><span style='font-family:monospace;'><span style='font-size:small;'>&#x2003;cex.axis=2, cex.lab=2, cex.main=2, cex.sub=2)</span></span></div>
 
-<div class='plain_layout' id='magicparlabel-104'><span style='font-family:monospace;'><span style='font-size:small;'>points(x, f, cex = .5, col = "dark red")</span></span></div>
+<div class='plain_layout' id='magicparlabel-100'><span style='font-family:monospace;'><span style='font-size:small;'>points(x, f, cex = .5, col = "dark red")</span></span></div>
 </div><img style='width:40%;' src='e_e413485b99f7_GP_realization.png' alt='image: e_e413485b99f7_GP_realization.png' /></span></div>
 </div></span></div>
 </div>
-<div class='standard' id='magicparlabel-105'>
+<div class='standard' id='magicparlabel-101'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-106'><span class="note_label">Note 9.</span>
+<div class="note_item" id='magicparlabel-102'><span class="note_label">Note 9.</span>
 <a id="note_Consider_a_function" />Consider a function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3B7;</mi>
@@ -1968,18 +1968,18 @@ One way to simulate a GP realization <math xmlns='http://www.w3.org/1998/Math/Ma
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-111'>
+<div class='standard' id='magicparlabel-107'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-112'><span class="note_label">Note 10.</span>
+<div class="note_item" id='magicparlabel-108'><span class="note_label">Note 10.</span>
 We introduce the concept of Gaussian process regression in the machine learning framework below.</div>
 </div>
-<div class='standard' id='magicparlabel-113'>
+<div class='standard' id='magicparlabel-109'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-114'><span class="note_label">Note 11.</span>
+<div class="note_item" id='magicparlabel-110'><span class="note_label">Note 11.</span>
 Consider the predictive rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>h</mi>
@@ -2027,7 +2027,7 @@ Consider the predictive rule <math xmlns='http://www.w3.org/1998/Math/MathML'>
 . </div>
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-115'><span class="example_label">Example 12.</span>
+<div class="example_item" id='magicparlabel-111'><span class="example_label">Example 12.</span>
 Figure <a href="#fig_True">a</a> shows a function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3B7;</mi>
@@ -2058,16 +2058,16 @@ Figure <a href="#fig_True">a</a> shows a function <math xmlns='http://www.w3.org
  </mrow>
 </mrow>
 </math>
-, we collect training data set as in Figure <a href="#fig_Training_Examples">b</a>. <div class='float-figure'><div class='plain_layout' id='magicparlabel-119'>  </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-123'><img style='width:30%;' src='e_b91564e74747_Ex_real_fun.png' alt='image: e_b91564e74747_Ex_real_fun.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_True" /></span></div>
+, we collect training data set as in Figure <a href="#fig_Training_Examples">b</a>. <div class='float-figure'><div class='plain_layout' id='magicparlabel-115'>  </div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-119'><img style='width:30%;' src='e_b91564e74747_Ex_real_fun.png' alt='image: e_b91564e74747_Ex_real_fun.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_True" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-135'><img style='width:30%;' src='e_a865ca4664c4_Ex_real_fun_data.png' alt='image: e_a865ca4664c4_Ex_real_fun_data.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_Training_Examples" />  </span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-131'><img style='width:30%;' src='e_a865ca4664c4_Ex_real_fun_data.png' alt='image: e_a865ca4664c4_Ex_real_fun_data.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_Training_Examples" />  </span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-151'><img style='width:30%;' src='e_96edcfbd33d9_Ex_CovFun_Gaussian_realizations_path.png' alt='image: e_96edcfbd33d9_Ex_CovFun_Gaussian_realizations_path.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig_Training_Examples_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-147'><img style='width:30%;' src='e_96edcfbd33d9_Ex_CovFun_Gaussian_realizations_path.png' alt='image: e_96edcfbd33d9_Ex_CovFun_Gaussian_realizations_path.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  <a id="fig_Training_Examples_1" /></span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-164'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  A toy example. <a href="#fig_True">(a)</a> shows the true <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='plain_layout' id='magicparlabel-160'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  A toy example. <a href="#fig_True">(a)</a> shows the true <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3B7;</mi>
  <mrow>
@@ -2159,11 +2159,11 @@ Figure <a href="#fig_True">a</a> shows a function <math xmlns='http://www.w3.org
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-173'>
+<div class='standard' id='magicparlabel-169'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-174'><span class="note_label">Note 13.</span>
+<div class="note_item" id='magicparlabel-170'><span class="note_label">Note 13.</span>
 For training purposes, assume there is available a set of observables <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msubsup>
  <mrow>
@@ -2763,11 +2763,11 @@ As <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-179'>
+<div class='standard' id='magicparlabel-175'>
 <br />
 </div>
 <div class='notation'>
-<div class="notation_item" id='magicparlabel-180'><span class="notation_label">Notation 14.</span>
+<div class="notation_item" id='magicparlabel-176'><span class="notation_label">Notation 14.</span>
 From now on, to easy the notation, <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
@@ -2812,11 +2812,11 @@ From now on, to easy the notation, <math xmlns='http://www.w3.org/1998/Math/Math
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-181'>
+<div class='standard' id='magicparlabel-177'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-182'><span class="note_label">Note 15.</span>
+<div class="note_item" id='magicparlabel-178'><span class="note_label">Note 15.</span>
 A realization of <a href="#eq__13">(2.2)</a> (with ref to Fig <a href="#fig_Training_Examples_1">c</a>) can be simulated by setting a finite vector <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -2924,11 +2924,11 @@ A realization of <a href="#eq__13">(2.2)</a> (with ref to Fig <a href="#fig_Trai
 </math>
 . See Fig <a href="#fig_Training_Examples_1">c</a>, and the R code provided int he caption.</div>
 </div>
-<div class='standard' id='magicparlabel-183'>
+<div class='standard' id='magicparlabel-179'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-184'><span class="note_label">Note 16.</span>
+<div class="note_item" id='magicparlabel-180'><span class="note_label">Note 16.</span>
 Consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -3251,11 +3251,11 @@ Consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-189'>
+<div class='standard' id='magicparlabel-185'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-190'><span class="note_label">Note 17.</span>
+<div class="note_item" id='magicparlabel-186'><span class="note_label">Note 17.</span>
 <a id="note_Consider__as" /> The conditional distribution of <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -3608,11 +3608,11 @@ Consider <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-191'>
+<div class='standard' id='magicparlabel-187'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-192'><span class="note_label">Note 18.</span>
+<div class="note_item" id='magicparlabel-188'><span class="note_label">Note 18.</span>
 Comparing <a href="#eq__9">(2.6)</a> with <a href="#eq__1">(1.4)</a>, the extra <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo stretchy='false'>+</mo>
@@ -3676,11 +3676,11 @@ Comparing <a href="#eq__9">(2.6)</a> with <a href="#eq__1">(1.4)</a>, the extra 
 </math>
 <a href="#note_The_predictive_distribution">4</a>.</div>
 </div>
-<div class='standard' id='magicparlabel-193'>
+<div class='standard' id='magicparlabel-189'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-194'><span class="note_label">Note 19.</span>
+<div class="note_item" id='magicparlabel-190'><span class="note_label">Note 19.</span>
 Because <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
  <mi>X</mi>
@@ -4047,15 +4047,15 @@ Because <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 , <a href="#eq__7">(2.8)</a> results as the first block of <a href="#eq__10">(2.5)</a>, and <a href="#eq__8">(2.9)</a> results as the top off-diagonal block of <a href="#eq__9">(2.6)</a>.</div>
 </div>
-<div class='standard' id='magicparlabel-195'>
+<div class='standard' id='magicparlabel-191'>
 <br />
 </div>
 
-<div class='standard' id='magicparlabel-196'>
+<div class='standard' id='magicparlabel-192'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-197'><span class="note_label">Note 20.</span>
+<div class="note_item" id='magicparlabel-193'><span class="note_label">Note 20.</span>
 Note that the posterior expected rule at <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -4296,11 +4296,11 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 . This is in accordance to the Representation theorem (Theorem <a href="#thm__Representation_theorem__Assume">thm:(Representation-theorem)-Assume</a> in Handout 7 Kernel methods) with reference to the Bayesian linear regression (Note <a href="#note_Consider_the_predictive">2</a>).</div>
 </div>
-<div class='standard' id='magicparlabel-206'>
+<div class='standard' id='magicparlabel-202'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-207'><span class="example_label">Example 21.</span>
+<div class="example_item" id='magicparlabel-203'><span class="example_label">Example 21.</span>
 <a id="exa_Given_some_values" />Given some values for <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>&#x3C3;</mi>
@@ -4467,13 +4467,13 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </msub>
 </math>
 . <div class='float-figure'>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-215'><img style='width:33%;' src='e_abdf93dfe121_GPR-n=10-par=good.png' alt='image: e_abdf93dfe121_GPR-n=10-par=good.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_Predictive_GP" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-211'><img style='width:33%;' src='e_abdf93dfe121_GPR-n=10-par=good.png' alt='image: e_abdf93dfe121_GPR-n=10-par=good.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_Predictive_GP" /></span></div>
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-223'><img style='width:33%;' src='e_dc085d60db42_GPR-n=6-par=good.png' alt='image: e_dc085d60db42_GPR-n=6-par=good.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_Wise_choice_of_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-219'><img style='width:33%;' src='e_dc085d60db42_GPR-n=6-par=good.png' alt='image: e_dc085d60db42_GPR-n=6-par=good.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_Wise_choice_of_1" /></span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-228'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  Predictive GP regressions given different numbers of training data points, for some values of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='plain_layout' id='magicparlabel-224'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  Predictive GP regressions given different numbers of training data points, for some values of <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>&#x3C3;</mi>
  <mn>2</mn>
@@ -4503,11 +4503,11 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-233'>
+<div class='standard' id='magicparlabel-229'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-234'><span class="note_label">Note 22.</span>
+<div class="note_item" id='magicparlabel-230'><span class="note_label">Note 22.</span>
 (Related to Example <a href="#exa_Given_some_values">21</a>) Intuitively, we can imagine that the conditional <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3B7;</mi>
@@ -4538,14 +4538,14 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  examples.</div>
 </div>
-<div class='standard' id='magicparlabel-235'>
+<div class='standard' id='magicparlabel-231'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-236'><span class="section_label">3</span> <a id="sec_Training__via_Empirical" />Training (via Empirical Bayes)</h2>
+<h2 class='section' id='magicparlabel-232'><span class="section_label">3</span> <a id="sec_Training__via_Empirical" />Training (via Empirical Bayes)</h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-237'><span class="note_label">Note 23.</span>
+<div class="note_item" id='magicparlabel-233'><span class="note_label">Note 23.</span>
 Recall that the mean and covariance functions in <a href="#eq__5">(2.7)</a> depend on tunable parameters <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>&#x3C3;</mi>
@@ -4562,7 +4562,7 @@ Recall that the mean and covariance functions in <a href="#eq__5">(2.7)</a> depe
 <mn>6</mn>
 </math>
  examples where the tunable parameters are different.<div class='float-figure'>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-245'><img style='width:33%;' src='e_02903cdf984c_GPR-n=6-par=bad.png' alt='image: e_02903cdf984c_GPR-n=6-par=bad.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Careless choice of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-241'><img style='width:33%;' src='e_02903cdf984c_GPR-n=6-par=bad.png' alt='image: e_02903cdf984c_GPR-n=6-par=bad.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Careless choice of <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3D5;</mi>
 </math>
  Here <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -4586,7 +4586,7 @@ Recall that the mean and covariance functions in <a href="#eq__5">(2.7)</a> depe
 
 
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-254'><img style='width:33%;' src='e_dc085d60db42_GPR-n=6-par=good.png' alt='image: e_dc085d60db42_GPR-n=6-par=good.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_Wise_choice_of" />Wise choice of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-250'><img style='width:33%;' src='e_dc085d60db42_GPR-n=6-par=good.png' alt='image: e_dc085d60db42_GPR-n=6-par=good.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_Wise_choice_of" />Wise choice of <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3D5;</mi>
 </math>
  Here <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -4610,7 +4610,7 @@ Recall that the mean and covariance functions in <a href="#eq__5">(2.7)</a> depe
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-259'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  <a id="fig_Sensitivity_in_the" />Sensitivity in the tunable parameters <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='plain_layout' id='magicparlabel-255'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  <a id="fig_Sensitivity_in_the" />Sensitivity in the tunable parameters <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3D5;</mi>
 </math>
 . Here <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -4636,11 +4636,11 @@ Recall that the mean and covariance functions in <a href="#eq__5">(2.7)</a> depe
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-265'>
+<div class='standard' id='magicparlabel-261'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-266'><span class="note_label">Note 24.</span>
+<div class="note_item" id='magicparlabel-262'><span class="note_label">Note 24.</span>
 The marginal likelihood <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>f</mi>
@@ -4741,11 +4741,11 @@ The marginal likelihood <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-267'>
+<div class='standard' id='magicparlabel-263'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-268'><span class="note_label">Note 25.</span>
+<div class="note_item" id='magicparlabel-264'><span class="note_label">Note 25.</span>
 Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
@@ -4877,7 +4877,7 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
  </mrow>
 </mrow>
 </math>
- <div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-272'>Equivalently Empirical Bayes training procedures</div>
+ <div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-268'>Equivalently Empirical Bayes training procedures</div>
 </div></div>. Hence, we need to minimize<a id="eq__12" />
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -5120,12 +5120,12 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-273'>
+<div class='standard' id='magicparlabel-269'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-274'><span class="note_label">Note 26.</span>
-<a href="#eq__12">(3.2)</a> can be solved via GD (Algorithm <a href="#alg_Gradient_descent_algorithm">alg:Gradient-descent-algorithm</a> Handout 2 Gradient descent), or the Stochastic Gradient (Handout 3: Stochastic gradient descent) as the required gradient ca be easily computed as<div class='marginal'><div class='plain_layout' id='magicparlabel-278'>No need to be memorized</div>
+<div class="note_item" id='magicparlabel-270'><span class="note_label">Note 26.</span>
+<a href="#eq__12">(3.2)</a> can be solved via GD (Algorithm <a href="#alg_Gradient_descent_algorithm">alg:Gradient-descent-algorithm</a> Handout 2 Gradient descent), or the Stochastic Gradient (Handout 3: Stochastic gradient descent) as the required gradient ca be easily computed as<div class='marginal'><div class='plain_layout' id='magicparlabel-274'>No need to be memorized</div>
 </div>
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -5477,19 +5477,19 @@ Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-279'>
+<div class='standard' id='magicparlabel-275'>
 <br />
 </div>
 
 
 </section>
 <section>
-<h2 class='section' id='magicparlabel-290'><span class="section_label">4</span> <a id="sec_Examples_of_Covariance" />Examples of Covariance Functions</h2>
-<div class='standard' id='magicparlabel-291'>
+<h2 class='section' id='magicparlabel-286'><span class="section_label">4</span> <a id="sec_Examples_of_Covariance" />Examples of Covariance Functions</h2>
+<div class='standard' id='magicparlabel-287'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-292'><span class="note_label">Note 27.</span>
+<div class="note_item" id='magicparlabel-288'><span class="note_label">Note 27.</span>
 The covariance function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>C</mi>
@@ -5538,25 +5538,25 @@ The covariance function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  change together. </div>
 </div>
+<div class='standard' id='magicparlabel-289'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-290'><span class="note_label">Note 28.</span>
+Covariance function is a functional parameter of the GP prior <a href="#eq__13">(2.2)</a>. Different covarince functions represent different properties, hence they impose different prior info in the GP regression model; they are crusial parameters. </div>
+</div>
+<div class='standard' id='magicparlabel-291'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-292'><span class="note_label">Note 29.</span>
+Any positive definite Kernel as described in Section <a href="#sec_Construction_of_kernels">sec:Construction-of-kernels</a> in Handout 7 Kernel methods can be used as a covarince function. Consequently kernel construction approached and theories introduced can be use for the covariance functions as well.</div>
+</div>
 <div class='standard' id='magicparlabel-293'>
 <br />
 </div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-294'><span class="note_label">Note 28.</span>
-Covariance function is a functional parameter of the GP prior <a href="#eq__13">(2.2)</a>. Different covarince functions represent different properties, hence they impose different prior info in the GP regression model; they are crusial parameters. </div>
-</div>
-<div class='standard' id='magicparlabel-295'>
-<br />
-</div>
-<div class='note'>
-<div class="note_item" id='magicparlabel-296'><span class="note_label">Note 29.</span>
-Any positive definite Kernel as described in Section <a href="#sec_Construction_of_kernels">sec:Construction-of-kernels</a> in Handout 7 Kernel methods can be used as a covarince function. Consequently kernel construction approached and theories introduced can be use for the covariance functions as well.</div>
-</div>
-<div class='standard' id='magicparlabel-297'>
-<br />
-</div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-298'><span class="definition_label">Definition 30.</span>
+<div class="definition_item" id='magicparlabel-294'><span class="definition_label">Definition 30.</span>
 Stationary covariance function is called a covariance function <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>C</mi>
@@ -5622,11 +5622,11 @@ Stationary covariance function is called a covariance function <math xmlns='http
 </math>
  is a function of their distance and only. </div>
 </div>
-<div class='standard' id='magicparlabel-299'>
+<div class='standard' id='magicparlabel-295'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-300'><span class="note_label">Note 31.</span>
+<div class="note_item" id='magicparlabel-296'><span class="note_label">Note 31.</span>
 <a id="note_a_one_dimensional_Gaussian" />In <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mn>1</mn>
 </math>
@@ -5748,15 +5748,15 @@ Stationary covariance function is called a covariance function <math xmlns='http
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-301'>
+<div class='standard' id='magicparlabel-297'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-302'><span class="note_label">Note 32.</span>
+<div class="note_item" id='magicparlabel-298'><span class="note_label">Note 32.</span>
 <a id="note_Popular_covariance_functions" />Popular covariance functions are</div>
 <dl class='description'>
 <dt class="description_label">Gaussian&#xA0;covariance&#xA0;function</dt>
-<dd class="description_item" id='magicparlabel-303'> given as 
+<dd class="description_item" id='magicparlabel-299'> given as 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <mi>C</mi>
@@ -5792,12 +5792,12 @@ Stationary covariance function is called a covariance function <math xmlns='http
 </math>
 
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-304'>It is infinitely differentiable, which means that the GP is very smooth. </li>
-<li class="itemize_item" id='magicparlabel-305'>The parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-300'>It is infinitely differentiable, which means that the GP is very smooth. </li>
+<li class="itemize_item" id='magicparlabel-301'>The parameter <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3D5;</mi>
 </math>
  is called lengthscale. </li>
-<li class="itemize_item" id='magicparlabel-306'>The number of upcrossing at level <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-302'>The number of upcrossing at level <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>u</mi>
 </math>
  is <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -5837,7 +5837,7 @@ Stationary covariance function is called a covariance function <math xmlns='http
  represents more upcrossings, hence represents smaller scale dependences</li>
 </ul>
 </dd><dt class="description_label">Exponential&#xA0;Covariance&#xA0;Function</dt>
-<dd class="description_item" id='magicparlabel-307'> given as 
+<dd class="description_item" id='magicparlabel-303'> given as 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <mi>C</mi>
@@ -5868,7 +5868,7 @@ Stationary covariance function is called a covariance function <math xmlns='http
 </math>
 
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-308'>It is not differentiable at <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-304'>It is not differentiable at <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>r</mi>
  <mo stretchy='false'>=</mo>
@@ -5878,7 +5878,7 @@ Stationary covariance function is called a covariance function <math xmlns='http
 </li>
 </ul>
 </dd><dt class="description_label">Matern&#xA0;Class&#xA0;of&#xA0;Covariance&#xA0;Functions</dt>
-<dd class="description_item" id='magicparlabel-309'> given as
+<dd class="description_item" id='magicparlabel-305'> given as
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mrow>
  <msub>
@@ -5982,11 +5982,11 @@ Stationary covariance function is called a covariance function <math xmlns='http
 . </dd>
 </dl>
 </div>
-<div class='standard' id='magicparlabel-310'>
+<div class='standard' id='magicparlabel-306'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-311'><span class="example_label">Example 33.</span>
+<div class="example_item" id='magicparlabel-307'><span class="example_label">Example 33.</span>
 We investigate the effect of choosing a different length scale <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3D5;</mi>
 </math>
@@ -6009,15 +6009,15 @@ We investigate the effect of choosing a different length scale <math xmlns='http
  </mrow>
 </mrow>
 </math>
- may have strong small scale variation (eg changes more frequently). <div class='float-figure'><div class='plain_layout' id='magicparlabel-315'> <span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.1:  <a id="fig_Investigation_of_the" />Investigation of the effect of choosing a different length scale <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ may have strong small scale variation (eg changes more frequently). <div class='float-figure'><div class='plain_layout' id='magicparlabel-311'> <span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.1:  <a id="fig_Investigation_of_the" />Investigation of the effect of choosing a different length scale <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x3D5;</mi>
 </math>
 </span></div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-319'><img style='width:33%;' src='e_2aba1d89e364_Ex_CovFun_Gaussian_scale_distance.png' alt='image: e_2aba1d89e364_Ex_CovFun_Gaussian_scale_distance.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-315'><img style='width:33%;' src='e_2aba1d89e364_Ex_CovFun_Gaussian_scale_distance.png' alt='image: e_2aba1d89e364_Ex_CovFun_Gaussian_scale_distance.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig__1" /></span></div>
 
 
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-328'><img style='width:33%;' src='e_1e17a12db625_Ex_CovFun_Gaussian_scale_path.png' alt='image: e_1e17a12db625_Ex_CovFun_Gaussian_scale_path.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1" /></span></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-324'><img style='width:33%;' src='e_1e17a12db625_Ex_CovFun_Gaussian_scale_path.png' alt='image: e_1e17a12db625_Ex_CovFun_Gaussian_scale_path.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig__1_1" /></span></div>
 </div>
 
 
@@ -6025,11 +6025,11 @@ We investigate the effect of choosing a different length scale <math xmlns='http
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-338'>
+<div class='standard' id='magicparlabel-334'>
 <br />
 </div>
 <div class='example'>
-<div class="example_item" id='magicparlabel-339'><span class="example_label">Example 34.</span>
+<div class="example_item" id='magicparlabel-335'><span class="example_label">Example 34.</span>
 We investigate the effect of choosing a different covariance functions: Gaussian, Exponential, Matern <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>3</mn>
@@ -6046,20 +6046,20 @@ We investigate the effect of choosing a different covariance functions: Gaussian
  <mn>2</mn>
 </mrow>
 </math>
-) &#8217;s behavior is between those of Gaussian and Exponential, as expected.<div class='float-figure'><div class='plain_layout' id='magicparlabel-343'> </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-347'><img style='width:33%;' src='e_33e7a19c8551_Ex_compare_CovFum_distance.png' alt='image: e_33e7a19c8551_Ex_compare_CovFum_distance.png' /></div>
+) &#8217;s behavior is between those of Gaussian and Exponential, as expected.<div class='float-figure'><div class='plain_layout' id='magicparlabel-339'> </div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-343'><img style='width:33%;' src='e_33e7a19c8551_Ex_compare_CovFum_distance.png' alt='image: e_33e7a19c8551_Ex_compare_CovFum_distance.png' /></div>
 
-<div class='plain_layout' id='magicparlabel-348'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_" /></span></div>
+<div class='plain_layout' id='magicparlabel-344'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_" /></span></div>
 
 
 </div>
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-361'><img style='width:33%;' src='e_754362fbcb4e_Ex_compare_CovFum_path.png' alt='image: e_754362fbcb4e_Ex_compare_CovFum_path.png' /></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-357'><img style='width:33%;' src='e_754362fbcb4e_Ex_compare_CovFum_path.png' alt='image: e_754362fbcb4e_Ex_compare_CovFum_path.png' /></div>
 
-<div class='plain_layout' id='magicparlabel-362'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_GP_realizations" /> </span></div>
+<div class='plain_layout' id='magicparlabel-358'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  <a id="fig_GP_realizations" /> </span></div>
 </div>
 
 
-<div class='plain_layout' id='magicparlabel-371'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.2:  <a id="fig_Snapshots_of_different" />Investigation of the effect of choosing a different covariance functions: Gaussian, Exponential, Matern <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='plain_layout' id='magicparlabel-367'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 4.2:  <a id="fig_Snapshots_of_different" />Investigation of the effect of choosing a different covariance functions: Gaussian, Exponential, Matern <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>3</mn>
  <mo stretchy='false'>/</mo>
@@ -6126,11 +6126,11 @@ We investigate the effect of choosing a different covariance functions: Gaussian
 </div>
 </div>
 </div>
-<div class='standard' id='magicparlabel-377'>
+<div class='standard' id='magicparlabel-373'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-378'><span class="note_label">Note 35.</span>
+<div class="note_item" id='magicparlabel-374'><span class="note_label">Note 35.</span>
 Anisotropic versions of these isotropic covariance functions can be created anisotropy by setting <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>r</mi>
@@ -6184,9 +6184,9 @@ Anisotropic versions of these isotropic covariance functions can be created anis
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-379'><span class="section_label">5</span> <a id="sec_Practical_maters" />Practical maters</h2>
+<h2 class='section' id='magicparlabel-375'><span class="section_label">5</span> <a id="sec_Practical_maters" />Practical maters</h2>
 <div class='note'>
-<div class="note_item" id='magicparlabel-380'><span class="note_label">Note 36.</span>
+<div class="note_item" id='magicparlabel-376'><span class="note_label">Note 36.</span>
 One may consider some low degree polynomial form <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>&#x3BC;</mi>
@@ -6310,11 +6310,11 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-381'>
+<div class='standard' id='magicparlabel-377'>
 <br />
 </div>
 <div class='note'>
-<div class="note_item" id='magicparlabel-382'><span class="note_label">Note 37.</span>
+<div class="note_item" id='magicparlabel-378'><span class="note_label">Note 37.</span>
 (Geostistical model) Thinking as a statistician, one may decompose <a href="#eq__13">(2.2)</a> as 
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
 <mtable displaystyle='true' columnalign='right left '>
@@ -6491,54 +6491,54 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
  represents large scale dependence (about very distant inputs points). </div>
 </div>
-<div class='standard' id='magicparlabel-383'>
+<div class='standard' id='magicparlabel-379'>
 <br />
 </div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-384'><span class="section_label">6</span> <a id="sec_Practice__implementation__and" />Practice, implementation, and code</h2>
-<div class='standard' id='magicparlabel-385'>Below is some practical examples on the implementation of Gaussian process regression in R programming environment by using the R packages: DiceKriging and DiceOptim. </div>
+<h2 class='section' id='magicparlabel-380'><span class="section_label">6</span> <a id="sec_Practice__implementation__and" />Practice, implementation, and code</h2>
+<div class='standard' id='magicparlabel-381'>Below is some practical examples on the implementation of Gaussian process regression in R programming environment by using the R packages: DiceKriging and DiceOptim. </div>
 <ul class='lyxitem lyxitemi'>
-<li class="itemize_item" id='magicparlabel-386'>Roustant, O., Ginsbourger, D., &amp; Deville, Y. (2012). DiceKriging, DiceOptim: Two R packages for the analysis of computer experiments by kriging-based metamodeling and optimization. Journal of statistical software, 51, 1-55.</li>
+<li class="itemize_item" id='magicparlabel-382'>Roustant, O., Ginsbourger, D., &amp; Deville, Y. (2012). DiceKriging, DiceOptim: Two R packages for the analysis of computer experiments by kriging-based metamodeling and optimization. Journal of statistical software, 51, 1-55.</li>
 </ul>
-<div class='standard' id='magicparlabel-387'>The examples below were created for the undergraduate programme SURF 2016 at Purdue University (July 8, 2016) however they are suitable to the course for your practice.</div>
+<div class='standard' id='magicparlabel-383'>The examples below were created for the undergraduate programme SURF 2016 at Purdue University (July 8, 2016) however they are suitable to the course for your practice.</div>
 
-<div class='standard' id='magicparlabel-388'>&#xA0;</div>
+<div class='standard' id='magicparlabel-384'>&#xA0;</div>
 
-<div class='standard' id='magicparlabel-389'>Toy example </div>
+<div class='standard' id='magicparlabel-385'>Toy example </div>
 
-<div class='standard' id='magicparlabel-390'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Numerical_example.ipynb</span> </div>
+<div class='standard' id='magicparlabel-386'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Numerical_example.ipynb</span> </div>
 
-<div class='standard' id='magicparlabel-395'>&#xA0;</div>
+<div class='standard' id='magicparlabel-391'>&#xA0;</div>
 
-<div class='standard' id='magicparlabel-396'>The Piston Simulation function model in 2D </div>
+<div class='standard' id='magicparlabel-392'>The Piston Simulation function model in 2D </div>
 
-<div class='standard' id='magicparlabel-397'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_2D.ipynb</span></div>
+<div class='standard' id='magicparlabel-393'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_2D.ipynb</span></div>
 
-<div class='standard' id='magicparlabel-402'>&#xA0;</div>
+<div class='standard' id='magicparlabel-398'>&#xA0;</div>
 
-<div class='standard' id='magicparlabel-403'>Practice Catalytic Reaction 5D</div>
+<div class='standard' id='magicparlabel-399'>Practice Catalytic Reaction 5D</div>
 
-<div class='standard' id='magicparlabel-404'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_CatalyticReaction_5D_solution.ipynb</span></div>
+<div class='standard' id='magicparlabel-400'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_CatalyticReaction_5D_solution.ipynb</span></div>
 
-<div class='standard' id='magicparlabel-409'>&#xA0;</div>
+<div class='standard' id='magicparlabel-405'>&#xA0;</div>
 
-<div class='standard' id='magicparlabel-410'>Practice Piston 7D</div>
+<div class='standard' id='magicparlabel-406'>Practice Piston 7D</div>
 
-<div class='standard' id='magicparlabel-411'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_Piston_7D_solution.ipynb</span></div>
+<div class='standard' id='magicparlabel-407'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_Piston_7D_solution.ipynb</span></div>
 
-<div class='standard' id='magicparlabel-416'>&#xA0;</div>
+<div class='standard' id='magicparlabel-412'>&#xA0;</div>
 
-<div class='standard' id='magicparlabel-417'>Practice Robot Arm 8D</div>
+<div class='standard' id='magicparlabel-413'>Practice Robot Arm 8D</div>
 
-<div class='standard' id='magicparlabel-418'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_Robot_Arm_8D_solution.ipynbb</span></div>
+<div class='standard' id='magicparlabel-414'><span class='flex_url'>https://github.com/georgios-stats/Intro_GPR_SURF_2016/blob/master/Practice_Robot_Arm_8D_solution.ipynbb</span></div>
 
-<div class='standard' id='magicparlabel-423'>&#xA0;</div>
+<div class='standard' id='magicparlabel-419'>&#xA0;</div>
 
-<div class='standard' id='magicparlabel-432'><br /></div>
+<div class='standard' id='magicparlabel-428'><br /></div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-433'><span class="section_label">A</span> <a id="sec_Multivariate_Normal_distribution" />Multivariate Normal distribution<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-437'>More detailed material about the Multivariate Normal distribution can be found in the can be found in &#8220;Handout 2: Revision in mixture of probability distributions&#8221; of the module &#8220;Bayesian Statistics III/IV (MATH3341/4031)&#8221; Michaelmas term, 2021 available from <span class='flex_url'>https://github.com/georgios-stats/Bayesian_Statistics_Michaelmas_2021/blob/main/Lecture_handouts/02_Revision_in_mixture_of_probability_distributions.pdf</span>. The material in this section is just a sub-set of the statements in the referenced handout.</div>
+<h2 class='section' id='magicparlabel-429'><span class="section_label">A</span> <a id="sec_Multivariate_Normal_distribution" />Multivariate Normal distribution<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-433'>More detailed material about the Multivariate Normal distribution can be found in the can be found in &#8220;Handout 2: Revision in mixture of probability distributions&#8221; of the module &#8220;Bayesian Statistics III/IV (MATH3341/4031)&#8221; Michaelmas term, 2021 available from <span class='flex_url'>https://github.com/georgios-stats/Bayesian_Statistics_Michaelmas_2021/blob/main/Lecture_handouts/02_Revision_in_mixture_of_probability_distributions.pdf</span>. The material in this section is just a sub-set of the statements in the referenced handout.</div>
 </div></div> <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -6564,7 +6564,7 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
 </h2>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-442'><span class="definition_label">Definition 38.</span>
+<div class="definition_item" id='magicparlabel-438'><span class="definition_label">Definition 38.</span>
 <a id="def_Random_variable_" /> A <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>d</mi>
 </math>
@@ -6606,11 +6606,11 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
  has a univariate Normal (Gaussian) distribution.</div>
 </div>
-<div class='standard' id='magicparlabel-443'>
+<div class='standard' id='magicparlabel-439'>
 <br />
 </div>
 <div class='definition'>
-<div class="definition_item" id='magicparlabel-444'><span class="definition_label">Definition 39.</span>
+<div class="definition_item" id='magicparlabel-440'><span class="definition_label">Definition 39.</span>
 <a id="rem_We_denote_the" />We denote the <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>d</mi>
 </math>
@@ -6643,11 +6643,11 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-445'>
+<div class='standard' id='magicparlabel-441'>
 <br />
 </div>
 <div class='notation'>
-<div class="notation_item" id='magicparlabel-446'><span class="notation_label">Notation 40.</span>
+<div class="notation_item" id='magicparlabel-442'><span class="notation_label">Notation 40.</span>
 <a id="rem_We_denote_the_1" />The <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>d</mi>
 </math>
@@ -6670,11 +6670,11 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-447'>
+<div class='standard' id='magicparlabel-443'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-448'><span class="proposition_label">Proposition 41.</span>
+<div class="proposition_item" id='magicparlabel-444'><span class="proposition_label">Proposition 41.</span>
 <a id="prop_The_following_are" />Let random variable <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -6764,11 +6764,11 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
 . </div>
 </div>
-<div class='standard' id='magicparlabel-453'>
+<div class='standard' id='magicparlabel-449'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-454'><span class="proposition_label">Proposition 42.</span>
+<div class="proposition_item" id='magicparlabel-450'><span class="proposition_label">Proposition 42.</span>
 <a id="prop_Let_a__dimensional" />&#xA0;Let a <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>d</mi>
 </math>
@@ -6796,7 +6796,7 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </math>
 . </div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-455'><i>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-451'><i>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>y</mi>
  <mo stretchy='false'>=</mo>
@@ -6871,7 +6871,7 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
 </mrow>
 </math>
 . </i></li>
-<li class="enumerate_item" id='magicparlabel-456'><i>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-452'><i>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
  <mo stretchy='false'>=</mo>
@@ -6914,18 +6914,18 @@ One may consider some low degree polynomial form <math xmlns='http://www.w3.org/
  are zero.</i></li>
 </ol>
 </div>
-<div class='standard' id='magicparlabel-461'>
+<div class='standard' id='magicparlabel-457'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-462'><span class="proposition_label">Proposition 43.</span>
+<div class="proposition_item" id='magicparlabel-458'><span class="proposition_label">Proposition 43.</span>
 Any sub-vector of a vector with multivariate Normal distribution has a multivariate Normal distribution. </div>
 </div>
-<div class='standard' id='magicparlabel-467'>
+<div class='standard' id='magicparlabel-463'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-468'><span class="proposition_label">Proposition 44.</span>
+<div class="proposition_item" id='magicparlabel-464'><span class="proposition_label">Proposition 44.</span>
 <a id="prop_Let___Consider" /> [Marginalization &amp; conditioning]  Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
@@ -7098,7 +7098,7 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
  Then:</div>
 <ol class='lyxenum enumi'>
-<li class="enumerate_item" id='magicparlabel-477'><i>For the marginal, it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-473'><i>For the marginal, it is <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>x</mi>
@@ -7130,7 +7130,7 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </mrow>
 </math>
 . </i></li>
-<li class="enumerate_item" id='magicparlabel-478'><i>For the conditional, if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-474'><i>For the conditional, if <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>&#x3A3;</mi>
@@ -7281,11 +7281,11 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </i></li>
 </ol>
 </div>
-<div class='standard' id='magicparlabel-492'>
+<div class='standard' id='magicparlabel-488'>
 <br />
 </div>
 <div class='proposition'>
-<div class="proposition_item" id='magicparlabel-493'><span class="proposition_label">Proposition 45.</span>
+<div class="proposition_item" id='magicparlabel-489'><span class="proposition_label">Proposition 45.</span>
 The density function of the <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>d</mi>
 </math>
@@ -7394,7 +7394,9 @@ The density function of the <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-514'>
+
+
+<div class='standard' id='magicparlabel-507'>
 <br />
 </div>
 </section>
