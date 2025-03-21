@@ -1048,7 +1048,7 @@ In Note <a href="#note_For_every_class">9</a>(<a href="#enu_For_each_binary">2.<
  of input space that are ambiguously classified. </div>
 </div>
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-71'><img style='width:40%;' src='e_d5ca59194cce_one-vs-all-issue.png' alt='image: e_d5ca59194cce_one-vs-all-issue.png' /></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-71'><img style='width:40%;' src='e_93db66b2ccfa_one-vs-all-issue.png' alt='image: e_93db66b2ccfa_one-vs-all-issue.png' /></div>
 
 <div class='plain_layout' id='magicparlabel-72'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  <a id="fig_Two_discriminants_" /> Two binary classification rules <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
@@ -1515,7 +1515,7 @@ The one-versus-one approach involves the introduction of <math xmlns='http://www
 The one-versus-one approach suffers from the problem of ambiguous regions as seen in Figure <a href="#fig_Two_discriminants__1">2.2</a>. </div>
 </div>
 
-<div class='float-figure'><div class='plain_layout' id='magicparlabel-93'><img style='width:40%;' src='e_99093b39504f_one-vs-one-issue.png' alt='image: e_99093b39504f_one-vs-one-issue.png' /></div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-93'><img style='width:40%;' src='e_f3c8dee9efa8_one-vs-one-issue.png' alt='image: e_f3c8dee9efa8_one-vs-one-issue.png' /></div>
 
 <div class='plain_layout' id='magicparlabel-94'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  <a id="fig_Two_discriminants__1" /> three binary classification rules each of which is used to separate a pair of classes <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msub>
@@ -1763,7 +1763,7 @@ In the multi-class setting, we extend the binary SVM idea as follows. </div>
 </math>
 . </li>
 <li class="itemize_item" id='magicparlabel-107'>The hypothesis class of multi-class predictors is 
-<div style = "text-align: center;"><img src="lyxpreviewycxnfN1.png" alt="Mathematical Equation" /></div>
+<div style = "text-align: center;"><img src="lyxpreviewiFcoNI1.png" alt="Mathematical Equation" /></div>
 </li>
 </ul>
 </div>
@@ -2161,7 +2161,7 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
          <mi>x</mi>
          <mo>)</mo>
         </mrow>
-        <mo stretchy='false'>=</mo>
+        <mo>&#x2260;</mo>
         <mi>y</mi>
        </mrow>
       </mtd>
@@ -2184,7 +2184,7 @@ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
          <mi>x</mi>
          <mo>)</mo>
         </mrow>
-        <mo>&#x2260;</mo>
+        <mo stretchy='false'>=</mo>
         <mi>y</mi>
        </mrow>
       </mtd>
@@ -4209,15 +4209,82 @@ if <math xmlns='http://www.w3.org/1998/Math/MathML'>
   <mtd>
    <mrow>
     <mo stretchy='false'>=</mo>
-    <msub>
-     <mi>&#x2207;</mi>
-     <mi>w</mi>
-    </msub>
     <mrow>
-     <mo>&#x27E8;</mo>
+     <mo>{</mo>
      <mrow>
-      <mi>w</mi>
-      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>&#x2207;</mi>
+       <mi>w</mi>
+      </msub>
+      <mrow>
+       <mo>&#x27E8;</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <msup>
+           <mi>x</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+          <mo stretchy='false'>,</mo>
+          <mover>
+           <mi>y</mi>
+           <mo stretchy='true'>&#x02C6;</mo>
+          </mover>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>-</mo>
+        <mi>&#x3A8;</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <msup>
+           <mi>x</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+          <mo stretchy='false'>,</mo>
+          <msup>
+           <mi>y</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>&#x27E9;</mo>
+      </mrow>
+     </mrow>
+     <mo>}</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mrow>
+     <mo>{</mo>
+     <mrow>
       <mi>&#x3A8;</mi>
       <mrow>
        <mo>(</mo>
@@ -4264,62 +4331,7 @@ if <math xmlns='http://www.w3.org/1998/Math/MathML'>
        <mo>)</mo>
       </mrow>
      </mrow>
-     <mo>&#x27E9;</mo>
-    </mrow>
-   </mrow>
-  </mtd>
- </mtr>
- <mtr>
-  <mtd>
-   <mrow/>
-  </mtd>
-  <mtd>
-   <mrow>
-    <mo stretchy='false'>=</mo>
-    <mi>&#x3A8;</mi>
-    <mrow>
-     <mo>(</mo>
-     <mrow>
-      <msup>
-       <mi>x</mi>
-       <mrow>
-        <mo>(</mo>
-        <mi>t</mi>
-        <mo>)</mo>
-       </mrow>
-      </msup>
-      <mo stretchy='false'>,</mo>
-      <mover>
-       <mi>y</mi>
-       <mo stretchy='true'>&#x02C6;</mo>
-      </mover>
-     </mrow>
-     <mo>)</mo>
-    </mrow>
-    <mo stretchy='false'>-</mo>
-    <mi>&#x3A8;</mi>
-    <mrow>
-     <mo>(</mo>
-     <mrow>
-      <msup>
-       <mi>x</mi>
-       <mrow>
-        <mo>(</mo>
-        <mi>t</mi>
-        <mo>)</mo>
-       </mrow>
-      </msup>
-      <mo stretchy='false'>,</mo>
-      <msup>
-       <mi>y</mi>
-       <mrow>
-        <mo>(</mo>
-        <mi>t</mi>
-        <mo>)</mo>
-       </mrow>
-      </msup>
-     </mrow>
-     <mo>)</mo>
+     <mo>}</mo>
     </mrow>
    </mrow>
   </mtd>
