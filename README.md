@@ -45,10 +45,7 @@ Below you can find:
 
 + [Computer lab notes](./README.md#computer-lab-notes)  
 
-+ [Exercise sheets](./README.md#exercise-sheets-and-homework)  
-<!--
-+ [Practical computer based tests](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/blob/main/README.md#practical-first-computer-based-tests)  
--->
++ [Exercise sheets](./README.md#exercise-sheets-and-homework) 
 
 + [Downloading instructions](./README.md#downloading-instructions)     
 
