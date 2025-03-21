@@ -1,0 +1,6247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="generator" content="LyX 2.4.2.1" />
+<title>LyX Document</title>
+<style>
+/* Layout-provided Styles */
+div.standard {
+text-align: left;
+
+}
+div.plain_layout {
+text-align: left;
+
+}
+h3.subsection_ {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+ol.enumi   { list-style-type: decimal; }
+ol.enumii  { list-style-type: lower-latin; }
+ol.enumiii { list-style-type: lower-roman; }
+ol.enumiv  { list-style-type: upper-latin; }
+h2.section {
+font-weight: normal;
+font-style: normal;
+font-variant: small-caps;
+font-size: medium;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+div.theorem {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.theorem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.problem {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.problem_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.note {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.note_label {
+font-weight: normal;
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+
+}
+div.algorithm {
+font-style: italic;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.algorithm_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.example {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.example_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+h3.subsection {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+span.subsection_label {
+font-weight: normal;
+font-size: medium;
+
+}
+ul.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+h5.paragraph_ {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.4ex;
+text-align: left;
+
+}
+div.definition {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.definition_label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
+div.Boxed {
+	border: solid thick black;
+	padding: 0.5ex;
+}
+span.foot_label {
+	vertical-align: super;
+	font-size: smaller;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.foot {
+	display: inline;
+	font-size: small;
+	font-weight: normal;
+	font-family: serif;
+	font-variant: normal;
+	font-style: normal;
+}
+div.foot_inner { display: none; }
+div.foot:hover div.foot_inner {
+	display: block;
+	border: 1px double black;
+	margin: 0em 1em;
+	padding: 1em;
+}
+span.flex_url {
+font-family: monospace;
+}
+div.float {
+	border: 2px solid black;
+	text-align: center;
+}
+div.float-caption {
+	text-align: center;
+	border: 2px solid black;
+	padding: 1ex;
+	margin: 1ex;
+}
+
+
+</style>
+</head>
+<body dir="auto">
+<div class='standard' id='magicparlabel-1'><div class='Shadowbox'>
+
+<div class='plain_layout' id='magicparlabel-10'>Machine Learning and Neural Networks (MATH3431)&#xA0;&#xA0;
+Epiphany term, 2025<div style='height:3ex'></div></div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-11'> Lecture notes <a href="#enu_Handout___Stochastic_1">enu:Handout-:-Stochastic-1</a>: Variations of stochastic gradient descent <div style='height:3ex'></div></div>
+
+<div class='plain_layout' id='magicparlabel-28'>Lecturer &amp; author: Georgios P. Karagiannis 
+<a href="mailto:georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+
+<div class='plain_layout' id='magicparlabel-29'><hr />
+<div style='height:3ex'></div></div>
+<h3 class='subsection_' id='magicparlabel-30'>Aim</h3>
+<div class='plain_layout' id='magicparlabel-31'>To introduce the stochastic gradient descent variations for restricted sets, adaptive step functions, and acceleration/variance redunction. </div>
+
+<div class='plain_layout' id='magicparlabel-32'><hr />
+<div style='height:3ex'></div></div>
+<h3 class='subsection_' id='magicparlabel-33'>Reading list &amp; references:</h3>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-44'><a id="enu_Johnson__Rie__and" /> Johnson, Rie, and Tong Zhang. "Accelerating stochastic gradient descent using predictive variance reduction." Advances in neural information processing systems 26 (2013).</li>
+<li class="enumerate_item" id='magicparlabel-45'><a id="enu_Duchi__John__Elad" /> Duchi, John, Elad Hazan, and Yoram Singer. "Adaptive subgradient methods for online learning and stochastic optimization." Journal of machine learning research 12, no. 7 (2011).</li>
+</ol>
+</div></div>
+<section>
+<h2 class='section' id='magicparlabel-52'><span class="section_label">1</span> Stochastic gradient descent with projection</h2>
+<div class='problem'>
+<div class="problem_item" id='magicparlabel-53'><span class="problem_label">Problem 1.</span>
+<a id="prob_Consider_the_minimization" /> Consider the minimization problem<a id="eq_gvbzvcb_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <mo>arg</mo>
+    <munder>
+     <mo>min</mo>
+     <mi>w</mi>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>f</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>w</mi>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(1.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ , <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+, and assume <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo>&#x2282;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ is a restricted domain. </div>
+</div>
+<div class='standard' id='magicparlabel-54'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-55'><span class="note_label">Note 2.</span>
+In Problem <a href="#prob_Consider_the_minimization">1</a> if for instance, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <msup>
+    <mstyle mathvariant='double-struck'>
+     <mi>R</mi>
+    </mstyle>
+    <mi>d</mi>
+   </msup>
+   <mo stretchy='false'>:</mo>
+   <mrow>
+    <mo>&#x2225;</mo>
+    <mi>w</mi>
+    <mo>&#x2225;</mo>
+   </mrow>
+   <mo>&#x2264;</mo>
+   <mi>B</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>B</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ is convex over <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>W</mi>
+</mstyle>
+</math>
+, but <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ is non-convex in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+ <mo stretchy='false'>/</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+, direct implementation of (standard) SGD (Algorithm <a href="#alg_Stochastic_Gradient_descent">alg:Stochastic-Gradient-descent</a>, Lect. Notes <a href="#enu_Handout___Stochastic">enu:Handout-:-Stochastic</a>) may produce a chain stepping out <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>W</mi>
+</mstyle>
+</math>
+ and hence an output <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>w</mi>
+  <mtext>SGD</mtext>
+ </msub>
+ <mrow>
+  <mo>/</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-56'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-57'><span class="note_label">Note 3.</span>
+Stochastic gradient descent with projection (prjSGD) is a modified SGD suitable for applications with restricted sets and relies on the consideration of a projection step guaranteeing <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>w</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+</mrow>
+</math>
+ .</div>
+</div>
+<div class='standard' id='magicparlabel-58'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-59'><div class='Boxed'><div class='algorithm'>
+<div class="algorithm_item" id='magicparlabel-63'><span class="algorithm_label">Algorithm 4.</span>
+<a id="alg_Stochastic_Gradient_descent_1" /> Stochastic Gradient Descent with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ and with projection in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>W</mi>
+</mstyle>
+</math>
+ for Problem<a href="#prob_Consider_the_minimization">1</a></div>
+<div class="algorithm_item" id='magicparlabel-64'><hr />
+</div>
+<div class='plain_layout' id='magicparlabel-65'><i>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ iterate:</i></div>
+<ol class='lyxenum enumi'>
+<li style='text-align: left;' id='magicparlabel-66'><i><a id="enu_compute__where_1" />compute <a id="eq_GD_UPDATE_MECHANISM_3" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mfrac>
+        <mn>1</mn>
+        <mn>2</mn>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x3B7;</mi>
+     <mi>t</mi>
+    </msub>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>,</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(1.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>v</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ is a random vector such that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>v</mi>
+    <mi>t</mi>
+   </msub>
+   <mo stretchy='false'>|</mo>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mi>&#x2202;</mi>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>w</mi>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>t</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</i></li>
+<li class="enumerate_item" id='magicparlabel-67'><i>compute <a id="eq_GD_UPDATE_MECHANISM_3_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mn>1</mn>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <mo>arg</mo>
+    <munder>
+     <mo>min</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>W</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>-</mo>
+       <msup>
+        <mi>w</mi>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mi>t</mi>
+          <mo stretchy='false'>+</mo>
+          <mfrac>
+           <mn>1</mn>
+           <mn>2</mn>
+          </mfrac>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </msup>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(1.3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</i></li>
+<li class="enumerate_item" id='magicparlabel-68'><i><a id="enu_terminate_if_2_1" />terminate if a termination criterion is satisfied</i></li>
+</ol>
+</div>
+</div></div>
+
+<div class='standard' id='magicparlabel-73'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-74'><span class="note_label">Note 5.</span>
+The analysis of SGD with projection is given as a Exercise <a href="#exer____2_1_1_1_1_2_1">exer:()-2-1-1-1-1-2-1</a> from the Exercise sheet. </div>
+</div>
+<div class='standard' id='magicparlabel-75'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-76'><span class="example_label">Example 6.</span>
+<a id="exa_Consider_a__rather" /> <div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-80'><span class='flex_url'>https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main/Lecture_notes/code/example_projSGD.R</span></div>
+</div></div> Consider a (rather naive) loss function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>z</mi>
+   <mo stretchy='false'>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>-</mo>
+ <mtext>cos</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0.5</mn>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>y</mi>
+     <mo stretchy='false'>-</mo>
+     <msub>
+      <mi>w</mi>
+      <mn>1</mn>
+     </msub>
+     <mo stretchy='false'>-</mo>
+     <msub>
+      <mi>w</mi>
+      <mn>2</mn>
+     </msub>
+     <mi>x</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, a hypothesis class <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>h</mi>
+    <mi>w</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>=</mo>
+   <msup>
+    <mi>w</mi>
+    <mi>&#x22A4;</mi>
+   </msup>
+   <mi>x</mi>
+   <mo stretchy='false'>:</mo>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>W</mi>
+   </mstyle>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>w</mi>
+   <mo>&#x2208;</mo>
+   <msup>
+    <mstyle mathvariant='double-struck'>
+     <mi>R</mi>
+    </mstyle>
+    <mn>2</mn>
+   </msup>
+   <mo stretchy='false'>:</mo>
+   <mrow>
+    <mo>&#x2225;</mo>
+    <mi>w</mi>
+    <mo>&#x2225;</mo>
+   </mrow>
+   <mo>&#x2264;</mo>
+   <mn>1.5</mn>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+, and assume that inputs <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ in dataset <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+ are such that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+. Note that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mtext>cos</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is convex in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>[</mo>
+ <mrow>
+  <mo stretchy='false'>-</mo>
+  <mn>1.5</mn>
+  <mo stretchy='false'>,</mo>
+  <mn>1.5</mn>
+ </mrow>
+ <mo>]</mo>
+</mrow>
+</math>
+ and non-convex in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>R</mi>
+</mstyle>
+</math>
+. Consider learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mn>50</mn>
+ <mo stretchy='false'>/</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+ reducing to zero, and seed <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mn>0</mn>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>1.5</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>1.5</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. An unconstrained SGD may produce a minimizer/solution outside <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ because <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x3B7;</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ is too large at the first few iterations. We can design the online SGD (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+) with projection to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ as</div>
+<div class='standard' id='magicparlabel-85'>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ iterate:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-86'><a id="enu_sample___and_2_1_1_1" /> randomly generate a set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>J</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <msup>
+   <mi>j</mi>
+   <mo stretchy='false'>*</mo>
+  </msup>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ by drawing one number from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <mrow>
+  <mn>1</mn>
+  <mo stretchy='false'>,</mo>
+  <mn>...</mn>
+  <mo stretchy='false'>,</mo>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+  <msup>
+   <mn>0</mn>
+   <mn>6</mn>
+  </msup>
+ </mrow>
+ <mo>}</mo>
+</mrow>
+</math>
+, and set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mover>
+   <mstyle mathvariant='script'>
+    <mi>S</mi>
+   </mstyle>
+   <mo stretchy='true'>&#x02DC;</mo>
+  </mover>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <msub>
+   <mi>z</mi>
+   <msup>
+    <mi>j</mi>
+    <mo stretchy='false'>*</mo>
+   </msup>
+  </msub>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+<li style='text-align: left;' id='magicparlabel-91'><a id="enu_sample___and_3_1_1" />compute
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mn>1</mn>
+       <mo stretchy='false'>/</mo>
+       <mn>2</mn>
+      </mrow>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>t</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <mfrac>
+     <mn>25</mn>
+     <mi>t</mi>
+    </mfrac>
+    <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mo>sin</mo>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mn>0.5</mn>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>y</mi>
+             <msup>
+              <mi>j</mi>
+              <mo stretchy='false'>*</mo>
+             </msup>
+            </msub>
+            <mo stretchy='false'>-</mo>
+            <msubsup>
+             <mi>w</mi>
+             <mn>1</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <mo stretchy='false'>-</mo>
+            <msubsup>
+             <mi>w</mi>
+             <mn>2</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <msub>
+             <mi>x</mi>
+             <msup>
+              <mi>j</mi>
+              <mo stretchy='false'>*</mo>
+             </msup>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mo>sin</mo>
+        <mrow>
+         <mo>(</mo>
+         <mrow>
+          <mn>0.5</mn>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>y</mi>
+             <msup>
+              <mi>j</mi>
+              <mo stretchy='false'>*</mo>
+             </msup>
+            </msub>
+            <mo stretchy='false'>-</mo>
+            <msubsup>
+             <mi>w</mi>
+             <mn>1</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <mo stretchy='false'>-</mo>
+            <msubsup>
+             <mi>w</mi>
+             <mn>2</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <msub>
+             <mi>x</mi>
+             <msup>
+              <mi>j</mi>
+              <mo stretchy='false'>*</mo>
+             </msup>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+         </mrow>
+         <mo>)</mo>
+        </mrow>
+        <msub>
+         <mi>x</mi>
+         <msup>
+          <mi>j</mi>
+          <mo stretchy='false'>*</mo>
+         </msup>
+        </msub>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mn>1</mn>
+       <mo stretchy='false'>/</mo>
+       <mn>2</mn>
+      </mrow>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <munder accent='false'>
+     <mrow>
+      <mo>arg</mo>
+      <mo>min</mo>
+     </mrow>
+     <mrow>
+      <mrow>
+       <mo>&#x2225;</mo>
+       <mi>w</mi>
+       <mo>&#x2225;</mo>
+      </mrow>
+      <mo>&#x2264;</mo>
+      <mn>1.5</mn>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>w</mi>
+       <mo stretchy='false'>-</mo>
+       <msup>
+        <mi>w</mi>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mrow>
+          <mi>t</mi>
+          <mo stretchy='false'>+</mo>
+          <mn>1</mn>
+          <mo stretchy='false'>/</mo>
+          <mn>2</mn>
+         </mrow>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-92'>if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2265;</mo>
+ <mi>T</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1000</mn>
+</mrow>
+</math>
+ STOP</li>
+</ol>
+<div class='standard' id='magicparlabel-93'>because 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>v</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x2207;</mi>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <msup>
+     <mi>j</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+       <mi>&#x2202;</mi>
+       <msubsup>
+        <mi>w</mi>
+        <mn>1</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+      </mrow>
+     </mfrac>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msup>
+        <mi>w</mi>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo stretchy='false'>,</mo>
+       <msub>
+        <mi>z</mi>
+        <msup>
+         <mi>j</mi>
+         <mo stretchy='false'>*</mo>
+        </msup>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+       <mi>&#x2202;</mi>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+      </mrow>
+     </mfrac>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msup>
+        <mi>w</mi>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo stretchy='false'>,</mo>
+       <msub>
+        <mi>z</mi>
+        <msup>
+         <mi>j</mi>
+         <mo stretchy='false'>*</mo>
+        </msup>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mn>0.5</mn>
+     <mo>sin</mo>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mn>0.5</mn>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <msub>
+          <mi>y</mi>
+          <msup>
+           <mi>j</mi>
+           <mo stretchy='false'>*</mo>
+          </msup>
+         </msub>
+         <mo stretchy='false'>-</mo>
+         <msubsup>
+          <mi>w</mi>
+          <mn>1</mn>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>t</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msubsup>
+         <mo stretchy='false'>-</mo>
+         <msubsup>
+          <mi>w</mi>
+          <mn>2</mn>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>t</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msubsup>
+         <msub>
+          <mi>x</mi>
+          <msup>
+           <mi>j</mi>
+           <mo stretchy='false'>*</mo>
+          </msup>
+         </msub>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mn>0.5</mn>
+     <mo>sin</mo>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mn>0.5</mn>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <msub>
+          <mi>y</mi>
+          <msup>
+           <mi>j</mi>
+           <mo stretchy='false'>*</mo>
+          </msup>
+         </msub>
+         <mo stretchy='false'>-</mo>
+         <msubsup>
+          <mi>w</mi>
+          <mn>1</mn>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>t</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msubsup>
+         <mo stretchy='false'>-</mo>
+         <msubsup>
+          <mi>w</mi>
+          <mn>2</mn>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>t</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msubsup>
+         <msub>
+          <mi>x</mi>
+          <msup>
+           <mi>j</mi>
+           <mo stretchy='false'>*</mo>
+          </msup>
+         </msub>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <msub>
+      <mi>x</mi>
+      <msup>
+       <mi>j</mi>
+       <mo stretchy='false'>*</mo>
+      </msup>
+     </msub>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+</mrow>
+</math>
+In Figures <a href="#fig_Example__1">A.0.2</a> &amp; <a href="#fig_Example__4">A.0.5</a>, we observe that the SGD got trapped outside <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ due to the unreasonably large learning rate at the beginning of the iterations, while the SGD with projection step managed to stay in <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>H</mi>
+</mstyle>
+</math>
+ and converge. </div>
+</div>
+<div class='standard' id='magicparlabel-94'>
+<br />
+</div>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-95'><span class="section_label">2</span> Preconditioned SGD abd the AdaGrad algorithm </h2>
+<div class='standard' id='magicparlabel-104'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-105'>
+<br />
+</div>
+<div class='problem'>
+<div class="problem_item" id='magicparlabel-106'><span class="problem_label">Problem 7.</span>
+<a id="prob_Consider_the_minimization_1" /> Consider the minimization problem<a id="eq_gvbzvcb_1_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mo stretchy='false'>*</mo>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <mo>arg</mo>
+    <munder>
+     <mo>min</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo>&#x2208;</mo>
+      <mstyle mathvariant='script'>
+       <mi>W</mi>
+      </mstyle>
+     </mrow>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>f</mi>
+      <mrow>
+       <mo>(</mo>
+       <mi>w</mi>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.1)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ , and assume <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>W</mi>
+ </mstyle>
+ <mo>&#x2261;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-107'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-108'><span class="note_label">Note 8.</span>
+All SGD (introduced earlier) are first order methods, in the sense they consider only the gradient, and hence they ignore the curvature of the space. Consequently they may present slow converge in cases the curvature changes, eg. among dimensions of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-109'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-110'><span class="note_label">Note 9.</span>
+Preconditioned Stochastic Gradient Descent (Algorithm <a href="#alg_Stochastic_Gradient_descent_2">10</a>) is a modified SGD aiming to expedite convergence of SGD by using a preconditioner <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>P</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ that accounts for the curvature (or geometry in general) of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-111'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-112'><div class='Boxed'><div class='algorithm'>
+<div class="algorithm_item" id='magicparlabel-116'><span class="algorithm_label">Algorithm 10.</span>
+<a id="alg_Stochastic_Gradient_descent_2" /> Preconditioned Stochastic Gradient Descent with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, and preconditioner <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>P</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ for the solution of the minimization problem <a href="#eq_gvbzvcb">eq:gvbzvcb</a> <hr />
+</div>
+<div class='plain_layout' id='magicparlabel-121'><i>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ iterate:</i></div>
+<ol class='lyxenum enumi'>
+<li style='text-align: left;' id='magicparlabel-122'><i><a id="enu_compute__where_2" />compute <a id="eq_GD_UPDATE_MECHANISM_4" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mn>1</mn>
+      </mrow>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>t</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x3B7;</mi>
+     <mi>t</mi>
+    </msub>
+    <msub>
+     <mi>P</mi>
+     <mi>t</mi>
+    </msub>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>,</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>v</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ is a random vector such that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>v</mi>
+    <mi>t</mi>
+   </msub>
+   <mo stretchy='false'>|</mo>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mi>&#x2202;</mi>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>w</mi>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>t</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>P</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ is a preconditioner</i></li>
+<li class="enumerate_item" id='magicparlabel-123'><i><a id="enu_terminate_if_2_2" />terminate if a termination criterion is satisfied, e.g.
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mtext>If</mtext>
+ <mspace width="6px"/>
+ <mspace width="6px"/>
+ <mspace width="6px"/>
+ <mi>t</mi>
+ <mo>&#x2265;</mo>
+ <mi>T</mi>
+ <mspace width="6px"/>
+ <mspace width="6px"/>
+ <mspace width="6px"/>
+ <mtext>then</mtext>
+ <mspace width="6px"/>
+ <mspace width="6px"/>
+ <mspace width="6px"/>
+ <mtext>STOP</mtext>
+</mrow>
+</math>
+</i></li>
+</ol>
+</div>
+</div></div>
+
+<div class='standard' id='magicparlabel-124'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-125'><span class="note_label">Note 11.</span>
+A natural choice of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>P</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ can be <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>P</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>[</mo>
+   <mrow>
+    <msub>
+     <mi>H</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3F5;</mi>
+    <msub>
+     <mi>I</mi>
+     <mi>d</mi>
+    </msub>
+   </mrow>
+   <mo>]</mo>
+  </mrow>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+, where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>H</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ is the Hessian matrix <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mi>H</mi>
+    <mi>t</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mrow>
+   <mo>.</mo>
+   <mrow>
+    <mfrac>
+     <msup>
+      <mi>&#x2202;</mi>
+      <mn>2</mn>
+     </msup>
+     <mrow>
+      <mi>&#x2202;</mi>
+      <msub>
+       <mi>w</mi>
+       <mi>i</mi>
+      </msub>
+      <mi>&#x2202;</mi>
+      <msub>
+       <mi>w</mi>
+       <mi>j</mi>
+      </msub>
+     </mrow>
+    </mfrac>
+    <mi>f</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>|</mo>
+  </mrow>
+  <mrow>
+   <mi>w</mi>
+   <mo stretchy='false'>=</mo>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mrow>
+ </msub>
+</mrow>
+</math>
+ (ie. the gradient of the gradient&#8217;s elements), and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3F5;</mi>
+</math>
+ is a tiny <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ to mitigate machine error when Hessian elements are close to zero.</div>
+</div>
+<div class='standard' id='magicparlabel-126'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-127'><span class="note_label">Note 12.</span>
+Using the inverse of the full Hessian as preconditioner <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>P</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ may be too expensive to perform matrix operations in <a href="#eq_GD_UPDATE_MECHANISM_4">(2.2)</a> and operations can be too unstable/inaccurate due to the random error induced by the stochasticity of the gradient. </div>
+</div>
+<section>
+<h3 class='subsection' id='magicparlabel-128'><span class="subsection_label">2.1</span> <a id="subsec_Adaptive_Stochastic_Gradient" /> Adaptive Stochastic Gradient Decent (AdaGrad)</h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-142'><span class="note_label">Note 13.</span>
+AdaGrad (Algorithm <a href="#def_Adaptive_Stochastic_Gradient">15</a>) is a modified SGD algorithm that aims to adaptively adjust the learning rate of SGD, perform more informative gradient-based learning, and by improve convergence performance over standard SGD by dynamically incorporating knowledge of the geometry of function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ in earlier iterations. </div>
+</div>
+<div class='standard' id='magicparlabel-143'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-144'><span class="note_label">Note 14.</span>
+It is particularly suitable in cases where the data are sparse and sparse features <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+&#8217;s are more informative. It aims to perform larger updates (i.e. high learning rates) for those dimensions of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+ that are related to infrequent features (largest partial derivative) and smaller updates (i.e. low learning rates) for frequent ones (smaller partial derivative). </div>
+</div>
+<div class='standard' id='magicparlabel-145'>
+<br />
+</div>
+<div class='algorithm'>
+<div class="algorithm_item" id='magicparlabel-146'><span class="algorithm_label">Algorithm 15.</span>
+<a id="def_Adaptive_Stochastic_Gradient" /> Adaptive Stochastic Gradient Decent (AdaGrad) is a preconditioned SGD (Algorithm <a href="#alg_Stochastic_Gradient_descent_2">10</a>) with preconditioner <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>P</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>[</mo>
+   <mrow>
+    <mtext>diag</mtext>
+    <mrow>
+     <mo>(</mo>
+     <msub>
+      <mi>G</mi>
+      <mi>t</mi>
+     </msub>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3F5;</mi>
+    <msub>
+     <mi>I</mi>
+     <mi>d</mi>
+    </msub>
+   </mrow>
+   <mo>]</mo>
+  </mrow>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>/</mo>
+   <mn>2</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ where notation <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>diag</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mi>A</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ denotes a <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mo>&#x00D7;</mo>
+ <mi>d</mi>
+</mrow>
+</math>
+ matrix whose diagonal is the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>d</mi>
+</math>
+ dimensional diagonal vector <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mi>A</mi>
+   <mrow>
+    <mn>1</mn>
+    <mo stretchy='false'>,</mo>
+    <mn>1</mn>
+   </mrow>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>A</mi>
+   <mrow>
+    <mn>2</mn>
+    <mo stretchy='false'>,</mo>
+    <mn>2</mn>
+   </mrow>
+  </msub>
+  <mn>...</mn>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>A</mi>
+   <mrow>
+    <mi>d</mi>
+    <mo stretchy='false'>,</mo>
+    <mi>d</mi>
+   </mrow>
+  </msub>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mo>&#x00D7;</mo>
+ <mi>d</mi>
+</mrow>
+</math>
+ matrix <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ and whose off-diagonal elements are zero, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>G</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>&#x3C4;</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>t</mi>
+ </munderover>
+ <msub>
+  <mi>v</mi>
+  <mi>&#x3C4;</mi>
+ </msub>
+ <msubsup>
+  <mi>v</mi>
+  <mi>&#x3C4;</mi>
+  <mi>&#x22A4;</mi>
+ </msubsup>
+</mrow>
+</math>
+ is the sum of the outer products of the gradients <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <mrow>
+  <msub>
+   <mi>v</mi>
+   <mi>&#x3C4;</mi>
+  </msub>
+  <mo stretchy='false'>;</mo>
+  <mi>&#x3C4;</mi>
+  <mo>&#x2264;</mo>
+  <mi>t</mi>
+ </mrow>
+ <mo>}</mo>
+</mrow>
+</math>
+ up to the state <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ is a tiny value (eg, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>6</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+) set for computational stability is case the gradient becomes too close to zero. I.e. <a id="eq_GD_UPDATE_MECHANISM_4_1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mrow>
+      <mi>t</mi>
+      <mo stretchy='false'>+</mo>
+      <mn>1</mn>
+     </mrow>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>t</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x3B7;</mi>
+     <mi>t</mi>
+    </msub>
+    <msup>
+     <mrow>
+      <mo>[</mo>
+      <mrow>
+       <mtext>diag</mtext>
+       <mrow>
+        <mo>(</mo>
+        <msub>
+         <mi>G</mi>
+         <mi>t</mi>
+        </msub>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>+</mo>
+       <mi>&#x3F5;</mi>
+       <msub>
+        <mi>I</mi>
+        <mi>d</mi>
+       </msub>
+      </mrow>
+      <mo>]</mo>
+     </mrow>
+     <mrow>
+      <mo stretchy='false'>-</mo>
+      <mn>1</mn>
+      <mo stretchy='false'>/</mo>
+      <mn>2</mn>
+     </mrow>
+    </msup>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mn>.</mn>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-151'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-152'><span class="note_label">Note 16.</span>
+AdaGrad individually adapts the learning rate of each dimension of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mi>t</mi>
+</msub>
+</math>
+ by scaling them inversely proportional to the square root of the sum of all the past squared values of the gradient <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <mrow>
+  <msub>
+   <mi>v</mi>
+   <mi>&#x3C4;</mi>
+  </msub>
+  <mo stretchy='false'>;</mo>
+  <mi>&#x3C4;</mi>
+  <mo>&#x2264;</mo>
+  <mi>t</mi>
+ </mrow>
+ <mo>}</mo>
+</mrow>
+</math>
+. This is because <a id="eq_fgsfg" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mrow>
+      <mo>[</mo>
+      <msub>
+       <mi>G</mi>
+       <mi>t</mi>
+      </msub>
+      <mo>]</mo>
+     </mrow>
+     <mrow>
+      <mi>j</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>j</mi>
+     </mrow>
+    </msub>
+    <mo stretchy='false'>=</mo>
+    <munderover>
+     <mo>&#x2211;</mo>
+     <mrow>
+      <mi>&#x3C4;</mi>
+      <mo stretchy='false'>=</mo>
+      <mn>1</mn>
+     </mrow>
+     <mi>t</mi>
+    </munderover>
+    <msup>
+     <mrow>
+      <mo>(</mo>
+      <msub>
+       <mi>v</mi>
+       <mrow>
+        <mi>&#x3C4;</mi>
+        <mo stretchy='false'>,</mo>
+        <mi>j</mi>
+       </mrow>
+      </msub>
+      <mo>)</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(2.4)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+ denotes the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+-th dimension of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+. Hence <a href="#eq_GD_UPDATE_MECHANISM_4_1">(2.3)</a> and <a href="#eq_GD_UPDATE_MECHANISM_4_1">(2.3)</a>imply that the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+-th dimension of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+ is updated as 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msubsup>
+  <mi>w</mi>
+  <mi>j</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mrow>
+    <mi>t</mi>
+    <mo stretchy='false'>+</mo>
+    <mn>1</mn>
+   </mrow>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mi>w</mi>
+  <mi>j</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msubsup>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mfrac>
+  <mn>1</mn>
+  <msqrt>
+   <mrow>
+    <msub>
+     <mrow>
+      <mo>[</mo>
+      <msub>
+       <mi>G</mi>
+       <mi>t</mi>
+      </msub>
+      <mo>]</mo>
+     </mrow>
+     <mrow>
+      <mi>j</mi>
+      <mo stretchy='false'>,</mo>
+      <mi>j</mi>
+     </mrow>
+    </msub>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x3F5;</mi>
+   </mrow>
+  </msqrt>
+ </mfrac>
+ <msub>
+  <mi>v</mi>
+  <mrow>
+   <mi>t</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>j</mi>
+  </mrow>
+ </msub>
+ <mn>.</mn>
+</mrow>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-153'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-154'><span class="note_label">Note 17.</span>
+The accumulation of positive terms in <a href="#eq_fgsfg">(2.4)</a> makes the sum keep growing during training and causes the learning rate to shrink and become infinitesimally small. This offers an automatic way to choose a decreasing learning rate simplifying setting the learning rate; however it may result in a premature and excessive decrease in the effective learning rate. This can be mitigated by still considering in <a href="#eq_GD_UPDATE_MECHANISM_4_1">(2.3)</a> a (user specified rate) <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo>&#x2265;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ and tuning it properly via pilot runs.</div>
+</div>
+<div class='standard' id='magicparlabel-155'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-156'><span class="example_label">Example 18.</span>
+<a id="exa_The_AdaGrad_with" /> <div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-160'><span class='flex_url'>https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main/Lecture_notes/code/example_AdaGrad.R</span></div>
+</div></div> AdaGrad with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3F5;</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>6</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+, and batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ is</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-165'>Set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>G</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mn>0</mn>
+    <mo stretchy='false'>,</mo>
+    <mn>0</mn>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>&#x22A4;</mi>
+ </msup>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-166'>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ iterate:
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-167'><a id="enu_sample___and_2_1_1" /> randomly generate  <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>j</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mi>t</mi>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</msup>
+</math>
+ from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <mrow>
+  <mn>1</mn>
+  <mo stretchy='false'>,</mo>
+  <mn>...</mn>
+  <mo stretchy='false'>,</mo>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+  <msup>
+   <mn>0</mn>
+   <mn>6</mn>
+  </msup>
+ </mrow>
+ <mo>}</mo>
+</mrow>
+</math>
+ </li>
+<li style='text-align: left;' id='magicparlabel-176'><a id="enu_sample___and_3_1" />compute
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>=</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <mrow>
+       <mn>2</mn>
+       <msubsup>
+        <mi>w</mi>
+        <mn>1</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <mo stretchy='false'>+</mo>
+       <mn>2</mn>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <msub>
+        <mi>x</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+       </msub>
+       <mo stretchy='false'>-</mo>
+       <mn>2</mn>
+       <msub>
+        <mi>y</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+       </msub>
+      </mrow>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd>
+      <mrow>
+       <mn>2</mn>
+       <msubsup>
+        <mi>w</mi>
+        <mn>1</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <mover>
+        <mi>x</mi>
+        <mo stretchy='true'>&#x00AF;</mo>
+       </mover>
+       <mo stretchy='false'>+</mo>
+       <mn>2</mn>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <msubsup>
+        <mi>x</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+        <mn>2</mn>
+       </msubsup>
+       <mo stretchy='false'>-</mo>
+       <mn>2</mn>
+       <msub>
+        <mi>y</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+       </msub>
+       <msub>
+        <mi>x</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+       </msub>
+      </mrow>
+     </mtd>
+    </mtr>
+   </mtable>
+   <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>G</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>=</mo>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>G</mi>
+     <mrow>
+      <mi>t</mi>
+      <mo stretchy='false'>-</mo>
+      <mn>1</mn>
+     </mrow>
+    </msub>
+    <mo stretchy='false'>+</mo>
+    <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <msubsup>
+        <mi>v</mi>
+        <mrow>
+         <mi>t</mi>
+         <mo stretchy='false'>,</mo>
+         <mn>1</mn>
+        </mrow>
+        <mn>2</mn>
+       </msubsup>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <msubsup>
+        <mi>v</mi>
+        <mrow>
+         <mi>t</mi>
+         <mo stretchy='false'>,</mo>
+         <mn>2</mn>
+        </mrow>
+        <mn>2</mn>
+       </msubsup>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mrow>
+      <mi>t</mi>
+      <mo stretchy='false'>+</mo>
+      <mn>1</mn>
+     </mrow>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msubsup>
+         <mi>w</mi>
+         <mn>1</mn>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msubsup>
+        <mo stretchy='false'>-</mo>
+        <mfrac>
+         <msub>
+          <mi>&#x3B7;</mi>
+          <mi>t</mi>
+         </msub>
+         <msqrt>
+          <mrow>
+           <msub>
+            <mi>G</mi>
+            <mrow>
+             <mi>t</mi>
+             <mo stretchy='false'>,</mo>
+             <mn>1</mn>
+            </mrow>
+           </msub>
+           <mo stretchy='false'>+</mo>
+           <mi>&#x3F5;</mi>
+          </mrow>
+         </msqrt>
+        </mfrac>
+        <msub>
+         <mi>v</mi>
+         <mrow>
+          <mi>t</mi>
+          <mo stretchy='false'>,</mo>
+          <mn>1</mn>
+         </mrow>
+        </msub>
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msubsup>
+         <mi>w</mi>
+         <mn>2</mn>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msubsup>
+        <mo stretchy='false'>-</mo>
+        <mfrac>
+         <msub>
+          <mi>&#x3B7;</mi>
+          <mi>t</mi>
+         </msub>
+         <msqrt>
+          <mrow>
+           <msub>
+            <mi>G</mi>
+            <mrow>
+             <mi>t</mi>
+             <mo stretchy='false'>,</mo>
+             <mn>2</mn>
+            </mrow>
+           </msub>
+           <mo stretchy='false'>+</mo>
+           <mi>&#x3F5;</mi>
+          </mrow>
+         </msqrt>
+        </mfrac>
+        <msub>
+         <mi>v</mi>
+         <mrow>
+          <mi>t</mi>
+          <mo stretchy='false'>,</mo>
+          <mn>2</mn>
+         </mrow>
+        </msub>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+    <mo stretchy='false'>,</mo>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-177'>if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2265;</mo>
+ <mi>T</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1000</mn>
+</mrow>
+</math>
+ STOP</li>
+</ol>
+</li></ul>
+<div class='standard' id='magicparlabel-178'>because 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>v</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x2207;</mi>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <msup>
+     <mi>j</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>t</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+       <mi>&#x2202;</mi>
+       <msubsup>
+        <mi>w</mi>
+        <mn>1</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+      </mrow>
+     </mfrac>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msup>
+        <mi>w</mi>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo stretchy='false'>,</mo>
+       <msub>
+        <mi>z</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mi>&#x2202;</mi>
+      <mrow>
+       <mi>&#x2202;</mi>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+      </mrow>
+     </mfrac>
+     <mi>&#x2113;</mi>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msup>
+        <mi>w</mi>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msup>
+       <mo stretchy='false'>,</mo>
+       <msub>
+        <mi>z</mi>
+        <msup>
+         <mi>j</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mn>2</mn>
+     <msubsup>
+      <mi>w</mi>
+      <mn>1</mn>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>t</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msubsup>
+     <mo stretchy='false'>+</mo>
+     <mn>2</mn>
+     <msubsup>
+      <mi>w</mi>
+      <mn>2</mn>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>t</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msubsup>
+     <msub>
+      <mi>x</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>t</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+     </msub>
+     <mo stretchy='false'>-</mo>
+     <mn>2</mn>
+     <msub>
+      <mi>y</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>t</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+     </msub>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mn>2</mn>
+     <msubsup>
+      <mi>w</mi>
+      <mn>1</mn>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>t</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mi>x</mi>
+      <mo stretchy='true'>&#x00AF;</mo>
+     </mover>
+     <mo stretchy='false'>+</mo>
+     <mn>2</mn>
+     <msubsup>
+      <mi>w</mi>
+      <mn>2</mn>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>t</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msubsup>
+     <msubsup>
+      <mi>x</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>t</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+      <mn>2</mn>
+     </msubsup>
+     <mo stretchy='false'>-</mo>
+     <mn>2</mn>
+     <msub>
+      <mi>y</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>t</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+     </msub>
+     <msub>
+      <mi>x</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>t</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+     </msub>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+</mrow>
+</math>
+ In Figures <a href="#fig_Example__1_1">A.0.7</a> &amp; <a href="#fig_Example__1_1_1">A.0.8</a>, we see that AdaGrad with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B7;</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ works (I did not try to tune it), however to make vanilla SGD to work I have to tune <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B7;</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0.03</mn>
+</mrow>
+</math>
+ otherwise for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B7;</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1.0</mn>
+</mrow>
+</math>
+ it did not work. </div>
+</div>
+<div class='standard' id='magicparlabel-197'>
+<br />
+</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-198'><span class="section_label">3</span> Stochastic Variance Reduced Gradient (SVRG) </h2>
+<div class='standard' id='magicparlabel-207'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-208'><span class="note_label">Note 19.</span>
+(Recall) Consider minimization problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <munder accent='false'>
+  <mrow>
+   <mo>arg</mo>
+   <mo>min</mo>
+  </mrow>
+  <mi>w</mi>
+ </munder>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>f</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>w</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+ <mn>.</mn>
+</mrow>
+</math>
+ Consider SGD with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B7;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, output <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mi>w</mi>
+ <mtext>SGD</mtext>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mi>T</mi>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</msubsup>
+</math>
+, and general recursion 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mrow>
+    <mi>t</mi>
+    <mo stretchy='false'>+</mo>
+    <mn>1</mn>
+   </mrow>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <msub>
+  <mi>v</mi>
+  <mi>t</mi>
+ </msub>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>v</mi>
+    <mi>t</mi>
+   </msub>
+   <mo stretchy='false'>|</mo>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mi>&#x2202;</mi>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>w</mi>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>t</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. Recall that the upper bound of the error depends on the variance of the stochastic sub-gradient i.e. <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>-</mo>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <msub>
+      <mi>v</mi>
+      <mi>t</mi>
+     </msub>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+. <a id="eq_" /><a id="eq__1" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>f</mi>
+      <mrow>
+       <mo>(</mo>
+       <msubsup>
+        <mi>w</mi>
+        <mtext>SGD</mtext>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>T</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>f</mi>
+    <mrow>
+     <mo>(</mo>
+     <msup>
+      <mi>w</mi>
+      <mo stretchy='false'>*</mo>
+     </msup>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <mfrac>
+     <msup>
+      <mrow>
+       <mo>&#x2225;</mo>
+       <msup>
+        <mi>w</mi>
+        <mo stretchy='false'>*</mo>
+       </msup>
+       <mo>&#x2225;</mo>
+      </mrow>
+      <mn>2</mn>
+     </msup>
+     <mrow>
+      <mn>2</mn>
+      <mi>&#x3B7;</mi>
+      <mi>T</mi>
+     </mrow>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mi>&#x3B7;</mi>
+     <mn>2</mn>
+    </mfrac>
+    <mfrac>
+     <mn>1</mn>
+     <mi>T</mi>
+    </mfrac>
+    <munderover>
+     <mo>&#x2211;</mo>
+     <mrow>
+      <mi>t</mi>
+      <mo stretchy='false'>=</mo>
+      <mn>1</mn>
+     </mrow>
+     <mi>T</mi>
+    </munderover>
+    <mtext>E</mtext>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <msub>
+       <mi>v</mi>
+       <mi>t</mi>
+      </msub>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.1)</mtext>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mtext>E</mtext>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <msub>
+       <mi>v</mi>
+       <mi>t</mi>
+      </msub>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <mtext>E</mtext>
+       <msup>
+        <mrow>
+         <mo>&#x2225;</mo>
+         <mrow>
+          <msub>
+           <mi>v</mi>
+           <mi>t</mi>
+          </msub>
+          <mo stretchy='false'>-</mo>
+          <mtext>E</mtext>
+          <mrow>
+           <mo>(</mo>
+           <msub>
+            <mi>v</mi>
+            <mi>t</mi>
+           </msub>
+           <mo>)</mo>
+          </mrow>
+         </mrow>
+         <mo>&#x2225;</mo>
+        </mrow>
+        <mn>2</mn>
+       </msup>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mrow>
+      <mo stretchy='false'>=</mo>
+      <mtext>tr</mtext>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mtext>Var</mtext>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mi>v</mi>
+          <mi>t</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+    </munder>
+    <mo stretchy='false'>+</mo>
+    <munder accent='false'>
+     <munder>
+      <msup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mrow>
+         <mtext>E</mtext>
+         <mrow>
+          <mo>(</mo>
+          <msub>
+           <mi>v</mi>
+           <mi>t</mi>
+          </msub>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+      </msup>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+     <mtext>const</mtext>
+     <mn>.</mn>
+    </munder>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.2)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+A way to improve the SGD may be by reducing / controlling the variances at each dimension of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>v</mi>
+ <mi>t</mi>
+</msub>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-209'>
+<br />
+</div>
+<div class='problem'>
+<div class="problem_item" id='magicparlabel-210'><span class="problem_label">Problem 20.</span>
+Consider a learning problem <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>H</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>Z</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2113;</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ with risk function <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>R</mi>
+  <mi>g</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>w</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x2113;</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>h</mi>
+      <mi>w</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <mi>z</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ given an unknown data generating model <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</mrow>
+</math>
+, using a known tractable loss <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>,</mo>
+   <mo>&#x22C5;</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and hypothesis <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>h</mi>
+  <mi>w</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='script'>
+  <mi>H</mi>
+ </mstyle>
+</mrow>
+</math>
+. Consider a training data set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mstyle mathvariant='script'>
+   <mi>S</mi>
+  </mstyle>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy='false'>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+     </msub>
+     <mo stretchy='false'>,</mo>
+     <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>;</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>i</mi>
+   </msub>
+   <mo>&#x2208;</mo>
+   <mstyle mathvariant='script'>
+    <mi>Z</mi>
+   </mstyle>
+   <mo stretchy='false'>,</mo>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+. We need to find minimizer <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mo>arg</mo>
+ <munder>
+  <mo>min</mo>
+  <mi>w</mi>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>R</mi>
+    <mi>g</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>w</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' id='magicparlabel-211'>
+<br />
+</div>
+<section>
+<h3 class='subsection' id='magicparlabel-212'><span class="subsection_label">3.1</span> Stochastic gradient descent using (mini-batches)</h3>
+<div class='note'>
+<div class="note_item" id='magicparlabel-213'><span class="note_label">Note 21.</span>
+A way to reduce variance in <a href="#eq__1">(3.2)</a> (and hence achieve faster convergence rate) is to consider a larger batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>|</mo>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>J</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </msup>
+  <mo>|</mo>
+ </mrow>
+</mrow>
+</math>
+. Note that 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>-</mo>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <msub>
+      <mi>v</mi>
+      <mi>t</mi>
+     </msub>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msub>
+     <mi>&#x2207;</mi>
+     <mi>w</mi>
+    </msub>
+    <mfrac>
+     <mn>1</mn>
+     <mrow>
+      <mo>|</mo>
+      <msup>
+       <mstyle mathvariant='script'>
+        <mi>J</mi>
+       </mstyle>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+      <mo>|</mo>
+     </mrow>
+    </mfrac>
+    <munder>
+     <mo>&#x2211;</mo>
+     <mrow>
+      <mi>j</mi>
+      <mo>&#x2208;</mo>
+      <msup>
+       <mstyle mathvariant='script'>
+        <mi>J</mi>
+       </mstyle>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+     </mrow>
+    </munder>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>w</mi>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>z</mi>
+       <mi>j</mi>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x2207;</mi>
+     <mi>w</mi>
+    </msub>
+    <msub>
+     <mi>R</mi>
+     <mi>g</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>w</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mtext>E</mtext>
+    <mrow>
+     <msub>
+      <mi>z</mi>
+      <mi>j</mi>
+     </msub>
+     <mo>&#x223C;</mo>
+     <mi>g</mi>
+    </mrow>
+   </msub>
+   <msup>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <msub>
+       <mi>&#x2207;</mi>
+       <mi>w</mi>
+      </msub>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>w</mi>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>j</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+      <mo stretchy='false'>-</mo>
+      <msub>
+       <mi>&#x2207;</mi>
+       <mi>w</mi>
+      </msub>
+      <msub>
+       <mi>R</mi>
+       <mi>g</mi>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mi>w</mi>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+  <mrow>
+   <mo>|</mo>
+   <msup>
+    <mstyle mathvariant='script'>
+     <mi>J</mi>
+    </mstyle>
+    <mrow>
+     <mo>(</mo>
+     <mi>t</mi>
+     <mo>)</mo>
+    </mrow>
+   </msup>
+   <mo>|</mo>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+ where to top part of the fraction is the gradient variance for SGD with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+. Using larger batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>|</mo>
+  <msup>
+   <mstyle mathvariant='script'>
+    <mi>J</mi>
+   </mstyle>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </msup>
+  <mo>|</mo>
+ </mrow>
+</mrow>
+</math>
+ reduces the stochastic gradient variance and hence the convergence rate. </div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-214'><span class="subsection_label">3.2</span> Stochastic Variance Reduced Gradient (SVRG)</h3>
+<h5 class='paragraph_' id='magicparlabel-215'>Control variate methods </h5>
+<div class='standard' id='magicparlabel-216'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-217'><span class="note_label">Note 22.</span>
+<a id="rem_Control_variate_is" /> Control variate is a general way to perform variance reduction. Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ be an unbiased estimator of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B8;</mi>
+</math>
+. The goal is to compute <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>x</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>c</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>y</mi>
+   <mo stretchy='false'>-</mo>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>y</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ by finding a suitable control variable <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+ and constant <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ such that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>tr</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mtext>Var</mtext>
+    <mi>c</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>v</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>&lt;</mo>
+ <mtext>tr</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mtext>Var</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ with purpose to use it as an unbiased estimator of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B8;</mi>
+</math>
+ instead of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mi>c</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>v</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3B8;</mi>
+</mrow>
+</math>
+. </div>
+</div>
+<div class='standard' id='magicparlabel-218'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-219'><span class="example_label">Example 23.</span>
+Let random variables <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>&#x2208;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mi>d</mi>
+ </msup>
+</mrow>
+</math>
+. Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>x</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>c</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>y</mi>
+   <mo stretchy='false'>-</mo>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>y</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ for some constant <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+. It is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mi>c</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>v</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+. Also 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mi>c</mi>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>v</mi>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mtext>E</mtext>
+     <mi>c</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mi>v</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mtext>E</mtext>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy='false'>-</mo>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>+</mo>
+ <msup>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msup>
+ <mtext>E</mtext>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <mi>y</mi>
+    <mo stretchy='false'>-</mo>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <mi>y</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>+</mo>
+ <mn>2</mn>
+ <mi>c</mi>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>&#x27E8;</mo>
+  <mrow>
+   <mi>x</mi>
+   <mo stretchy='false'>-</mo>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <mi>y</mi>
+   <mo stretchy='false'>-</mo>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mi>y</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>&#x27E9;</mo>
+ </mrow>
+</mrow>
+</math>
+ which is minimized for
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mrow>
+   <mo>.</mo>
+   <mrow>
+    <mfrac>
+     <mtext>d</mtext>
+     <mrow>
+      <mtext>d</mtext>
+      <mi>c</mi>
+     </mrow>
+    </mfrac>
+    <msub>
+     <mtext>E</mtext>
+     <mi>c</mi>
+    </msub>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>v</mi>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mtext>E</mtext>
+        <mi>c</mi>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mi>v</mi>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+   <mo>|</mo>
+  </mrow>
+  <mrow>
+   <mi>c</mi>
+   <mo stretchy='false'>=</mo>
+   <msup>
+    <mi>c</mi>
+    <mo stretchy='false'>*</mo>
+   </msup>
+  </mrow>
+ </msub>
+ <mo>&#x27F9;</mo>
+ <msup>
+  <mi>c</mi>
+  <mo stretchy='false'>*</mo>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <mrow>
+   <mtext>E</mtext>
+   <mrow>
+    <mo>&#x27E8;</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo stretchy='false'>-</mo>
+     <mtext>E</mtext>
+     <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <mi>y</mi>
+     <mo stretchy='false'>-</mo>
+     <mtext>E</mtext>
+     <mrow>
+      <mo>(</mo>
+      <mi>y</mi>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+    <mo>&#x27E9;</mo>
+   </mrow>
+  </mrow>
+  <mrow>
+   <mtext>E</mtext>
+   <msup>
+    <mrow>
+     <mo>&#x2225;</mo>
+     <mrow>
+      <mi>y</mi>
+      <mo stretchy='false'>-</mo>
+      <mtext>E</mtext>
+      <mrow>
+       <mo>(</mo>
+       <mi>y</mi>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>&#x2225;</mo>
+    </mrow>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+ with <a id="eq__2" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <msup>
+      <mi>c</mi>
+      <mo stretchy='false'>*</mo>
+     </msup>
+    </msub>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>v</mi>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mtext>E</mtext>
+        <mi>c</mi>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <mi>v</mi>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <mtext>E</mtext>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mi>x</mi>
+       <mo stretchy='false'>-</mo>
+       <mtext>E</mtext>
+       <mrow>
+        <mo>(</mo>
+        <mi>x</mi>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <mfrac>
+     <mrow>
+      <mtext>E</mtext>
+      <mrow>
+       <mo>&#x27E8;</mo>
+       <mrow>
+        <mi>x</mi>
+        <mo stretchy='false'>-</mo>
+        <mtext>E</mtext>
+        <mrow>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mo stretchy='false'>,</mo>
+        <mi>y</mi>
+        <mo stretchy='false'>-</mo>
+        <mtext>E</mtext>
+        <mrow>
+         <mo>(</mo>
+         <mi>y</mi>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>&#x27E9;</mo>
+      </mrow>
+     </mrow>
+     <mrow>
+      <mtext>E</mtext>
+      <msup>
+       <mrow>
+        <mo>&#x2225;</mo>
+        <mrow>
+         <mi>y</mi>
+         <mo stretchy='false'>-</mo>
+         <mtext>E</mtext>
+         <mrow>
+          <mo>(</mo>
+          <mi>y</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>&#x2225;</mo>
+       </mrow>
+       <mn>2</mn>
+      </msup>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.3)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' id='magicparlabel-220'>
+<br />
+</div>
+<h5 class='paragraph_' id='magicparlabel-221'>Variance reduced methods</h5>
+<div class='standard' id='magicparlabel-222'>
+<br />
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-223'><span class="definition_label">Definition 24.</span>
+A SGD algorithm with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3B7;</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ and general recursion 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mrow>
+    <mi>t</mi>
+    <mo stretchy='false'>+</mo>
+    <mn>1</mn>
+   </mrow>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <msub>
+  <mi>v</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <mspace width="6px"/>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>v</mi>
+    <mi>t</mi>
+   </msub>
+   <mo stretchy='false'>|</mo>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2208;</mo>
+ <mi>&#x2202;</mi>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>w</mi>
+   <mrow>
+    <mo stretchy='false'>(</mo>
+    <mi>t</mi>
+    <mo stretchy='false'>)</mo>
+   </mrow>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is called variance reduced SGD if it presents smaller stochastic gradient variance compared to standard SGD and has the property
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mtext>E</mtext>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>-</mo>
+    <mi>&#x2207;</mi>
+    <mi>f</mi>
+    <mrow>
+     <mo>(</mo>
+     <msup>
+      <mi>w</mi>
+      <mrow>
+       <mo stretchy='false'>(</mo>
+       <mi>t</mi>
+       <mo stretchy='false'>)</mo>
+      </mrow>
+     </msup>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x2192;</mo>
+ <mn>0</mn>
+ <mo stretchy='false'>,</mo>
+ <mspace/>
+ <mtext>as</mtext>
+ <mspace/>
+ <mi>t</mi>
+ <mo>&#x2192;</mo>
+ <mi>&#x221E;</mi>
+</mrow>
+</math>
+ where <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>E</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mo>&#x22C5;</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is w.r.t. all random variables till iteration <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+. </div>
+</div>
+<h5 class='paragraph_' id='magicparlabel-224'>Stochastic Variance Reduced Gradient (SVRG) &#xA0;</h5>
+<div class='standard' id='magicparlabel-225'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-226'>&#xA0;
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-227'>&#xA0;</div>
+
+<div class='standard' id='magicparlabel-228'><div class='Boxed'><div class='algorithm'>
+<div class="algorithm_item" id='magicparlabel-232'><span class="algorithm_label">Algorithm 25.</span>
+<a id="alg_Stochastic_Variance_Reduced" /> Stochastic Variance Reduced Gradient with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ for Problem <a href="#prob_Consider_a_learning">prob:Consider-a-learning</a>.</div>
+<div class="algorithm_item" id='magicparlabel-233'><hr />
+</div>
+<div class='plain_layout' style='text-align: left;' id='magicparlabel-234'><i>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ iterate:</i></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-235'><i><a id="enu_sample___and_2" /> randomly draw an example <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>z</mi>
+ <msup>
+  <mi>j</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+</msub>
+</math>
+ indexed by <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>j</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mn>1</mn>
+   <mo stretchy='false'>,</mo>
+   <mn>...</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+.</i></li>
+<li style='text-align: left;' id='magicparlabel-240'><i>compute <a id="eq_GD_UPDATE_MECHANISM_2_2" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mn>1</mn>
+      </mrow>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>t</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x3B7;</mi>
+     <mi>t</mi>
+    </msub>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.4)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+where <a id="eq__3" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mi>v</mi>
+     <mi>t</mi>
+    </msub>
+    <mo stretchy='false'>=</mo>
+    <munder accent='false'>
+     <munder>
+      <mrow>
+       <mi>&#x2207;</mi>
+       <mi>&#x2113;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <msup>
+          <mi>w</mi>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>t</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msup>
+         <mo stretchy='false'>,</mo>
+         <msub>
+          <mi>z</mi>
+          <msup>
+           <mi>j</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </msub>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+    </munder>
+    <munder accent='false'>
+     <munder>
+      <mo stretchy='false'>-</mo>
+      <mo stretchy='true'>&#x23DF;</mo>
+     </munder>
+    </munder>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <munder accent='false'>
+       <munder>
+        <mrow>
+         <mi>&#x2207;</mi>
+         <mi>&#x2113;</mi>
+         <mrow>
+          <mo>(</mo>
+          <mrow>
+           <mover>
+            <mi>w</mi>
+            <mo stretchy='true'>&#x02DC;</mo>
+           </mover>
+           <mo stretchy='false'>,</mo>
+           <msub>
+            <mi>z</mi>
+            <msup>
+             <mi>j</mi>
+             <mrow>
+              <mo>(</mo>
+              <mi>t</mi>
+              <mo>)</mo>
+             </mrow>
+            </msup>
+           </msub>
+          </mrow>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo stretchy='true'>&#x23DF;</mo>
+       </munder>
+      </munder>
+      <mo stretchy='false'>-</mo>
+      <mfrac>
+       <mn>1</mn>
+       <mi>n</mi>
+      </mfrac>
+      <munderover>
+       <mo>&#x2211;</mo>
+       <mrow>
+        <mi>i</mi>
+        <mo stretchy='false'>=</mo>
+        <mn>1</mn>
+       </mrow>
+       <mi>n</mi>
+      </munderover>
+      <mi>&#x2207;</mi>
+      <mi>&#x2113;</mi>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mover>
+         <mi>w</mi>
+         <mo stretchy='true'>&#x02DC;</mo>
+        </mover>
+        <mo stretchy='false'>,</mo>
+        <msub>
+         <mi>z</mi>
+         <mi>i</mi>
+        </msub>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.5)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+.</i></li>
+<li class="enumerate_item" id='magicparlabel-241'><i>if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>modulo</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>t</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3BA;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mover>
+  <mi>w</mi>
+  <mo stretchy='true'>&#x02DC;</mo>
+ </mover>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+</i></li>
+<li style='text-align: left;' id='magicparlabel-242'><i>if a termination criterion is satisfied STOP</i></li>
+</ol>
+</div>
+</div></div>
+
+<div class='standard' id='magicparlabel-252'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-253'><span class="note_label">Note 26.</span>
+Prepend, we do not know <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>c</mi>
+</math>
+ in <a href="#eq__2">(3.3)</a>. The variance of gradient <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mi>v</mi>
+ <mi>t</mi>
+ <mtext>SVRG</mtext>
+</msubsup>
+</math>
+ is 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mi>z</mi>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <msubsup>
+        <mi>v</mi>
+        <mi>t</mi>
+        <mtext>SVRG</mtext>
+       </msubsup>
+       <mo stretchy='false'>-</mo>
+       <mtext>E</mtext>
+       <mrow>
+        <mo>(</mo>
+        <msubsup>
+         <mi>v</mi>
+         <mi>t</mi>
+         <mtext>SVRG</mtext>
+        </msubsup>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mi>z</mi>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <mover accent='false'>
+        <mover>
+         <mrow>
+          <msub>
+           <mi>&#x2207;</mi>
+           <mi>w</mi>
+          </msub>
+          <mi>&#x2113;</mi>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msup>
+             <mi>w</mi>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msup>
+            <mo stretchy='false'>,</mo>
+            <msub>
+             <mi>z</mi>
+             <msup>
+              <mi>j</mi>
+              <mrow>
+               <mo>(</mo>
+               <mi>t</mi>
+               <mo>)</mo>
+              </mrow>
+             </msup>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+          <mo stretchy='false'>+</mo>
+          <mi>c</mi>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msub>
+             <mi>&#x2207;</mi>
+             <mi>w</mi>
+            </msub>
+            <mi>&#x2113;</mi>
+            <mrow>
+             <mo>(</mo>
+             <mrow>
+              <mover>
+               <mi>w</mi>
+               <mo stretchy='true'>&#x02DC;</mo>
+              </mover>
+              <mo stretchy='false'>,</mo>
+              <msub>
+               <mi>z</mi>
+               <msup>
+                <mi>j</mi>
+                <mrow>
+                 <mo>(</mo>
+                 <mi>t</mi>
+                 <mo>)</mo>
+                </mrow>
+               </msup>
+              </msub>
+             </mrow>
+             <mo>)</mo>
+            </mrow>
+            <mo stretchy='false'>-</mo>
+            <mfrac>
+             <mn>1</mn>
+             <mi>n</mi>
+            </mfrac>
+            <munderover>
+             <mo>&#x2211;</mo>
+             <mrow>
+              <mi>i</mi>
+              <mo stretchy='false'>=</mo>
+              <mn>1</mn>
+             </mrow>
+             <mi>n</mi>
+            </munderover>
+            <msub>
+             <mi>&#x2207;</mi>
+             <mi>w</mi>
+            </msub>
+            <mi>&#x2113;</mi>
+            <mrow>
+             <mo>(</mo>
+             <mrow>
+              <mover>
+               <mi>w</mi>
+               <mo stretchy='true'>&#x02DC;</mo>
+              </mover>
+              <mo stretchy='false'>,</mo>
+              <msub>
+               <mi>z</mi>
+               <mi>i</mi>
+              </msub>
+             </mrow>
+             <mo>)</mo>
+            </mrow>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+         </mrow>
+         <mo stretchy='true'>&#x23DE;</mo>
+        </mover>
+        <mrow>
+         <msubsup>
+          <mi>v</mi>
+          <mi>t</mi>
+          <mtext>SVRG</mtext>
+         </msubsup>
+         <mo stretchy='false'>=</mo>
+        </mrow>
+       </mover>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mi>&#x2207;</mi>
+        <mi>w</mi>
+       </msub>
+       <msub>
+        <mi>R</mi>
+        <mi>g</mi>
+       </msub>
+       <mrow>
+        <mo>(</mo>
+        <msup>
+         <mi>w</mi>
+         <mrow>
+          <mo stretchy='false'>(</mo>
+          <mi>t</mi>
+          <mo stretchy='false'>)</mo>
+         </mrow>
+        </msup>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo>&#x2264;</mo>
+    <msub>
+     <mtext>E</mtext>
+     <mrow>
+      <mi>z</mi>
+      <mo>&#x223C;</mo>
+      <mi>g</mi>
+     </mrow>
+    </msub>
+    <msup>
+     <mrow>
+      <mo>&#x2225;</mo>
+      <mrow>
+       <msub>
+        <mi>&#x2207;</mi>
+        <mi>w</mi>
+       </msub>
+       <mi>&#x2113;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <msup>
+          <mi>w</mi>
+          <mrow>
+           <mo stretchy='false'>(</mo>
+           <mi>t</mi>
+           <mo stretchy='false'>)</mo>
+          </mrow>
+         </msup>
+         <mo stretchy='false'>,</mo>
+         <msub>
+          <mi>z</mi>
+          <msup>
+           <mi>j</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </msub>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+       <mo stretchy='false'>+</mo>
+       <mi>c</mi>
+       <msub>
+        <mi>&#x2207;</mi>
+        <mi>w</mi>
+       </msub>
+       <mi>&#x2113;</mi>
+       <mrow>
+        <mo>(</mo>
+        <mrow>
+         <mover>
+          <mi>w</mi>
+          <mo stretchy='true'>&#x02DC;</mo>
+         </mover>
+         <mo stretchy='false'>,</mo>
+         <msub>
+          <mi>z</mi>
+          <msup>
+           <mi>j</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </msub>
+        </mrow>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mo>&#x2225;</mo>
+     </mrow>
+     <mn>2</mn>
+    </msup>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+As optimal <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>c</mi>
+</math>
+ is often intractable, we sub-optimally set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ and get 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msubsup>
+     <mi>v</mi>
+     <mi>t</mi>
+     <mtext>SVRG</mtext>
+    </msubsup>
+    <mo stretchy='false'>-</mo>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <msubsup>
+      <mi>v</mi>
+      <mi>t</mi>
+      <mtext>SVRG</mtext>
+     </msubsup>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x2264;</mo>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msub>
+     <mi>&#x2207;</mi>
+     <mi>w</mi>
+    </msub>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>w</mi>
+       <mrow>
+        <mo stretchy='false'>(</mo>
+        <mi>t</mi>
+        <mo stretchy='false'>)</mo>
+       </mrow>
+      </msup>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>z</mi>
+       <msup>
+        <mi>j</mi>
+        <mrow>
+         <mo>(</mo>
+         <mi>t</mi>
+         <mo>)</mo>
+        </mrow>
+       </msup>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x2207;</mi>
+     <mi>w</mi>
+    </msub>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mover>
+       <mi>w</mi>
+       <mo stretchy='true'>&#x02DC;</mo>
+      </mover>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>z</mi>
+       <msup>
+        <mi>j</mi>
+        <mrow>
+         <mo>(</mo>
+         <mi>t</mi>
+         <mo>)</mo>
+        </mrow>
+       </msup>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+ If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <mi>j</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x3B2;</mi>
+ <mi>j</mi>
+</msub>
+</math>
+-smooth, then 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mtext>E</mtext>
+  <mrow>
+   <mi>z</mi>
+   <mo>&#x223C;</mo>
+   <mi>g</mi>
+  </mrow>
+ </msub>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msubsup>
+     <mi>v</mi>
+     <mi>t</mi>
+     <mtext>SVRG</mtext>
+    </msubsup>
+    <mo stretchy='false'>-</mo>
+    <mtext>E</mtext>
+    <mrow>
+     <mo>(</mo>
+     <msubsup>
+      <mi>v</mi>
+      <mi>t</mi>
+      <mtext>SVRG</mtext>
+     </msubsup>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x2264;</mo>
+ <munder>
+  <mo>max</mo>
+  <mi>j</mi>
+ </munder>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>{</mo>
+   <msub>
+    <mi>&#x3B2;</mi>
+    <mi>j</mi>
+   </msub>
+   <mo>}</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <msup>
+  <mrow>
+   <mo>&#x2225;</mo>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mi>t</mi>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <mover>
+     <mi>w</mi>
+     <mo stretchy='true'>&#x02DC;</mo>
+    </mover>
+   </mrow>
+   <mo>&#x2225;</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+Hence to bound/control variance, point <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mover>
+ <mi>w</mi>
+ <mo stretchy='true'>&#x02DC;</mo>
+</mover>
+</math>
+ should be chosen to be as close as possible to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>w</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mi>t</mi>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</msup>
+</math>
+. Perhaps by taking a snapshot <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mover>
+  <mi>w</mi>
+  <mo stretchy='true'>&#x02DC;</mo>
+ </mover>
+ <mo>&#x2190;</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ every <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BA;</mi>
+</math>
+-th iteration. </div>
+</div>
+<div class='standard' id='magicparlabel-254'>
+<br />
+</div>
+
+
+
+<div class='standard' id='magicparlabel-280'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-281'><span class="note_label">Note 27.</span>
+The frequency of the snapshots <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BA;</mi>
+</math>
+ is specified by the researcher. The smaller the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3BA;</mi>
+</math>
+, the more frequent snapshots, and the more correlated the baseline <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ will be with the objective <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ in <a href="#eq__3">(3.5)</a> and hence the bigger the performance improvement (See <a href="#eq__2">(3.3)</a>); however the iterations will be slower.</div>
+</div>
+<div class='standard' id='magicparlabel-307'>
+<br />
+</div>
+<div class='note'>
+<div class="note_item" id='magicparlabel-308'><span class="note_label">Note 28.</span>
+Iterations of SVRG are computationally faster than those of full GD but SVRG can still match the theoretical convergence rate of GD.</div>
+</div>
+<div class='standard' id='magicparlabel-309'>
+<br />
+</div>
+
+<div class='standard' id='magicparlabel-310'>
+<br />
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-311'><span class="example_label">Example 29.</span>
+<a id="exa_The_SVRG_with" /> <div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-315'><span class='flex_url'>https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2025/tree/main/Lecture_notes/code/example_SVRG.R</span></div>
+</div></div> The SVRG with learning rate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3B7;</mi>
+  <mi>t</mi>
+ </msub>
+ <mo stretchy='false'>&gt;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ and batch size <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ is</div>
+<div class='standard' style='text-align: left;' id='magicparlabel-320'>For <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>...</mn>
+</mrow>
+</math>
+ iterate:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-321'><a id="enu_sample___and_2_1" /> randomly generate a set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='script'>
+   <mi>J</mi>
+  </mstyle>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <msup>
+   <mi>j</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </msup>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+ by drawing one number <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>j</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+</msup>
+</math>
+ from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>{</mo>
+ <mrow>
+  <mn>1</mn>
+  <mo stretchy='false'>,</mo>
+  <mn>...</mn>
+  <mo stretchy='false'>,</mo>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+  <msup>
+   <mn>0</mn>
+   <mn>6</mn>
+  </msup>
+ </mrow>
+ <mo>}</mo>
+</mrow>
+</math>
+.</li>
+<li style='text-align: left;' id='magicparlabel-326'>compute <a id="eq_GD_UPDATE_MECHANISM_2_2_2" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <msup>
+     <mi>w</mi>
+     <mrow>
+      <mo stretchy='false'>(</mo>
+      <mrow>
+       <mi>t</mi>
+       <mo stretchy='false'>+</mo>
+       <mn>1</mn>
+      </mrow>
+      <mo stretchy='false'>)</mo>
+     </mrow>
+    </msup>
+    <mo stretchy='false'>=</mo>
+    <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <msubsup>
+        <mi>w</mi>
+        <mn>1</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>&#x3B7;</mi>
+     <mi>t</mi>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+      <mtable>
+       <mtr>
+        <mtd>
+         <mrow>
+          <mn>2</mn>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msubsup>
+             <mi>w</mi>
+             <mn>1</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <mo stretchy='false'>-</mo>
+            <msub>
+             <mover>
+              <mi>w</mi>
+              <mo stretchy='true'>&#x02DC;</mo>
+             </mover>
+             <mn>1</mn>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+          <mo stretchy='false'>+</mo>
+          <mn>2</mn>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msubsup>
+             <mi>w</mi>
+             <mn>2</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <mo stretchy='false'>-</mo>
+            <msub>
+             <mover>
+              <mi>w</mi>
+              <mo stretchy='true'>&#x02DC;</mo>
+             </mover>
+             <mn>2</mn>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+          <msub>
+           <mi>x</mi>
+           <msup>
+            <mi>j</mi>
+            <mrow>
+             <mo>(</mo>
+             <mi>t</mi>
+             <mo>)</mo>
+            </mrow>
+           </msup>
+          </msub>
+         </mrow>
+        </mtd>
+       </mtr>
+       <mtr>
+        <mtd>
+         <mrow>
+          <mn>2</mn>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msubsup>
+             <mi>w</mi>
+             <mn>2</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <mo stretchy='false'>-</mo>
+            <msub>
+             <mover>
+              <mi>w</mi>
+              <mo stretchy='true'>&#x02DC;</mo>
+             </mover>
+             <mn>2</mn>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+          <msub>
+           <mi>x</mi>
+           <msup>
+            <mi>j</mi>
+            <mrow>
+             <mo>(</mo>
+             <mi>t</mi>
+             <mo>)</mo>
+            </mrow>
+           </msup>
+          </msub>
+          <mo stretchy='false'>+</mo>
+          <mn>2</mn>
+          <mrow>
+           <mo>(</mo>
+           <mrow>
+            <msubsup>
+             <mi>w</mi>
+             <mn>2</mn>
+             <mrow>
+              <mo stretchy='false'>(</mo>
+              <mi>t</mi>
+              <mo stretchy='false'>)</mo>
+             </mrow>
+            </msubsup>
+            <mo stretchy='false'>-</mo>
+            <msub>
+             <mover>
+              <mi>w</mi>
+              <mo stretchy='true'>&#x02DC;</mo>
+             </mover>
+             <mn>2</mn>
+            </msub>
+           </mrow>
+           <mo>)</mo>
+          </mrow>
+          <msup>
+           <mrow>
+            <mo>(</mo>
+            <msub>
+             <mi>x</mi>
+             <msup>
+              <mi>j</mi>
+              <mrow>
+               <mo>(</mo>
+               <mi>t</mi>
+               <mo>)</mo>
+              </mrow>
+             </msup>
+            </msub>
+            <mo>)</mo>
+           </mrow>
+           <mn>2</mn>
+          </msup>
+         </mrow>
+        </mtd>
+       </mtr>
+      </mtable>
+      <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+      <mo stretchy='false'>+</mo>
+      <mi>&#x2207;</mi>
+      <msub>
+       <mover>
+        <mi>R</mi>
+        <mo stretchy='true'>&#x02C6;</mo>
+       </mover>
+       <mstyle mathvariant='script'>
+        <mi>S</mi>
+       </mstyle>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mover>
+        <mi>w</mi>
+        <mo stretchy='true'>&#x02DC;</mo>
+       </mover>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.6)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-327'>if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>modulo</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>t</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x3BA;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, set <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mover>
+  <mi>w</mi>
+  <mo stretchy='true'>&#x02DC;</mo>
+ </mover>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>w</mi>
+  <mrow>
+   <mo stretchy='false'>(</mo>
+   <mi>t</mi>
+   <mo stretchy='false'>)</mo>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+</li>
+<li class="enumerate_item" id='magicparlabel-328'>compute <a id="eq_tyhtsstyrujey" />
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true'>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mfrac>
+     <mn>1</mn>
+     <mi>n</mi>
+    </mfrac>
+    <munderover>
+     <mo>&#x2211;</mo>
+     <mrow>
+      <mi>i</mi>
+      <mo stretchy='false'>=</mo>
+      <mn>1</mn>
+     </mrow>
+     <mi>n</mi>
+    </munderover>
+    <mi>&#x2113;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mover>
+       <mi>w</mi>
+       <mo stretchy='true'>&#x02DC;</mo>
+      </mover>
+      <mo stretchy='false'>,</mo>
+      <msub>
+       <mi>z</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mn>2</mn>
+        <msub>
+         <mover>
+          <mi>w</mi>
+          <mo stretchy='true'>&#x02DC;</mo>
+         </mover>
+         <mn>1</mn>
+        </msub>
+        <mo stretchy='false'>+</mo>
+        <mn>2</mn>
+        <msub>
+         <mover>
+          <mi>w</mi>
+          <mo stretchy='true'>&#x02DC;</mo>
+         </mover>
+         <mn>2</mn>
+        </msub>
+        <mover>
+         <mi>x</mi>
+         <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo stretchy='false'>-</mo>
+        <mn>2</mn>
+        <mover>
+         <mi>y</mi>
+         <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow>
+        <mn>2</mn>
+        <msub>
+         <mover>
+          <mi>w</mi>
+          <mo stretchy='true'>&#x02DC;</mo>
+         </mover>
+         <mn>1</mn>
+        </msub>
+        <mover>
+         <mi>x</mi>
+         <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo stretchy='false'>+</mo>
+        <mn>2</mn>
+        <msub>
+         <mover>
+          <mi>w</mi>
+          <mo stretchy='true'>&#x02DC;</mo>
+         </mover>
+         <mn>2</mn>
+        </msub>
+        <mover>
+         <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+         </msup>
+         <mo stretchy='true'>&#x00AF;</mo>
+        </mover>
+        <mo stretchy='false'>-</mo>
+        <mn>2</mn>
+        <msup>
+         <mi>y</mi>
+         <mi>&#x22A4;</mi>
+        </msup>
+        <mi>x</mi>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+    <mo stretchy='false'>=</mo>
+    <mi>&#x2207;</mi>
+    <msub>
+     <mover>
+      <mi>R</mi>
+      <mo stretchy='true'>&#x02C6;</mo>
+     </mover>
+     <mstyle mathvariant='script'>
+      <mi>S</mi>
+     </mstyle>
+    </msub>
+    <mrow>
+     <mo>(</mo>
+     <mover>
+      <mi>w</mi>
+      <mo stretchy='true'>&#x02DC;</mo>
+     </mover>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mtext>(3.7)</mtext>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+<li style='text-align: left;' id='magicparlabel-329'>if a termination criterion is satisfied STOP</li>
+</ol>
+<div class='standard' id='magicparlabel-334'>Because <a href="#eq_tyhtsstyrujey">(3.7)</a> is actually the gradient of the Risk function at <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mover>
+ <mi>w</mi>
+ <mo stretchy='true'>&#x02DC;</mo>
+</mover>
+</math>
+ and 
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>&#x2207;</mi>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msup>
+    <mi>w</mi>
+    <mrow>
+     <mo stretchy='false'>(</mo>
+     <mi>t</mi>
+     <mo stretchy='false'>)</mo>
+    </mrow>
+   </msup>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <msup>
+     <mi>j</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+     </mrow>
+    </msup>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x2207;</mi>
+ <mi>&#x2113;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mover>
+    <mi>w</mi>
+    <mo stretchy='true'>&#x02DC;</mo>
+   </mover>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>z</mi>
+    <msup>
+     <mi>j</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+     </mrow>
+    </msup>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>(</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mn>2</mn>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msubsup>
+        <mi>w</mi>
+        <mn>1</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mover>
+         <mi>w</mi>
+         <mo stretchy='true'>&#x02DC;</mo>
+        </mover>
+        <mn>1</mn>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>+</mo>
+     <mn>2</mn>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mover>
+         <mi>w</mi>
+         <mo stretchy='true'>&#x02DC;</mo>
+        </mover>
+        <mn>2</mn>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <msub>
+      <mi>x</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+     </msub>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mn>2</mn>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mover>
+         <mi>w</mi>
+         <mo stretchy='true'>&#x02DC;</mo>
+        </mover>
+        <mn>2</mn>
+       </msub>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <msub>
+      <mi>x</mi>
+      <msup>
+       <mi>j</mi>
+       <mrow>
+        <mo>(</mo>
+        <mi>t</mi>
+        <mo>)</mo>
+       </mrow>
+      </msup>
+     </msub>
+     <mo stretchy='false'>+</mo>
+     <mn>2</mn>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <msubsup>
+        <mi>w</mi>
+        <mn>2</mn>
+        <mrow>
+         <mo stretchy='false'>(</mo>
+         <mi>t</mi>
+         <mo stretchy='false'>)</mo>
+        </mrow>
+       </msubsup>
+       <msup>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mi>x</mi>
+          <msup>
+           <mi>j</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+        <mn>2</mn>
+       </msup>
+       <mo stretchy='false'>-</mo>
+       <msub>
+        <mover>
+         <mi>w</mi>
+         <mo stretchy='true'>&#x02DC;</mo>
+        </mover>
+        <mn>2</mn>
+       </msub>
+       <msup>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mi>x</mi>
+          <msup>
+           <mi>j</mi>
+           <mrow>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+           </mrow>
+          </msup>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+        <mn>2</mn>
+       </msup>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>)</mo>
+</mrow>
+</math>
+In Figure <a href="#fig_Example__2">A.0.3</a> we observe the frequency of the snapshots has improved the convergence; however this is not a panacea as seen in Figure <a href="#fig_Example__5">A.0.6</a>. </div>
+</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-335'><span class="section_label">A</span> Plots</h2>
+<div class='standard' id='magicparlabel-336'><div style='height:1em'></div></div>
+<div class='float-figure'>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-344'><img style='width:33%;' src='e_bee9f4ec1a83_SGD_w_1.png' alt='image: e_bee9f4ec1a83_SGD_w_1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.1:  <a id="fig_Example_" />batch SGD Example <a href="#exa_The_batch_SGD">exa:The-batch-SGD</a> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>1</mn>
+</msub>
+</math>
+</span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-352'><img style='width:33%;' src='e_5c556249dc1a_projSGD_w_2.png' alt='image: e_5c556249dc1a_projSGD_w_2.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.2:  <a id="fig_Example__1" />online SGD with projection Example <a href="#exa_Consider_a__rather">6</a><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>1</mn>
+</msub>
+</math>
+</span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-360'><img style='width:33%;' src='e_8f94341bec1c_SVRG_w_1.png' alt='image: e_8f94341bec1c_SVRG_w_1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.3:  <a id="fig_Example__2" />SVRG Example <a href="#exa_The_SVRG_with">29</a> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>1</mn>
+</msub>
+</math>
+</span></div>
+</div>
+
+
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-369'><img style='width:33%;' src='e_bee9f4ec1a83_SGD_w_1.png' alt='image: e_bee9f4ec1a83_SGD_w_1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.4:  <a id="fig_Example__3" />batch SGD Example <a href="#exa_The_batch_SGD">exa:The-batch-SGD</a> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>2</mn>
+</msub>
+</math>
+</span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-377'><img style='width:33%;' src='e_5c556249dc1a_projSGD_w_2.png' alt='image: e_5c556249dc1a_projSGD_w_2.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.5:  <a id="fig_Example__4" />online SGD with projection Example <a href="#exa_Consider_a__rather">6</a> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>2</mn>
+</msub>
+</math>
+</span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-385'><img style='width:33%;' src='e_38bbeeab75f6_SVRG_w_2.png' alt='image: e_38bbeeab75f6_SVRG_w_2.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.6:  <a id="fig_Example__5" />SVRG Example <a href="#exa_The_SVRG_with">29</a> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>2</mn>
+</msub>
+</math>
+</span></div>
+</div>
+
+
+
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-394'><img style='width:33%;' src='e_4033c3c4d15e_AdaGrad_w_1.png' alt='image: e_4033c3c4d15e_AdaGrad_w_1.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.7:  <a id="fig_Example__1_1" />online AdaGrad Example <a href="#exa_The_AdaGrad_with">18</a><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>1</mn>
+</msub>
+</math>
+</span></div>
+</div>
+<div class='float-figure'><div class='plain_layout' id='magicparlabel-402'><img style='width:33%;' src='e_664f7eaa436a_AdaGrad_w_2.png' alt='image: e_664f7eaa436a_AdaGrad_w_2.png' /><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure A.0.8:  <a id="fig_Example__1_1_1" />online AdaGrad Example <a href="#exa_The_AdaGrad_with">18</a><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>w</mi>
+ <mn>2</mn>
+</msub>
+</math>
+</span></div>
+</div>
+
+
+<div class='plain_layout' id='magicparlabel-407'><span class='float-caption-Standard float-caption float-caption-standard'>Figure A.1:  Simulations of the Examples</span></div>
+</div>
+
+</section>
+</body>
+</html>
